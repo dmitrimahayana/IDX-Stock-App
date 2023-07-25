@@ -52,7 +52,7 @@ public class StreamStockAggregate {
 
     public static void main(String[] args) {
         String topic = "streaming.goapi.idx.stock.json";
-        String bootStrapServer1 = "localhost:39092,localhost:39093,localhost:39094";
+        String bootStrapServer = "localhost:39092,localhost:39093,localhost:39094";
 
         StreamsBuilder builder = new StreamsBuilder();
 
@@ -61,7 +61,7 @@ public class StreamStockAggregate {
 
         final Topology appTopology = builder.build();
         log.info("Topology: {}", appTopology.describe());
-        KafkaStreams streams = new KafkaStreams(appTopology, createProperties(bootStrapServer1));
+        KafkaStreams streams = new KafkaStreams(appTopology, createProperties(bootStrapServer));
 
         //Add shutdown hook
         Runtime.getRuntime().addShutdownHook(new Thread(streams::close));
