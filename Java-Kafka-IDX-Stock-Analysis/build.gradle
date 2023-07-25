@@ -1,0 +1,56 @@
+plugins {
+    id 'java'
+}
+
+group 'io.id.stock.analysis'
+version '1.0'
+
+repositories {
+    mavenCentral()
+    maven {
+        url "https://packages.confluent.io/maven/"
+    }
+}
+
+dependencies {
+    //KAFKA Dependencies
+    // https://mvnrepository.com/artifact/org.apache.kafka/kafka-clients
+    implementation 'org.apache.kafka:kafka-clients:3.3.2'
+
+    // https://mvnrepository.com/artifact/org.apache.kafka/kafka-streams
+    implementation 'org.apache.kafka:kafka-streams:3.3.2'
+
+    // https://mvnrepository.com/artifact/io.confluent.ksql/ksqldb-api-client
+    implementation 'io.confluent.ksql:ksqldb-api-client:6.2.0'
+
+    //SPARK Dependencies
+    // https://mvnrepository.com/artifact/org.apache.spark/spark-core
+    implementation 'org.apache.spark:spark-core_2.12:3.2.4'
+
+    // https://mvnrepository.com/artifact/org.apache.spark/spark-mllib
+    implementation 'org.apache.spark:spark-mllib_2.12:3.2.4'
+
+    // https://mvnrepository.com/artifact/org.apache.spark/spark-sql
+    implementation 'org.apache.spark:spark-sql_2.12:3.2.4'
+
+    // https://mvnrepository.com/artifact/org.mongodb/mongodb-driver-sync
+    implementation 'org.mongodb:mongodb-driver-sync:4.9.1'
+
+    // Other Dependencies
+    // https://mvnrepository.com/artifact/com.google.code.gson/gson
+    implementation 'com.google.code.gson:gson:2.8.9'
+
+    // https://mvnrepository.com/artifact/org.slf4j/slf4j-api
+    implementation 'org.slf4j:slf4j-api:2.0.5'
+
+    // https://mvnrepository.com/artifact/org.slf4j/slf4j-simple
+    implementation 'org.slf4j:slf4j-simple:2.0.5'
+
+    // https://mvnrepository.com/artifact/org.json/json
+    implementation 'org.json:json:20230227'
+
+}
+
+test {
+    useJUnitPlatform()
+}
