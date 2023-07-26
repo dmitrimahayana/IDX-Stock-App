@@ -11,18 +11,25 @@ import Link from "@mui/material/Link";
 
 function App() {
     const [data, setData] = useState([]);
+    const [data2, setData2] = useState([]);
     const [keyword, setKeyword] = useState('');
 
     // GET with fetch API
     useEffect(() => {
-        
+
         const fetchData = async () => {
-            const response = await fetch('http://localhost:9090/ticker-list-last-stock');
-            const data = await response.json();
-            setData(data);
+            const response = await fetch('http://localhost:9000/allStock');
+            const result = await response.json();
+            setData(result);
         };
-        
         fetchData(); 
+
+        const fetchData2 = async () => {
+            const response = await fetch('http://localhost:9000/yesterdayStock');
+            const result = await response.text();
+            setData2(result);
+        };
+        fetchData2(); 
 
         // const interval = setInterval(() => {
         //     fetchData();
@@ -92,31 +99,45 @@ function App() {
             editable: true,
         },
         {
+            field: 'high',
+            headerName: 'High',
+            type: 'number',
+            width: 100,
+            editable: true,
+        },
+        {
+            field: 'low',
+            headerName: 'Low',
+            type: 'number',
+            width: 100,
+            editable: true,
+        },
+        {
             field: 'close',
             headerName: 'Close',
             type: 'number',
             width: 100,
             editable: true,
         },
-        {
-            field: "status",
-            headerName: "Status",
-            sortable: false,
-            headerAlign: 'center',
-            align: 'center',
-            width: 150,
-            disableClickEventBubbling: true,
-            renderCell: (params) => {
-                return (
-                    <div
-                        className="d-flex justify-content-between align-items-center"
-                        style={{ cursor: "pointer" }}
-                    >
-                        <MatUpDown id={params.row.id} index={params.row} />
-                    </div>
-                );
-            }
-        }
+        // {
+        //     field: "status",
+        //     headerName: "Status",
+        //     sortable: false,
+        //     headerAlign: 'center',
+        //     align: 'center',
+        //     width: 150,
+        //     disableClickEventBubbling: true,
+        //     renderCell: (params) => {
+        //         return (
+        //             <div
+        //                 className="d-flex justify-content-between align-items-center"
+        //                 style={{ cursor: "pointer" }}
+        //             >
+        //                 <MatUpDown id={params.row.id} index={params.row} />
+        //             </div>
+        //         );
+        //     }
+        // }
     ];
 
     const MatUpDown = ({ index }) => {
