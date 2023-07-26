@@ -1,0 +1,159 @@
+[debug] > Exec(;reload; set _root_.org.jetbrains.sbt.StructureKeys.sbtStructureOptions in Global := "download resolveClassifiers resolveSbtClassifiers" ;preferScala2;*/*:dumpStructureTo C:/Users/dmitr/AppData/Local/Temp/sbt-structure.xml; session clear-all ; set ideaPort in Global := 50213, None, None)
+[debug] > Exec(reload, None, None)
+[debug] > Exec(sbtStashOnFailure, None, None)
+[debug] > Exec(onFailure loadFailed, None, None)
+[debug] > Exec(loadp, None, None)
+[info] welcome to sbt 1.9.1 (Amazon.com Inc. Java 11.0.19)
+[debug]       Load.loadUnit: plugins took 20.1298ms
+[debug]       Load.loadUnit: defsScala took 0.0037ms
+[debug] [Loading] Scanning directory C:\Users\dmitr\.sbt\1.0\plugins
+[debug] [Loading] Found non-root projects 
+[debug] [Loading] Done in C:\Users\dmitr\.sbt\1.0\plugins, returning: ()
+[debug] deducing auto plugins based on known facts Set(Atom(sbt.plugins.CorePlugin)) and clauses Clauses(Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.IvyPlugin)))
+[debug] Clause(Atom(sbt.ScriptedPlugin),Set(Atom(sbt.plugins.JvmPlugin)))
+[debug] Clause(Atom(sbt.plugins.SbtPlugin),Set(Atom(sbt.ScriptedPlugin)))
+[debug] Clause(Atom(sbt.plugins.SemanticdbPlugin),Set(Atom(sbt.plugins.JvmPlugin)))
+[debug] Clause(Atom(sbt.plugins.JUnitXmlReportPlugin),Set(Atom(sbt.plugins.JvmPlugin)))
+[debug] Clause(Atom(sbt.plugins.MiniDependencyTreePlugin),Set(Atom(sbt.plugins.JvmPlugin)))
+[debug] Clause(Atom(sbt.plugins.CorePlugin),Set(Atom(sbt.plugins.IvyPlugin)))
+[debug] Clause(Atom(sbt.plugins.IvyPlugin),Set(Atom(sbt.plugins.JvmPlugin)))
+[debug] Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.SemanticdbPlugin)))
+[debug] Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.JUnitXmlReportPlugin)))
+[debug] Clause(Atom(sbt.plugins.CorePlugin),Set(Atom(sbt.plugins.Giter8TemplatePlugin)))
+[debug] Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.MiniDependencyTreePlugin))))
+[debug]   :: deduced result: Matched(sbt.plugins.CorePlugin,sbt.plugins.Giter8TemplatePlugin,sbt.plugins.IvyPlugin,sbt.plugins.JvmPlugin,sbt.plugins.MiniDependencyTreePlugin,sbt.plugins.JUnitXmlReportPlugin,sbt.plugins.SemanticdbPlugin)
+[debug] Plugins.deducer#function took 0.9119 ms
+[debug]           Load.resolveProject(global-plugins) took 0.8359ms
+[debug]         Load.loadTransitive: finalizeProject(Project(id global-plugins, base: C:\Users\dmitr\.sbt\1.0\plugins, plugins: List(<none>))) took 2.0722ms
+[debug] [Loading] Done in C:\Users\dmitr\.sbt\1.0\plugins, returning: (global-plugins)
+[debug]       Load.loadUnit: loadedProjectsRaw took 3.8954ms
+[debug]       Load.loadUnit: cleanEvalClasses took 0.0085ms
+[debug]     Load.loadUnit(file:/C:/Users/dmitr/.sbt/1.0/plugins/, ...) took 24.8103ms
+[debug]   Load.apply: load took 26.0743ms
+[debug]   Load.apply: resolveProjects took 0.0847ms
+[debug]   Load.apply: finalTransforms took 6.3709ms
+[debug]   Load.apply: config.delegates took 0.3852ms
+[debug]   Load.apply: Def.make(settings)... took 50.0091ms
+[debug]   Load.apply: structureIndex took 25.0017ms
+[debug]   Load.apply: mkStreams took 0.003ms
+[info] loading global plugins from C:\Users\dmitr\.sbt\1.0\plugins
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Load.defaultLoad until apply took 483.0429ms
+[debug]           Load.loadUnit: plugins took 31.21ms
+[debug]           Load.loadUnit: defsScala took 0.0065ms
+[debug] [Loading] Scanning directory D:\00 Project\00 My Project\IdeaProjects\Scala_Amazon_ETL\project
+[debug]             Load.loadUnit: mkEval took 0.2175ms
+[debug] [Loading] Found non-root projects 
+[debug] [Loading] Done in D:\00 Project\00 My Project\IdeaProjects\Scala_Amazon_ETL\project, returning: ()
+[debug] deducing auto plugins based on known facts Set(Atom(sbt.plugins.CorePlugin)) and clauses Clauses(Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.IvyPlugin)))
+[debug] Clause(Atom(sbt.ScriptedPlugin),Set(Atom(sbt.plugins.JvmPlugin)))
+[debug] Clause(Atom(sbt.plugins.SbtPlugin),Set(Atom(sbt.ScriptedPlugin)))
+[debug] Clause(Atom(sbt.plugins.SemanticdbPlugin),Set(Atom(sbt.plugins.JvmPlugin)))
+[debug] Clause(Atom(sbt.plugins.JUnitXmlReportPlugin),Set(Atom(sbt.plugins.JvmPlugin)))
+[debug] Clause(Atom(sbt.plugins.MiniDependencyTreePlugin),Set(Atom(sbt.plugins.JvmPlugin)))
+[debug] Clause(Atom(sbt.plugins.CorePlugin),Set(Atom(sbt.plugins.IvyPlugin)))
+[debug] Clause(Atom(sbt.plugins.IvyPlugin),Set(Atom(sbt.plugins.JvmPlugin)))
+[debug] Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.SemanticdbPlugin)))
+[debug] Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.JUnitXmlReportPlugin)))
+[debug] Clause(Atom(sbt.plugins.CorePlugin),Set(Atom(sbt.plugins.Giter8TemplatePlugin)))
+[debug] Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.MiniDependencyTreePlugin))))
+[debug]   :: deduced result: Matched(sbt.plugins.CorePlugin,sbt.plugins.Giter8TemplatePlugin,sbt.plugins.IvyPlugin,sbt.plugins.JvmPlugin,sbt.plugins.MiniDependencyTreePlugin,sbt.plugins.JUnitXmlReportPlugin,sbt.plugins.SemanticdbPlugin)
+[debug] Plugins.deducer#function took 1.8289 ms
+[info] loading settings for project scala_amazon_etl-build from idea.sbt ...
+[debug]               Load.resolveProject(scala_amazon_etl-build) took 2.3125ms
+[debug]             Load.loadTransitive: finalizeProject(Project(id scala_amazon_etl-build, base: D:\00 Project\00 My Project\IdeaProjects\Scala_Amazon_ETL\project, plugins: List(<none>))) took 4.6068ms
+[debug] [Loading] Done in D:\00 Project\00 My Project\IdeaProjects\Scala_Amazon_ETL\project, returning: (scala_amazon_etl-build)
+[debug]           Load.loadUnit: loadedProjectsRaw took 37.1779ms
+[debug]           Load.loadUnit: cleanEvalClasses took 1.2692ms
+[debug]         Load.loadUnit(file:/D:/00%20Project/00%20My%20Project/IdeaProjects/Scala_Amazon_ETL/project/, ...) took 70.742ms
+[debug]       Load.apply: load took 72.1537ms
+[debug]       Load.apply: resolveProjects took 0.1221ms
+[debug]       Load.apply: finalTransforms took 8.7774ms
+[debug]       Load.apply: config.delegates took 0.3177ms
+[debug]       Load.apply: Def.make(settings)... took 47.0859ms
+[debug]       Load.apply: structureIndex took 24.1054ms
+[debug]       Load.apply: mkStreams took 0.0041ms
+[info] loading project definition from D:\00 Project\00 My Project\IdeaProjects\Scala_Amazon_ETL\project
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug]     Load.loadUnit: plugins took 344.6405ms
+[debug]     Load.loadUnit: defsScala took 0.0203ms
+[debug] [Loading] Scanning directory D:\00 Project\00 My Project\IdeaProjects\Scala_Amazon_ETL
+[debug]       Load.loadUnit: mkEval took 0.4234ms
+[debug] [Loading] Found root project root w/ remaining 
+[debug] deducing auto plugins based on known facts Set(Atom(sbt.plugins.CorePlugin)) and clauses Clauses(Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.IvyPlugin)))
+[debug] Clause(Atom(sbt.ScriptedPlugin),Set(Atom(sbt.plugins.JvmPlugin)))
+[debug] Clause(Atom(sbt.plugins.SbtPlugin),Set(Atom(sbt.ScriptedPlugin)))
+[debug] Clause(Atom(sbt.plugins.SemanticdbPlugin),Set(Atom(sbt.plugins.JvmPlugin)))
+[debug] Clause(Atom(sbt.plugins.JUnitXmlReportPlugin),Set(Atom(sbt.plugins.JvmPlugin)))
+[debug] Clause(Atom(sbt.plugins.MiniDependencyTreePlugin),Set(Atom(sbt.plugins.JvmPlugin)))
+[debug] Clause(Atom(org.jetbrains.sbt.StructurePlugin),Set(Atom(sbt.plugins.JvmPlugin)))
+[debug] Clause(Atom(org.jetbrains.sbt.IdeaShellPlugin),Set(Atom(sbt.plugins.JvmPlugin)))
+[debug] Clause(Atom(org.jetbrains.sbt.indices.SbtIntellijIndicesPlugin),Set(Atom(sbt.plugins.JvmPlugin)))
+[debug] Clause(Atom(sbt.plugins.CorePlugin),Set(Atom(sbt.plugins.IvyPlugin)))
+[debug] Clause(Atom(sbt.plugins.IvyPlugin),Set(Atom(sbt.plugins.JvmPlugin)))
+[debug] Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.SemanticdbPlugin)))
+[debug] Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.JUnitXmlReportPlugin)))
+[debug] Clause(Atom(sbt.plugins.CorePlugin),Set(Atom(sbt.plugins.Giter8TemplatePlugin)))
+[debug] Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.MiniDependencyTreePlugin)))
+[debug] Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(org.jetbrains.sbt.StructurePlugin)))
+[debug] Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(org.jetbrains.sbt.IdeaShellPlugin)))
+[debug] Clause(And(Set(Atom(sbt.plugins.CorePlugin), Atom(sbt.plugins.JvmPlugin))),Set(Atom(org.jetbrains.sbt.indices.SbtIntellijIndicesPlugin))))
+[debug]   :: deduced result: Matched(sbt.plugins.CorePlugin,sbt.plugins.Giter8TemplatePlugin,sbt.plugins.IvyPlugin,sbt.plugins.JvmPlugin,sbt.plugins.SemanticdbPlugin,org.jetbrains.sbt.indices.SbtIntellijIndicesPlugin,sbt.plugins.JUnitXmlReportPlugin,org.jetbrains.sbt.IdeaShellPlugin,org.jetbrains.sbt.StructurePlugin,sbt.plugins.MiniDependencyTreePlugin)
+[debug] Plugins.deducer#function took 1.4206 ms
+[info] loading settings for project root from build.sbt ...
+[debug]         Load.resolveProject(root) took 81.105ms
+[debug]       Load.loadTransitive: finalizeProject(Project(id root, base: D:\00 Project\00 My Project\IdeaProjects\Scala_Amazon_ETL, plugins: List(<none>))) took 83.0183ms
+[debug] [Loading] Done in D:\00 Project\00 My Project\IdeaProjects\Scala_Amazon_ETL, returning: (root)
+[debug]     Load.loadUnit: loadedProjectsRaw took 174.2014ms
+[debug]     Load.loadUnit: cleanEvalClasses took 2.3129ms
+[debug]   Load.loadUnit(file:/D:/00%20Project/00%20My%20Project/IdeaProjects/Scala_Amazon_ETL/, ...) took 522.0562ms
+[debug] Load.apply: load took 523.7157ms
+[debug] Load.apply: resolveProjects took 0.1084ms
+[debug] Load.apply: finalTransforms took 21.7584ms
+[debug] Load.apply: config.delegates took 0.4895ms
+[debug] Load.apply: Def.make(settings)... took 89.1652ms
+[debug] Load.apply: structureIndex took 32.6488ms
+[debug] Load.apply: mkStreams took 0.0047ms
+[warn] Discarding 1 session setting.  Use 'session save' to persist session settings.
+[info] set current project to Scala_Amazon_ETL (in build file:/D:/00%20Project/00%20My%20Project/IdeaProjects/Scala_Amazon_ETL/)
+[debug] > Exec(sbtPopOnFailure, None, None)
+[debug] > Exec(resumeFromFailure, None, None)
+[debug] > Exec(set _root_.org.jetbrains.sbt.StructureKeys.sbtStructureOptions in Global := "download resolveClassifiers resolveSbtClassifiers", None, None)
+[info] Defining Global / sbtStructureOptions
+[info] The new value will be used by Global / ssOptions
+[debug] Defining 
+[debug] 	Global / sbtStructureOptions
+[debug] 
+[debug] The new value will be used by 
+[debug] 	Global / ssOptions
+[info] Reapplying settings...
+[info] set current project to Scala_Amazon_ETL (in build file:/D:/00%20Project/00%20My%20Project/IdeaProjects/Scala_Amazon_ETL/)
+[debug] > Exec(preferScala2, None, None)
+[debug] > Exec(*/*:dumpStructureTo C:/Users/dmitr/AppData/Local/Temp/sbt-structure.xml, None, None)
+[debug] Evaluating tasks: Global / dumpStructureTo
+[warn] sbt 0.13 shell syntax is deprecated; use slash syntax instead: Global / dumpStructureTo
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[warn] Unrecognized repository Scala Plugin Bundled Repository, ignoring it
+[warn] Unrecognized repository Scala Plugin Bundled Repository, ignoring it
+[warn] Unrecognized repository Scala Plugin Bundled Repository, ignoring it
+[warn] scala-library-2.12.15-sources.jar no longer exists at C:\Users\user\AppData\Local\Coursier\Cache\v1\https\repo1.maven.org\maven2\org\scala-lang\scala-library\2.12.15\scala-library-2.12.15-sources.jar
+[info] Writing structure to C:\Users\dmitr\AppData\Local\Temp\sbt-structure.xml...
+[info] Done.
+[success] Total time: 150 s (02:30), completed Jul 4, 2023, 10:18:12 PM
+[debug] > Exec(session clear-all, None, None)
+[info] Reapplying settings...
+[info] set current project to Scala_Amazon_ETL (in build file:/D:/00%20Project/00%20My%20Project/IdeaProjects/Scala_Amazon_ETL/)
+[debug] > Exec(set ideaPort in Global := 50213, None, None)
+[info] Defining Global / ideaPort
+[info] The new value will be used by Compile / compile, Test / compile
+[debug] Defining 
+[debug] 	Global / ideaPort
+[debug] 
+[debug] The new value will be used by 
+[debug] 	Compile / compile
+[debug] 	Test / compile
+[info] Reapplying settings...
+[info] set current project to Scala_Amazon_ETL (in build file:/D:/00%20Project/00%20My%20Project/IdeaProjects/Scala_Amazon_ETL/)
+[debug] > Exec(idea-shell, None, None)
+[debug] > Exec(, None, None)
+[debug] > Exec(idea-shell, None, None)

@@ -1,0 +1,7821 @@
+[{
+  "_id": {
+    "$oid": "64be1d707967084911b405d8"
+  },
+  "id": "GOTO",
+  "ticker": "GOTO",
+  "name": "PT GoTo Gojek Tokopedia Tbk",
+  "logo": "https://s3.goapi.id/logo/GOTO.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1d8f7967084911b405d9"
+  },
+  "id": "NATO",
+  "ticker": "NATO",
+  "name": "PT Surya Permata Andalan Tbk",
+  "logo": "https://s3.goapi.id/logo/NATO.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1d907967084911b405da"
+  },
+  "id": "CARE",
+  "ticker": "CARE",
+  "name": "PT Metro Healthcare Indonesia Tbk",
+  "logo": "https://s3.goapi.id/logo/CARE.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1d907967084911b405db"
+  },
+  "id": "BOGA",
+  "ticker": "BOGA",
+  "name": "PT Bintang Oto Global Tbk",
+  "logo": "https://s3.goapi.id/logo/BOGA.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1d907967084911b405dc"
+  },
+  "id": "MEDC",
+  "ticker": "MEDC",
+  "name": "PT Medco Energi Internasional Tbk",
+  "logo": "https://s3.goapi.id/logo/MEDC.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1d907967084911b405dd"
+  },
+  "id": "ACES",
+  "ticker": "ACES",
+  "name": "Ace Hardware Indonesia Tbk",
+  "logo": "https://s3.goapi.id/logo/ACES.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1d907967084911b405de"
+  },
+  "id": "ADRO",
+  "ticker": "ADRO",
+  "name": "Adaro Energy Indonesia Tbk",
+  "logo": "https://s3.goapi.id/logo/ADRO.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1d917967084911b405df"
+  },
+  "id": "TLKM",
+  "ticker": "TLKM",
+  "name": "PT Telkom Indonesia (Persero) Tbk",
+  "logo": "https://s3.goapi.id/logo/TLKM.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1d917967084911b405e0"
+  },
+  "id": "BTPS",
+  "ticker": "BTPS",
+  "name": "PT Bank BTPN Syariah Tbk.",
+  "logo": "https://s3.goapi.id/logo/BTPS.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1d917967084911b405e1"
+  },
+  "id": "BBRI",
+  "ticker": "BBRI",
+  "name": "PT Bank Rakyat Indonesia (Persero) Tbk",
+  "logo": "https://s3.goapi.id/logo/BBRI.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1d917967084911b405e2"
+  },
+  "id": "BBCA",
+  "ticker": "BBCA",
+  "name": "PT Bank Central Asia Tbk.",
+  "logo": "https://s3.goapi.id/logo/BBCA.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1d917967084911b405e3"
+  },
+  "id": "BMRI",
+  "ticker": "BMRI",
+  "name": "PT Bank Mandiri (Persero) Tbk",
+  "logo": "https://s3.goapi.id/logo/BMRI.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1d917967084911b405e4"
+  },
+  "id": "ASII",
+  "ticker": "ASII",
+  "name": "Astra International Tbk",
+  "logo": "https://s3.goapi.id/logo/ASII.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1d917967084911b405e5"
+  },
+  "id": "BBNI",
+  "ticker": "BBNI",
+  "name": "PT Bank Negara Indonesia (Persero) Tbk",
+  "logo": "https://s3.goapi.id/logo/BBNI.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1d927967084911b405e6"
+  },
+  "id": "UNTR",
+  "ticker": "UNTR",
+  "name": "United Tractors Tbk",
+  "logo": "https://s3.goapi.id/logo/UNTR.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1d927967084911b405e7"
+  },
+  "id": "ITMG",
+  "ticker": "ITMG",
+  "name": "Indo Tambangraya Megah Tbk",
+  "logo": "https://s3.goapi.id/logo/ITMG.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e157967084911b405e8"
+  },
+  "id": "AALI",
+  "ticker": "AALI",
+  "name": "Astra Agro Lestari Tbk",
+  "logo": "https://s3.goapi.id/logo/AALI.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e157967084911b405e9"
+  },
+  "id": "ABBA",
+  "ticker": "ABBA",
+  "name": "Mahaka Media Tbk",
+  "logo": "https://s3.goapi.id/logo/ABBA.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e157967084911b405ea"
+  },
+  "id": "ABDA",
+  "ticker": "ABDA",
+  "name": "Asuransi Bina Dana Arta Tbk",
+  "logo": "https://s3.goapi.id/logo/ABDA.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e157967084911b405eb"
+  },
+  "id": "ABMM",
+  "ticker": "ABMM",
+  "name": "ABM Investama Tbk",
+  "logo": "https://s3.goapi.id/logo/ABMM.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e157967084911b405ec"
+  },
+  "id": "ACST",
+  "ticker": "ACST",
+  "name": "PT Acset Indonusa Tbk.",
+  "logo": "https://s3.goapi.id/logo/ACST.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e157967084911b405ed"
+  },
+  "id": "ADCP",
+  "ticker": "ADCP",
+  "name": "PT Adhi Commuter Properti Tbk",
+  "logo": "https://s3.goapi.id/logo/ADCP.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e157967084911b405ee"
+  },
+  "id": "ADES",
+  "ticker": "ADES",
+  "name": "Akasha Wira International Tbk  Tbk",
+  "logo": "https://s3.goapi.id/logo/ADES.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e157967084911b405ef"
+  },
+  "id": "ADFO",
+  "ticker": "ADFO",
+  "name": "PT Adindo Foresta Indonesia Tbk",
+  "logo": "https://s3.goapi.id/logo/ADFO.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e157967084911b405f0"
+  },
+  "id": "ADHI",
+  "ticker": "ADHI",
+  "name": "PT Adhi Karya (Persero) Tbk.",
+  "logo": "https://s3.goapi.id/logo/ADHI.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e157967084911b405f1"
+  },
+  "id": "ADMF",
+  "ticker": "ADMF",
+  "name": "Adira Dinamika Multi Finance Tbk",
+  "logo": "https://s3.goapi.id/logo/ADMF.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e167967084911b405f2"
+  },
+  "id": "ADMG",
+  "ticker": "ADMG",
+  "name": "Polychem Indonesia Tbk",
+  "logo": "https://s3.goapi.id/logo/ADMG.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e167967084911b405f3"
+  },
+  "id": "ADMR",
+  "ticker": "ADMR",
+  "name": "PT Adaro Minerals Indonesia Tbk",
+  "logo": "https://s3.goapi.id/logo/ADMR.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e167967084911b405f4"
+  },
+  "id": "AGAR",
+  "ticker": "AGAR",
+  "name": "PT Asia Sejahtera Mina Tbk",
+  "logo": "https://s3.goapi.id/logo/AGAR.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e167967084911b405f5"
+  },
+  "id": "AGII",
+  "ticker": "AGII",
+  "name": "PT Aneka Gas Industri Tbk.",
+  "logo": "https://s3.goapi.id/logo/AGII.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e167967084911b405f6"
+  },
+  "id": "AGRO",
+  "ticker": "AGRO",
+  "name": "PT Bank Raya Indonesia Tbk",
+  "logo": "https://s3.goapi.id/logo/AGRO.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e167967084911b405f7"
+  },
+  "id": "AGRS",
+  "ticker": "AGRS",
+  "name": "PT Bank IBK Indonesia Tbk.",
+  "logo": "https://s3.goapi.id/logo/AGRS.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e167967084911b405f8"
+  },
+  "id": "AHAP",
+  "ticker": "AHAP",
+  "name": "Asuransi Harta Aman Pratama Tbk",
+  "logo": "https://s3.goapi.id/logo/AHAP.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e167967084911b405f9"
+  },
+  "id": "AIMS",
+  "ticker": "AIMS",
+  "name": "Akbar Indomakmur Stimec Tbk",
+  "logo": "https://s3.goapi.id/logo/AIMS.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e167967084911b405fa"
+  },
+  "id": "AISA",
+  "ticker": "AISA",
+  "name": "PT FKS Food Sejahtera Tbk",
+  "logo": "https://s3.goapi.id/logo/AISA.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e167967084911b405fb"
+  },
+  "id": "AKKU",
+  "ticker": "AKKU",
+  "name": "PT Anugerah Kagum Karya Utama Tbk",
+  "logo": "https://s3.goapi.id/logo/AKKU.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e167967084911b405fc"
+  },
+  "id": "AKPI",
+  "ticker": "AKPI",
+  "name": "Argha Karya Prima Ind. Tbk",
+  "logo": "https://s3.goapi.id/logo/AKPI.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e167967084911b405fd"
+  },
+  "id": "AKRA",
+  "ticker": "AKRA",
+  "name": "PT AKR Corporindo Tbk.",
+  "logo": "https://s3.goapi.id/logo/AKRA.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e167967084911b405fe"
+  },
+  "id": "AKSI",
+  "ticker": "AKSI",
+  "name": "PT Mineral Sumberdaya Mandiri Tbk",
+  "logo": "https://s3.goapi.id/logo/AKSI.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e167967084911b405ff"
+  },
+  "id": "ALDO",
+  "ticker": "ALDO",
+  "name": "Alkindo Naratama Tbk",
+  "logo": "https://s3.goapi.id/logo/ALDO.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e167967084911b40600"
+  },
+  "id": "ALKA",
+  "ticker": "ALKA",
+  "name": "Alakasa Industrindo Tbk",
+  "logo": "https://s3.goapi.id/logo/ALKA.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e167967084911b40601"
+  },
+  "id": "ALMI",
+  "ticker": "ALMI",
+  "name": "Alumindo Light Metal Industry Tbk",
+  "logo": "https://s3.goapi.id/logo/ALMI.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e167967084911b40602"
+  },
+  "id": "ALTO",
+  "ticker": "ALTO",
+  "name": "Tri Banyan Tirta Tbk",
+  "logo": "https://s3.goapi.id/logo/ALTO.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e167967084911b40603"
+  },
+  "id": "AMAG",
+  "ticker": "AMAG",
+  "name": "Asuransi Multi Artha Guna Tbk",
+  "logo": "https://s3.goapi.id/logo/AMAG.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e167967084911b40604"
+  },
+  "id": "AMAN",
+  "ticker": "AMAN",
+  "name": "PT Makmur Berkah Amanda Tbk.",
+  "logo": "https://s3.goapi.id/logo/AMAN.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e167967084911b40605"
+  },
+  "id": "AMAR",
+  "ticker": "AMAR",
+  "name": "PT Bank Amar Indonesia Tbk.",
+  "logo": "https://s3.goapi.id/logo/AMAR.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e167967084911b40606"
+  },
+  "id": "AMFG",
+  "ticker": "AMFG",
+  "name": "Asahimas Flat Glass Tbk",
+  "logo": "https://s3.goapi.id/logo/AMFG.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e167967084911b40607"
+  },
+  "id": "AMIN",
+  "ticker": "AMIN",
+  "name": "PT Ateliers Mecaniques D Indonesie Tbk.",
+  "logo": "https://s3.goapi.id/logo/AMIN.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e167967084911b40608"
+  },
+  "id": "AMMS",
+  "ticker": "AMMS",
+  "name": "PT Agung Menjangan Mas Tbk",
+  "logo": "https://s3.goapi.id/logo/AMMS.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e167967084911b40609"
+  },
+  "id": "AMOR",
+  "ticker": "AMOR",
+  "name": "PT Ashmore Asset Management Indonesia Tbk.",
+  "logo": "https://s3.goapi.id/logo/AMOR.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e167967084911b4060a"
+  },
+  "id": "AMRT",
+  "ticker": "AMRT",
+  "name": "PT Sumber Alfaria Trijaya Tbk.",
+  "logo": "https://s3.goapi.id/logo/AMRT.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e167967084911b4060b"
+  },
+  "id": "ANDI",
+  "ticker": "ANDI",
+  "name": "PT Andira Agro Tbk",
+  "logo": "https://s3.goapi.id/logo/ANDI.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e167967084911b4060c"
+  },
+  "id": "ANJT",
+  "ticker": "ANJT",
+  "name": "PT Austindo Nusantara Jaya Tbk.",
+  "logo": "https://s3.goapi.id/logo/ANJT.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e167967084911b4060d"
+  },
+  "id": "ANTM",
+  "ticker": "ANTM",
+  "name": "Aneka Tambang Tbk.",
+  "logo": "https://s3.goapi.id/logo/ANTM.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e167967084911b4060e"
+  },
+  "id": "APEX",
+  "ticker": "APEX",
+  "name": "Apexindo Pratama Duta Tbk",
+  "logo": "https://s3.goapi.id/logo/APEX.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e167967084911b4060f"
+  },
+  "id": "APIC",
+  "ticker": "APIC",
+  "name": "PACIFIC STRATEGIC FINANCIAL Tbk",
+  "logo": "https://s3.goapi.id/logo/APIC.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e167967084911b40610"
+  },
+  "id": "APII",
+  "ticker": "APII",
+  "name": "PT Arita Prima Indonesia Tbk.",
+  "logo": "https://s3.goapi.id/logo/APII.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e167967084911b40611"
+  },
+  "id": "APLI",
+  "ticker": "APLI",
+  "name": "Asiaplast Industries Tbk",
+  "logo": "https://s3.goapi.id/logo/APLI.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e167967084911b40612"
+  },
+  "id": "APLN",
+  "ticker": "APLN",
+  "name": "PT Agung Podomoro Land Tbk.",
+  "logo": "https://s3.goapi.id/logo/APLN.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e167967084911b40613"
+  },
+  "id": "APOL",
+  "ticker": "APOL",
+  "name": "Arpeni Pratama Ocean Line Tbk",
+  "logo": "https://s3.goapi.id/logo/APOL.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e167967084911b40614"
+  },
+  "id": "ARCI",
+  "ticker": "ARCI",
+  "name": "PT Archi Indonesia Tbk",
+  "logo": "https://s3.goapi.id/logo/ARCI.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e167967084911b40615"
+  },
+  "id": "ARGO",
+  "ticker": "ARGO",
+  "name": "Argo Pantes Tbk",
+  "logo": "https://s3.goapi.id/logo/ARGO.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e167967084911b40616"
+  },
+  "id": "ARII",
+  "ticker": "ARII",
+  "name": "Atlas Resources Tbk",
+  "logo": "https://s3.goapi.id/logo/ARII.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e167967084911b40617"
+  },
+  "id": "ARKA",
+  "ticker": "ARKA",
+  "name": "PT Arkha Jayanti Persada Tbk.",
+  "logo": "https://s3.goapi.id/logo/ARKA.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e167967084911b40618"
+  },
+  "id": "ARKO",
+  "ticker": "ARKO",
+  "name": "PT Arkora Hydro Tbk.",
+  "logo": "https://s3.goapi.id/logo/ARKO.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e167967084911b40619"
+  },
+  "id": "ARMY",
+  "ticker": "ARMY",
+  "name": "PT Armidian Karyatama Tbk",
+  "logo": "https://s3.goapi.id/logo/ARMY.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e167967084911b4061a"
+  },
+  "id": "ARNA",
+  "ticker": "ARNA",
+  "name": "Arwana Citramulia Tbk",
+  "logo": "https://s3.goapi.id/logo/ARNA.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e167967084911b4061b"
+  },
+  "id": "ARTA",
+  "ticker": "ARTA",
+  "name": "Arthavest Tbk",
+  "logo": "https://s3.goapi.id/logo/ARTA.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e167967084911b4061c"
+  },
+  "id": "ARTI",
+  "ticker": "ARTI",
+  "name": "Ratu Prabu Energi Tbk",
+  "logo": "https://s3.goapi.id/logo/ARTI.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e167967084911b4061d"
+  },
+  "id": "ARTO",
+  "ticker": "ARTO",
+  "name": "PT Bank Jago Tbk.",
+  "logo": "https://s3.goapi.id/logo/ARTO.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e167967084911b4061e"
+  },
+  "id": "ASBI",
+  "ticker": "ASBI",
+  "name": "Asuransi Bintang Tbk",
+  "logo": "https://s3.goapi.id/logo/ASBI.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e167967084911b4061f"
+  },
+  "id": "ASDM",
+  "ticker": "ASDM",
+  "name": "Asuransi Dayin Mitra Tbk",
+  "logo": "https://s3.goapi.id/logo/ASDM.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e167967084911b40620"
+  },
+  "id": "ASGR",
+  "ticker": "ASGR",
+  "name": "Astra Graphia Tbk",
+  "logo": "https://s3.goapi.id/logo/ASGR.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e167967084911b40621"
+  },
+  "id": "ASHA",
+  "ticker": "ASHA",
+  "name": "PT Cilacap Samudera Fishing Industry Tbk",
+  "logo": "https://s3.goapi.id/logo/ASHA.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e167967084911b40622"
+  },
+  "id": "ASJT",
+  "ticker": "ASJT",
+  "name": "Asuransi Jasa Tania Tbk",
+  "logo": "https://s3.goapi.id/logo/ASJT.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e167967084911b40623"
+  },
+  "id": "ASLC",
+  "ticker": "ASLC",
+  "name": "PT Autopedia Sukses Lestari Tbk",
+  "logo": "https://s3.goapi.id/logo/ASLC.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e167967084911b40624"
+  },
+  "id": "ASMI",
+  "ticker": "ASMI",
+  "name": "PT Asuransi Maximus Graha Persada Tbk.",
+  "logo": "https://s3.goapi.id/logo/ASMI.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e167967084911b40625"
+  },
+  "id": "ASPI",
+  "ticker": "ASPI",
+  "name": "PT Andalan Sakti Primaindo Tbk.",
+  "logo": "https://s3.goapi.id/logo/ASPI.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e167967084911b40626"
+  },
+  "id": "ASRI",
+  "ticker": "ASRI",
+  "name": "ALAM SUTERA REALTY Tbk",
+  "logo": "https://s3.goapi.id/logo/ASRI.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e167967084911b40627"
+  },
+  "id": "ASRM",
+  "ticker": "ASRM",
+  "name": "Asuransi Ramayana Tbk",
+  "logo": "https://s3.goapi.id/logo/ASRM.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e167967084911b40628"
+  },
+  "id": "ASSA",
+  "ticker": "ASSA",
+  "name": "Adi Sarana Armada Tbk",
+  "logo": "https://s3.goapi.id/logo/ASSA.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e167967084911b40629"
+  },
+  "id": "ATAP",
+  "ticker": "ATAP",
+  "name": "PT Trimitra Prawara Goldland Tbk ",
+  "logo": "https://s3.goapi.id/logo/ATAP.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e167967084911b4062a"
+  },
+  "id": "ATIC",
+  "ticker": "ATIC",
+  "name": "PT Anabatic Technologies Tbk",
+  "logo": "https://s3.goapi.id/logo/ATIC.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e167967084911b4062b"
+  },
+  "id": "AUTO",
+  "ticker": "AUTO",
+  "name": "Astra Otoparts Tbk",
+  "logo": "https://s3.goapi.id/logo/AUTO.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e167967084911b4062c"
+  },
+  "id": "AVIA",
+  "ticker": "AVIA",
+  "name": "PT Avia Avian Tbk",
+  "logo": "https://s3.goapi.id/logo/AVIA.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e167967084911b4062d"
+  },
+  "id": "AXIO",
+  "ticker": "AXIO",
+  "name": "PT Tera Data Indonusa Tbk",
+  "logo": "https://s3.goapi.id/logo/AXIO.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e167967084911b4062e"
+  },
+  "id": "AYLS",
+  "ticker": "AYLS",
+  "name": "PT Agro Yasa Lestari Tbk",
+  "logo": "https://s3.goapi.id/logo/AYLS.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e167967084911b4062f"
+  },
+  "id": "BABP",
+  "ticker": "BABP",
+  "name": "PT Bank MNC Internasional Tbk.",
+  "logo": "https://s3.goapi.id/logo/BABP.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e167967084911b40630"
+  },
+  "id": "BACA",
+  "ticker": "BACA",
+  "name": "PT Bank Capital Indonesia Tbk",
+  "logo": "https://s3.goapi.id/logo/BACA.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e167967084911b40631"
+  },
+  "id": "BAJA",
+  "ticker": "BAJA",
+  "name": "Saranacentral Bajatama Tbk",
+  "logo": "https://s3.goapi.id/logo/BAJA.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e167967084911b40632"
+  },
+  "id": "BALI",
+  "ticker": "BALI",
+  "name": "PT Bali Towerindo Sentra Tbk. ",
+  "logo": "https://s3.goapi.id/logo/BALI.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e167967084911b40633"
+  },
+  "id": "BANK",
+  "ticker": "BANK",
+  "name": "PT Bank Aladin Syariah Tbk",
+  "logo": "https://s3.goapi.id/logo/BANK.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e167967084911b40634"
+  },
+  "id": "BAPA",
+  "ticker": "BAPA",
+  "name": "Bekasi Asri Pemula Tbk",
+  "logo": "https://s3.goapi.id/logo/BAPA.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e167967084911b40635"
+  },
+  "id": "BAPI",
+  "ticker": "BAPI",
+  "name": "PT Bhakti Agung Propertindo Tbk.",
+  "logo": "https://s3.goapi.id/logo/BAPI.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e167967084911b40636"
+  },
+  "id": "BATA",
+  "ticker": "BATA",
+  "name": "Sepatu Bata Tbk",
+  "logo": "https://s3.goapi.id/logo/BATA.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e167967084911b40637"
+  },
+  "id": "BAUT",
+  "ticker": "BAUT",
+  "name": "PT Mitra Angkasa Sejahtera Tbk",
+  "logo": "https://s3.goapi.id/logo/BAUT.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e167967084911b40638"
+  },
+  "id": "BAYU",
+  "ticker": "BAYU",
+  "name": "Bayu Buana Tbk",
+  "logo": "https://s3.goapi.id/logo/BAYU.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e167967084911b40639"
+  },
+  "id": "BBHI",
+  "ticker": "BBHI",
+  "name": "PT Allo Bank Indonesia Tbk",
+  "logo": "https://s3.goapi.id/logo/BBHI.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e167967084911b4063a"
+  },
+  "id": "BBKP",
+  "ticker": "BBKP",
+  "name": "PT Bank KB Bukopin Tbk",
+  "logo": "https://s3.goapi.id/logo/BBKP.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e167967084911b4063b"
+  },
+  "id": "BBLD",
+  "ticker": "BBLD",
+  "name": "Buana Finance Tbk",
+  "logo": "https://s3.goapi.id/logo/BBLD.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e167967084911b4063c"
+  },
+  "id": "BBMD",
+  "ticker": "BBMD",
+  "name": "PT Bank Mestika Dharma Tbk.",
+  "logo": "https://s3.goapi.id/logo/BBMD.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e177967084911b4063d"
+  },
+  "id": "BBRM",
+  "ticker": "BBRM",
+  "name": "Pelayaran Nasional Bina Buana Raya Tbk",
+  "logo": "https://s3.goapi.id/logo/BBRM.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e177967084911b4063e"
+  },
+  "id": "BBSI",
+  "ticker": "BBSI",
+  "name": "PT Bank Bisnis Internasional Tbk.",
+  "logo": "https://s3.goapi.id/logo/BBSI.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e177967084911b4063f"
+  },
+  "id": "BBSS",
+  "ticker": "BBSS",
+  "name": "PT Bumi Benowo Sukses Sejahtera Tbk",
+  "logo": "https://s3.goapi.id/logo/BBSS.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e177967084911b40640"
+  },
+  "id": "BBTN",
+  "ticker": "BBTN",
+  "name": "PT Bank Tabungan Negara (Persero) Tbk",
+  "logo": "https://s3.goapi.id/logo/BBTN.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e177967084911b40641"
+  },
+  "id": "BBYB",
+  "ticker": "BBYB",
+  "name": "PT Bank Neo Commerce Tbk.",
+  "logo": "https://s3.goapi.id/logo/BBYB.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e177967084911b40642"
+  },
+  "id": "BCAP",
+  "ticker": "BCAP",
+  "name": "MNC Kapital Indonesia Tbk",
+  "logo": "https://s3.goapi.id/logo/BCAP.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e177967084911b40643"
+  },
+  "id": "BCIC",
+  "ticker": "BCIC",
+  "name": "PT Bank JTrust Indonesia Tbk. ",
+  "logo": "https://s3.goapi.id/logo/BCIC.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e177967084911b40644"
+  },
+  "id": "BCIP",
+  "ticker": "BCIP",
+  "name": "Bumi Citra Permai Tbk",
+  "logo": "https://s3.goapi.id/logo/BCIP.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e177967084911b40645"
+  },
+  "id": "BDKR",
+  "ticker": "BDKR",
+  "name": "PT Berdikari Pondasi Perkasa Tbk.",
+  "logo": "https://s3.goapi.id/logo/BDKR.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e177967084911b40646"
+  },
+  "id": "BDMN",
+  "ticker": "BDMN",
+  "name": "PT Bank Danamon Indonesia Tbk",
+  "logo": "https://s3.goapi.id/logo/BDMN.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e177967084911b40647"
+  },
+  "id": "BEBS",
+  "ticker": "BEBS",
+  "name": "PT Berkah Beton Sadaya Tbk",
+  "logo": "https://s3.goapi.id/logo/BEBS.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e177967084911b40648"
+  },
+  "id": "BEEF",
+  "ticker": "BEEF",
+  "name": "PT Estika Tata Tiara Tbk.",
+  "logo": "https://s3.goapi.id/logo/BEEF.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e177967084911b40649"
+  },
+  "id": "BEER",
+  "ticker": "BEER",
+  "name": "PT Jobubu Jarum Minahasa Tbk",
+  "logo": "https://s3.goapi.id/logo/BEER.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e177967084911b4064a"
+  },
+  "id": "BEKS",
+  "ticker": "BEKS",
+  "name": "PT Bank Pembangunan Daerah Banten Tbk.",
+  "logo": "https://s3.goapi.id/logo/BEKS.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e177967084911b4064b"
+  },
+  "id": "BELI",
+  "ticker": "BELI",
+  "name": "PT Global Digital Niaga Tbk",
+  "logo": "https://s3.goapi.id/logo/BELI.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e177967084911b4064c"
+  },
+  "id": "BELL",
+  "ticker": "BELL",
+  "name": "PT Trisula Textile Industries Tbk",
+  "logo": "https://s3.goapi.id/logo/BELL.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e177967084911b4064d"
+  },
+  "id": "BESS",
+  "ticker": "BESS",
+  "name": "PT Batulicin Nusantara Maritim Tbk.",
+  "logo": "https://s3.goapi.id/logo/BESS.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e177967084911b4064e"
+  },
+  "id": "BEST",
+  "ticker": "BEST",
+  "name": "Bekasi Fajar Industrial Estate Tbk",
+  "logo": "https://s3.goapi.id/logo/BEST.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e177967084911b4064f"
+  },
+  "id": "BFIN",
+  "ticker": "BFIN",
+  "name": "BFI Finance Indonesia Tbk",
+  "logo": "https://s3.goapi.id/logo/BFIN.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e177967084911b40650"
+  },
+  "id": "BGTG",
+  "ticker": "BGTG",
+  "name": "PT Bank Ganesha Tbk.",
+  "logo": "https://s3.goapi.id/logo/BGTG.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e177967084911b40651"
+  },
+  "id": "BHAT",
+  "ticker": "BHAT",
+  "name": "PT Bhakti Multi Artha Tbk.",
+  "logo": "https://s3.goapi.id/logo/BHAT.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e177967084911b40652"
+  },
+  "id": "BHIT",
+  "ticker": "BHIT",
+  "name": "PT MNC Investama Tbk.",
+  "logo": "https://s3.goapi.id/logo/BHIT.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e177967084911b40653"
+  },
+  "id": "BIKA",
+  "ticker": "BIKA",
+  "name": "PT Binakarya Jaya Abadi Tbk.",
+  "logo": "https://s3.goapi.id/logo/BIKA.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e177967084911b40654"
+  },
+  "id": "BIKE",
+  "ticker": "BIKE",
+  "name": "PT Sepeda Bersama Indonesia Tbk",
+  "logo": "https://s3.goapi.id/logo/BIKE.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e177967084911b40655"
+  },
+  "id": "BIMA",
+  "ticker": "BIMA",
+  "name": "Primarindo Asia Infrastructure Tbk",
+  "logo": "https://s3.goapi.id/logo/BIMA.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e177967084911b40656"
+  },
+  "id": "BINA",
+  "ticker": "BINA",
+  "name": "PT Bank Ina Perdana Tbk.",
+  "logo": "https://s3.goapi.id/logo/BINA.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e177967084911b40657"
+  },
+  "id": "BINO",
+  "ticker": "BINO",
+  "name": "PT Perma Plasindo Tbk ",
+  "logo": "https://s3.goapi.id/logo/BINO.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e177967084911b40658"
+  },
+  "id": "BIPI",
+  "ticker": "BIPI",
+  "name": "PT Astrindo Nusantara Infrastruktur Tbk.",
+  "logo": "https://s3.goapi.id/logo/BIPI.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e177967084911b40659"
+  },
+  "id": "BIPP",
+  "ticker": "BIPP",
+  "name": "Bhuwanatala Indah Permai Tbk",
+  "logo": "https://s3.goapi.id/logo/BIPP.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e177967084911b4065a"
+  },
+  "id": "BIRD",
+  "ticker": "BIRD",
+  "name": "PT Blue Bird Tbk",
+  "logo": "https://s3.goapi.id/logo/BIRD.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e177967084911b4065b"
+  },
+  "id": "BISI",
+  "ticker": "BISI",
+  "name": "BISI INTERNATIONAL Tbk",
+  "logo": "https://s3.goapi.id/logo/BISI.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e177967084911b4065c"
+  },
+  "id": "BJBR",
+  "ticker": "BJBR",
+  "name": "Bank Pembangunan Daerah Jawa Barat dan Banten Tbk",
+  "logo": "https://s3.goapi.id/logo/BJBR.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e177967084911b4065d"
+  },
+  "id": "BJTM",
+  "ticker": "BJTM",
+  "name": "Bank Pembangunan Daerah Jawa Timur Tbk",
+  "logo": "https://s3.goapi.id/logo/BJTM.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e177967084911b4065e"
+  },
+  "id": "BKDP",
+  "ticker": "BKDP",
+  "name": "Bukit Darmo Property Tbk",
+  "logo": "https://s3.goapi.id/logo/BKDP.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e177967084911b4065f"
+  },
+  "id": "BKSL",
+  "ticker": "BKSL",
+  "name": "Sentul City Tbk",
+  "logo": "https://s3.goapi.id/logo/BKSL.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e177967084911b40660"
+  },
+  "id": "BKSW",
+  "ticker": "BKSW",
+  "name": "PT Bank QNB Indonesia Tbk",
+  "logo": "https://s3.goapi.id/logo/BKSW.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e177967084911b40661"
+  },
+  "id": "BLTA",
+  "ticker": "BLTA",
+  "name": "Berlian Laju Tanker Tbk",
+  "logo": "https://s3.goapi.id/logo/BLTA.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e177967084911b40662"
+  },
+  "id": "BLTZ",
+  "ticker": "BLTZ",
+  "name": "PT Graha Layar Prima Tbk.",
+  "logo": "https://s3.goapi.id/logo/BLTZ.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e177967084911b40663"
+  },
+  "id": "BLUE",
+  "ticker": "BLUE",
+  "name": "PT Berkah Prima Perkasa Tbk",
+  "logo": "https://s3.goapi.id/logo/BLUE.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e177967084911b40664"
+  },
+  "id": "BMAS",
+  "ticker": "BMAS",
+  "name": "PT Bank Maspion Indonesia Tbk.",
+  "logo": "https://s3.goapi.id/logo/BMAS.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e177967084911b40665"
+  },
+  "id": "BMBL",
+  "ticker": "BMBL",
+  "name": "PT Lavender Bina Cendikia Tbk",
+  "logo": "https://s3.goapi.id/logo/BMBL.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e177967084911b40666"
+  },
+  "id": "BMHS",
+  "ticker": "BMHS",
+  "name": "PT Bundamedik Tbk",
+  "logo": "https://s3.goapi.id/logo/BMHS.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e177967084911b40667"
+  },
+  "id": "BMSR",
+  "ticker": "BMSR",
+  "name": "Bintang Mitra Semestaraya Tbk",
+  "logo": "https://s3.goapi.id/logo/BMSR.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e177967084911b40668"
+  },
+  "id": "BMTR",
+  "ticker": "BMTR",
+  "name": "PT Global Mediacom Tbk",
+  "logo": "https://s3.goapi.id/logo/BMTR.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e177967084911b40669"
+  },
+  "id": "BNBA",
+  "ticker": "BNBA",
+  "name": "Bank Bumi Arta Tbk",
+  "logo": "https://s3.goapi.id/logo/BNBA.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e177967084911b4066a"
+  },
+  "id": "BNBR",
+  "ticker": "BNBR",
+  "name": "Bakrie & Brothers Tbk",
+  "logo": "https://s3.goapi.id/logo/BNBR.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e177967084911b4066b"
+  },
+  "id": "BNGA",
+  "ticker": "BNGA",
+  "name": "PT Bank CIMB Niaga Tbk",
+  "logo": "https://s3.goapi.id/logo/BNGA.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e177967084911b4066c"
+  },
+  "id": "BNII",
+  "ticker": "BNII",
+  "name": "PT Bank Maybank Indonesia Tbk",
+  "logo": "https://s3.goapi.id/logo/BNII.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e177967084911b4066d"
+  },
+  "id": "BNLI",
+  "ticker": "BNLI",
+  "name": "Bank Permata Tbk",
+  "logo": "https://s3.goapi.id/logo/BNLI.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e177967084911b4066e"
+  },
+  "id": "BOBA",
+  "ticker": "BOBA",
+  "name": "PT Formosa Ingredient Factory Tbk",
+  "logo": "https://s3.goapi.id/logo/BOBA.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e177967084911b4066f"
+  },
+  "id": "BOLA",
+  "ticker": "BOLA",
+  "name": "PT Bali Bintang Sejahtera Tbk.",
+  "logo": "https://s3.goapi.id/logo/BOLA.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e177967084911b40670"
+  },
+  "id": "BOLT",
+  "ticker": "BOLT",
+  "name": "PT Garuda Metalindo Tbk.",
+  "logo": "https://s3.goapi.id/logo/BOLT.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e177967084911b40671"
+  },
+  "id": "BORN",
+  "ticker": "BORN",
+  "name": "Borneo Lumbung Energi &amp; Metal Tbk",
+  "logo": "https://s3.goapi.id/logo/BORN.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e177967084911b40672"
+  },
+  "id": "BOSS",
+  "ticker": "BOSS",
+  "name": "PT Borneo Olah Sarana Sukses Tbk.",
+  "logo": "https://s3.goapi.id/logo/BOSS.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e177967084911b40673"
+  },
+  "id": "BPFI",
+  "ticker": "BPFI",
+  "name": "Batavia Prosperindo Finance Tbk",
+  "logo": "https://s3.goapi.id/logo/BPFI.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e177967084911b40674"
+  },
+  "id": "BPII",
+  "ticker": "BPII",
+  "name": "PT Batavia Prosperindo Internasional Tbk.",
+  "logo": "https://s3.goapi.id/logo/BPII.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e177967084911b40675"
+  },
+  "id": "BPTR",
+  "ticker": "BPTR",
+  "name": "PT Batavia Prosperindo Trans Tbk.",
+  "logo": "https://s3.goapi.id/logo/BPTR.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e177967084911b40676"
+  },
+  "id": "BRAM",
+  "ticker": "BRAM",
+  "name": "Indo Kordsa Tbk",
+  "logo": "https://s3.goapi.id/logo/BRAM.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e177967084911b40677"
+  },
+  "id": "BRIS",
+  "ticker": "BRIS",
+  "name": "PT Bank Syariah Indonesia Tbk",
+  "logo": "https://s3.goapi.id/logo/BRIS.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e177967084911b40678"
+  },
+  "id": "BRMS",
+  "ticker": "BRMS",
+  "name": "Bumi Resources Minerals Tbk",
+  "logo": "https://s3.goapi.id/logo/BRMS.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e177967084911b40679"
+  },
+  "id": "BRNA",
+  "ticker": "BRNA",
+  "name": "Berlina Tbk",
+  "logo": "https://s3.goapi.id/logo/BRNA.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e177967084911b4067a"
+  },
+  "id": "BRPT",
+  "ticker": "BRPT",
+  "name": "Barito Pacific Tbk",
+  "logo": "https://s3.goapi.id/logo/BRPT.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e177967084911b4067b"
+  },
+  "id": "BSBK",
+  "ticker": "BSBK",
+  "name": "PT Wulandari Bangun Laksana Tbk",
+  "logo": "https://s3.goapi.id/logo/BSBK.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e177967084911b4067c"
+  },
+  "id": "BSDE",
+  "ticker": "BSDE",
+  "name": "PT Bumi Serpong Damai Tbk",
+  "logo": "https://s3.goapi.id/logo/BSDE.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e177967084911b4067d"
+  },
+  "id": "BSIM",
+  "ticker": "BSIM",
+  "name": "Bank Sinarmas Tbk",
+  "logo": "https://s3.goapi.id/logo/BSIM.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e177967084911b4067e"
+  },
+  "id": "BSML",
+  "ticker": "BSML",
+  "name": "PT Bintang Samudera Mandiri Lines Tbk",
+  "logo": "https://s3.goapi.id/logo/BSML.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e177967084911b4067f"
+  },
+  "id": "BSSR",
+  "ticker": "BSSR",
+  "name": "Baramulti Suksessarana Tbk",
+  "logo": "https://s3.goapi.id/logo/BSSR.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e177967084911b40680"
+  },
+  "id": "BSWD",
+  "ticker": "BSWD",
+  "name": "Bank of India Indonesia Tbk",
+  "logo": "https://s3.goapi.id/logo/BSWD.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e177967084911b40681"
+  },
+  "id": "BTEK",
+  "ticker": "BTEK",
+  "name": "Bumi Teknokultura Unggul Tbk",
+  "logo": "https://s3.goapi.id/logo/BTEK.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e177967084911b40682"
+  },
+  "id": "BTEL",
+  "ticker": "BTEL",
+  "name": "Bakrie Telecom Tbk",
+  "logo": "https://s3.goapi.id/logo/BTEL.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e177967084911b40683"
+  },
+  "id": "BTON",
+  "ticker": "BTON",
+  "name": "Betonjaya Manunggal Tbk",
+  "logo": "https://s3.goapi.id/logo/BTON.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e177967084911b40684"
+  },
+  "id": "BTPN",
+  "ticker": "BTPN",
+  "name": "PT Bank BTPN Tbk",
+  "logo": "https://s3.goapi.id/logo/BTPN.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e177967084911b40685"
+  },
+  "id": "BUAH",
+  "ticker": "BUAH",
+  "name": "PT Segar Kumala Indonesia Tbk",
+  "logo": "https://s3.goapi.id/logo/BUAH.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e177967084911b40686"
+  },
+  "id": "BUDI",
+  "ticker": "BUDI",
+  "name": "PT Budi Starch & Sweetener Tbk.",
+  "logo": "https://s3.goapi.id/logo/BUDI.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e177967084911b40687"
+  },
+  "id": "BUKA",
+  "ticker": "BUKA",
+  "name": "PT Bukalapak.com Tbk",
+  "logo": "https://s3.goapi.id/logo/BUKA.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e177967084911b40688"
+  },
+  "id": "BUKK",
+  "ticker": "BUKK",
+  "name": "Bukaka Teknik Utama Tbk",
+  "logo": "https://s3.goapi.id/logo/BUKK.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e177967084911b40689"
+  },
+  "id": "BULL",
+  "ticker": "BULL",
+  "name": "PT Buana Lintas Lautan Tbk.",
+  "logo": "https://s3.goapi.id/logo/BULL.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e177967084911b4068a"
+  },
+  "id": "BUMI",
+  "ticker": "BUMI",
+  "name": "Bumi Resources Tbk",
+  "logo": "https://s3.goapi.id/logo/BUMI.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e177967084911b4068b"
+  },
+  "id": "BUVA",
+  "ticker": "BUVA",
+  "name": "PT Bukit Uluwatu Villa Tbk",
+  "logo": "https://s3.goapi.id/logo/BUVA.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e177967084911b4068c"
+  },
+  "id": "BVIC",
+  "ticker": "BVIC",
+  "name": "Bank Victoria International Tbk",
+  "logo": "https://s3.goapi.id/logo/BVIC.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e177967084911b4068d"
+  },
+  "id": "BWPT",
+  "ticker": "BWPT",
+  "name": "Eagle High Plantations Tbk",
+  "logo": "https://s3.goapi.id/logo/BWPT.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e177967084911b4068e"
+  },
+  "id": "BYAN",
+  "ticker": "BYAN",
+  "name": "Bayan Resources Tbk",
+  "logo": "https://s3.goapi.id/logo/BYAN.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e177967084911b4068f"
+  },
+  "id": "CAKK",
+  "ticker": "CAKK",
+  "name": "PT Cahayaputra Asa Keramik Tbk.",
+  "logo": "https://s3.goapi.id/logo/CAKK.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e177967084911b40690"
+  },
+  "id": "CAMP",
+  "ticker": "CAMP",
+  "name": "PT Campina Ice Cream Industry Tbk.",
+  "logo": "https://s3.goapi.id/logo/CAMP.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e177967084911b40691"
+  },
+  "id": "CANI",
+  "ticker": "CANI",
+  "name": "PT Capitol Nusantara Indonesia Tbk.",
+  "logo": "https://s3.goapi.id/logo/CANI.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e177967084911b40692"
+  },
+  "id": "CARS",
+  "ticker": "CARS",
+  "name": "PT Industri dan Perdagangan Bintraco Dharma Tbk",
+  "logo": "https://s3.goapi.id/logo/CARS.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e177967084911b40693"
+  },
+  "id": "CASA",
+  "ticker": "CASA",
+  "name": "PT Capital Financial Indonesia Tbk",
+  "logo": "https://s3.goapi.id/logo/CASA.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e177967084911b40694"
+  },
+  "id": "CASH",
+  "ticker": "CASH",
+  "name": "PT Cashlez Worldwide Indonesia Tbk.",
+  "logo": "https://s3.goapi.id/logo/CASH.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e177967084911b40695"
+  },
+  "id": "CASS",
+  "ticker": "CASS",
+  "name": "Cardig Aero Services Tbk",
+  "logo": "https://s3.goapi.id/logo/CASS.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e177967084911b40696"
+  },
+  "id": "CBMF",
+  "ticker": "CBMF",
+  "name": "PT Cahaya Bintang Medan Tbk",
+  "logo": "https://s3.goapi.id/logo/CBMF.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e177967084911b40697"
+  },
+  "id": "CBPE",
+  "ticker": "CBPE",
+  "name": "PT Citra Buana Prasida Tbk",
+  "logo": "https://s3.goapi.id/logo/CBPE.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e177967084911b40698"
+  },
+  "id": "CBRE",
+  "ticker": "CBRE",
+  "name": "PT Cakra Buana Resources Energi Tbk",
+  "logo": "https://s3.goapi.id/logo/CBRE.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e177967084911b40699"
+  },
+  "id": "CBUT",
+  "ticker": "CBUT",
+  "name": "PT Citra Borneo Utama Tbk",
+  "logo": "https://s3.goapi.id/logo/CBUT.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e177967084911b4069a"
+  },
+  "id": "CCSI",
+  "ticker": "CCSI",
+  "name": "PT Communication Cable Systems Indonesia Tbk.",
+  "logo": "https://s3.goapi.id/logo/CCSI.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e177967084911b4069b"
+  },
+  "id": "CEKA",
+  "ticker": "CEKA",
+  "name": "PT Wilmar Cahaya Indonesia Tbk.",
+  "logo": "https://s3.goapi.id/logo/CEKA.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e177967084911b4069c"
+  },
+  "id": "CENT",
+  "ticker": "CENT",
+  "name": "PT Centratama Telekomunikasi Indonesia Tbk.",
+  "logo": "https://s3.goapi.id/logo/CENT.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e177967084911b4069d"
+  },
+  "id": "CFIN",
+  "ticker": "CFIN",
+  "name": "Clipan Finance Indonesia Tbk",
+  "logo": "https://s3.goapi.id/logo/CFIN.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e177967084911b4069e"
+  },
+  "id": "CHEM",
+  "ticker": "CHEM",
+  "name": "PT Chemstar Indonesia Tbk",
+  "logo": "https://s3.goapi.id/logo/CHEM.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e177967084911b4069f"
+  },
+  "id": "CHIP",
+  "ticker": "CHIP",
+  "name": "PT Pelita Teknologi Global Tbk",
+  "logo": "https://s3.goapi.id/logo/CHIP.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e177967084911b406a0"
+  },
+  "id": "CINT",
+  "ticker": "CINT",
+  "name": "PT Chitose Internasional Tbk",
+  "logo": "https://s3.goapi.id/logo/CINT.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e177967084911b406a1"
+  },
+  "id": "CITA",
+  "ticker": "CITA",
+  "name": "Cita Mineral Investindo Tbk",
+  "logo": "https://s3.goapi.id/logo/CITA.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e177967084911b406a2"
+  },
+  "id": "CITY",
+  "ticker": "CITY",
+  "name": "PT Natura City Developments Tbk.",
+  "logo": "https://s3.goapi.id/logo/CITY.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e177967084911b406a3"
+  },
+  "id": "CKRA",
+  "ticker": "CKRA",
+  "name": "Cakra Mineral Tbk.",
+  "logo": "https://s3.goapi.id/logo/CKRA.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e177967084911b406a4"
+  },
+  "id": "CLAY",
+  "ticker": "CLAY",
+  "name": "PT Citra Putra Realty Tbk",
+  "logo": "https://s3.goapi.id/logo/CLAY.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e177967084911b406a5"
+  },
+  "id": "CLEO",
+  "ticker": "CLEO",
+  "name": "PT Sariguna Primatirta Tbk",
+  "logo": "https://s3.goapi.id/logo/CLEO.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e177967084911b406a6"
+  },
+  "id": "CLPI",
+  "ticker": "CLPI",
+  "name": "Colorpak Indonesia Tbk",
+  "logo": "https://s3.goapi.id/logo/CLPI.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e177967084911b406a7"
+  },
+  "id": "CMNP",
+  "ticker": "CMNP",
+  "name": "Citra Marga Nusaphala Persada Tbk",
+  "logo": "https://s3.goapi.id/logo/CMNP.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e177967084911b406a8"
+  },
+  "id": "CMNT",
+  "ticker": "CMNT",
+  "name": "PT Cemindo Gemilang Tbk",
+  "logo": "https://s3.goapi.id/logo/CMNT.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e177967084911b406a9"
+  },
+  "id": "CMPP",
+  "ticker": "CMPP",
+  "name": "PT AirAsia Indonesia Tbk",
+  "logo": "https://s3.goapi.id/logo/CMPP.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e177967084911b406aa"
+  },
+  "id": "CMRY",
+  "ticker": "CMRY",
+  "name": "PT Cisarua Mountain Dairy Tbk",
+  "logo": "https://s3.goapi.id/logo/CMRY.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e177967084911b406ab"
+  },
+  "id": "CNKO",
+  "ticker": "CNKO",
+  "name": "Exploitasi Energi Indonesia Tbk",
+  "logo": "https://s3.goapi.id/logo/CNKO.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e177967084911b406ac"
+  },
+  "id": "CNTX",
+  "ticker": "CNTX",
+  "name": "PT Century Textile Industry Tbk",
+  "logo": "https://s3.goapi.id/logo/CNTX.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e177967084911b406ad"
+  },
+  "id": "COAL",
+  "ticker": "COAL",
+  "name": "PT Black Diamond Resources Tbk",
+  "logo": "https://s3.goapi.id/logo/COAL.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e177967084911b406ae"
+  },
+  "id": "COCO",
+  "ticker": "COCO",
+  "name": "PT Wahana Interfood Nusantara Tbk.",
+  "logo": "https://s3.goapi.id/logo/COCO.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e177967084911b406af"
+  },
+  "id": "COWL",
+  "ticker": "COWL",
+  "name": "COWELL DEVELOPMENT Tbk",
+  "logo": "https://s3.goapi.id/logo/COWL.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e177967084911b406b0"
+  },
+  "id": "CPIN",
+  "ticker": "CPIN",
+  "name": "Charoen Pokphand Indonesia Tbk",
+  "logo": "https://s3.goapi.id/logo/CPIN.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e177967084911b406b1"
+  },
+  "id": "CPRI",
+  "ticker": "CPRI",
+  "name": "PT Capri Nusa Satu Properti Tbk.",
+  "logo": "https://s3.goapi.id/logo/CPRI.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e177967084911b406b2"
+  },
+  "id": "CPRO",
+  "ticker": "CPRO",
+  "name": "Central Proteina Prima Tbk",
+  "logo": "https://s3.goapi.id/logo/CPRO.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e177967084911b406b3"
+  },
+  "id": "CRAB",
+  "ticker": "CRAB",
+  "name": "PT Toba Surimi Industries Tbk",
+  "logo": "https://s3.goapi.id/logo/CRAB.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e177967084911b406b4"
+  },
+  "id": "CSAP",
+  "ticker": "CSAP",
+  "name": "Catur Sentosa Adiprana Tbk",
+  "logo": "https://s3.goapi.id/logo/CSAP.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e177967084911b406b5"
+  },
+  "id": "CSIS",
+  "ticker": "CSIS",
+  "name": "PT Cahayasakti Investindo Sukses Tbk",
+  "logo": "https://s3.goapi.id/logo/CSIS.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e177967084911b406b6"
+  },
+  "id": "CSMI",
+  "ticker": "CSMI",
+  "name": "PT Cipta Selera Murni Tbk.",
+  "logo": "https://s3.goapi.id/logo/CSMI.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e177967084911b406b7"
+  },
+  "id": "CSRA",
+  "ticker": "CSRA",
+  "name": "PT Cisadane Sawit Raya Tbk.",
+  "logo": "https://s3.goapi.id/logo/CSRA.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e177967084911b406b8"
+  },
+  "id": "CTBN",
+  "ticker": "CTBN",
+  "name": "Citra Tubindo Tbk",
+  "logo": "https://s3.goapi.id/logo/CTBN.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e177967084911b406b9"
+  },
+  "id": "CTRA",
+  "ticker": "CTRA",
+  "name": "Ciputra Development Tbk",
+  "logo": "https://s3.goapi.id/logo/CTRA.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e177967084911b406ba"
+  },
+  "id": "CTTH",
+  "ticker": "CTTH",
+  "name": "Citatah Tbk",
+  "logo": "https://s3.goapi.id/logo/CTTH.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e177967084911b406bb"
+  },
+  "id": "CUAN",
+  "ticker": "CUAN",
+  "name": "PT Petrindo Jaya Kreasi Tbk",
+  "logo": "https://s3.goapi.id/logo/CUAN.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e177967084911b406bc"
+  },
+  "id": "DADA",
+  "ticker": "DADA",
+  "name": "PT Diamond Citra Propertindo Tbk.",
+  "logo": "https://s3.goapi.id/logo/DADA.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e177967084911b406bd"
+  },
+  "id": "DART",
+  "ticker": "DART",
+  "name": "Duta Anggada Realty Tbk",
+  "logo": "https://s3.goapi.id/logo/DART.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e177967084911b406be"
+  },
+  "id": "DAYA",
+  "ticker": "DAYA",
+  "name": "PT Duta Intidaya Tbk.",
+  "logo": "https://s3.goapi.id/logo/DAYA.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e177967084911b406bf"
+  },
+  "id": "DCII",
+  "ticker": "DCII",
+  "name": "PT DCI Indonesia Tbk",
+  "logo": "https://s3.goapi.id/logo/DCII.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e177967084911b406c0"
+  },
+  "id": "DEAL",
+  "ticker": "DEAL",
+  "name": "PT Dewata Freightinternational Tbk.",
+  "logo": "https://s3.goapi.id/logo/DEAL.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e177967084911b406c1"
+  },
+  "id": "DEFI",
+  "ticker": "DEFI",
+  "name": "Danasupra Erapacific Tbk",
+  "logo": "https://s3.goapi.id/logo/DEFI.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e177967084911b406c2"
+  },
+  "id": "DEPO",
+  "ticker": "DEPO",
+  "name": "PT Caturkarda Depo Bangunan Tbk",
+  "logo": "https://s3.goapi.id/logo/DEPO.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e177967084911b406c3"
+  },
+  "id": "DEWA",
+  "ticker": "DEWA",
+  "name": "Darma Henwa Tbk",
+  "logo": "https://s3.goapi.id/logo/DEWA.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e177967084911b406c4"
+  },
+  "id": "DEWI",
+  "ticker": "DEWI",
+  "name": "PT Dewi Shri Farmindo Tbk",
+  "logo": "https://s3.goapi.id/logo/DEWI.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e177967084911b406c5"
+  },
+  "id": "DFAM",
+  "ticker": "DFAM",
+  "name": "PT Dafam Property Indonesia Tbk",
+  "logo": "https://s3.goapi.id/logo/DFAM.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e177967084911b406c6"
+  },
+  "id": "DGIK",
+  "ticker": "DGIK",
+  "name": "Nusa Konstruksi Enjiniring  Tbk",
+  "logo": "https://s3.goapi.id/logo/DGIK.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e177967084911b406c7"
+  },
+  "id": "DGNS",
+  "ticker": "DGNS",
+  "name": "PT Diagnos Laboratorium Utama Tbk",
+  "logo": "https://s3.goapi.id/logo/DGNS.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e177967084911b406c8"
+  },
+  "id": "DIGI",
+  "ticker": "DIGI",
+  "name": "PT Arkadia Digital Media Tbk",
+  "logo": "https://s3.goapi.id/logo/DIGI.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e177967084911b406c9"
+  },
+  "id": "DILD",
+  "ticker": "DILD",
+  "name": "Intiland Development Tbk",
+  "logo": "https://s3.goapi.id/logo/DILD.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e177967084911b406ca"
+  },
+  "id": "DIVA",
+  "ticker": "DIVA",
+  "name": "PT Distribusi Voucher Nusantara Tbk",
+  "logo": "https://s3.goapi.id/logo/DIVA.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e177967084911b406cb"
+  },
+  "id": "DKFT",
+  "ticker": "DKFT",
+  "name": "Central Omega Resources Tbk",
+  "logo": "https://s3.goapi.id/logo/DKFT.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e177967084911b406cc"
+  },
+  "id": "DLTA",
+  "ticker": "DLTA",
+  "name": "Delta Djakarta Tbk",
+  "logo": "https://s3.goapi.id/logo/DLTA.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e177967084911b406cd"
+  },
+  "id": "DMAS",
+  "ticker": "DMAS",
+  "name": "PT Puradelta Lestari Tbk.",
+  "logo": "https://s3.goapi.id/logo/DMAS.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e177967084911b406ce"
+  },
+  "id": "DMMX",
+  "ticker": "DMMX",
+  "name": "PT Digital Mediatama Maxima Tbk",
+  "logo": "https://s3.goapi.id/logo/DMMX.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e177967084911b406cf"
+  },
+  "id": "DMND",
+  "ticker": "DMND",
+  "name": "PT Diamond Food Indonesia Tbk.",
+  "logo": "https://s3.goapi.id/logo/DMND.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e177967084911b406d0"
+  },
+  "id": "DNAR",
+  "ticker": "DNAR",
+  "name": "PT Bank Oke Indonesia Tbk.",
+  "logo": "https://s3.goapi.id/logo/DNAR.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e177967084911b406d1"
+  },
+  "id": "DNET",
+  "ticker": "DNET",
+  "name": "PT Indoritel Makmur Internasional Tbk.",
+  "logo": "https://s3.goapi.id/logo/DNET.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e177967084911b406d2"
+  },
+  "id": "DOID",
+  "ticker": "DOID",
+  "name": "Delta Dunia Makmur Tbk",
+  "logo": "https://s3.goapi.id/logo/DOID.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e177967084911b406d3"
+  },
+  "id": "DPNS",
+  "ticker": "DPNS",
+  "name": "Duta Pertiwi Nusantara Tbk",
+  "logo": "https://s3.goapi.id/logo/DPNS.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e177967084911b406d4"
+  },
+  "id": "DPUM",
+  "ticker": "DPUM",
+  "name": "PT Dua Putra Utama Makmur Tbk.",
+  "logo": "https://s3.goapi.id/logo/DPUM.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e177967084911b406d5"
+  },
+  "id": "DRMA",
+  "ticker": "DRMA",
+  "name": "PT Dharma Polimetal Tbk",
+  "logo": "https://s3.goapi.id/logo/DRMA.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e177967084911b406d6"
+  },
+  "id": "DSFI",
+  "ticker": "DSFI",
+  "name": "Dharma Samudera Fishing Ind. Tbk",
+  "logo": "https://s3.goapi.id/logo/DSFI.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e177967084911b406d7"
+  },
+  "id": "DSNG",
+  "ticker": "DSNG",
+  "name": "PT Dharma Satya Nusantara Tbk.",
+  "logo": "https://s3.goapi.id/logo/DSNG.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e177967084911b406d8"
+  },
+  "id": "DSSA",
+  "ticker": "DSSA",
+  "name": "Dian Swastatika Sentosa Tbk",
+  "logo": "https://s3.goapi.id/logo/DSSA.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e177967084911b406d9"
+  },
+  "id": "DUCK",
+  "ticker": "DUCK",
+  "name": "PT Jaya Bersama Indo Tbk.",
+  "logo": "https://s3.goapi.id/logo/DUCK.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e177967084911b406da"
+  },
+  "id": "DUTI",
+  "ticker": "DUTI",
+  "name": "Duta Pertiwi Tbk",
+  "logo": "https://s3.goapi.id/logo/DUTI.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e177967084911b406db"
+  },
+  "id": "DVLA",
+  "ticker": "DVLA",
+  "name": "Darya-Varia Laboratoria Tbk",
+  "logo": "https://s3.goapi.id/logo/DVLA.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e177967084911b406dc"
+  },
+  "id": "DWGL",
+  "ticker": "DWGL",
+  "name": "PT Dwi Guna Laksana Tbk",
+  "logo": "https://s3.goapi.id/logo/DWGL.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e177967084911b406dd"
+  },
+  "id": "DYAN",
+  "ticker": "DYAN",
+  "name": "PT Dyandra Media International Tbk.",
+  "logo": "https://s3.goapi.id/logo/DYAN.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e177967084911b406de"
+  },
+  "id": "EAST",
+  "ticker": "EAST",
+  "name": "PT Eastparc Hotel Tbk",
+  "logo": "https://s3.goapi.id/logo/EAST.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e177967084911b406df"
+  },
+  "id": "ECII",
+  "ticker": "ECII",
+  "name": "PT Electronic City Indonesia Tbk.",
+  "logo": "https://s3.goapi.id/logo/ECII.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e177967084911b406e0"
+  },
+  "id": "EDGE",
+  "ticker": "EDGE",
+  "name": "PT Indointernet Tbk.",
+  "logo": "https://s3.goapi.id/logo/EDGE.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e177967084911b406e1"
+  },
+  "id": "EKAD",
+  "ticker": "EKAD",
+  "name": "Ekadharma International Tbk",
+  "logo": "https://s3.goapi.id/logo/EKAD.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e177967084911b406e2"
+  },
+  "id": "ELIT",
+  "ticker": "ELIT",
+  "name": "PT Data Sinergitama Jaya Tbk",
+  "logo": "https://s3.goapi.id/logo/ELIT.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e177967084911b406e3"
+  },
+  "id": "ELPI",
+  "ticker": "ELPI",
+  "name": "PT Pelayaran Nasional Ekalya Purnamasari Tbk",
+  "logo": "https://s3.goapi.id/logo/ELPI.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e177967084911b406e4"
+  },
+  "id": "ELSA",
+  "ticker": "ELSA",
+  "name": "Elnusa Tbk",
+  "logo": "https://s3.goapi.id/logo/ELSA.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e177967084911b406e5"
+  },
+  "id": "ELTY",
+  "ticker": "ELTY",
+  "name": "Bakrieland Development Tbk",
+  "logo": "https://s3.goapi.id/logo/ELTY.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e177967084911b406e6"
+  },
+  "id": "EMDE",
+  "ticker": "EMDE",
+  "name": "Megapolitan Developments Tbk",
+  "logo": "https://s3.goapi.id/logo/EMDE.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e177967084911b406e7"
+  },
+  "id": "EMTK",
+  "ticker": "EMTK",
+  "name": "Elang Mahkota Teknologi Tbk",
+  "logo": "https://s3.goapi.id/logo/EMTK.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e177967084911b406e8"
+  },
+  "id": "ENAK",
+  "ticker": "ENAK",
+  "name": "PT Champ Resto Indonesia Tbk",
+  "logo": "https://s3.goapi.id/logo/ENAK.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e177967084911b406e9"
+  },
+  "id": "ENRG",
+  "ticker": "ENRG",
+  "name": "Energi Mega Persada Tbk",
+  "logo": "https://s3.goapi.id/logo/ENRG.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e177967084911b406ea"
+  },
+  "id": "ENVY",
+  "ticker": "ENVY",
+  "name": "PT Envy Technologies Indonesia Tbk",
+  "logo": "https://s3.goapi.id/logo/ENVY.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e177967084911b406eb"
+  },
+  "id": "ENZO",
+  "ticker": "ENZO",
+  "name": "PT Morenzo Abadi Perkasa Tbk",
+  "logo": "https://s3.goapi.id/logo/ENZO.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e177967084911b406ec"
+  },
+  "id": "EPAC",
+  "ticker": "EPAC",
+  "name": "PT Megalestari Epack Sentosaraya Tbk.",
+  "logo": "https://s3.goapi.id/logo/EPAC.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e177967084911b406ed"
+  },
+  "id": "EPMT",
+  "ticker": "EPMT",
+  "name": "Enseval Putera Megatrading Tbk",
+  "logo": "https://s3.goapi.id/logo/EPMT.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e177967084911b406ee"
+  },
+  "id": "ERAA",
+  "ticker": "ERAA",
+  "name": "Erajaya Swasembada Tbk",
+  "logo": "https://s3.goapi.id/logo/ERAA.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e177967084911b406ef"
+  },
+  "id": "ERTX",
+  "ticker": "ERTX",
+  "name": "Eratex Djaja Tbk",
+  "logo": "https://s3.goapi.id/logo/ERTX.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e177967084911b406f0"
+  },
+  "id": "ESIP",
+  "ticker": "ESIP",
+  "name": "PT Sinergi Inti Plastindo Tbk.",
+  "logo": "https://s3.goapi.id/logo/ESIP.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e177967084911b406f1"
+  },
+  "id": "ESSA",
+  "ticker": "ESSA",
+  "name": "Surya Esa Perkasa Tbk",
+  "logo": "https://s3.goapi.id/logo/ESSA.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e177967084911b406f2"
+  },
+  "id": "ESTA",
+  "ticker": "ESTA",
+  "name": "PT Esta Multi Usaha Tbk.",
+  "logo": "https://s3.goapi.id/logo/ESTA.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e177967084911b406f3"
+  },
+  "id": "ESTI",
+  "ticker": "ESTI",
+  "name": "Ever Shine Textile Industry Tbk",
+  "logo": "https://s3.goapi.id/logo/ESTI.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e177967084911b406f4"
+  },
+  "id": "ETWA",
+  "ticker": "ETWA",
+  "name": "Eterindo Wahanatama Tbk",
+  "logo": "https://s3.goapi.id/logo/ETWA.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e177967084911b406f5"
+  },
+  "id": "EURO",
+  "ticker": "EURO",
+  "name": "PT Estee Gold Feet Tbk",
+  "logo": "https://s3.goapi.id/logo/EURO.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e177967084911b406f6"
+  },
+  "id": "EXCL",
+  "ticker": "EXCL",
+  "name": "PT XL Axiata Tbk",
+  "logo": "https://s3.goapi.id/logo/EXCL.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e177967084911b406f7"
+  },
+  "id": "FAPA",
+  "ticker": "FAPA",
+  "name": "PT FAP Agri Tbk",
+  "logo": "https://s3.goapi.id/logo/FAPA.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e177967084911b406f8"
+  },
+  "id": "FAST",
+  "ticker": "FAST",
+  "name": "PT Fast Food Indonesia Tbk",
+  "logo": "https://s3.goapi.id/logo/FAST.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e177967084911b406f9"
+  },
+  "id": "FASW",
+  "ticker": "FASW",
+  "name": "Fajar Surya Wisesa Tbk",
+  "logo": "https://s3.goapi.id/logo/FASW.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e177967084911b406fa"
+  },
+  "id": "FILM",
+  "ticker": "FILM",
+  "name": "PT MD Pictures Tbk.",
+  "logo": "https://s3.goapi.id/logo/FILM.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e177967084911b406fb"
+  },
+  "id": "FIMP",
+  "ticker": "FIMP",
+  "name": "PT Fimperkasa Utama Tbk",
+  "logo": "https://s3.goapi.id/logo/FIMP.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e177967084911b406fc"
+  },
+  "id": "FINN",
+  "ticker": "FINN",
+  "name": "PT First Indo American Leasing Tbk.",
+  "logo": "https://s3.goapi.id/logo/FINN.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e177967084911b406fd"
+  },
+  "id": "FIRE",
+  "ticker": "FIRE",
+  "name": "PT Alfa Energi Investama Tbk.",
+  "logo": "https://s3.goapi.id/logo/FIRE.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e177967084911b406fe"
+  },
+  "id": "FISH",
+  "ticker": "FISH",
+  "name": "FKS Multi Agro Tbk",
+  "logo": "https://s3.goapi.id/logo/FISH.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e177967084911b406ff"
+  },
+  "id": "FITT",
+  "ticker": "FITT",
+  "name": "PT Hotel Fitra International Tbk",
+  "logo": "https://s3.goapi.id/logo/FITT.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e177967084911b40700"
+  },
+  "id": "FLMC",
+  "ticker": "FLMC",
+  "name": "PT Falmaco Nonwoven Industri Tbk",
+  "logo": "https://s3.goapi.id/logo/FLMC.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e177967084911b40701"
+  },
+  "id": "FMII",
+  "ticker": "FMII",
+  "name": "Fortune Mate Indonesia Tbk",
+  "logo": "https://s3.goapi.id/logo/FMII.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e177967084911b40702"
+  },
+  "id": "FOOD",
+  "ticker": "FOOD",
+  "name": "PT Sentra Food Indonesia Tbk.",
+  "logo": "https://s3.goapi.id/logo/FOOD.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e177967084911b40703"
+  },
+  "id": "FORU",
+  "ticker": "FORU",
+  "name": "Fortune Indonesia Tbk",
+  "logo": "https://s3.goapi.id/logo/FORU.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e177967084911b40704"
+  },
+  "id": "FORZ",
+  "ticker": "FORZ",
+  "name": "PT Forza Land Indonesia Tbk.",
+  "logo": "https://s3.goapi.id/logo/FORZ.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e177967084911b40705"
+  },
+  "id": "FPNI",
+  "ticker": "FPNI",
+  "name": "PT Lotte Chemical Titan Tbk.",
+  "logo": "https://s3.goapi.id/logo/FPNI.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e177967084911b40706"
+  },
+  "id": "FREN",
+  "ticker": "FREN",
+  "name": "PT Smartfren Telecom Tbk",
+  "logo": "https://s3.goapi.id/logo/FREN.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e177967084911b40707"
+  },
+  "id": "FUJI",
+  "ticker": "FUJI",
+  "name": "PT Fuji Finance Indonesia Tbk.",
+  "logo": "https://s3.goapi.id/logo/FUJI.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e177967084911b40708"
+  },
+  "id": "FUTR",
+  "ticker": "FUTR",
+  "name": "PT Lini Imaji Kreasi Ekosistem Tbk",
+  "logo": "https://s3.goapi.id/logo/FUTR.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e177967084911b40709"
+  },
+  "id": "FWCT",
+  "ticker": "FWCT",
+  "name": "PT Wijaya Cahaya Timber Tbk",
+  "logo": "https://s3.goapi.id/logo/FWCT.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e177967084911b4070a"
+  },
+  "id": "GAMA",
+  "ticker": "GAMA",
+  "name": "Aksara Global Development Tbk",
+  "logo": "https://s3.goapi.id/logo/GAMA.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e177967084911b4070b"
+  },
+  "id": "GDST",
+  "ticker": "GDST",
+  "name": "Gunawan Dianjaya Steel Tbk",
+  "logo": "https://s3.goapi.id/logo/GDST.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e177967084911b4070c"
+  },
+  "id": "GDYR",
+  "ticker": "GDYR",
+  "name": "Goodyear Indonesia Tbk",
+  "logo": "https://s3.goapi.id/logo/GDYR.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e177967084911b4070d"
+  },
+  "id": "GEMA",
+  "ticker": "GEMA",
+  "name": "Gema Grahasarana Tbk",
+  "logo": "https://s3.goapi.id/logo/GEMA.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e177967084911b4070e"
+  },
+  "id": "GEMS",
+  "ticker": "GEMS",
+  "name": "Golden Energy Mines Tbk",
+  "logo": "https://s3.goapi.id/logo/GEMS.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e177967084911b4070f"
+  },
+  "id": "GGRM",
+  "ticker": "GGRM",
+  "name": "Gudang Garam Tbk",
+  "logo": "https://s3.goapi.id/logo/GGRM.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e177967084911b40710"
+  },
+  "id": "GGRP",
+  "ticker": "GGRP",
+  "name": "PT Gunung Raja Paksi Tbk.",
+  "logo": "https://s3.goapi.id/logo/GGRP.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e177967084911b40711"
+  },
+  "id": "GGST",
+  "ticker": "GGST",
+  "name": "PT Great Golden Star Tbk",
+  "logo": "https://s3.goapi.id/logo/GGST.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e177967084911b40712"
+  },
+  "id": "GHON",
+  "ticker": "GHON",
+  "name": "PT Gihon Telekomunikasi Indonesia Tbk",
+  "logo": "https://s3.goapi.id/logo/GHON.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e177967084911b40713"
+  },
+  "id": "GIAA",
+  "ticker": "GIAA",
+  "name": "Garuda Indonesia (Persero) Tbk",
+  "logo": "https://s3.goapi.id/logo/GIAA.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e177967084911b40714"
+  },
+  "id": "GJTL",
+  "ticker": "GJTL",
+  "name": "Gajah Tunggal Tbk",
+  "logo": "https://s3.goapi.id/logo/GJTL.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e177967084911b40715"
+  },
+  "id": "GLOB",
+  "ticker": "GLOB",
+  "name": "PT Globe Kita Terang Tbk",
+  "logo": "https://s3.goapi.id/logo/GLOB.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e177967084911b40716"
+  },
+  "id": "GLVA",
+  "ticker": "GLVA",
+  "name": "PT Galva Technologies Tbk",
+  "logo": "https://s3.goapi.id/logo/GLVA.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e177967084911b40717"
+  },
+  "id": "GMFI",
+  "ticker": "GMFI",
+  "name": "PT Garuda Maintenance Facility Aero Asia Tbk.",
+  "logo": "https://s3.goapi.id/logo/GMFI.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e177967084911b40718"
+  },
+  "id": "GMTD",
+  "ticker": "GMTD",
+  "name": "Gowa Makassar Tourism Development Tbk",
+  "logo": "https://s3.goapi.id/logo/GMTD.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e177967084911b40719"
+  },
+  "id": "GOLD",
+  "ticker": "GOLD",
+  "name": "PT Visi Telekomunikasi Infrastruktur Tbk.",
+  "logo": "https://s3.goapi.id/logo/GOLD.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e177967084911b4071a"
+  },
+  "id": "GOLL",
+  "ticker": "GOLL",
+  "name": "PT Golden Plantation Tbk",
+  "logo": "https://s3.goapi.id/logo/GOLL.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e177967084911b4071b"
+  },
+  "id": "GOOD",
+  "ticker": "GOOD",
+  "name": "PT Garudafood Putra Putri Jaya Tbk.",
+  "logo": "https://s3.goapi.id/logo/GOOD.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e177967084911b4071c"
+  },
+  "id": "GPRA",
+  "ticker": "GPRA",
+  "name": "Perdana Gapura Prima Tbk",
+  "logo": "https://s3.goapi.id/logo/GPRA.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e177967084911b4071d"
+  },
+  "id": "GPSO",
+  "ticker": "GPSO",
+  "name": "PT Geoprima Solusi Tbk",
+  "logo": "https://s3.goapi.id/logo/GPSO.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e177967084911b4071e"
+  },
+  "id": "GREN",
+  "ticker": "GREN",
+  "name": "Evergreen Invesco Tbk",
+  "logo": "https://s3.goapi.id/logo/GREN.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e177967084911b4071f"
+  },
+  "id": "GRHA",
+  "ticker": "GRHA",
+  "name": "PT GRHA SATU ENAM LIMA TBK",
+  "logo": "https://s3.goapi.id/logo/GRHA.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e177967084911b40720"
+  },
+  "id": "GSMF",
+  "ticker": "GSMF",
+  "name": "Equity Development Investment Tbk",
+  "logo": "https://s3.goapi.id/logo/GSMF.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e177967084911b40721"
+  },
+  "id": "GTBO",
+  "ticker": "GTBO",
+  "name": "Garda Tujuh Buana Tbk",
+  "logo": "https://s3.goapi.id/logo/GTBO.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e177967084911b40722"
+  },
+  "id": "GTSI",
+  "ticker": "GTSI",
+  "name": "PT GTS Internasional Tbk",
+  "logo": "https://s3.goapi.id/logo/GTSI.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e177967084911b40723"
+  },
+  "id": "GULA",
+  "ticker": "GULA",
+  "name": "PT Aman Agrindo Tbk",
+  "logo": "https://s3.goapi.id/logo/GULA.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e177967084911b40724"
+  },
+  "id": "GWSA",
+  "ticker": "GWSA",
+  "name": "PT Greenwood Sejahtera Tbk",
+  "logo": "https://s3.goapi.id/logo/GWSA.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e177967084911b40725"
+  },
+  "id": "GZCO",
+  "ticker": "GZCO",
+  "name": "Gozco Plantations Tbk",
+  "logo": "https://s3.goapi.id/logo/GZCO.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e177967084911b40726"
+  },
+  "id": "HADE",
+  "ticker": "HADE",
+  "name": "PT Himalaya Energi Perkasa Tbk",
+  "logo": "https://s3.goapi.id/logo/HADE.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e177967084911b40727"
+  },
+  "id": "HAIS",
+  "ticker": "HAIS",
+  "name": "PT Hasnur Internasional Shipping Tbk",
+  "logo": "https://s3.goapi.id/logo/HAIS.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e177967084911b40728"
+  },
+  "id": "HALO",
+  "ticker": "HALO",
+  "name": "PT Haloni Jane Tbk",
+  "logo": "https://s3.goapi.id/logo/HALO.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e177967084911b40729"
+  },
+  "id": "HATM",
+  "ticker": "HATM",
+  "name": "PT Habco Trans Maritima Tbk",
+  "logo": "https://s3.goapi.id/logo/HATM.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e177967084911b4072a"
+  },
+  "id": "HDFA",
+  "ticker": "HDFA",
+  "name": "Radana Bhaskara Finance Tbk",
+  "logo": "https://s3.goapi.id/logo/HDFA.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e177967084911b4072b"
+  },
+  "id": "HDIT",
+  "ticker": "HDIT",
+  "name": "PT Hensel Davest Indonesia Tbk",
+  "logo": "https://s3.goapi.id/logo/HDIT.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e177967084911b4072c"
+  },
+  "id": "HDTX",
+  "ticker": "HDTX",
+  "name": "Panasia Indo Resources Tbk",
+  "logo": "https://s3.goapi.id/logo/HDTX.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e177967084911b4072d"
+  },
+  "id": "HEAL",
+  "ticker": "HEAL",
+  "name": "PT Medikaloka Hermina Tbk.",
+  "logo": "https://s3.goapi.id/logo/HEAL.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e177967084911b4072e"
+  },
+  "id": "HELI",
+  "ticker": "HELI",
+  "name": "PT Jaya Trishindo Tbk",
+  "logo": "https://s3.goapi.id/logo/HELI.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e177967084911b4072f"
+  },
+  "id": "HERO",
+  "ticker": "HERO",
+  "name": "Hero Supermarket Tbk",
+  "logo": "https://s3.goapi.id/logo/HERO.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e177967084911b40730"
+  },
+  "id": "HEXA",
+  "ticker": "HEXA",
+  "name": "Hexindo Adiperkasa Tbk",
+  "logo": "https://s3.goapi.id/logo/HEXA.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e177967084911b40731"
+  },
+  "id": "HILL",
+  "ticker": "HILL",
+  "name": "PT Hillcon Tbk",
+  "logo": "https://s3.goapi.id/logo/HILL.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e177967084911b40732"
+  },
+  "id": "HITS",
+  "ticker": "HITS",
+  "name": "Humpuss Intermoda Transportasi Tbk",
+  "logo": "https://s3.goapi.id/logo/HITS.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e177967084911b40733"
+  },
+  "id": "HKMU",
+  "ticker": "HKMU",
+  "name": "PT HK Metals Utama Tbk",
+  "logo": "https://s3.goapi.id/logo/HKMU.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e177967084911b40734"
+  },
+  "id": "HMSP",
+  "ticker": "HMSP",
+  "name": "HM Sampoerna Tbk",
+  "logo": "https://s3.goapi.id/logo/HMSP.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e177967084911b40735"
+  },
+  "id": "HOKI",
+  "ticker": "HOKI",
+  "name": "PT Buyung Poetra Sembada Tbk.",
+  "logo": "https://s3.goapi.id/logo/HOKI.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e177967084911b40736"
+  },
+  "id": "HOME",
+  "ticker": "HOME",
+  "name": "Hotel Mandarine Regency Tbk",
+  "logo": "https://s3.goapi.id/logo/HOME.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e177967084911b40737"
+  },
+  "id": "HOMI",
+  "ticker": "HOMI",
+  "name": "PT Grand House Mulia Tbk",
+  "logo": "https://s3.goapi.id/logo/HOMI.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e177967084911b40738"
+  },
+  "id": "HOPE",
+  "ticker": "HOPE",
+  "name": "PT Harapan Duta Pertiwi Tbk.",
+  "logo": "https://s3.goapi.id/logo/HOPE.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e177967084911b40739"
+  },
+  "id": "HOTL",
+  "ticker": "HOTL",
+  "name": "Saraswati Griya Lestari Tbk",
+  "logo": "https://s3.goapi.id/logo/HOTL.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e177967084911b4073a"
+  },
+  "id": "HRME",
+  "ticker": "HRME",
+  "name": "PT Menteng Heritage Realty Tbk.",
+  "logo": "https://s3.goapi.id/logo/HRME.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e177967084911b4073b"
+  },
+  "id": "HRTA",
+  "ticker": "HRTA",
+  "name": "PT Hartadinata Abadi Tbk",
+  "logo": "https://s3.goapi.id/logo/HRTA.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e177967084911b4073c"
+  },
+  "id": "HRUM",
+  "ticker": "HRUM",
+  "name": "Harum Energy Tbk",
+  "logo": "https://s3.goapi.id/logo/HRUM.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e177967084911b4073d"
+  },
+  "id": "IATA",
+  "ticker": "IATA",
+  "name": "PT MNC Energy Investments Tbk",
+  "logo": "https://s3.goapi.id/logo/IATA.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e177967084911b4073e"
+  },
+  "id": "IBFN",
+  "ticker": "IBFN",
+  "name": "PT Intan Baru Prana Tbk",
+  "logo": "https://s3.goapi.id/logo/IBFN.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e177967084911b4073f"
+  },
+  "id": "IBOS",
+  "ticker": "IBOS",
+  "name": "PT Indo Boga Sukses Tbk",
+  "logo": "https://s3.goapi.id/logo/IBOS.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e177967084911b40740"
+  },
+  "id": "IBST",
+  "ticker": "IBST",
+  "name": "Inti Bangun Sejahtera Tbk",
+  "logo": "https://s3.goapi.id/logo/IBST.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e177967084911b40741"
+  },
+  "id": "ICBP",
+  "ticker": "ICBP",
+  "name": "Indofood CBP Sukses Makmur Tbk",
+  "logo": "https://s3.goapi.id/logo/ICBP.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e177967084911b40742"
+  },
+  "id": "ICON",
+  "ticker": "ICON",
+  "name": "Island Concepts Indonesia Tbk",
+  "logo": "https://s3.goapi.id/logo/ICON.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e177967084911b40743"
+  },
+  "id": "IDEA",
+  "ticker": "IDEA",
+  "name": "PT Idea Indonesia Akademi Tbk",
+  "logo": "https://s3.goapi.id/logo/IDEA.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e177967084911b40744"
+  },
+  "id": "IDPR",
+  "ticker": "IDPR",
+  "name": "PT Indonesia Pondasi Raya Tbk.",
+  "logo": "https://s3.goapi.id/logo/IDPR.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e177967084911b40745"
+  },
+  "id": "IFII",
+  "ticker": "IFII",
+  "name": "PT Indonesia Fibreboard Industry Tbk",
+  "logo": "https://s3.goapi.id/logo/IFII.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e177967084911b40746"
+  },
+  "id": "IFSH",
+  "ticker": "IFSH",
+  "name": "PT Ifishdeco Tbk.",
+  "logo": "https://s3.goapi.id/logo/IFSH.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e177967084911b40747"
+  },
+  "id": "IGAR",
+  "ticker": "IGAR",
+  "name": "Champion Pacific Indonesia Tbk",
+  "logo": "https://s3.goapi.id/logo/IGAR.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e177967084911b40748"
+  },
+  "id": "IIKP",
+  "ticker": "IIKP",
+  "name": "Inti Agri Resources Tbk",
+  "logo": "https://s3.goapi.id/logo/IIKP.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e177967084911b40749"
+  },
+  "id": "IKAI",
+  "ticker": "IKAI",
+  "name": "Intikeramik Alamasri Industri Tbk",
+  "logo": "https://s3.goapi.id/logo/IKAI.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e177967084911b4074a"
+  },
+  "id": "IKAN",
+  "ticker": "IKAN",
+  "name": "PT Era Mandiri Cemerlang Tbk",
+  "logo": "https://s3.goapi.id/logo/IKAN.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e177967084911b4074b"
+  },
+  "id": "IKBI",
+  "ticker": "IKBI",
+  "name": "Sumi Indo Kabel Tbk",
+  "logo": "https://s3.goapi.id/logo/IKBI.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e177967084911b4074c"
+  },
+  "id": "IMAS",
+  "ticker": "IMAS",
+  "name": "Indomobil Sukses Internasional Tbk",
+  "logo": "https://s3.goapi.id/logo/IMAS.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e177967084911b4074d"
+  },
+  "id": "IMJS",
+  "ticker": "IMJS",
+  "name": "PT Indomobil Multi Jasa Tbk.",
+  "logo": "https://s3.goapi.id/logo/IMJS.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e177967084911b4074e"
+  },
+  "id": "IMPC",
+  "ticker": "IMPC",
+  "name": "PT Impack Pratama Industri Tbk",
+  "logo": "https://s3.goapi.id/logo/IMPC.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e177967084911b4074f"
+  },
+  "id": "INAF",
+  "ticker": "INAF",
+  "name": "Indofarma Tbk.",
+  "logo": "https://s3.goapi.id/logo/INAF.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e177967084911b40750"
+  },
+  "id": "INAI",
+  "ticker": "INAI",
+  "name": "Indal Aluminium Industry Tbk",
+  "logo": "https://s3.goapi.id/logo/INAI.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e177967084911b40751"
+  },
+  "id": "INCF",
+  "ticker": "INCF",
+  "name": "PT Indo Komoditi Korpora Tbk",
+  "logo": "https://s3.goapi.id/logo/INCF.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e177967084911b40752"
+  },
+  "id": "INCI",
+  "ticker": "INCI",
+  "name": "Intanwijaya Internasional Tbk",
+  "logo": "https://s3.goapi.id/logo/INCI.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e177967084911b40753"
+  },
+  "id": "INCO",
+  "ticker": "INCO",
+  "name": "Vale Indonesia Tbk",
+  "logo": "https://s3.goapi.id/logo/INCO.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e177967084911b40754"
+  },
+  "id": "INDF",
+  "ticker": "INDF",
+  "name": "Indofood Sukses Makmur Tbk",
+  "logo": "https://s3.goapi.id/logo/INDF.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e177967084911b40755"
+  },
+  "id": "INDO",
+  "ticker": "INDO",
+  "name": "PT Royalindo Investa Wijaya Tbk",
+  "logo": "https://s3.goapi.id/logo/INDO.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e177967084911b40756"
+  },
+  "id": "INDR",
+  "ticker": "INDR",
+  "name": "Indorama Synthetics Tbk",
+  "logo": "https://s3.goapi.id/logo/INDR.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e177967084911b40757"
+  },
+  "id": "INDS",
+  "ticker": "INDS",
+  "name": "Indospring Tbk",
+  "logo": "https://s3.goapi.id/logo/INDS.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e177967084911b40758"
+  },
+  "id": "INDX",
+  "ticker": "INDX",
+  "name": "Tanah Laut Tbk",
+  "logo": "https://s3.goapi.id/logo/INDX.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e177967084911b40759"
+  },
+  "id": "INDY",
+  "ticker": "INDY",
+  "name": "Indika Energy Tbk",
+  "logo": "https://s3.goapi.id/logo/INDY.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e177967084911b4075a"
+  },
+  "id": "INKP",
+  "ticker": "INKP",
+  "name": "Indah Kiat Pulp & Paper Tbk",
+  "logo": "https://s3.goapi.id/logo/INKP.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e177967084911b4075b"
+  },
+  "id": "INOV",
+  "ticker": "INOV",
+  "name": "PT Inocycle Technology Group Tbk.",
+  "logo": "https://s3.goapi.id/logo/INOV.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e177967084911b4075c"
+  },
+  "id": "INPC",
+  "ticker": "INPC",
+  "name": "Bank Artha Graha Internasional Tbk",
+  "logo": "https://s3.goapi.id/logo/INPC.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e177967084911b4075d"
+  },
+  "id": "INPP",
+  "ticker": "INPP",
+  "name": "Indonesian Paradise Property Tbk",
+  "logo": "https://s3.goapi.id/logo/INPP.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e177967084911b4075e"
+  },
+  "id": "INPS",
+  "ticker": "INPS",
+  "name": "PT Indah Prakasa Sentosa Tbk.",
+  "logo": "https://s3.goapi.id/logo/INPS.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e177967084911b4075f"
+  },
+  "id": "INRU",
+  "ticker": "INRU",
+  "name": "Toba Pulp Lestari Tbk",
+  "logo": "https://s3.goapi.id/logo/INRU.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e177967084911b40760"
+  },
+  "id": "INSA",
+  "ticker": "INSA",
+  "name": "PT Intinusa Selareksa Tbk",
+  "logo": "https://s3.goapi.id/logo/INSA.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e177967084911b40761"
+  },
+  "id": "INTA",
+  "ticker": "INTA",
+  "name": "Intraco Penta Tbk",
+  "logo": "https://s3.goapi.id/logo/INTA.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e177967084911b40762"
+  },
+  "id": "INTD",
+  "ticker": "INTD",
+  "name": "Inter-Delta Tbk",
+  "logo": "https://s3.goapi.id/logo/INTD.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e177967084911b40763"
+  },
+  "id": "INTP",
+  "ticker": "INTP",
+  "name": "Indocement Tunggal Prakarsa Tbk",
+  "logo": "https://s3.goapi.id/logo/INTP.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e177967084911b40764"
+  },
+  "id": "IPAC",
+  "ticker": "IPAC",
+  "name": "PT Era Graharealty Tbk",
+  "logo": "https://s3.goapi.id/logo/IPAC.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e177967084911b40765"
+  },
+  "id": "IPCC",
+  "ticker": "IPCC",
+  "name": "PT Indonesia Kendaraan Terminal Tbk.",
+  "logo": "https://s3.goapi.id/logo/IPCC.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e177967084911b40766"
+  },
+  "id": "IPCM",
+  "ticker": "IPCM",
+  "name": "PT Jasa Armada Indonesia Tbk.",
+  "logo": "https://s3.goapi.id/logo/IPCM.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e177967084911b40767"
+  },
+  "id": "IPOL",
+  "ticker": "IPOL",
+  "name": "Indopoly Swakarsa Industry Tbk",
+  "logo": "https://s3.goapi.id/logo/IPOL.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e177967084911b40768"
+  },
+  "id": "IPPE",
+  "ticker": "IPPE",
+  "name": "PT Indo Pureco Pratama Tbk",
+  "logo": "https://s3.goapi.id/logo/IPPE.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e177967084911b40769"
+  },
+  "id": "IPTV",
+  "ticker": "IPTV",
+  "name": "PT MNC Vision Networks Tbk.",
+  "logo": "https://s3.goapi.id/logo/IPTV.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e177967084911b4076a"
+  },
+  "id": "IRRA",
+  "ticker": "IRRA",
+  "name": "PT Itama Ranoraya Tbk.",
+  "logo": "https://s3.goapi.id/logo/IRRA.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e177967084911b4076b"
+  },
+  "id": "IRSX",
+  "ticker": "IRSX",
+  "name": "PT Aviana Sinar Abadi Tbk",
+  "logo": "https://s3.goapi.id/logo/IRSX.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e177967084911b4076c"
+  },
+  "id": "ISAP",
+  "ticker": "ISAP",
+  "name": "PT Isra Presisi Indonesia Tbk",
+  "logo": "https://s3.goapi.id/logo/ISAP.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e177967084911b4076d"
+  },
+  "id": "ISAT",
+  "ticker": "ISAT",
+  "name": "PT Indosat Tbk",
+  "logo": "https://s3.goapi.id/logo/ISAT.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e177967084911b4076e"
+  },
+  "id": "ISSP",
+  "ticker": "ISSP",
+  "name": "PT Steel Pipe Industry of Indonesia Tbk",
+  "logo": "https://s3.goapi.id/logo/ISSP.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e177967084911b4076f"
+  },
+  "id": "ITIC",
+  "ticker": "ITIC",
+  "name": "PT Indonesian Tobacco Tbk.",
+  "logo": "https://s3.goapi.id/logo/ITIC.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e177967084911b40770"
+  },
+  "id": "ITMA",
+  "ticker": "ITMA",
+  "name": "SUMBER ENERGI ANDALAN Tbk",
+  "logo": "https://s3.goapi.id/logo/ITMA.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e177967084911b40771"
+  },
+  "id": "ITTG",
+  "ticker": "ITTG",
+  "name": "Leo Investments Tbk",
+  "logo": "https://s3.goapi.id/logo/ITTG.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e177967084911b40772"
+  },
+  "id": "JARR",
+  "ticker": "JARR",
+  "name": "PT Jhonlin Agro Raya Tbk",
+  "logo": "https://s3.goapi.id/logo/JARR.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e177967084911b40773"
+  },
+  "id": "JAST",
+  "ticker": "JAST",
+  "name": "PT Jasnita Telekomindo Tbk. ",
+  "logo": "https://s3.goapi.id/logo/JAST.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e177967084911b40774"
+  },
+  "id": "JAWA",
+  "ticker": "JAWA",
+  "name": "Jaya Agra Wattie Tbk",
+  "logo": "https://s3.goapi.id/logo/JAWA.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e177967084911b40775"
+  },
+  "id": "JAYA",
+  "ticker": "JAYA",
+  "name": "PT Armada Berjaya Trans Tbk.",
+  "logo": "https://s3.goapi.id/logo/JAYA.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e177967084911b40776"
+  },
+  "id": "JECC",
+  "ticker": "JECC",
+  "name": "Jembo Cable Company Tbk",
+  "logo": "https://s3.goapi.id/logo/JECC.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e177967084911b40777"
+  },
+  "id": "JGLE",
+  "ticker": "JGLE",
+  "name": "PT Graha Andrasentra Propertindo Tbk.",
+  "logo": "https://s3.goapi.id/logo/JGLE.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e177967084911b40778"
+  },
+  "id": "JIHD",
+  "ticker": "JIHD",
+  "name": "Jakarta International Hotels & Development Tbk",
+  "logo": "https://s3.goapi.id/logo/JIHD.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e177967084911b40779"
+  },
+  "id": "JKON",
+  "ticker": "JKON",
+  "name": "Jaya Konstruksi Manggala Pratama Tbk",
+  "logo": "https://s3.goapi.id/logo/JKON.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e177967084911b4077a"
+  },
+  "id": "JKSW",
+  "ticker": "JKSW",
+  "name": "Jakarta Kyoei Steel Works Tbk",
+  "logo": "https://s3.goapi.id/logo/JKSW.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e177967084911b4077b"
+  },
+  "id": "JMAS",
+  "ticker": "JMAS",
+  "name": "PT Asuransi Jiwa Syariah Jasa Mitra Abadi Tbk",
+  "logo": "https://s3.goapi.id/logo/JMAS.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e177967084911b4077c"
+  },
+  "id": "JPFA",
+  "ticker": "JPFA",
+  "name": "JAPFA Comfeed Indonesia Tbk",
+  "logo": "https://s3.goapi.id/logo/JPFA.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e177967084911b4077d"
+  },
+  "id": "JRPT",
+  "ticker": "JRPT",
+  "name": "Jaya Real Property Tbk",
+  "logo": "https://s3.goapi.id/logo/JRPT.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e177967084911b4077e"
+  },
+  "id": "JSKY",
+  "ticker": "JSKY",
+  "name": "PT Sky Energy Indonesia Tbk.",
+  "logo": "https://s3.goapi.id/logo/JSKY.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e177967084911b4077f"
+  },
+  "id": "JSMR",
+  "ticker": "JSMR",
+  "name": "PT Jasa Marga Tbk",
+  "logo": "https://s3.goapi.id/logo/JSMR.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e177967084911b40780"
+  },
+  "id": "JSPT",
+  "ticker": "JSPT",
+  "name": "Jakarta Setiabudi Internasional Tbk",
+  "logo": "https://s3.goapi.id/logo/JSPT.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e177967084911b40781"
+  },
+  "id": "JTPE",
+  "ticker": "JTPE",
+  "name": "Jasuindo Tiga Perkasa Tbk",
+  "logo": "https://s3.goapi.id/logo/JTPE.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e177967084911b40782"
+  },
+  "id": "KAEF",
+  "ticker": "KAEF",
+  "name": "Kimia Farma Tbk.",
+  "logo": "https://s3.goapi.id/logo/KAEF.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e177967084911b40783"
+  },
+  "id": "KARW",
+  "ticker": "KARW",
+  "name": "ICTSI JASA PRIMA Tbk",
+  "logo": "https://s3.goapi.id/logo/KARW.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e177967084911b40784"
+  },
+  "id": "KAYU",
+  "ticker": "KAYU",
+  "name": "PT Darmi Bersaudara Tbk.",
+  "logo": "https://s3.goapi.id/logo/KAYU.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e177967084911b40785"
+  },
+  "id": "KBAG",
+  "ticker": "KBAG",
+  "name": "PT Karya Bersama Anugerah Tbk",
+  "logo": "https://s3.goapi.id/logo/KBAG.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e177967084911b40786"
+  },
+  "id": "KBLI",
+  "ticker": "KBLI",
+  "name": "KMI Wire and Cable Tbk",
+  "logo": "https://s3.goapi.id/logo/KBLI.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e177967084911b40787"
+  },
+  "id": "KBLM",
+  "ticker": "KBLM",
+  "name": "Kabelindo Murni Tbk",
+  "logo": "https://s3.goapi.id/logo/KBLM.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e177967084911b40788"
+  },
+  "id": "KBLV",
+  "ticker": "KBLV",
+  "name": "First Media Tbk",
+  "logo": "https://s3.goapi.id/logo/KBLV.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e177967084911b40789"
+  },
+  "id": "KBRI",
+  "ticker": "KBRI",
+  "name": "Kertas Basuki Rachmat Indonesia Tbk",
+  "logo": "https://s3.goapi.id/logo/KBRI.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e177967084911b4078a"
+  },
+  "id": "KDSI",
+  "ticker": "KDSI",
+  "name": "Kedawung Setia Industrial Tbk",
+  "logo": "https://s3.goapi.id/logo/KDSI.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e177967084911b4078b"
+  },
+  "id": "KDTN",
+  "ticker": "KDTN",
+  "name": "PT Puri Sentul Permai Tbk",
+  "logo": "https://s3.goapi.id/logo/KDTN.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e177967084911b4078c"
+  },
+  "id": "KEEN",
+  "ticker": "KEEN",
+  "name": "PT Kencana Energi Lestari Tbk. ",
+  "logo": "https://s3.goapi.id/logo/KEEN.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e177967084911b4078d"
+  },
+  "id": "KEJU",
+  "ticker": "KEJU",
+  "name": "PT Mulia Boga Raya Tbk",
+  "logo": "https://s3.goapi.id/logo/KEJU.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e177967084911b4078e"
+  },
+  "id": "KETR",
+  "ticker": "KETR",
+  "name": "PT Ketrosden Triasmitra Tbk",
+  "logo": "https://s3.goapi.id/logo/KETR.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e177967084911b4078f"
+  },
+  "id": "KIAS",
+  "ticker": "KIAS",
+  "name": "Keramika Indonesia Assosiasi Tbk",
+  "logo": "https://s3.goapi.id/logo/KIAS.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e177967084911b40790"
+  },
+  "id": "KICI",
+  "ticker": "KICI",
+  "name": "Kedaung Indah Can Tbk",
+  "logo": "https://s3.goapi.id/logo/KICI.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e177967084911b40791"
+  },
+  "id": "KIJA",
+  "ticker": "KIJA",
+  "name": "Kawasan Industri Jababeka Tbk",
+  "logo": "https://s3.goapi.id/logo/KIJA.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e177967084911b40792"
+  },
+  "id": "KING",
+  "ticker": "KING",
+  "name": "PT Hoffmen Cleanindo Tbk",
+  "logo": "https://s3.goapi.id/logo/KING.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e177967084911b40793"
+  },
+  "id": "KINO",
+  "ticker": "KINO",
+  "name": "PT Kino Indonesia Tbk",
+  "logo": "https://s3.goapi.id/logo/KINO.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e177967084911b40794"
+  },
+  "id": "KIOS",
+  "ticker": "KIOS",
+  "name": "PT Kioson Komersial Indonesia Tbk.",
+  "logo": "https://s3.goapi.id/logo/KIOS.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e177967084911b40795"
+  },
+  "id": "KJEN",
+  "ticker": "KJEN",
+  "name": "PT Krida Jaringan Nusantara Tbk.",
+  "logo": "https://s3.goapi.id/logo/KJEN.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e177967084911b40796"
+  },
+  "id": "KKES",
+  "ticker": "KKES",
+  "name": "PT Kusuma Kemindo Sentosa Tbk",
+  "logo": "https://s3.goapi.id/logo/KKES.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e177967084911b40797"
+  },
+  "id": "KKGI",
+  "ticker": "KKGI",
+  "name": "Resource Alam Indonesia Tbk",
+  "logo": "https://s3.goapi.id/logo/KKGI.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e177967084911b40798"
+  },
+  "id": "KLBF",
+  "ticker": "KLBF",
+  "name": "Kalbe Farma Tbk",
+  "logo": "https://s3.goapi.id/logo/KLBF.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e177967084911b40799"
+  },
+  "id": "KLIN",
+  "ticker": "KLIN",
+  "name": "PT Klinko Karya Imaji Tbk",
+  "logo": "https://s3.goapi.id/logo/KLIN.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e177967084911b4079a"
+  },
+  "id": "KMDS",
+  "ticker": "KMDS",
+  "name": "PT Kurniamitra Duta Sentosa Tbk.",
+  "logo": "https://s3.goapi.id/logo/KMDS.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e177967084911b4079b"
+  },
+  "id": "KMTR",
+  "ticker": "KMTR",
+  "name": "PT Kirana Megatara Tbk.",
+  "logo": "https://s3.goapi.id/logo/KMTR.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e177967084911b4079c"
+  },
+  "id": "KOBX",
+  "ticker": "KOBX",
+  "name": "Kobexindo Tractors Tbk",
+  "logo": "https://s3.goapi.id/logo/KOBX.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e177967084911b4079d"
+  },
+  "id": "KOIN",
+  "ticker": "KOIN",
+  "name": "Kokoh Inti Arebama Tbk",
+  "logo": "https://s3.goapi.id/logo/KOIN.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e177967084911b4079e"
+  },
+  "id": "KONI",
+  "ticker": "KONI",
+  "name": "Perdana Bangun Pusaka Tbk",
+  "logo": "https://s3.goapi.id/logo/KONI.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e177967084911b4079f"
+  },
+  "id": "KOPI",
+  "ticker": "KOPI",
+  "name": "PT Mitra Energi Persada Tbk",
+  "logo": "https://s3.goapi.id/logo/KOPI.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e177967084911b407a0"
+  },
+  "id": "KOTA",
+  "ticker": "KOTA",
+  "name": "PT DMS Propertindo Tbk.",
+  "logo": "https://s3.goapi.id/logo/KOTA.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e177967084911b407a1"
+  },
+  "id": "KPAL",
+  "ticker": "KPAL",
+  "name": "PT Steadfast Marine Tbk",
+  "logo": "https://s3.goapi.id/logo/KPAL.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e177967084911b407a2"
+  },
+  "id": "KPAS",
+  "ticker": "KPAS",
+  "name": "PT Cottonindo Ariesta Tbk.",
+  "logo": "https://s3.goapi.id/logo/KPAS.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e177967084911b407a3"
+  },
+  "id": "KPIG",
+  "ticker": "KPIG",
+  "name": "MNC Land Tbk",
+  "logo": "https://s3.goapi.id/logo/KPIG.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e177967084911b407a4"
+  },
+  "id": "KRAH",
+  "ticker": "KRAH",
+  "name": "PT Grand Kartech Tbk",
+  "logo": "https://s3.goapi.id/logo/KRAH.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e177967084911b407a5"
+  },
+  "id": "KRAS",
+  "ticker": "KRAS",
+  "name": "Krakatau Steel (Persero) Tbk",
+  "logo": "https://s3.goapi.id/logo/KRAS.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e177967084911b407a6"
+  },
+  "id": "KREN",
+  "ticker": "KREN",
+  "name": "PT Kresna Graha Investama Tbk.",
+  "logo": "https://s3.goapi.id/logo/KREN.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e177967084911b407a7"
+  },
+  "id": "KRYA",
+  "ticker": "KRYA",
+  "name": "PT Bangun Karya Perkasa Jaya Tbk",
+  "logo": "https://s3.goapi.id/logo/KRYA.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e177967084911b407a8"
+  },
+  "id": "KUAS",
+  "ticker": "KUAS",
+  "name": "PT Ace Oldfields Tbk",
+  "logo": "https://s3.goapi.id/logo/KUAS.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e177967084911b407a9"
+  },
+  "id": "LABA",
+  "ticker": "LABA",
+  "name": "PT Ladangbaja Murni Tbk",
+  "logo": "https://s3.goapi.id/logo/LABA.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e177967084911b407aa"
+  },
+  "id": "LAJU",
+  "ticker": "LAJU",
+  "name": "PT Jasa Berdikari Logistics Tbk",
+  "logo": "https://s3.goapi.id/logo/LAJU.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e177967084911b407ab"
+  },
+  "id": "LAND",
+  "ticker": "LAND",
+  "name": "PT Trimitra Propertindo Tbk.",
+  "logo": "https://s3.goapi.id/logo/LAND.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e177967084911b407ac"
+  },
+  "id": "LAPD",
+  "ticker": "LAPD",
+  "name": "Leyand International Tbk",
+  "logo": "https://s3.goapi.id/logo/LAPD.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e177967084911b407ad"
+  },
+  "id": "LCGP",
+  "ticker": "LCGP",
+  "name": "PT Eureka Prima Jakarta Tbk.",
+  "logo": "https://s3.goapi.id/logo/LCGP.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e177967084911b407ae"
+  },
+  "id": "LCKM",
+  "ticker": "LCKM",
+  "name": "PT LCK Global Kedaton Tbk",
+  "logo": "https://s3.goapi.id/logo/LCKM.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e177967084911b407af"
+  },
+  "id": "LEAD",
+  "ticker": "LEAD",
+  "name": "PT Logindo Samudramakmur Tbk.",
+  "logo": "https://s3.goapi.id/logo/LEAD.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e177967084911b407b0"
+  },
+  "id": "LFLO",
+  "ticker": "LFLO",
+  "name": "PT Imago Mulia Persada Tbk",
+  "logo": "https://s3.goapi.id/logo/LFLO.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e177967084911b407b1"
+  },
+  "id": "LIFE",
+  "ticker": "LIFE",
+  "name": "PT Asuransi Jiwa Sinarmas MSIG Tbk.",
+  "logo": "https://s3.goapi.id/logo/LIFE.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e177967084911b407b2"
+  },
+  "id": "LINK",
+  "ticker": "LINK",
+  "name": "PT Link Net Tbk.",
+  "logo": "https://s3.goapi.id/logo/LINK.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e177967084911b407b3"
+  },
+  "id": "LION",
+  "ticker": "LION",
+  "name": "Lion Metal Works Tbk",
+  "logo": "https://s3.goapi.id/logo/LION.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e177967084911b407b4"
+  },
+  "id": "LMAS",
+  "ticker": "LMAS",
+  "name": "Limas Indonesia Makmur Tbk",
+  "logo": "https://s3.goapi.id/logo/LMAS.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e177967084911b407b5"
+  },
+  "id": "LMPI",
+  "ticker": "LMPI",
+  "name": "Langgeng Makmur Industri Tbk",
+  "logo": "https://s3.goapi.id/logo/LMPI.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e177967084911b407b6"
+  },
+  "id": "LMSH",
+  "ticker": "LMSH",
+  "name": "Lionmesh Prima Tbk",
+  "logo": "https://s3.goapi.id/logo/LMSH.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e177967084911b407b7"
+  },
+  "id": "LPCK",
+  "ticker": "LPCK",
+  "name": "Lippo Cikarang Tbk",
+  "logo": "https://s3.goapi.id/logo/LPCK.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e177967084911b407b8"
+  },
+  "id": "LPGI",
+  "ticker": "LPGI",
+  "name": "Lippo General Insurance Tbk",
+  "logo": "https://s3.goapi.id/logo/LPGI.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e177967084911b407b9"
+  },
+  "id": "LPIN",
+  "ticker": "LPIN",
+  "name": "Multi Prima Sejahtera Tbk",
+  "logo": "https://s3.goapi.id/logo/LPIN.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e177967084911b407ba"
+  },
+  "id": "LPKR",
+  "ticker": "LPKR",
+  "name": "Lippo Karawaci Tbk",
+  "logo": "https://s3.goapi.id/logo/LPKR.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e177967084911b407bb"
+  },
+  "id": "LPLI",
+  "ticker": "LPLI",
+  "name": "Star Pacific Tbk",
+  "logo": "https://s3.goapi.id/logo/LPLI.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e177967084911b407bc"
+  },
+  "id": "LPPF",
+  "ticker": "LPPF",
+  "name": "Matahari Department Store Tbk",
+  "logo": "https://s3.goapi.id/logo/LPPF.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e177967084911b407bd"
+  },
+  "id": "LPPS",
+  "ticker": "LPPS",
+  "name": "PT Lenox Pasifik Investama Tbk",
+  "logo": "https://s3.goapi.id/logo/LPPS.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e177967084911b407be"
+  },
+  "id": "LRNA",
+  "ticker": "LRNA",
+  "name": "PT Eka Sari Lorena Transport Tbk.",
+  "logo": "https://s3.goapi.id/logo/LRNA.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e177967084911b407bf"
+  },
+  "id": "LSIP",
+  "ticker": "LSIP",
+  "name": "PP London Sumatra Indonesia Tbk",
+  "logo": "https://s3.goapi.id/logo/LSIP.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e177967084911b407c0"
+  },
+  "id": "LTLS",
+  "ticker": "LTLS",
+  "name": "PT Lautan Luas Tbk",
+  "logo": "https://s3.goapi.id/logo/LTLS.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e177967084911b407c1"
+  },
+  "id": "LUCK",
+  "ticker": "LUCK",
+  "name": "PT Sentral Mitra Informatika Tbk.",
+  "logo": "https://s3.goapi.id/logo/LUCK.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e177967084911b407c2"
+  },
+  "id": "LUCY",
+  "ticker": "LUCY",
+  "name": "PT Lima Dua Lima Tiga Tbk",
+  "logo": "https://s3.goapi.id/logo/LUCY.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e177967084911b407c3"
+  },
+  "id": "MABA",
+  "ticker": "MABA",
+  "name": "PT Marga Abhinaya Abadi Tbk",
+  "logo": "https://s3.goapi.id/logo/MABA.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e177967084911b407c4"
+  },
+  "id": "MAGP",
+  "ticker": "MAGP",
+  "name": "Multi Agro Gemilang Plantation Tbk",
+  "logo": "https://s3.goapi.id/logo/MAGP.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e177967084911b407c5"
+  },
+  "id": "MAIN",
+  "ticker": "MAIN",
+  "name": "Malindo Feedmill Tbk",
+  "logo": "https://s3.goapi.id/logo/MAIN.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e177967084911b407c6"
+  },
+  "id": "MAMI",
+  "ticker": "MAMI",
+  "name": "Mas Murni Indonesia Tbk",
+  "logo": "https://s3.goapi.id/logo/MAMI.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e177967084911b407c7"
+  },
+  "id": "MAPA",
+  "ticker": "MAPA",
+  "name": "PT MAP Aktif Adiperkasa Tbk.",
+  "logo": "https://s3.goapi.id/logo/MAPA.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e177967084911b407c8"
+  },
+  "id": "MAPB",
+  "ticker": "MAPB",
+  "name": "PT MAP Boga Adiperkasa Tbk.",
+  "logo": "https://s3.goapi.id/logo/MAPB.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e177967084911b407c9"
+  },
+  "id": "MAPI",
+  "ticker": "MAPI",
+  "name": "Mitra Adiperkasa Tbk",
+  "logo": "https://s3.goapi.id/logo/MAPI.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e177967084911b407ca"
+  },
+  "id": "MARI",
+  "ticker": "MARI",
+  "name": "PT Mahaka Radio Integra Tbk.",
+  "logo": "https://s3.goapi.id/logo/MARI.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e177967084911b407cb"
+  },
+  "id": "MARK",
+  "ticker": "MARK",
+  "name": "PT Mark Dynamics Indonesia Tbk.",
+  "logo": "https://s3.goapi.id/logo/MARK.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e177967084911b407cc"
+  },
+  "id": "MASA",
+  "ticker": "MASA",
+  "name": "Multistrada Arah Sarana Tbk",
+  "logo": "https://s3.goapi.id/logo/MASA.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e177967084911b407cd"
+  },
+  "id": "MASB",
+  "ticker": "MASB",
+  "name": "PT Bank Multiarta Sentosa Tbk",
+  "logo": "https://s3.goapi.id/logo/MASB.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e177967084911b407ce"
+  },
+  "id": "MAYA",
+  "ticker": "MAYA",
+  "name": "PT Bank Mayapada Internasional Tbk",
+  "logo": "https://s3.goapi.id/logo/MAYA.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e177967084911b407cf"
+  },
+  "id": "MBAP",
+  "ticker": "MBAP",
+  "name": "PT Mitrabara Adiperdana Tbk",
+  "logo": "https://s3.goapi.id/logo/MBAP.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e177967084911b407d0"
+  },
+  "id": "MBSS",
+  "ticker": "MBSS",
+  "name": "Mitrabahtera Segara Sejati Tbk",
+  "logo": "https://s3.goapi.id/logo/MBSS.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e177967084911b407d1"
+  },
+  "id": "MBTO",
+  "ticker": "MBTO",
+  "name": "Martina Berto Tbk",
+  "logo": "https://s3.goapi.id/logo/MBTO.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e177967084911b407d2"
+  },
+  "id": "MCAS",
+  "ticker": "MCAS",
+  "name": "PT M Cash Integrasi Tbk",
+  "logo": "https://s3.goapi.id/logo/MCAS.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e177967084911b407d3"
+  },
+  "id": "MCOL",
+  "ticker": "MCOL",
+  "name": "PT Prima Andalan Mandiri Tbk",
+  "logo": "https://s3.goapi.id/logo/MCOL.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e177967084911b407d4"
+  },
+  "id": "MCOR",
+  "ticker": "MCOR",
+  "name": "PT Bank China Construction Bank Indonesia Tbk",
+  "logo": "https://s3.goapi.id/logo/MCOR.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e177967084911b407d5"
+  },
+  "id": "MDIA",
+  "ticker": "MDIA",
+  "name": "PT Intermedia Capital Tbk.",
+  "logo": "https://s3.goapi.id/logo/MDIA.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e177967084911b407d6"
+  },
+  "id": "MDKA",
+  "ticker": "MDKA",
+  "name": "PT Merdeka Copper Gold Tbk.",
+  "logo": "https://s3.goapi.id/logo/MDKA.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e177967084911b407d7"
+  },
+  "id": "MDKI",
+  "ticker": "MDKI",
+  "name": "PT Emdeki Utama Tbk",
+  "logo": "https://s3.goapi.id/logo/MDKI.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e177967084911b407d8"
+  },
+  "id": "MDLN",
+  "ticker": "MDLN",
+  "name": "PT Modernland Realty Tbk.",
+  "logo": "https://s3.goapi.id/logo/MDLN.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e177967084911b407d9"
+  },
+  "id": "MDRN",
+  "ticker": "MDRN",
+  "name": "Modern Internasional Tbk",
+  "logo": "https://s3.goapi.id/logo/MDRN.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e177967084911b407da"
+  },
+  "id": "MEDS",
+  "ticker": "MEDS",
+  "name": "PT Hetzer Medical Indonesia Tbk",
+  "logo": "https://s3.goapi.id/logo/MEDS.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e177967084911b407db"
+  },
+  "id": "MEGA",
+  "ticker": "MEGA",
+  "name": "Bank Mega Tbk",
+  "logo": "https://s3.goapi.id/logo/MEGA.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e177967084911b407dc"
+  },
+  "id": "MERK",
+  "ticker": "MERK",
+  "name": "Merck Tbk",
+  "logo": "https://s3.goapi.id/logo/MERK.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e177967084911b407dd"
+  },
+  "id": "META",
+  "ticker": "META",
+  "name": "Nusantara Infrastructure Tbk",
+  "logo": "https://s3.goapi.id/logo/META.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e177967084911b407de"
+  },
+  "id": "MFIN",
+  "ticker": "MFIN",
+  "name": "PT Mandala Multifinance Tbk.",
+  "logo": "https://s3.goapi.id/logo/MFIN.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e177967084911b407df"
+  },
+  "id": "MFMI",
+  "ticker": "MFMI",
+  "name": "Multifiling Mitra Indonesia Tbk",
+  "logo": "https://s3.goapi.id/logo/MFMI.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e177967084911b407e0"
+  },
+  "id": "MGLV",
+  "ticker": "MGLV",
+  "name": "PT Panca Anugrah Wisesa Tbk",
+  "logo": "https://s3.goapi.id/logo/MGLV.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e177967084911b407e1"
+  },
+  "id": "MGNA",
+  "ticker": "MGNA",
+  "name": "PT Magna Investama Mandiri Tbk",
+  "logo": "https://s3.goapi.id/logo/MGNA.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e177967084911b407e2"
+  },
+  "id": "MGRO",
+  "ticker": "MGRO",
+  "name": "PT Mahkota Group Tbk.",
+  "logo": "https://s3.goapi.id/logo/MGRO.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e177967084911b407e3"
+  },
+  "id": "MICE",
+  "ticker": "MICE",
+  "name": "Multi Indocitra Tbk",
+  "logo": "https://s3.goapi.id/logo/MICE.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e177967084911b407e4"
+  },
+  "id": "MIDI",
+  "ticker": "MIDI",
+  "name": "Midi Utama Indonesia Tbk",
+  "logo": "https://s3.goapi.id/logo/MIDI.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e177967084911b407e5"
+  },
+  "id": "MIKA",
+  "ticker": "MIKA",
+  "name": "PT Mitra Keluarga Karyasehat Tbk.",
+  "logo": "https://s3.goapi.id/logo/MIKA.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e177967084911b407e6"
+  },
+  "id": "MINA",
+  "ticker": "MINA",
+  "name": "PT Sanurhasta Mitra Tbk.",
+  "logo": "https://s3.goapi.id/logo/MINA.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e177967084911b407e7"
+  },
+  "id": "MIRA",
+  "ticker": "MIRA",
+  "name": "Mitra International Resources Tbk",
+  "logo": "https://s3.goapi.id/logo/MIRA.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e177967084911b407e8"
+  },
+  "id": "MITI",
+  "ticker": "MITI",
+  "name": "Mitra Investindo Tbk",
+  "logo": "https://s3.goapi.id/logo/MITI.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e177967084911b407e9"
+  },
+  "id": "MKNT",
+  "ticker": "MKNT",
+  "name": "PT Mitra Komunikasi Nusantara Tbk.",
+  "logo": "https://s3.goapi.id/logo/MKNT.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e177967084911b407ea"
+  },
+  "id": "MKPI",
+  "ticker": "MKPI",
+  "name": "Metropolitan Kentjana Tbk",
+  "logo": "https://s3.goapi.id/logo/MKPI.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e187967084911b407eb"
+  },
+  "id": "MKTR",
+  "ticker": "MKTR",
+  "name": "PT Menthobi Karyatama Raya Tbk",
+  "logo": "https://s3.goapi.id/logo/MKTR.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e187967084911b407ec"
+  },
+  "id": "MLBI",
+  "ticker": "MLBI",
+  "name": "Multi Bintang Indonesia Tbk",
+  "logo": "https://s3.goapi.id/logo/MLBI.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e187967084911b407ed"
+  },
+  "id": "MLIA",
+  "ticker": "MLIA",
+  "name": "Mulia Industrindo Tbk",
+  "logo": "https://s3.goapi.id/logo/MLIA.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e187967084911b407ee"
+  },
+  "id": "MLPL",
+  "ticker": "MLPL",
+  "name": "Multipolar Tbk",
+  "logo": "https://s3.goapi.id/logo/MLPL.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e187967084911b407ef"
+  },
+  "id": "MLPT",
+  "ticker": "MLPT",
+  "name": "PT Multipolar Technology Tbk.",
+  "logo": "https://s3.goapi.id/logo/MLPT.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e187967084911b407f0"
+  },
+  "id": "MMIX",
+  "ticker": "MMIX",
+  "name": "PT Multi Medika Internasional Tbk",
+  "logo": "https://s3.goapi.id/logo/MMIX.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e187967084911b407f1"
+  },
+  "id": "MMLP",
+  "ticker": "MMLP",
+  "name": "PT Mega Manunggal Property Tbk.",
+  "logo": "https://s3.goapi.id/logo/MMLP.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e187967084911b407f2"
+  },
+  "id": "MNCN",
+  "ticker": "MNCN",
+  "name": "Media Nusantara Citra Tbk",
+  "logo": "https://s3.goapi.id/logo/MNCN.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e187967084911b407f3"
+  },
+  "id": "MOLI",
+  "ticker": "MOLI",
+  "name": "PT Madusari Murni Indah Tbk.",
+  "logo": "https://s3.goapi.id/logo/MOLI.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e187967084911b407f4"
+  },
+  "id": "MORA",
+  "ticker": "MORA",
+  "name": "PT Mora Telematika Indonesia Tbk",
+  "logo": "https://s3.goapi.id/logo/MORA.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e187967084911b407f5"
+  },
+  "id": "MPMX",
+  "ticker": "MPMX",
+  "name": "PT Mitra Pinasthika Mustika Tbk.",
+  "logo": "https://s3.goapi.id/logo/MPMX.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e187967084911b407f6"
+  },
+  "id": "MPOW",
+  "ticker": "MPOW",
+  "name": "PT Megapower Makmur Tbk.",
+  "logo": "https://s3.goapi.id/logo/MPOW.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e187967084911b407f7"
+  },
+  "id": "MPPA",
+  "ticker": "MPPA",
+  "name": "Matahari Putra Prima Tbk",
+  "logo": "https://s3.goapi.id/logo/MPPA.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e187967084911b407f8"
+  },
+  "id": "MPRO",
+  "ticker": "MPRO",
+  "name": "PT Maha Properti Indonesia Tbk.",
+  "logo": "https://s3.goapi.id/logo/MPRO.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e187967084911b407f9"
+  },
+  "id": "MRAT",
+  "ticker": "MRAT",
+  "name": "Mustika Ratu Tbk",
+  "logo": "https://s3.goapi.id/logo/MRAT.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e187967084911b407fa"
+  },
+  "id": "MREI",
+  "ticker": "MREI",
+  "name": "Maskapai Reasuransi Indonesia Tbk",
+  "logo": "https://s3.goapi.id/logo/MREI.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e187967084911b407fb"
+  },
+  "id": "MSIN",
+  "ticker": "MSIN",
+  "name": "PT MNC Digital Entertainment Tbk",
+  "logo": "https://s3.goapi.id/logo/MSIN.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e187967084911b407fc"
+  },
+  "id": "MSKY",
+  "ticker": "MSKY",
+  "name": "MNC Sky Vision Tbk",
+  "logo": "https://s3.goapi.id/logo/MSKY.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e187967084911b407fd"
+  },
+  "id": "MTDL",
+  "ticker": "MTDL",
+  "name": "Metrodata Electronics Tbk",
+  "logo": "https://s3.goapi.id/logo/MTDL.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e187967084911b407fe"
+  },
+  "id": "MTEL",
+  "ticker": "MTEL",
+  "name": "PT Dayamitra Telekomunikasi Tbk",
+  "logo": "https://s3.goapi.id/logo/MTEL.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e187967084911b407ff"
+  },
+  "id": "MTFN",
+  "ticker": "MTFN",
+  "name": "Capitalinc Investment Tbk",
+  "logo": "https://s3.goapi.id/logo/MTFN.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e187967084911b40800"
+  },
+  "id": "MTLA",
+  "ticker": "MTLA",
+  "name": "Metropolitan Land Tbk",
+  "logo": "https://s3.goapi.id/logo/MTLA.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e187967084911b40801"
+  },
+  "id": "MTMH",
+  "ticker": "MTMH",
+  "name": "PT Murni Sadar Tbk",
+  "logo": "https://s3.goapi.id/logo/MTMH.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e187967084911b40802"
+  },
+  "id": "MTPS",
+  "ticker": "MTPS",
+  "name": "PT Meta Epsi Tbk.",
+  "logo": "https://s3.goapi.id/logo/MTPS.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e187967084911b40803"
+  },
+  "id": "MTRA",
+  "ticker": "MTRA",
+  "name": "PT Mitra Pemuda Tbk.",
+  "logo": "https://s3.goapi.id/logo/MTRA.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e187967084911b40804"
+  },
+  "id": "MTSM",
+  "ticker": "MTSM",
+  "name": "Metro Realty Tbk",
+  "logo": "https://s3.goapi.id/logo/MTSM.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e187967084911b40805"
+  },
+  "id": "MTWI",
+  "ticker": "MTWI",
+  "name": "PT Malacca Trust Wuwungan Insurance Tbk.",
+  "logo": "https://s3.goapi.id/logo/MTWI.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e187967084911b40806"
+  },
+  "id": "MYOH",
+  "ticker": "MYOH",
+  "name": "Samindo Resources Tbk",
+  "logo": "https://s3.goapi.id/logo/MYOH.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e187967084911b40807"
+  },
+  "id": "MYOR",
+  "ticker": "MYOR",
+  "name": "Mayora Indah Tbk",
+  "logo": "https://s3.goapi.id/logo/MYOR.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e187967084911b40808"
+  },
+  "id": "MYRX",
+  "ticker": "MYRX",
+  "name": "Hanson International Tbk",
+  "logo": "https://s3.goapi.id/logo/MYRX.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e187967084911b40809"
+  },
+  "id": "MYTX",
+  "ticker": "MYTX",
+  "name": "PT Asia Pacific Investama Tbk.",
+  "logo": "https://s3.goapi.id/logo/MYTX.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e187967084911b4080a"
+  },
+  "id": "NANO",
+  "ticker": "NANO",
+  "name": "PT Nanotech Indonesia Global Tbk",
+  "logo": "https://s3.goapi.id/logo/NANO.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e187967084911b4080b"
+  },
+  "id": "NASA",
+  "ticker": "NASA",
+  "name": "PT Andalan Perkasa Abadi Tbk",
+  "logo": "https://s3.goapi.id/logo/NASA.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e187967084911b4080c"
+  },
+  "id": "NASI",
+  "ticker": "NASI",
+  "name": "PT Wahana Inti Makmur Tbk",
+  "logo": "https://s3.goapi.id/logo/NASI.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e187967084911b4080d"
+  },
+  "id": "NAYZ",
+  "ticker": "NAYZ",
+  "name": "PT Hassana Boga Sejahtera Tbk",
+  "logo": "https://s3.goapi.id/logo/NAYZ.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e187967084911b4080e"
+  },
+  "id": "NELY",
+  "ticker": "NELY",
+  "name": "Pelayaran Nelly Dwi Putri Tbk",
+  "logo": "https://s3.goapi.id/logo/NELY.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e187967084911b4080f"
+  },
+  "id": "NETV",
+  "ticker": "NETV",
+  "name": "PT Net Visi Media Tbk",
+  "logo": "https://s3.goapi.id/logo/NETV.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e187967084911b40810"
+  },
+  "id": "NFCX",
+  "ticker": "NFCX",
+  "name": "PT NFC Indonesia Tbk",
+  "logo": "https://s3.goapi.id/logo/NFCX.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e187967084911b40811"
+  },
+  "id": "NICK",
+  "ticker": "NICK",
+  "name": "PT Charnic Capital Tbk.",
+  "logo": "https://s3.goapi.id/logo/NICK.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e187967084911b40812"
+  },
+  "id": "NICL",
+  "ticker": "NICL",
+  "name": "PT PAM Mineral Tbk",
+  "logo": "https://s3.goapi.id/logo/NICL.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e187967084911b40813"
+  },
+  "id": "NIKL",
+  "ticker": "NIKL",
+  "name": "Pelat Timah Nusantara Tbk",
+  "logo": "https://s3.goapi.id/logo/NIKL.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e187967084911b40814"
+  },
+  "id": "NINE",
+  "ticker": "NINE",
+  "name": "PT Techno9 Indonesia Tbk",
+  "logo": "https://s3.goapi.id/logo/NINE.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e187967084911b40815"
+  },
+  "id": "NIPS",
+  "ticker": "NIPS",
+  "name": "Nipress Tbk",
+  "logo": "https://s3.goapi.id/logo/NIPS.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e187967084911b40816"
+  },
+  "id": "NIRO",
+  "ticker": "NIRO",
+  "name": "City Retail Developments Tbk",
+  "logo": "https://s3.goapi.id/logo/NIRO.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e187967084911b40817"
+  },
+  "id": "NISP",
+  "ticker": "NISP",
+  "name": "PT Bank OCBC NISP Tbk",
+  "logo": "https://s3.goapi.id/logo/NISP.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e187967084911b40818"
+  },
+  "id": "NOBU",
+  "ticker": "NOBU",
+  "name": "PT Bank Nationalnobu Tbk.",
+  "logo": "https://s3.goapi.id/logo/NOBU.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e187967084911b40819"
+  },
+  "id": "NPGF",
+  "ticker": "NPGF",
+  "name": "PT Nusa Palapa Gemilang Tbk",
+  "logo": "https://s3.goapi.id/logo/NPGF.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e187967084911b4081a"
+  },
+  "id": "NRCA",
+  "ticker": "NRCA",
+  "name": "PT Nusa Raya Cipta Tbk.",
+  "logo": "https://s3.goapi.id/logo/NRCA.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e187967084911b4081b"
+  },
+  "id": "NSSS",
+  "ticker": "NSSS",
+  "name": "PT Nusantara Sawit Sejahtera Tbk",
+  "logo": "https://s3.goapi.id/logo/NSSS.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e187967084911b4081c"
+  },
+  "id": "NTBK",
+  "ticker": "NTBK",
+  "name": "PT Nusatama Berkah Tbk",
+  "logo": "https://s3.goapi.id/logo/NTBK.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e187967084911b4081d"
+  },
+  "id": "NUSA",
+  "ticker": "NUSA",
+  "name": "PT Sinergi Megah Internusa Tbk",
+  "logo": "https://s3.goapi.id/logo/NUSA.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e187967084911b4081e"
+  },
+  "id": "NZIA",
+  "ticker": "NZIA",
+  "name": "PT Nusantara Almazia, Tbk.",
+  "logo": "https://s3.goapi.id/logo/NZIA.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e187967084911b4081f"
+  },
+  "id": "OASA",
+  "ticker": "OASA",
+  "name": "PT Protech Mitra Perkasa Tbk",
+  "logo": "https://s3.goapi.id/logo/OASA.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e187967084911b40820"
+  },
+  "id": "OBMD",
+  "ticker": "OBMD",
+  "name": "PT OBM Drilchem Tbk",
+  "logo": "https://s3.goapi.id/logo/OBMD.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e187967084911b40821"
+  },
+  "id": "OCAP",
+  "ticker": "OCAP",
+  "name": "ONIX CAPITAL Tbk",
+  "logo": "https://s3.goapi.id/logo/OCAP.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e187967084911b40822"
+  },
+  "id": "OILS",
+  "ticker": "OILS",
+  "name": "PT Indo Oil Perkasa Tbk",
+  "logo": "https://s3.goapi.id/logo/OILS.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e187967084911b40823"
+  },
+  "id": "OKAS",
+  "ticker": "OKAS",
+  "name": "Ancora Indonesia Resources Tbk",
+  "logo": "https://s3.goapi.id/logo/OKAS.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e187967084911b40824"
+  },
+  "id": "OLIV",
+  "ticker": "OLIV",
+  "name": "PT Oscar Mitra Sukses Sejahtera Tbk",
+  "logo": "https://s3.goapi.id/logo/OLIV.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e187967084911b40825"
+  },
+  "id": "OMED",
+  "ticker": "OMED",
+  "name": "PT Jayamas Medica Industri Tbk",
+  "logo": "https://s3.goapi.id/logo/OMED.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e187967084911b40826"
+  },
+  "id": "OMRE",
+  "ticker": "OMRE",
+  "name": "Indonesia Prima Property Tbk",
+  "logo": "https://s3.goapi.id/logo/OMRE.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e187967084911b40827"
+  },
+  "id": "OPMS",
+  "ticker": "OPMS",
+  "name": "PT Optima Prima Metal Sinergi Tbk.",
+  "logo": "https://s3.goapi.id/logo/OPMS.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e197967084911b40828"
+  },
+  "id": "PACK",
+  "ticker": "PACK",
+  "name": "PT Solusi Kemasan Digital Tbk",
+  "logo": "https://s3.goapi.id/logo/PACK.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e197967084911b40829"
+  },
+  "id": "PADA",
+  "ticker": "PADA",
+  "name": "PT Personel Alih Daya Tbk",
+  "logo": "https://s3.goapi.id/logo/PADA.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e197967084911b4082a"
+  },
+  "id": "PADI",
+  "ticker": "PADI",
+  "name": "Minna Padi Investama Sekuritas Tbk",
+  "logo": "https://s3.goapi.id/logo/PADI.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e197967084911b4082b"
+  },
+  "id": "PALM",
+  "ticker": "PALM",
+  "name": "Provident Agro Tbk",
+  "logo": "https://s3.goapi.id/logo/PALM.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e197967084911b4082c"
+  },
+  "id": "PAMG",
+  "ticker": "PAMG",
+  "name": "PT Bima Sakti Pertiwi Tbk",
+  "logo": "https://s3.goapi.id/logo/PAMG.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e197967084911b4082d"
+  },
+  "id": "PANI",
+  "ticker": "PANI",
+  "name": "PT Pratama Abadi Nusa Industri Tbk.",
+  "logo": "https://s3.goapi.id/logo/PANI.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e197967084911b4082e"
+  },
+  "id": "PANR",
+  "ticker": "PANR",
+  "name": "Panorama Sentrawisata Tbk",
+  "logo": "https://s3.goapi.id/logo/PANR.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e197967084911b4082f"
+  },
+  "id": "PANS",
+  "ticker": "PANS",
+  "name": "Panin Sekuritas Tbk",
+  "logo": "https://s3.goapi.id/logo/PANS.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e197967084911b40830"
+  },
+  "id": "PBID",
+  "ticker": "PBID",
+  "name": "PT Panca Budi Idaman Tbk",
+  "logo": "https://s3.goapi.id/logo/PBID.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e197967084911b40831"
+  },
+  "id": "PBRX",
+  "ticker": "PBRX",
+  "name": "Pan Brothers Tbk",
+  "logo": "https://s3.goapi.id/logo/PBRX.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e197967084911b40832"
+  },
+  "id": "PBSA",
+  "ticker": "PBSA",
+  "name": "PT Paramita Bangun Sarana Tbk",
+  "logo": "https://s3.goapi.id/logo/PBSA.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e197967084911b40833"
+  },
+  "id": "PCAR",
+  "ticker": "PCAR",
+  "name": "PT Prima Cakrawala Abadi Tbk",
+  "logo": "https://s3.goapi.id/logo/PCAR.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e197967084911b40834"
+  },
+  "id": "PDES",
+  "ticker": "PDES",
+  "name": "Destinasi Tirta Nusantara Tbk",
+  "logo": "https://s3.goapi.id/logo/PDES.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e197967084911b40835"
+  },
+  "id": "PDPP",
+  "ticker": "PDPP",
+  "name": "PT Primadaya Plastisindo Tbk",
+  "logo": "https://s3.goapi.id/logo/PDPP.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e197967084911b40836"
+  },
+  "id": "PEGE",
+  "ticker": "PEGE",
+  "name": "PT Panca Global Kapital Tbk.",
+  "logo": "https://s3.goapi.id/logo/PEGE.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e197967084911b40837"
+  },
+  "id": "PEHA",
+  "ticker": "PEHA",
+  "name": "PT Phapros Tbk",
+  "logo": "https://s3.goapi.id/logo/PEHA.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e197967084911b40838"
+  },
+  "id": "PEVE",
+  "ticker": "PEVE",
+  "name": "PT Penta Valent Tbk",
+  "logo": "https://s3.goapi.id/logo/PEVE.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e197967084911b40839"
+  },
+  "id": "PGAS",
+  "ticker": "PGAS",
+  "name": "PT Perusahaan Gas Negara Tbk.",
+  "logo": "https://s3.goapi.id/logo/PGAS.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e197967084911b4083a"
+  },
+  "id": "PGEO",
+  "ticker": "PGEO",
+  "name": "PT Pertamina Geothermal Energy Tbk",
+  "logo": "https://s3.goapi.id/logo/PGEO.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e197967084911b4083b"
+  },
+  "id": "PGJO",
+  "ticker": "PGJO",
+  "name": "PT Tourindo Guide Indonesia Tbk.",
+  "logo": "https://s3.goapi.id/logo/PGJO.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e197967084911b4083c"
+  },
+  "id": "PGLI",
+  "ticker": "PGLI",
+  "name": "Pembangunan Graha Lestari Tbk",
+  "logo": "https://s3.goapi.id/logo/PGLI.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e197967084911b4083d"
+  },
+  "id": "PGUN",
+  "ticker": "PGUN",
+  "name": "PT Pradiksi Gunatama Tbk",
+  "logo": "https://s3.goapi.id/logo/PGUN.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e197967084911b4083e"
+  },
+  "id": "PICO",
+  "ticker": "PICO",
+  "name": "Pelangi Indah Canindo Tbk",
+  "logo": "https://s3.goapi.id/logo/PICO.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e197967084911b4083f"
+  },
+  "id": "PJAA",
+  "ticker": "PJAA",
+  "name": "Pembangunan Jaya Ancol Tbk",
+  "logo": "https://s3.goapi.id/logo/PJAA.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e197967084911b40840"
+  },
+  "id": "PKPK",
+  "ticker": "PKPK",
+  "name": "Perdana Karya Perkasa Tbk",
+  "logo": "https://s3.goapi.id/logo/PKPK.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e197967084911b40841"
+  },
+  "id": "PLAN",
+  "ticker": "PLAN",
+  "name": "PT Planet Properindo Jaya Tbk",
+  "logo": "https://s3.goapi.id/logo/PLAN.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e197967084911b40842"
+  },
+  "id": "PLAS",
+  "ticker": "PLAS",
+  "name": "Polaris Investama Tbk",
+  "logo": "https://s3.goapi.id/logo/PLAS.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e197967084911b40843"
+  },
+  "id": "PLIN",
+  "ticker": "PLIN",
+  "name": "Plaza Indonesia Realty Tbk",
+  "logo": "https://s3.goapi.id/logo/PLIN.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e197967084911b40844"
+  },
+  "id": "PMJS",
+  "ticker": "PMJS",
+  "name": "PT Putra Mandiri Jembar Tbk",
+  "logo": "https://s3.goapi.id/logo/PMJS.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e197967084911b40845"
+  },
+  "id": "PMMP",
+  "ticker": "PMMP",
+  "name": "PT Panca Mitra Multiperdana Tbk.",
+  "logo": "https://s3.goapi.id/logo/PMMP.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e197967084911b40846"
+  },
+  "id": "PNBN",
+  "ticker": "PNBN",
+  "name": "Bank Pan Indonesia Tbk",
+  "logo": "https://s3.goapi.id/logo/PNBN.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e197967084911b40847"
+  },
+  "id": "PNBS",
+  "ticker": "PNBS",
+  "name": "PT Bank Panin Dubai Syariah Tbk.",
+  "logo": "https://s3.goapi.id/logo/PNBS.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e197967084911b40848"
+  },
+  "id": "PNGO",
+  "ticker": "PNGO",
+  "name": "PT Pinago Utama Tbk",
+  "logo": "https://s3.goapi.id/logo/PNGO.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e197967084911b40849"
+  },
+  "id": "PNIN",
+  "ticker": "PNIN",
+  "name": "Paninvest Tbk",
+  "logo": "https://s3.goapi.id/logo/PNIN.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e197967084911b4084a"
+  },
+  "id": "PNLF",
+  "ticker": "PNLF",
+  "name": "Panin Financial Tbk",
+  "logo": "https://s3.goapi.id/logo/PNLF.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e197967084911b4084b"
+  },
+  "id": "PNSE",
+  "ticker": "PNSE",
+  "name": "Pudjiadi & Sons Tbk",
+  "logo": "https://s3.goapi.id/logo/PNSE.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e197967084911b4084c"
+  },
+  "id": "POLA",
+  "ticker": "POLA",
+  "name": "PT Pool Advista Finance Tbk.",
+  "logo": "https://s3.goapi.id/logo/POLA.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e197967084911b4084d"
+  },
+  "id": "POLI",
+  "ticker": "POLI",
+  "name": "PT Pollux Hotels Group Tbk",
+  "logo": "https://s3.goapi.id/logo/POLI.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e197967084911b4084e"
+  },
+  "id": "POLL",
+  "ticker": "POLL",
+  "name": "PT Pollux Properties Indonesia Tbk.",
+  "logo": "https://s3.goapi.id/logo/POLL.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e197967084911b4084f"
+  },
+  "id": "POLU",
+  "ticker": "POLU",
+  "name": "PT Golden Flower Tbk.",
+  "logo": "https://s3.goapi.id/logo/POLU.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e197967084911b40850"
+  },
+  "id": "POLY",
+  "ticker": "POLY",
+  "name": "Asia Pacific Fibers Tbk",
+  "logo": "https://s3.goapi.id/logo/POLY.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e197967084911b40851"
+  },
+  "id": "POOL",
+  "ticker": "POOL",
+  "name": "Pool Advista Indonesia Tbk",
+  "logo": "https://s3.goapi.id/logo/POOL.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e197967084911b40852"
+  },
+  "id": "PORT",
+  "ticker": "PORT",
+  "name": "PT Nusantara Pelabuhan Handal Tbk.",
+  "logo": "https://s3.goapi.id/logo/PORT.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e197967084911b40853"
+  },
+  "id": "POSA",
+  "ticker": "POSA",
+  "name": "PT Bliss Properti Indonesia Tbk.",
+  "logo": "https://s3.goapi.id/logo/POSA.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e197967084911b40854"
+  },
+  "id": "POWR",
+  "ticker": "POWR",
+  "name": "PT Cikarang Listrindo Tbk.",
+  "logo": "https://s3.goapi.id/logo/POWR.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e197967084911b40855"
+  },
+  "id": "PPGL",
+  "ticker": "PPGL",
+  "name": "PT Prima Globalindo Logistik Tbk.",
+  "logo": "https://s3.goapi.id/logo/PPGL.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e197967084911b40856"
+  },
+  "id": "PPRE",
+  "ticker": "PPRE",
+  "name": "PT PP Presisi Tbk.",
+  "logo": "https://s3.goapi.id/logo/PPRE.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e197967084911b40857"
+  },
+  "id": "PPRO",
+  "ticker": "PPRO",
+  "name": "PT PP Properti Tbk.",
+  "logo": "https://s3.goapi.id/logo/PPRO.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e197967084911b40858"
+  },
+  "id": "PRAS",
+  "ticker": "PRAS",
+  "name": "Prima Alloy Steel Universal Tbk",
+  "logo": "https://s3.goapi.id/logo/PRAS.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e197967084911b40859"
+  },
+  "id": "PRAY",
+  "ticker": "PRAY",
+  "name": "PT Famon Awal Bros Sedaya Tbk",
+  "logo": "https://s3.goapi.id/logo/PRAY.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e197967084911b4085a"
+  },
+  "id": "PRDA",
+  "ticker": "PRDA",
+  "name": "PT Prodia Widyahusada Tbk.",
+  "logo": "https://s3.goapi.id/logo/PRDA.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e197967084911b4085b"
+  },
+  "id": "PRIM",
+  "ticker": "PRIM",
+  "name": "PT Royal Prima Tbk.",
+  "logo": "https://s3.goapi.id/logo/PRIM.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e197967084911b4085c"
+  },
+  "id": "PSAB",
+  "ticker": "PSAB",
+  "name": "J RESOURCES ASIA PASIFIK Tbk",
+  "logo": "https://s3.goapi.id/logo/PSAB.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e197967084911b4085d"
+  },
+  "id": "PSDN",
+  "ticker": "PSDN",
+  "name": "Prasidha Aneka Niaga Tbk",
+  "logo": "https://s3.goapi.id/logo/PSDN.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e197967084911b4085e"
+  },
+  "id": "PSGO",
+  "ticker": "PSGO",
+  "name": "PT Palma Serasih Tbk.",
+  "logo": "https://s3.goapi.id/logo/PSGO.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e197967084911b4085f"
+  },
+  "id": "PSKT",
+  "ticker": "PSKT",
+  "name": "PT Red Planet Indonesia Tbk",
+  "logo": "https://s3.goapi.id/logo/PSKT.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e197967084911b40860"
+  },
+  "id": "PSSI",
+  "ticker": "PSSI",
+  "name": "PT Pelita Samudera Shipping Tbk",
+  "logo": "https://s3.goapi.id/logo/PSSI.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e197967084911b40861"
+  },
+  "id": "PTBA",
+  "ticker": "PTBA",
+  "name": "Bukit Asam Tbk",
+  "logo": "https://s3.goapi.id/logo/PTBA.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e197967084911b40862"
+  },
+  "id": "PTDU",
+  "ticker": "PTDU",
+  "name": "PT Djasa Ubersakti Tbk",
+  "logo": "https://s3.goapi.id/logo/PTDU.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e197967084911b40863"
+  },
+  "id": "PTIS",
+  "ticker": "PTIS",
+  "name": "Indo Straits Tbk",
+  "logo": "https://s3.goapi.id/logo/PTIS.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e197967084911b40864"
+  },
+  "id": "PTMP",
+  "ticker": "PTMP",
+  "name": "PT Mitra Pack Tbk.",
+  "logo": "https://s3.goapi.id/logo/PTMP.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e197967084911b40865"
+  },
+  "id": "PTPP",
+  "ticker": "PTPP",
+  "name": "PP (Persero) Tbk",
+  "logo": "https://s3.goapi.id/logo/PTPP.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e197967084911b40866"
+  },
+  "id": "PTPW",
+  "ticker": "PTPW",
+  "name": "PT Pratama Widya Tbk.",
+  "logo": "https://s3.goapi.id/logo/PTPW.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e197967084911b40867"
+  },
+  "id": "PTRO",
+  "ticker": "PTRO",
+  "name": "Petrosea Tbk",
+  "logo": "https://s3.goapi.id/logo/PTRO.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e197967084911b40868"
+  },
+  "id": "PTSN",
+  "ticker": "PTSN",
+  "name": "Sat Nusapersada Tbk",
+  "logo": "https://s3.goapi.id/logo/PTSN.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e197967084911b40869"
+  },
+  "id": "PTSP",
+  "ticker": "PTSP",
+  "name": "Pioneerindo Gourmet International Tbk",
+  "logo": "https://s3.goapi.id/logo/PTSP.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e197967084911b4086a"
+  },
+  "id": "PUDP",
+  "ticker": "PUDP",
+  "name": "Pudjiadi Prestige Tbk",
+  "logo": "https://s3.goapi.id/logo/PUDP.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e197967084911b4086b"
+  },
+  "id": "PURA",
+  "ticker": "PURA",
+  "name": "PT Putra Rajawali Kencana Tbk.",
+  "logo": "https://s3.goapi.id/logo/PURA.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e197967084911b4086c"
+  },
+  "id": "PURE",
+  "ticker": "PURE",
+  "name": "PT Trinitan Metals and Minerals Tbk",
+  "logo": "https://s3.goapi.id/logo/PURE.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e197967084911b4086d"
+  },
+  "id": "PURI",
+  "ticker": "PURI",
+  "name": "PT Puri Global Sukses Tbk",
+  "logo": "https://s3.goapi.id/logo/PURI.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e197967084911b4086e"
+  },
+  "id": "PWON",
+  "ticker": "PWON",
+  "name": "Pakuwon Jati Tbk",
+  "logo": "https://s3.goapi.id/logo/PWON.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e197967084911b4086f"
+  },
+  "id": "PYFA",
+  "ticker": "PYFA",
+  "name": "Pyridam Farma Tbk",
+  "logo": "https://s3.goapi.id/logo/PYFA.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e197967084911b40870"
+  },
+  "id": "PZZA",
+  "ticker": "PZZA",
+  "name": "PT Sarimelati Kencana Tbk.",
+  "logo": "https://s3.goapi.id/logo/PZZA.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e197967084911b40871"
+  },
+  "id": "RAFI",
+  "ticker": "RAFI",
+  "name": "PT Sari Kreasi Boga Tbk",
+  "logo": "https://s3.goapi.id/logo/RAFI.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e197967084911b40872"
+  },
+  "id": "RAJA",
+  "ticker": "RAJA",
+  "name": "Rukun Raharja Tbk",
+  "logo": "https://s3.goapi.id/logo/RAJA.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e197967084911b40873"
+  },
+  "id": "RALS",
+  "ticker": "RALS",
+  "name": "Ramayana Lestari Sentosa Tbk",
+  "logo": "https://s3.goapi.id/logo/RALS.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e197967084911b40874"
+  },
+  "id": "RANC",
+  "ticker": "RANC",
+  "name": "Supra Boga Lestari Tbk",
+  "logo": "https://s3.goapi.id/logo/RANC.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e197967084911b40875"
+  },
+  "id": "RBMS",
+  "ticker": "RBMS",
+  "name": "Ristia Bintang Mahkotasejati Tbk",
+  "logo": "https://s3.goapi.id/logo/RBMS.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e197967084911b40876"
+  },
+  "id": "RCCC",
+  "ticker": "RCCC",
+  "name": "PT Utama Radar Cahaya Tbk",
+  "logo": "https://s3.goapi.id/logo/RCCC.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e197967084911b40877"
+  },
+  "id": "RDTX",
+  "ticker": "RDTX",
+  "name": "Roda Vivatex Tbk",
+  "logo": "https://s3.goapi.id/logo/RDTX.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e197967084911b40878"
+  },
+  "id": "REAL",
+  "ticker": "REAL",
+  "name": "PT Repower Asia Indonesia Tbk.",
+  "logo": "https://s3.goapi.id/logo/REAL.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e197967084911b40879"
+  },
+  "id": "RELI",
+  "ticker": "RELI",
+  "name": "Reliance Sekuritas Indonesia Tbk",
+  "logo": "https://s3.goapi.id/logo/RELI.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e197967084911b4087a"
+  },
+  "id": "RICY",
+  "ticker": "RICY",
+  "name": "Ricky Putra Globalindo Tbk",
+  "logo": "https://s3.goapi.id/logo/RICY.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e197967084911b4087b"
+  },
+  "id": "RIGS",
+  "ticker": "RIGS",
+  "name": "Rig Tenders Tbk",
+  "logo": "https://s3.goapi.id/logo/RIGS.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e197967084911b4087c"
+  },
+  "id": "RIMO",
+  "ticker": "RIMO",
+  "name": "PT Rimo International Lestari Tbk.",
+  "logo": "https://s3.goapi.id/logo/RIMO.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e197967084911b4087d"
+  },
+  "id": "RISE",
+  "ticker": "RISE",
+  "name": "PT Jaya Sukses Makmur Sentosa Tbk.",
+  "logo": "https://s3.goapi.id/logo/RISE.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e197967084911b4087e"
+  },
+  "id": "RMBA",
+  "ticker": "RMBA",
+  "name": "Bentoel International Investama Tbk",
+  "logo": "https://s3.goapi.id/logo/RMBA.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e197967084911b4087f"
+  },
+  "id": "RMKE",
+  "ticker": "RMKE",
+  "name": "PT RMK Energy Tbk",
+  "logo": "https://s3.goapi.id/logo/RMKE.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e197967084911b40880"
+  },
+  "id": "ROCK",
+  "ticker": "ROCK",
+  "name": "PT Rockfields Properti Indonesia Tbk.",
+  "logo": "https://s3.goapi.id/logo/ROCK.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e197967084911b40881"
+  },
+  "id": "RODA",
+  "ticker": "RODA",
+  "name": "Pikko Land Development Tbk",
+  "logo": "https://s3.goapi.id/logo/RODA.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e197967084911b40882"
+  },
+  "id": "RONY",
+  "ticker": "RONY",
+  "name": "PT Aesler Grup Internasional Tbk",
+  "logo": "https://s3.goapi.id/logo/RONY.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e197967084911b40883"
+  },
+  "id": "ROTI",
+  "ticker": "ROTI",
+  "name": "PT Nippon Indosari Corpindo Tbk",
+  "logo": "https://s3.goapi.id/logo/ROTI.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e197967084911b40884"
+  },
+  "id": "RSGK",
+  "ticker": "RSGK",
+  "name": "PT Kedoya Adyaraya Tbk",
+  "logo": "https://s3.goapi.id/logo/RSGK.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e197967084911b40885"
+  },
+  "id": "RUIS",
+  "ticker": "RUIS",
+  "name": "Radiant Utama Interinsco Tbk",
+  "logo": "https://s3.goapi.id/logo/RUIS.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e197967084911b40886"
+  },
+  "id": "RUNS",
+  "ticker": "RUNS",
+  "name": "PT Global Sukses Solusi Tbk",
+  "logo": "https://s3.goapi.id/logo/RUNS.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e197967084911b40887"
+  },
+  "id": "SAFE",
+  "ticker": "SAFE",
+  "name": "Steady Safe Tbk",
+  "logo": "https://s3.goapi.id/logo/SAFE.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e197967084911b40888"
+  },
+  "id": "SAGE",
+  "ticker": "SAGE",
+  "name": "PT Saptausaha Gemilangindah Tbk",
+  "logo": "https://s3.goapi.id/logo/SAGE.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e197967084911b40889"
+  },
+  "id": "SAME",
+  "ticker": "SAME",
+  "name": "Sarana Meditama Metropolitan Tbk",
+  "logo": "https://s3.goapi.id/logo/SAME.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e197967084911b4088a"
+  },
+  "id": "SAMF",
+  "ticker": "SAMF",
+  "name": "PT Saraswanti Anugerah Makmur Tbk.",
+  "logo": "https://s3.goapi.id/logo/SAMF.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e197967084911b4088b"
+  },
+  "id": "SAPX",
+  "ticker": "SAPX",
+  "name": "PT Satria Antaran Prima Tbk.",
+  "logo": "https://s3.goapi.id/logo/SAPX.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e197967084911b4088c"
+  },
+  "id": "SATU",
+  "ticker": "SATU",
+  "name": "PT Kota Satu Properti Tbk.",
+  "logo": "https://s3.goapi.id/logo/SATU.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e197967084911b4088d"
+  },
+  "id": "SBAT",
+  "ticker": "SBAT",
+  "name": "PT Sejahtera Bintang Abadi Textile Tbk.",
+  "logo": "https://s3.goapi.id/logo/SBAT.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e197967084911b4088e"
+  },
+  "id": "SBMA",
+  "ticker": "SBMA",
+  "name": "PT Surya Biru Murni Acetylene Tbk",
+  "logo": "https://s3.goapi.id/logo/SBMA.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e197967084911b4088f"
+  },
+  "id": "SCBD",
+  "ticker": "SCBD",
+  "name": "Danayasa Arthatama Tbk",
+  "logo": "https://s3.goapi.id/logo/SCBD.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e197967084911b40890"
+  },
+  "id": "SCCO",
+  "ticker": "SCCO",
+  "name": "PT Supreme Cable Manufacturing & Commerce Tbk",
+  "logo": "https://s3.goapi.id/logo/SCCO.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e197967084911b40891"
+  },
+  "id": "SCMA",
+  "ticker": "SCMA",
+  "name": "Surya Citra Media Tbk",
+  "logo": "https://s3.goapi.id/logo/SCMA.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e197967084911b40892"
+  },
+  "id": "SCNP",
+  "ticker": "SCNP",
+  "name": "PT Selaras Citra Nusantara Perkasa Tbk",
+  "logo": "https://s3.goapi.id/logo/SCNP.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e197967084911b40893"
+  },
+  "id": "SCPI",
+  "ticker": "SCPI",
+  "name": "PT Organon Pharma Indonesia Tbk",
+  "logo": "https://s3.goapi.id/logo/SCPI.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e197967084911b40894"
+  },
+  "id": "SDMU",
+  "ticker": "SDMU",
+  "name": "Sidomulyo Selaras Tbk",
+  "logo": "https://s3.goapi.id/logo/SDMU.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e197967084911b40895"
+  },
+  "id": "SDPC",
+  "ticker": "SDPC",
+  "name": "Millennium Pharmacon International Tbk",
+  "logo": "https://s3.goapi.id/logo/SDPC.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e197967084911b40896"
+  },
+  "id": "SDRA",
+  "ticker": "SDRA",
+  "name": "PT Bank Woori Saudara Indonesia 1906 Tbk",
+  "logo": "https://s3.goapi.id/logo/SDRA.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e197967084911b40897"
+  },
+  "id": "SEMA",
+  "ticker": "SEMA",
+  "name": "PT Semacom Integrated Tbk",
+  "logo": "https://s3.goapi.id/logo/SEMA.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e197967084911b40898"
+  },
+  "id": "SFAN",
+  "ticker": "SFAN",
+  "name": "PT Surya Fajar Capital Tbk",
+  "logo": "https://s3.goapi.id/logo/SFAN.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e197967084911b40899"
+  },
+  "id": "SGER",
+  "ticker": "SGER",
+  "name": "PT Sumber Global Energy Tbk.",
+  "logo": "https://s3.goapi.id/logo/SGER.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e197967084911b4089a"
+  },
+  "id": "SGRO",
+  "ticker": "SGRO",
+  "name": "PT Sampoerna Agro Tbk",
+  "logo": "https://s3.goapi.id/logo/SGRO.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e197967084911b4089b"
+  },
+  "id": "SHID",
+  "ticker": "SHID",
+  "name": "Hotel Sahid Jaya Tbk",
+  "logo": "https://s3.goapi.id/logo/SHID.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e197967084911b4089c"
+  },
+  "id": "SHIP",
+  "ticker": "SHIP",
+  "name": "PT Sillo Maritime Perdana Tbk",
+  "logo": "https://s3.goapi.id/logo/SHIP.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e197967084911b4089d"
+  },
+  "id": "SIAP",
+  "ticker": "SIAP",
+  "name": "Sekawan Intipratama Tbk",
+  "logo": "https://s3.goapi.id/logo/SIAP.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e197967084911b4089e"
+  },
+  "id": "SICO",
+  "ticker": "SICO",
+  "name": "PT Sigma Energy Compressindo Tbk",
+  "logo": "https://s3.goapi.id/logo/SICO.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e197967084911b4089f"
+  },
+  "id": "SIDO",
+  "ticker": "SIDO",
+  "name": "PT Industri Jamu Dan Farmasi Sido Muncul Tbk",
+  "logo": "https://s3.goapi.id/logo/SIDO.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e197967084911b408a0"
+  },
+  "id": "SILO",
+  "ticker": "SILO",
+  "name": "PT Siloam International Hospitals Tbk.",
+  "logo": "https://s3.goapi.id/logo/SILO.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e197967084911b408a1"
+  },
+  "id": "SIMA",
+  "ticker": "SIMA",
+  "name": "Siwani Makmur Tbk",
+  "logo": "https://s3.goapi.id/logo/SIMA.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e197967084911b408a2"
+  },
+  "id": "SIMM",
+  "ticker": "SIMM",
+  "name": "PT Surya Intrindo Makmur Tbk",
+  "logo": "https://s3.goapi.id/logo/SIMM.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e197967084911b408a3"
+  },
+  "id": "SIMP",
+  "ticker": "SIMP",
+  "name": "Salim Ivomas Pratama Tbk",
+  "logo": "https://s3.goapi.id/logo/SIMP.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e197967084911b408a4"
+  },
+  "id": "SINI",
+  "ticker": "SINI",
+  "name": "PT Singaraja Putra Tbk.",
+  "logo": "https://s3.goapi.id/logo/SINI.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e197967084911b408a5"
+  },
+  "id": "SIPD",
+  "ticker": "SIPD",
+  "name": "PT Sreeya Sewu Indonesia Tbk",
+  "logo": "https://s3.goapi.id/logo/SIPD.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e197967084911b408a6"
+  },
+  "id": "SKBM",
+  "ticker": "SKBM",
+  "name": "Sekar Bumi Tbk",
+  "logo": "https://s3.goapi.id/logo/SKBM.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e197967084911b408a7"
+  },
+  "id": "SKLT",
+  "ticker": "SKLT",
+  "name": "Sekar Laut Tbk",
+  "logo": "https://s3.goapi.id/logo/SKLT.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e197967084911b408a8"
+  },
+  "id": "SKRN",
+  "ticker": "SKRN",
+  "name": "PT Superkrane Mitra Utama Tbk",
+  "logo": "https://s3.goapi.id/logo/SKRN.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e197967084911b408a9"
+  },
+  "id": "SKYB",
+  "ticker": "SKYB",
+  "name": "PT Northcliff Citranusa Indonesia Tbk.",
+  "logo": "https://s3.goapi.id/logo/SKYB.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e197967084911b408aa"
+  },
+  "id": "SLIS",
+  "ticker": "SLIS",
+  "name": "PT Gaya Abadi Sempurna Tbk",
+  "logo": "https://s3.goapi.id/logo/SLIS.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e197967084911b408ab"
+  },
+  "id": "SMAR",
+  "ticker": "SMAR",
+  "name": "PT Sinar Mas Agro Resources and Technology Tbk",
+  "logo": "https://s3.goapi.id/logo/SMAR.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e197967084911b408ac"
+  },
+  "id": "SMBR",
+  "ticker": "SMBR",
+  "name": "PT Semen Baturaja (Persero) Tbk",
+  "logo": "https://s3.goapi.id/logo/SMBR.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e197967084911b408ad"
+  },
+  "id": "SMCB",
+  "ticker": "SMCB",
+  "name": "PT Solusi Bangun Indonesia Tbk",
+  "logo": "https://s3.goapi.id/logo/SMCB.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e197967084911b408ae"
+  },
+  "id": "SMDM",
+  "ticker": "SMDM",
+  "name": "Suryamas Dutamakmur Tbk",
+  "logo": "https://s3.goapi.id/logo/SMDM.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e197967084911b408af"
+  },
+  "id": "SMDR",
+  "ticker": "SMDR",
+  "name": "Samudera Indonesia Tbk",
+  "logo": "https://s3.goapi.id/logo/SMDR.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e197967084911b408b0"
+  },
+  "id": "SMGR",
+  "ticker": "SMGR",
+  "name": "Semen Indonesia (Persero) Tbk",
+  "logo": "https://s3.goapi.id/logo/SMGR.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e197967084911b408b1"
+  },
+  "id": "SMKL",
+  "ticker": "SMKL",
+  "name": "PT Satyamitra Kemas Lestari Tbk",
+  "logo": "https://s3.goapi.id/logo/SMKL.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e197967084911b408b2"
+  },
+  "id": "SMKM",
+  "ticker": "SMKM",
+  "name": "PT Sumber Mas Konstruksi Tbk",
+  "logo": "https://s3.goapi.id/logo/SMKM.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e197967084911b408b3"
+  },
+  "id": "SMMA",
+  "ticker": "SMMA",
+  "name": "PT Sinar Mas Multiartha Tbk",
+  "logo": "https://s3.goapi.id/logo/SMMA.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e197967084911b408b4"
+  },
+  "id": "SMMT",
+  "ticker": "SMMT",
+  "name": "GOLDEN EAGLE ENERGY Tbk",
+  "logo": "https://s3.goapi.id/logo/SMMT.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e197967084911b408b5"
+  },
+  "id": "SMRA",
+  "ticker": "SMRA",
+  "name": "PT Summarecon Agung Tbk",
+  "logo": "https://s3.goapi.id/logo/SMRA.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e197967084911b408b6"
+  },
+  "id": "SMRU",
+  "ticker": "SMRU",
+  "name": "SMR Utama Tbk",
+  "logo": "https://s3.goapi.id/logo/SMRU.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e197967084911b408b7"
+  },
+  "id": "SMSM",
+  "ticker": "SMSM",
+  "name": "Selamat Sempurna Tbk",
+  "logo": "https://s3.goapi.id/logo/SMSM.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e197967084911b408b8"
+  },
+  "id": "SNLK",
+  "ticker": "SNLK",
+  "name": "PT Sunter Lakeside Hotel Tbk.",
+  "logo": "https://s3.goapi.id/logo/SNLK.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e197967084911b408b9"
+  },
+  "id": "SOCI",
+  "ticker": "SOCI",
+  "name": "PT Soechi Lines Tbk. ",
+  "logo": "https://s3.goapi.id/logo/SOCI.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e197967084911b408ba"
+  },
+  "id": "SOFA",
+  "ticker": "SOFA",
+  "name": "PT Boston Furniture Industries Tbk..",
+  "logo": "https://s3.goapi.id/logo/SOFA.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e197967084911b408bb"
+  },
+  "id": "SOHO",
+  "ticker": "SOHO",
+  "name": "PT Soho Global Health Tbk",
+  "logo": "https://s3.goapi.id/logo/SOHO.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e197967084911b408bc"
+  },
+  "id": "SONA",
+  "ticker": "SONA",
+  "name": "Sona Topas Tourism Industry Tbk",
+  "logo": "https://s3.goapi.id/logo/SONA.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e197967084911b408bd"
+  },
+  "id": "SOSS",
+  "ticker": "SOSS",
+  "name": "PT Shield On Service Tbk.",
+  "logo": "https://s3.goapi.id/logo/SOSS.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e197967084911b408be"
+  },
+  "id": "SOTS",
+  "ticker": "SOTS",
+  "name": "PT Satria Mega Kencana Tbk.",
+  "logo": "https://s3.goapi.id/logo/SOTS.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e197967084911b408bf"
+  },
+  "id": "SOUL",
+  "ticker": "SOUL",
+  "name": "PT Mitra Tirta Buwana Tbk",
+  "logo": "https://s3.goapi.id/logo/SOUL.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e197967084911b408c0"
+  },
+  "id": "SPMA",
+  "ticker": "SPMA",
+  "name": "Suparma Tbk",
+  "logo": "https://s3.goapi.id/logo/SPMA.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e197967084911b408c1"
+  },
+  "id": "SPOT",
+  "ticker": "SPOT",
+  "name": "PT Sofyan Hotels Tbk",
+  "logo": "https://s3.goapi.id/logo/SPOT.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e197967084911b408c2"
+  },
+  "id": "SPTO",
+  "ticker": "SPTO",
+  "name": "PT Surya Pertiwi Tbk",
+  "logo": "https://s3.goapi.id/logo/SPTO.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e197967084911b408c3"
+  },
+  "id": "SQMI",
+  "ticker": "SQMI",
+  "name": "Wilton Makmur Indonesia Tbk",
+  "logo": "https://s3.goapi.id/logo/SQMI.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e197967084911b408c4"
+  },
+  "id": "SRAJ",
+  "ticker": "SRAJ",
+  "name": "Sejahteraraya Anugrahjaya Tbk",
+  "logo": "https://s3.goapi.id/logo/SRAJ.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e197967084911b408c5"
+  },
+  "id": "SRIL",
+  "ticker": "SRIL",
+  "name": "PT Sri Rejeki Isman Tbk",
+  "logo": "https://s3.goapi.id/logo/SRIL.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e197967084911b408c6"
+  },
+  "id": "SRSN",
+  "ticker": "SRSN",
+  "name": "Indo Acidatama Tbk",
+  "logo": "https://s3.goapi.id/logo/SRSN.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e197967084911b408c7"
+  },
+  "id": "SRTG",
+  "ticker": "SRTG",
+  "name": "PT Saratoga Investama Sedaya Tbk.",
+  "logo": "https://s3.goapi.id/logo/SRTG.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e197967084911b408c8"
+  },
+  "id": "SSIA",
+  "ticker": "SSIA",
+  "name": "PT Surya Semesta Internusa Tbk",
+  "logo": "https://s3.goapi.id/logo/SSIA.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e197967084911b408c9"
+  },
+  "id": "SSMS",
+  "ticker": "SSMS",
+  "name": "PT Sawit Sumbermas Sarana Tbk. ",
+  "logo": "https://s3.goapi.id/logo/SSMS.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e197967084911b408ca"
+  },
+  "id": "SSTM",
+  "ticker": "SSTM",
+  "name": "Sunson Textile Manufacturer Tbk",
+  "logo": "https://s3.goapi.id/logo/SSTM.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e197967084911b408cb"
+  },
+  "id": "STAA",
+  "ticker": "STAA",
+  "name": "PT Sumber Tani Agung Resources Tbk",
+  "logo": "https://s3.goapi.id/logo/STAA.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e197967084911b408cc"
+  },
+  "id": "STAR",
+  "ticker": "STAR",
+  "name": "PT Buana Artha Anugerah Tbk.",
+  "logo": "https://s3.goapi.id/logo/STAR.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e197967084911b408cd"
+  },
+  "id": "STTP",
+  "ticker": "STTP",
+  "name": "PT Siantar Top Tbk",
+  "logo": "https://s3.goapi.id/logo/STTP.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e197967084911b408ce"
+  },
+  "id": "SUDI",
+  "ticker": "SUDI",
+  "name": "Surya Dumai Industri Tbk",
+  "logo": "https://s3.goapi.id/logo/SUDI.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e197967084911b408cf"
+  },
+  "id": "SUGI",
+  "ticker": "SUGI",
+  "name": "Sugih Energy Tbk",
+  "logo": "https://s3.goapi.id/logo/SUGI.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e197967084911b408d0"
+  },
+  "id": "SULI",
+  "ticker": "SULI",
+  "name": "PT SLJ Global Tbk",
+  "logo": "https://s3.goapi.id/logo/SULI.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e197967084911b408d1"
+  },
+  "id": "SUNI",
+  "ticker": "SUNI",
+  "name": "PT Sunindo Pratama Tbk",
+  "logo": "https://s3.goapi.id/logo/SUNI.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e197967084911b408d2"
+  },
+  "id": "SUPR",
+  "ticker": "SUPR",
+  "name": "Solusi Tunas Pratama Tbk",
+  "logo": "https://s3.goapi.id/logo/SUPR.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e197967084911b408d3"
+  },
+  "id": "SURE",
+  "ticker": "SURE",
+  "name": "PT Super Energy Tbk.",
+  "logo": "https://s3.goapi.id/logo/SURE.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e197967084911b408d4"
+  },
+  "id": "SWAT",
+  "ticker": "SWAT",
+  "name": "PT Sriwahana Adityakarta Tbk.",
+  "logo": "https://s3.goapi.id/logo/SWAT.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e197967084911b408d5"
+  },
+  "id": "SWID",
+  "ticker": "SWID",
+  "name": "PT Saraswanti Indoland Development Tbk",
+  "logo": "https://s3.goapi.id/logo/SWID.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e197967084911b408d6"
+  },
+  "id": "TALF",
+  "ticker": "TALF",
+  "name": "PT Tunas Alfin Tbk",
+  "logo": "https://s3.goapi.id/logo/TALF.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e197967084911b408d7"
+  },
+  "id": "TAMA",
+  "ticker": "TAMA",
+  "name": "PT Lancartama Sejati Tbk.",
+  "logo": "https://s3.goapi.id/logo/TAMA.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e197967084911b408d8"
+  },
+  "id": "TAMU",
+  "ticker": "TAMU",
+  "name": "PT Pelayaran Tamarin Samudra Tbk.",
+  "logo": "https://s3.goapi.id/logo/TAMU.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e197967084911b408d9"
+  },
+  "id": "TAPG",
+  "ticker": "TAPG",
+  "name": "PT Triputra Agro Persada Tbk.",
+  "logo": "https://s3.goapi.id/logo/TAPG.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e197967084911b408da"
+  },
+  "id": "TARA",
+  "ticker": "TARA",
+  "name": "PT Agung Semesta Sejahtera Tbk",
+  "logo": "https://s3.goapi.id/logo/TARA.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e197967084911b408db"
+  },
+  "id": "TAXI",
+  "ticker": "TAXI",
+  "name": "Express Transindo Utama Tbk",
+  "logo": "https://s3.goapi.id/logo/TAXI.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e197967084911b408dc"
+  },
+  "id": "TAYS",
+  "ticker": "TAYS",
+  "name": "PT Jaya Swarasa Agung Tbk",
+  "logo": "https://s3.goapi.id/logo/TAYS.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e197967084911b408dd"
+  },
+  "id": "TBIG",
+  "ticker": "TBIG",
+  "name": "PT Tower Bersama Infrastructure Tbk",
+  "logo": "https://s3.goapi.id/logo/TBIG.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e197967084911b408de"
+  },
+  "id": "TBLA",
+  "ticker": "TBLA",
+  "name": "Tunas Baru Lampung Tbk",
+  "logo": "https://s3.goapi.id/logo/TBLA.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e197967084911b408df"
+  },
+  "id": "TBMS",
+  "ticker": "TBMS",
+  "name": "Tembaga Mulia Semanan Tbk",
+  "logo": "https://s3.goapi.id/logo/TBMS.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e197967084911b408e0"
+  },
+  "id": "TCID",
+  "ticker": "TCID",
+  "name": "Mandom Indonesia Tbk",
+  "logo": "https://s3.goapi.id/logo/TCID.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e197967084911b408e1"
+  },
+  "id": "TCPI",
+  "ticker": "TCPI",
+  "name": "PT Transcoal Pacific Tbk.",
+  "logo": "https://s3.goapi.id/logo/TCPI.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e197967084911b408e2"
+  },
+  "id": "TDPM",
+  "ticker": "TDPM",
+  "name": "PT Tridomain Performance Materials Tbk.",
+  "logo": "https://s3.goapi.id/logo/TDPM.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e197967084911b408e3"
+  },
+  "id": "TEBE",
+  "ticker": "TEBE",
+  "name": "PT Dana Brata Luhur Tbk.",
+  "logo": "https://s3.goapi.id/logo/TEBE.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e197967084911b408e4"
+  },
+  "id": "TECH",
+  "ticker": "TECH",
+  "name": "PT Indosterling Technomedia Tbk",
+  "logo": "https://s3.goapi.id/logo/TECH.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e197967084911b408e5"
+  },
+  "id": "TELE",
+  "ticker": "TELE",
+  "name": "PT Tiphone Mobile Indonesia Tbk.",
+  "logo": "https://s3.goapi.id/logo/TELE.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e197967084911b408e6"
+  },
+  "id": "TFAS",
+  "ticker": "TFAS",
+  "name": "PT Telefast Indonesia Tbk.",
+  "logo": "https://s3.goapi.id/logo/TFAS.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e197967084911b408e7"
+  },
+  "id": "TFCO",
+  "ticker": "TFCO",
+  "name": "Tifico Fiber Indonesia Tbk",
+  "logo": "https://s3.goapi.id/logo/TFCO.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e197967084911b408e8"
+  },
+  "id": "TGKA",
+  "ticker": "TGKA",
+  "name": "Tigaraksa Satria Tbk",
+  "logo": "https://s3.goapi.id/logo/TGKA.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e197967084911b408e9"
+  },
+  "id": "TGRA",
+  "ticker": "TGRA",
+  "name": "PT Terregra Asia Energy",
+  "logo": "https://s3.goapi.id/logo/TGRA.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e197967084911b408ea"
+  },
+  "id": "TIFA",
+  "ticker": "TIFA",
+  "name": "KDB Tifa Finance Tbk",
+  "logo": "https://s3.goapi.id/logo/TIFA.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e197967084911b408eb"
+  },
+  "id": "TINS",
+  "ticker": "TINS",
+  "name": "PT Timah Tbk. ",
+  "logo": "https://s3.goapi.id/logo/TINS.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e197967084911b408ec"
+  },
+  "id": "TIRA",
+  "ticker": "TIRA",
+  "name": "Tira Austenite Tbk",
+  "logo": "https://s3.goapi.id/logo/TIRA.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e197967084911b408ed"
+  },
+  "id": "TIRT",
+  "ticker": "TIRT",
+  "name": "Tirta Mahakam Resources Tbk",
+  "logo": "https://s3.goapi.id/logo/TIRT.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e197967084911b408ee"
+  },
+  "id": "TKIM",
+  "ticker": "TKIM",
+  "name": "Pabrik Kertas Tjiwi Kimia Tbk",
+  "logo": "https://s3.goapi.id/logo/TKIM.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e197967084911b408ef"
+  },
+  "id": "TLDN",
+  "ticker": "TLDN",
+  "name": "PT Teladan Prima Agro Tbk",
+  "logo": "https://s3.goapi.id/logo/TLDN.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e197967084911b408f0"
+  },
+  "id": "TMAS",
+  "ticker": "TMAS",
+  "name": "PT Temas Tbk.",
+  "logo": "https://s3.goapi.id/logo/TMAS.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e197967084911b408f1"
+  },
+  "id": "TMPO",
+  "ticker": "TMPO",
+  "name": "Tempo Inti Media Tbk",
+  "logo": "https://s3.goapi.id/logo/TMPO.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e197967084911b408f2"
+  },
+  "id": "TNCA",
+  "ticker": "TNCA",
+  "name": "PT Trimuda Nuansa Citra Tbk.",
+  "logo": "https://s3.goapi.id/logo/TNCA.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e197967084911b408f3"
+  },
+  "id": "TOBA",
+  "ticker": "TOBA",
+  "name": "PT TBS Energi Utama Tbk",
+  "logo": "https://s3.goapi.id/logo/TOBA.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e197967084911b408f4"
+  },
+  "id": "TOOL",
+  "ticker": "TOOL",
+  "name": "PT Rohartindo Nusantara Luas Tbk",
+  "logo": "https://s3.goapi.id/logo/TOOL.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e197967084911b408f5"
+  },
+  "id": "TOPS",
+  "ticker": "TOPS",
+  "name": "PT Totalindo Eka Persada Tbk.",
+  "logo": "https://s3.goapi.id/logo/TOPS.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e197967084911b408f6"
+  },
+  "id": "TOTL",
+  "ticker": "TOTL",
+  "name": "Total Bangun Persada Tbk",
+  "logo": "https://s3.goapi.id/logo/TOTL.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e197967084911b408f7"
+  },
+  "id": "TOTO",
+  "ticker": "TOTO",
+  "name": "Surya Toto Indonesia Tbk",
+  "logo": "https://s3.goapi.id/logo/TOTO.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e197967084911b408f8"
+  },
+  "id": "TOWR",
+  "ticker": "TOWR",
+  "name": "Sarana Menara Nusantara Tbk",
+  "logo": "https://s3.goapi.id/logo/TOWR.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e197967084911b408f9"
+  },
+  "id": "TOYS",
+  "ticker": "TOYS",
+  "name": "PT Sunindo Adipersada Tbk.",
+  "logo": "https://s3.goapi.id/logo/TOYS.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e197967084911b408fa"
+  },
+  "id": "TPEN",
+  "ticker": "TPEN",
+  "name": "PT Texmaco Perkasa Engineering Tbk.",
+  "logo": "https://s3.goapi.id/logo/TPEN.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e197967084911b408fb"
+  },
+  "id": "TPIA",
+  "ticker": "TPIA",
+  "name": "PT Chandra Asri Petrochemical Tbk",
+  "logo": "https://s3.goapi.id/logo/TPIA.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e197967084911b408fc"
+  },
+  "id": "TPMA",
+  "ticker": "TPMA",
+  "name": "Trans Power Marine Tbk",
+  "logo": "https://s3.goapi.id/logo/TPMA.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e197967084911b408fd"
+  },
+  "id": "TRAM",
+  "ticker": "TRAM",
+  "name": "Trada Alam Minera Tbk.",
+  "logo": "https://s3.goapi.id/logo/TRAM.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e197967084911b408fe"
+  },
+  "id": "TRGU",
+  "ticker": "TRGU",
+  "name": "PT Cerestar Indonesia Tbk",
+  "logo": "https://s3.goapi.id/logo/TRGU.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e197967084911b408ff"
+  },
+  "id": "TRIL",
+  "ticker": "TRIL",
+  "name": "Triwira Insanlestari Tbk",
+  "logo": "https://s3.goapi.id/logo/TRIL.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e197967084911b40900"
+  },
+  "id": "TRIM",
+  "ticker": "TRIM",
+  "name": "PT Trimegah Sekuritas Indonesia Tbk",
+  "logo": "https://s3.goapi.id/logo/TRIM.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e197967084911b40901"
+  },
+  "id": "TRIN",
+  "ticker": "TRIN",
+  "name": "PT Perintis Triniti Properti Tbk",
+  "logo": "https://s3.goapi.id/logo/TRIN.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e197967084911b40902"
+  },
+  "id": "TRIO",
+  "ticker": "TRIO",
+  "name": "Trikomsel Oke Tbk",
+  "logo": "https://s3.goapi.id/logo/TRIO.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e197967084911b40903"
+  },
+  "id": "TRIS",
+  "ticker": "TRIS",
+  "name": "Trisula International Tbk",
+  "logo": "https://s3.goapi.id/logo/TRIS.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e197967084911b40904"
+  },
+  "id": "TRJA",
+  "ticker": "TRJA",
+  "name": "PT Transkon Jaya Tbk.",
+  "logo": "https://s3.goapi.id/logo/TRJA.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e197967084911b40905"
+  },
+  "id": "TRON",
+  "ticker": "TRON",
+  "name": "PT Teknologi Karya Digital Nusa Tbk.",
+  "logo": "https://s3.goapi.id/logo/TRON.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e197967084911b40906"
+  },
+  "id": "TRST",
+  "ticker": "TRST",
+  "name": "Trias Sentosa Tbk",
+  "logo": "https://s3.goapi.id/logo/TRST.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e197967084911b40907"
+  },
+  "id": "TRUE",
+  "ticker": "TRUE",
+  "name": "PT Triniti Dinamik Tbk",
+  "logo": "https://s3.goapi.id/logo/TRUE.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e197967084911b40908"
+  },
+  "id": "TRUK",
+  "ticker": "TRUK",
+  "name": "PT Guna Timur Raya Tbk.",
+  "logo": "https://s3.goapi.id/logo/TRUK.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e197967084911b40909"
+  },
+  "id": "TRUS",
+  "ticker": "TRUS",
+  "name": "Trust Finance Indonesia Tbk",
+  "logo": "https://s3.goapi.id/logo/TRUS.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e197967084911b4090a"
+  },
+  "id": "TSPC",
+  "ticker": "TSPC",
+  "name": "Tempo Scan Pacific Tbk",
+  "logo": "https://s3.goapi.id/logo/TSPC.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e197967084911b4090b"
+  },
+  "id": "TUGU",
+  "ticker": "TUGU",
+  "name": "PT Asuransi Tugu Pratama Indonesia Tbk",
+  "logo": "https://s3.goapi.id/logo/TUGU.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e197967084911b4090c"
+  },
+  "id": "TURI",
+  "ticker": "TURI",
+  "name": "Tunas Ridean Tbk",
+  "logo": "https://s3.goapi.id/logo/TURI.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e197967084911b4090d"
+  },
+  "id": "UANG",
+  "ticker": "UANG",
+  "name": "PT Pakuan Tbk",
+  "logo": "https://s3.goapi.id/logo/UANG.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e197967084911b4090e"
+  },
+  "id": "UCID",
+  "ticker": "UCID",
+  "name": "PT Uni-Charm Indonesia Tbk.",
+  "logo": "https://s3.goapi.id/logo/UCID.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e197967084911b4090f"
+  },
+  "id": "UFOE",
+  "ticker": "UFOE",
+  "name": "PT Damai Sejahtera Abadi Tbk",
+  "logo": "https://s3.goapi.id/logo/UFOE.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e197967084911b40910"
+  },
+  "id": "ULTJ",
+  "ticker": "ULTJ",
+  "name": "Ultra Jaya Milk Industry Tbk",
+  "logo": "https://s3.goapi.id/logo/ULTJ.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e197967084911b40911"
+  },
+  "id": "UNIC",
+  "ticker": "UNIC",
+  "name": "Unggul Indah Cahaya Tbk",
+  "logo": "https://s3.goapi.id/logo/UNIC.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e197967084911b40912"
+  },
+  "id": "UNIQ",
+  "ticker": "UNIQ",
+  "name": "PT Ulima Nitra Tbk",
+  "logo": "https://s3.goapi.id/logo/UNIQ.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e197967084911b40913"
+  },
+  "id": "UNIT",
+  "ticker": "UNIT",
+  "name": "Nusantara Inti Corpora Tbk",
+  "logo": "https://s3.goapi.id/logo/UNIT.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e197967084911b40914"
+  },
+  "id": "UNSP",
+  "ticker": "UNSP",
+  "name": "Bakrie Sumatera Plantations Tbk",
+  "logo": "https://s3.goapi.id/logo/UNSP.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e197967084911b40915"
+  },
+  "id": "UNVR",
+  "ticker": "UNVR",
+  "name": "Unilever Indonesia Tbk",
+  "logo": "https://s3.goapi.id/logo/UNVR.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e197967084911b40916"
+  },
+  "id": "URBN",
+  "ticker": "URBN",
+  "name": "PT Urban Jakarta Propertindo Tbk.",
+  "logo": "https://s3.goapi.id/logo/URBN.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e197967084911b40917"
+  },
+  "id": "UVCR",
+  "ticker": "UVCR",
+  "name": "PT Trimegah Karya Pratama Tbk.",
+  "logo": "https://s3.goapi.id/logo/UVCR.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e197967084911b40918"
+  },
+  "id": "VAST",
+  "ticker": "VAST",
+  "name": "PT Vastland Indonesia Tbk",
+  "logo": "https://s3.goapi.id/logo/VAST.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e197967084911b40919"
+  },
+  "id": "VICI",
+  "ticker": "VICI",
+  "name": "PT Victoria Care Indonesia Tbk",
+  "logo": "https://s3.goapi.id/logo/VICI.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e197967084911b4091a"
+  },
+  "id": "VICO",
+  "ticker": "VICO",
+  "name": "PT Victoria Investama Tbk.",
+  "logo": "https://s3.goapi.id/logo/VICO.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e197967084911b4091b"
+  },
+  "id": "VINS",
+  "ticker": "VINS",
+  "name": "PT Victoria Insurance Tbk.",
+  "logo": "https://s3.goapi.id/logo/VINS.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e197967084911b4091c"
+  },
+  "id": "VIVA",
+  "ticker": "VIVA",
+  "name": "PT Visi Media Asia Tbk",
+  "logo": "https://s3.goapi.id/logo/VIVA.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e197967084911b4091d"
+  },
+  "id": "VOKS",
+  "ticker": "VOKS",
+  "name": "Voksel Electric Tbk",
+  "logo": "https://s3.goapi.id/logo/VOKS.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e197967084911b4091e"
+  },
+  "id": "VRNA",
+  "ticker": "VRNA",
+  "name": "Verena Multi Finance Tbk",
+  "logo": "https://s3.goapi.id/logo/VRNA.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e197967084911b4091f"
+  },
+  "id": "VTNY",
+  "ticker": "VTNY",
+  "name": "PT Venteny Fortuna International Tbk",
+  "logo": "https://s3.goapi.id/logo/VTNY.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e197967084911b40920"
+  },
+  "id": "WAPO",
+  "ticker": "WAPO",
+  "name": "Wahana Pronatural Tbk",
+  "logo": "https://s3.goapi.id/logo/WAPO.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e197967084911b40921"
+  },
+  "id": "WEGE",
+  "ticker": "WEGE",
+  "name": "PT Wijaya Karya Bangunan Gedung Tbk.",
+  "logo": "https://s3.goapi.id/logo/WEGE.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e197967084911b40922"
+  },
+  "id": "WEHA",
+  "ticker": "WEHA",
+  "name": "PT WEHA Transportasi Indonesia Tbk",
+  "logo": "https://s3.goapi.id/logo/WEHA.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e197967084911b40923"
+  },
+  "id": "WGSH",
+  "ticker": "WGSH",
+  "name": "PT Wira Global Solusi Tbk",
+  "logo": "https://s3.goapi.id/logo/WGSH.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e197967084911b40924"
+  },
+  "id": "WICO",
+  "ticker": "WICO",
+  "name": "Wicaksana Overseas International Tbk",
+  "logo": "https://s3.goapi.id/logo/WICO.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e197967084911b40925"
+  },
+  "id": "WIFI",
+  "ticker": "WIFI",
+  "name": "PT Solusi Sinergi Digital Tbk",
+  "logo": "https://s3.goapi.id/logo/WIFI.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e197967084911b40926"
+  },
+  "id": "WIIM",
+  "ticker": "WIIM",
+  "name": "Wismilak Inti Makmur Tbk",
+  "logo": "https://s3.goapi.id/logo/WIIM.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e197967084911b40927"
+  },
+  "id": "WIKA",
+  "ticker": "WIKA",
+  "name": "PT Wijaya Karya (Persero) Tbk",
+  "logo": "https://s3.goapi.id/logo/WIKA.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e197967084911b40928"
+  },
+  "id": "WINE",
+  "ticker": "WINE",
+  "name": "PT Hatten Bali Tbk",
+  "logo": "https://s3.goapi.id/logo/WINE.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e197967084911b40929"
+  },
+  "id": "WINR",
+  "ticker": "WINR",
+  "name": "PT Winner Nusantara Jaya Tbk",
+  "logo": "https://s3.goapi.id/logo/WINR.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e197967084911b4092a"
+  },
+  "id": "WINS",
+  "ticker": "WINS",
+  "name": "Wintermar Offshore Marine Tbk",
+  "logo": "https://s3.goapi.id/logo/WINS.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e197967084911b4092b"
+  },
+  "id": "WIRG",
+  "ticker": "WIRG",
+  "name": "PT WIR ASIA Tbk",
+  "logo": "https://s3.goapi.id/logo/WIRG.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e197967084911b4092c"
+  },
+  "id": "WMPP",
+  "ticker": "WMPP",
+  "name": "PT Widodo Makmur Perkasa Tbk",
+  "logo": "https://s3.goapi.id/logo/WMPP.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e197967084911b4092d"
+  },
+  "id": "WMUU",
+  "ticker": "WMUU",
+  "name": "PT Widodo Makmur Unggas Tbk",
+  "logo": "https://s3.goapi.id/logo/WMUU.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e197967084911b4092e"
+  },
+  "id": "WOMF",
+  "ticker": "WOMF",
+  "name": "PT Wahana Ottomitra Multiartha Tbk",
+  "logo": "https://s3.goapi.id/logo/WOMF.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e197967084911b4092f"
+  },
+  "id": "WOOD",
+  "ticker": "WOOD",
+  "name": "PT Integra Indocabinet Tbk",
+  "logo": "https://s3.goapi.id/logo/WOOD.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e197967084911b40930"
+  },
+  "id": "WOWS",
+  "ticker": "WOWS",
+  "name": "PT Ginting Jaya Energi Tbk",
+  "logo": "https://s3.goapi.id/logo/WOWS.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e197967084911b40931"
+  },
+  "id": "WSBP",
+  "ticker": "WSBP",
+  "name": "PT Waskita Beton Precast Tbk.",
+  "logo": "https://s3.goapi.id/logo/WSBP.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e197967084911b40932"
+  },
+  "id": "WSKT",
+  "ticker": "WSKT",
+  "name": "PT Waskita Karya (Persero) Tbk",
+  "logo": "https://s3.goapi.id/logo/WSKT.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e197967084911b40933"
+  },
+  "id": "WTON",
+  "ticker": "WTON",
+  "name": "Wijaya Karya Beton",
+  "logo": "https://s3.goapi.id/logo/WTON.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e197967084911b40934"
+  },
+  "id": "YELO",
+  "ticker": "YELO",
+  "name": "PT Yelooo Integra Datanet Tbk.",
+  "logo": "https://s3.goapi.id/logo/YELO.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e197967084911b40935"
+  },
+  "id": "YPAS",
+  "ticker": "YPAS",
+  "name": "Yanaprima Hastapersada Tbk",
+  "logo": "https://s3.goapi.id/logo/YPAS.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e197967084911b40936"
+  },
+  "id": "YULE",
+  "ticker": "YULE",
+  "name": "Yulie Sekuritas Indonesia Tbk",
+  "logo": "https://s3.goapi.id/logo/YULE.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e197967084911b40937"
+  },
+  "id": "ZADI",
+  "ticker": "ZADI",
+  "name": "PT Asuransi Adira Dinamika Tbk",
+  "logo": "https://s3.goapi.id/logo/ZADI.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e197967084911b40938"
+  },
+  "id": "ZATA",
+  "ticker": "ZATA",
+  "name": "PT Bersama Zatta Jaya Tbk",
+  "logo": "https://s3.goapi.id/logo/ZATA.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e1a7967084911b40939"
+  },
+  "id": "ZBRA",
+  "ticker": "ZBRA",
+  "name": "PT Dosni Roha Indonesia Tbk",
+  "logo": "https://s3.goapi.id/logo/ZBRA.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e1a7967084911b4093a"
+  },
+  "id": "ZINC",
+  "ticker": "ZINC",
+  "name": "PT Kapuas Prima Coal Tbk",
+  "logo": "https://s3.goapi.id/logo/ZINC.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e1a7967084911b4093b"
+  },
+  "id": "ZONE",
+  "ticker": "ZONE",
+  "name": "PT Mega Perintis Tbk.",
+  "logo": "https://s3.goapi.id/logo/ZONE.jpg"
+},
+{
+  "_id": {
+    "$oid": "64be1e1a7967084911b4093c"
+  },
+  "id": "ZYRX",
+  "ticker": "ZYRX",
+  "name": "PT Zyrexindo Mandiri Buana Tbk",
+  "logo": "https://s3.goapi.id/logo/ZYRX.jpg"
+}]

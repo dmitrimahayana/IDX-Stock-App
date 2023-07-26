@@ -1,0 +1,221 @@
+[{
+  "_id": {
+    "$oid": "64c0a10e2baad82a4a5f3a45"
+  },
+  "id": "NATO_2023-07-26",
+  "ticker": "NATO",
+  "date": "2023-07-26",
+  "open": 510,
+  "high": 525,
+  "low": 505,
+  "close": 510,
+  "volume": 256393000
+},
+{
+  "_id": {
+    "$oid": "64c0a1182baad82a4a5f3a46"
+  },
+  "id": "CARE_2023-07-26",
+  "ticker": "CARE",
+  "date": "2023-07-26",
+  "open": 540,
+  "high": 545,
+  "low": 520,
+  "close": 540,
+  "volume": 235808400
+},
+{
+  "_id": {
+    "$oid": "64c0a1b42baad82a4a5f3a58"
+  },
+  "id": "CFIN_2023-07-26",
+  "ticker": "CFIN",
+  "date": "2023-07-26",
+  "open": 655,
+  "high": 750,
+  "low": 655,
+  "close": 700,
+  "volume": 101311500
+},
+{
+  "_id": {
+    "$oid": "64c0a1be2baad82a4a5f3a69"
+  },
+  "id": "BOGA_2023-07-26",
+  "ticker": "BOGA",
+  "date": "2023-07-26",
+  "open": 1240,
+  "high": 1250,
+  "low": 1225,
+  "close": 1235,
+  "volume": 102042400
+},
+{
+  "_id": {
+    "$oid": "64c0a1c62baad82a4a5f3a6a"
+  },
+  "id": "ADRO_2023-07-26",
+  "ticker": "ADRO",
+  "date": "2023-07-26",
+  "open": 2460,
+  "high": 2480,
+  "low": 2450,
+  "close": 2480,
+  "volume": 36384700
+},
+{
+  "_id": {
+    "$oid": "64c0a1dc2baad82a4a5f3a6c"
+  },
+  "id": "BBCA_2023-07-26",
+  "ticker": "BBCA",
+  "date": "2023-07-26",
+  "open": 9175,
+  "high": 9225,
+  "low": 9125,
+  "close": 9225,
+  "volume": 30681500
+},
+{
+  "_id": {
+    "$oid": "64c0a1eb2baad82a4a5f3a6d"
+  },
+  "id": "BMRI_2023-07-26",
+  "ticker": "BMRI",
+  "date": "2023-07-26",
+  "open": 5550,
+  "high": 5600,
+  "low": 5525,
+  "close": 5550,
+  "volume": 28764300
+},
+{
+  "_id": {
+    "$oid": "64c0a1f52baad82a4a5f3a6e"
+  },
+  "id": "UNVR_2023-07-26",
+  "ticker": "UNVR",
+  "date": "2023-07-26",
+  "open": 4050,
+  "high": 4070,
+  "low": 3950,
+  "close": 3990,
+  "volume": 17625100
+},
+{
+  "_id": {
+    "$oid": "64c0a20a2baad82a4a5f3a6f"
+  },
+  "id": "BBRI_2023-07-26",
+  "ticker": "BBRI",
+  "date": "2023-07-26",
+  "open": 5700,
+  "high": 5700,
+  "low": 5650,
+  "close": 5700,
+  "volume": 20062800
+},
+{
+  "_id": {
+    "$oid": "64c0a2162baad82a4a5f3a70"
+  },
+  "id": "ASII_2023-07-26",
+  "ticker": "ASII",
+  "date": "2023-07-26",
+  "open": 6575,
+  "high": 6625,
+  "low": 6550,
+  "close": 6550,
+  "volume": 11238100
+},
+{
+  "_id": {
+    "$oid": "64c0a21a2baad82a4a5f3a71"
+  },
+  "id": "BBNI_2023-07-26",
+  "ticker": "BBNI",
+  "date": "2023-07-26",
+  "open": 9025,
+  "high": 9050,
+  "low": 8925,
+  "close": 8950,
+  "volume": 22005600
+},
+{
+  "_id": {
+    "$oid": "64c0a22a2baad82a4a5f3a72"
+  },
+  "id": "AKRA_2023-07-26",
+  "ticker": "AKRA",
+  "date": "2023-07-26",
+  "open": 1395,
+  "high": 1420,
+  "low": 1380,
+  "close": 1410,
+  "volume": 36118800
+},
+{
+  "_id": {
+    "$oid": "64c0a22a2baad82a4a5f3a73"
+  },
+  "id": "HILL_2023-07-26",
+  "ticker": "HILL",
+  "date": "2023-07-26",
+  "open": 2800,
+  "high": 3310,
+  "low": 2790,
+  "close": 3250,
+  "volume": 35100100
+},
+{
+  "_id": {
+    "$oid": "64c0a22a2baad82a4a5f3a74"
+  },
+  "id": "FILM_2023-07-26",
+  "ticker": "FILM",
+  "date": "2023-07-26",
+  "open": 3800,
+  "high": 3890,
+  "low": 3770,
+  "close": 3830,
+  "volume": 16094800
+},
+{
+  "_id": {
+    "$oid": "64c0a22b2baad82a4a5f3a75"
+  },
+  "id": "MEDC_2023-07-26",
+  "ticker": "MEDC",
+  "date": "2023-07-26",
+  "open": 1080,
+  "high": 1090,
+  "low": 1050,
+  "close": 1085,
+  "volume": 68705000
+},
+{
+  "_id": {
+    "$oid": "64c0a22b2baad82a4a5f3a76"
+  },
+  "id": "TLKM_2023-07-26",
+  "ticker": "TLKM",
+  "date": "2023-07-26",
+  "open": 3890,
+  "high": 3900,
+  "low": 3830,
+  "close": 3860,
+  "volume": 23622000
+},
+{
+  "_id": {
+    "$oid": "64c0a22b2baad82a4a5f3a77"
+  },
+  "id": "UNTR_2023-07-26",
+  "ticker": "UNTR",
+  "date": "2023-07-26",
+  "open": 25525,
+  "high": 26000,
+  "low": 25525,
+  "close": 25975,
+  "volume": 2830400
+}]

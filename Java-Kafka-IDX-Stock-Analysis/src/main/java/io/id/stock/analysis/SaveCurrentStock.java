@@ -62,10 +62,11 @@ public class SaveCurrentStock {
         });
 
         try {
-            String topic1 = "group.stock"; //Must check if topic has been created by KSQL or KStream
-            String topic2 = "streaming.goapi.idx.companies.json"; //Must check if topic has been created by KSQL or KStream
-            //Create consumer
-            consumer.createConsumer(Arrays.asList(topic1, topic2));
+            //Must check if topic has been created by KSQL or KStream first
+            String topic1 = "group.stock";
+            String topic2 = "group.company";
+            String topic3 = "join.stock.company";
+            consumer.createConsumer(Arrays.asList(topic1, topic2, topic3));
 
             //Show data
             while (true){
@@ -76,12 +77,13 @@ public class SaveCurrentStock {
 
                 for(ConsumerRecord<String, String> record: records) {
                     try {
-                        System.out.println("key: " + record.key() + " --- value: " + record.value());
                         //Insert to MongoDB based on the topic
-                        if (record.topic().toLowerCase().equals(topic1.toLowerCase())){
-                            mongoDBConn.insertOrUpdate("kafka", "stock-stream", record.value().toString());
-                        } else if(record.topic().toLowerCase().equals(topic2.toLowerCase())){
-                            mongoDBConn.insertOrUpdate("kafka", "company-stream", record.value().toString());
+                        if (record.topic().equalsIgnoreCase(topic1)){
+                            mongoDBConn.insertOrUpdate("kafka", "stock-stream", record.value());
+                        } else if(record.topic().equalsIgnoreCase(topic2)){
+                            mongoDBConn.insertOrUpdate("kafka", "company-stream", record.value());
+                        } else if(record.topic().equalsIgnoreCase(topic3)){
+                            mongoDBConn.insertOrUpdate("kafka", "join-stock-company-stream", record.value());
                         }
 
 //                        //Insert to flat file
@@ -104,8 +106,10 @@ public class SaveCurrentStock {
                 }
 
                 //commit offset after batch is consumed
-                consumer.commit();
-                log.info("Offset have been commited");
+                if (recordCount > 0) {
+                    consumer.commit();
+                    log.info("Offset have been commited");
+                }
             }
         }catch (WakeupException e) {
             log.info("Consumer is starting to shut down...");

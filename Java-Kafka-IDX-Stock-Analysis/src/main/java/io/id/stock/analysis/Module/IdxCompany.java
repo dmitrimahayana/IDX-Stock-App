@@ -2,10 +2,10 @@ package io.id.stock.analysis.Module;
 
 public class IdxCompany {
 
-    private String id;
-    private String ticker;
-    private String name;
-    private String logo;
+    public String id;
+    public String ticker;
+    public String name;
+    public String logo;
 
     public IdxCompany(String id, String ticker, String name, String logo){
         this.id = id;

@@ -68,12 +68,12 @@ public class MongoDBStock {
             if (existingDocument == null) {
                 // Insert the document if no doc found
                 InsertOneResult result = collection.insertOne(newDoc);
-//                System.out.println("Inserted a document with the following id: " + result.getInsertedId().asObjectId().getValue().toString());
+//                System.out.println("Inserted collection "+collectionName+" documentID " + newDoc.getString("id") + " with the following mongoID: " + result.getInsertedId().asObjectId().getValue().toString());
             } else {
                 // Update the document if doc found with existing id
                 Bson filter = (Filters.eq("id", newDoc.getString("id")));
                 UpdateResult updateResult = collection.replaceOne(filter, newDoc);
-//                System.out.println("Existing document " + newDoc.getString("id") + " modified document count: " + updateResult.getModifiedCount());
+//                System.out.println("Existing collection "+collectionName+" documentID " + newDoc.getString("id") + " modified document count: " + updateResult.getModifiedCount());
             }
         } catch (MongoException me) {
             log.info(me.getMessage());

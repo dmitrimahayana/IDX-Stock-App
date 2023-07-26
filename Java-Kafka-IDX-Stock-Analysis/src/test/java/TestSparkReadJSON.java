@@ -20,7 +20,7 @@ public class TestSparkReadJSON {
                 .config("spark.cores.max", "12")
                 .getOrCreate();
 
-        String filePath = "KStream-IDXStock.json";
+        String filePath = "kafka.stock-stream.json";
         Dataset<Row> df = spark.read().format("json") // Use "csv" regardless of TSV or CSV.
                 .option("header", "true") // Does the file have a header line?
                 .load(filePath);

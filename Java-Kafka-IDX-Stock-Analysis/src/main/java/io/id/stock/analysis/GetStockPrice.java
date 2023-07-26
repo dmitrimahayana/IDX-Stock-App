@@ -118,49 +118,34 @@ public class GetStockPrice {
             //Counter
             int Counter = 0;
 
+            // Encode the parameter values
+            DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
+            String dateNow = LocalDate.now().format(formatter);
+//            String encodedParam1 = URLEncoder.encode("2020-01-02", StandardCharsets.UTF_8.toString());
+            String encodedParam1 = URLEncoder.encode(dateNow, StandardCharsets.UTF_8.toString());
+//            String encodedParam2 = URLEncoder.encode("2020-01-02", StandardCharsets.UTF_8.toString());
+            String encodedParam2 = URLEncoder.encode(dateNow, StandardCharsets.UTF_8.toString());
+
             for (JsonElement companyTrendElement : companyTrendResults) {
                 Counter++;
                 JsonObject companyTrendObject = companyTrendElement.getAsJsonObject();
                 String emitent = companyTrendObject.get("ticker").getAsString();
                 String change = companyTrendObject.get("change").getAsString();
                 String percent = companyTrendObject.get("percent").getAsString();
-                System.out.println("number: "+ String.valueOf(Counter));
+                System.out.println("number: " + Counter);
                 System.out.println("emitent: " + emitent);
                 System.out.println("change: " + change);
                 System.out.println("percent: " + percent);
 
-                if (listCompany.isJsonNull() != true) {
-                    if (listCompany.size() > 0) {
-                        for (JsonElement listCompanyElement : listCompany) {
-                            JsonObject listCompanyObject = listCompanyElement.getAsJsonObject();
-                            String compTicker = listCompanyObject.get("ticker").getAsString();
-                            String compName = listCompanyObject.get("name").getAsString();
-                            String compLogo = listCompanyObject.get("logo").getAsString();
-                            if(compTicker.toUpperCase().equals(emitent.toUpperCase())){
-                                //Send Company Producer
-                                System.out.println(compTicker+" - "+compName+" - "+compLogo);
-                                IdxCompany company = new IdxCompany(compTicker, compTicker, compName, compLogo);
-                                String jsonCompany = new Gson().toJson(company);
-                                producer.startProducer(topic2, compTicker, jsonCompany);
-                            }
-                        }
-                    }
-                }
-
-                // Encode the parameter values
-                DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
-                String dateNow = LocalDate.now().format(formatter);
-//                String encodedParam1 = URLEncoder.encode("2020-01-01", StandardCharsets.UTF_8.toString());
-                String encodedParam1 = URLEncoder.encode(dateNow, StandardCharsets.UTF_8.toString());
-                String encodedParam2 = URLEncoder.encode(dateNow, StandardCharsets.UTF_8.toString());
-
                 //Query Historical Stock Price
                 String apiUrl3 = baseUrl + emitent + "/historical";
                 apiUrl3 = apiUrl3 + "?from=" + encodedParam1 + "&to=" + encodedParam2;
+                log.info("API Historical URL: "+apiUrl3);
                 JsonArray historicalPrices = getAPIResults(apiUrl3);
-                if (historicalPrices.isJsonNull() != true){
-                    if (historicalPrices.size() > 0){
+                if (historicalPrices.isJsonNull() != true && listCompany.isJsonNull() != true){
+                    if (historicalPrices.size() > 0 && listCompany.size() > 0){
                         for (JsonElement historicalPriceElement : historicalPrices) {
+                            //Get JSON Stock
                             JsonObject historicalPriceObject = historicalPriceElement.getAsJsonObject();
                             String ticker = historicalPriceObject.get("ticker").getAsString();
                             String date = historicalPriceObject.get("date").getAsString();
@@ -169,11 +154,6 @@ public class GetStockPrice {
                             String low = historicalPriceObject.get("low").getAsString();
                             String close = historicalPriceObject.get("close").getAsString();
                             String volume = historicalPriceObject.get("volume").getAsString();
-//                            open = "1111"; //For Testing aggregation purpose
-//                            high = "2222"; //For Testing aggregation purpose
-//                            low = "3333"; //For Testing aggregation purpose
-//                            close = "4444"; //For Testing aggregation purpose
-//                            volume = "5555"; //For Testing aggregation purpose
                             String id = ticker + "_" + date;
 
                             System.out.println("ticker: " + ticker);
@@ -183,13 +163,29 @@ public class GetStockPrice {
                             System.out.println("low: " + low);
                             System.out.println("close: " + close);
                             System.out.println("volume: " + volume);
-                            System.out.println(" ");
 
                             IdxStock stock = new IdxStock(id, ticker, date, Double.valueOf(open),Double.valueOf(high),Double.valueOf(low),Double.valueOf(close),new BigInteger(volume));
                             String jsonStock = new Gson().toJson(stock);
-
                             //Send Stock Producer
                             producer.startProducer(topic1, id, jsonStock);
+
+                            for (JsonElement listCompanyElement : listCompany) {
+                                //Get JSON Company
+                                JsonObject listCompanyObject = listCompanyElement.getAsJsonObject();
+                                String compTicker = listCompanyObject.get("ticker").getAsString();
+                                String compName = listCompanyObject.get("name").getAsString();
+                                String compLogo = listCompanyObject.get("logo").getAsString();
+                                if(compTicker.equalsIgnoreCase(emitent)){
+                                    System.out.println("name: " + compName);
+                                    System.out.println("logo: " + compLogo);
+                                    System.out.println(" ");
+                                    IdxCompany company = new IdxCompany(compTicker, compTicker, compName, compLogo);
+                                    String jsonCompany = new Gson().toJson(company);
+                                    //Send Company Producer
+                                    producer.startProducer(topic2, id, jsonCompany);
+                                }
+                            }
+
 
                         }
                     } else {
@@ -197,10 +193,10 @@ public class GetStockPrice {
                     }
                 }
 
-                //Only call the first 1 of Company
-                if (Counter >= 1){
-                    break;
-                }
+//                //Only call the first 1 of Company
+//                if (Counter >= 1){
+//                    break;
+//                }
 
                 System.out.println("-----------------------------");
             }
@@ -215,7 +211,6 @@ public class GetStockPrice {
             } catch (InterruptedException error){
                 error.printStackTrace();
             }
-
         }
 
     }

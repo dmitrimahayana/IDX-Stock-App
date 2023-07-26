@@ -70,7 +70,7 @@ public class KafkaStockProducer {
             public void onCompletion(RecordMetadata metadata, Exception exception) {
                 //executed everytime a record successfully sent or an exception is thrown
                 if (exception == null) {
-                    log.info("key: " + key + " | " + "Partition: " + metadata.partition());
+                    log.info("key: " + key + " | " + "Topic: " + metadata.topic() + " | " +  "Partition: " + metadata.partition());
                 } else {
                     log.info("Error while producing ", exception);
                 }
