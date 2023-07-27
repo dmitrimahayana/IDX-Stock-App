@@ -1,0 +1,1 @@
+{"class":"org.apache.spark.ml.feature.VectorAssembler","timestamp":1690419981785,"sparkVersion":"3.4.1","uid":"vecAssembler_af2086d78782","paramMap":{"outputCol":"features","inputCols":["tickerOneHot","dateOneHot","open","volume"]},"defaultParamMap":{"outputCol":"vecAssembler_af2086d78782__output","handleInvalid":"error"}}

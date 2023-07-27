@@ -1,0 +1,8 @@
+[debug] > Exec(assembly, None, None)
+[error] Not a valid command: assembly
+[error] Not a valid project ID: assembly
+[error] Expected ':'
+[error] Not a valid key: assembly
+[error] assembly
+[error]         ^
+[debug] > Exec(idea-shell, None, None)

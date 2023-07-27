@@ -9,7 +9,11 @@ import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.lang.reflect.Type;
 import java.math.BigInteger;
+import java.text.DecimalFormat;
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 import java.util.List;
+import java.util.Random;
 
 public class StockProducerDummy {
 
@@ -23,13 +27,29 @@ public class StockProducerDummy {
         //Create Kafka Producer
         String topic1 = "streaming.goapi.idx.stock.json";
         String topic2 = "streaming.goapi.idx.companies.json";
-        KafkaStockProducer producer = new KafkaStockProducer(true);
+        KafkaStockProducer producerObj = new KafkaStockProducer(true);
 
-        String filename1 = "kafka.stock-stream 2023-07-26.json";
+        String filename1 = "kafka.stock-stream 2023-07-27.json";
         String filename2 = "kafka.company-stream.json";
         try{
             //Crete Kafka Connection
-            producer.createProducerConn();
+            producerObj.createProducerConn();
+
+            //get a reference to the main thread
+            final Thread mainThread = Thread.currentThread();
+            //adding the shutdown hook
+            Runtime.getRuntime().addShutdownHook(new Thread(){
+                public void run(){
+                    //Close Producer
+                    producerObj.flushAndCloseProducer();
+                    //join the main thread to allow the execution of the code in the main thread
+                    try {
+                        mainThread.join();
+                    } catch (InterruptedException e) {
+                        throw new RuntimeException(e);
+                    }
+                }
+            });
 
             Gson gson = new Gson();
             JsonReader reader1 = new JsonReader(new FileReader(filename1));
@@ -38,57 +58,73 @@ public class StockProducerDummy {
             JsonReader reader2 = new JsonReader(new FileReader(filename2));
             List<IdxCompany> dataCompany = gson.fromJson(reader2, REVIEW_TYPE2);
 
-            //Counter
-            int Counter = 0;
-            for (IdxStock row1 : dataLastStock) {
-                for (IdxCompany row2 : dataCompany) {
-                    if (row1.ticker.equals(row2.ticker)) {
-                        Counter++;
-                        String id = row1.id;
-                        String ticker = row1.ticker;
-                        String date = row1.date;
-                        String open = String.valueOf(row1.open);
-                        String high = String.valueOf(row1.high);
-                        String low = String.valueOf(row1.low);
-                        String close = String.valueOf(row1.close);
-                        String volume = String.valueOf(row1.volume);
-//                        open = "1111"; //For Testing aggregation purpose
-//                        high = "2222"; //For Testing aggregation purpose
-//                        low = "3333"; //For Testing aggregation purpose
-//                        close = "4444"; //For Testing aggregation purpose
-//                        volume = "5555"; //For Testing aggregation purpose
+            DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
+            String dateNow = LocalDate.now().format(formatter);
 
-                        System.out.println("Counter: " + Counter);
-                        System.out.println("ticker: " + ticker);
-                        System.out.println("date: " + date);
-                        System.out.println("open: " + open);
-                        System.out.println("high: " + high);
-                        System.out.println("low: " + low);
-                        System.out.println("close: " + close);
-                        System.out.println("volume: " + volume);
+            Double rangeMin = 500.0;
+            Double rangeMax = 5000.0;
+            Random r = new Random();
+            DecimalFormat f = new DecimalFormat("##.00");
 
-                        IdxStock stock = new IdxStock(id, ticker, date, Double.valueOf(open), Double.valueOf(high), Double.valueOf(low), Double.valueOf(close), new BigInteger(volume));
-                        String jsonStock = new Gson().toJson(stock);
-                        //Send Stock Producer
-                        producer.startProducer(topic1, id, jsonStock);
+            while(true){
+                //Counter
+                int Counter = 0;
+                for (IdxStock row1 : dataLastStock) {
+                    for (IdxCompany row2 : dataCompany) {
+                        if (row1.ticker.equals(row2.ticker)) {
+                            Counter++;
+                            String ticker = row1.ticker;
+                            String date = dateNow;
+//                            String date = "2023-07-26";
+                            String id = ticker + "_" + date;
+                            String open = String.valueOf(row1.open);
+                            String high = String.valueOf(row1.high);
+                            String low = String.valueOf(row1.low);
+                            String close = String.valueOf(row1.close);
+                            String volume = String.valueOf(row1.volume);
 
-                        String compTicker = row2.ticker;
-                        String compName = row2.name;
-                        String compLogo = row2.logo;
-                        System.out.println("name: " + compName);
-                        System.out.println("logo: " + compLogo);
-                        System.out.println(" ");
-                        System.out.println("-----------------------------");
-                        IdxCompany company = new IdxCompany(compTicker, compTicker, compName, compLogo);
-                        String jsonCompany = new Gson().toJson(company);
-                        //Send Company Producer
-                        producer.startProducer(topic2, id, jsonCompany);
+                            double randomValue1 = rangeMin + (rangeMax - rangeMin) * r.nextDouble();
+                            double randomValue2 = rangeMin + (rangeMax - rangeMin) * r.nextDouble();
+                            double randomValue3 = rangeMin + (rangeMax - rangeMin) * r.nextDouble();
+                            double randomValue4 = rangeMin + (rangeMax - rangeMin) * r.nextDouble();
+                            open = String.valueOf(f.format(randomValue1)); //For Testing aggregation purpose
+                            high = String.valueOf(f.format(randomValue2)); //For Testing aggregation purpose
+                            low = String.valueOf(f.format(randomValue3)); //For Testing aggregation purpose
+                            close = String.valueOf(f.format(randomValue4)); //For Testing aggregation purpose
+
+                            System.out.println("Counter: " + Counter);
+                            System.out.println("ticker: " + ticker);
+                            System.out.println("date: " + date);
+                            System.out.println("open: " + open);
+                            System.out.println("high: " + high);
+                            System.out.println("low: " + low);
+                            System.out.println("close: " + close);
+                            System.out.println("volume: " + volume);
+
+                            IdxStock stock = new IdxStock(id, ticker, date, Double.valueOf(open), Double.valueOf(high), Double.valueOf(low), Double.valueOf(close), new BigInteger(volume));
+                            String jsonStock = new Gson().toJson(stock);
+                            //Send Stock Producer
+                            producerObj.startProducer(topic1, id, jsonStock);
+
+                            String compTicker = row2.ticker;
+                            String compName = row2.name;
+                            String compLogo = row2.logo;
+                            System.out.println("name: " + compName);
+                            System.out.println("logo: " + compLogo);
+                            System.out.println(" ");
+                            System.out.println("-----------------------------");
+                            IdxCompany company = new IdxCompany(compTicker, compTicker, compName, compLogo);
+                            String jsonCompany = new Gson().toJson(company);
+                            //Send Company Producer
+                            producerObj.startProducer(topic2, id, jsonCompany);
+                        }
                     }
                 }
-            }
 
-            //Close Producer
-            producer.flushAndCloseProducer();
+//                //Close Producer
+//                producerObj.flushAndCloseProducer();
+                Thread.sleep(1000);
+            }
         } catch (FileNotFoundException e) {
             throw new RuntimeException(e);
         } catch (Exception e) {

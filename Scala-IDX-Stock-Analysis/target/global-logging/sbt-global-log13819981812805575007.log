@@ -1,0 +1,143 @@
+[debug] > Exec(early(addDefaultCommands), None, None)
+[debug] > Exec(addDefaultCommands, None, None)
+[debug] > Exec(early(initialize), None, None)
+[debug] > Exec(initialize, None, None)
+[debug] > Exec(early(addPluginSbtFile="""C:\Users\dmitr\AppData\Local\Temp\idea1.sbt"""), None, None)
+[debug] > Exec(addPluginSbtFile="""C:\Users\dmitr\AppData\Local\Temp\idea1.sbt""", None, None)
+[debug] > Exec(boot, None, None)
+[debug] > Exec(writeSbtVersion, None, None)
+[debug] > Exec(reload, None, None)
+[debug] > Exec(sbtStashOnFailure, None, None)
+[debug] > Exec(onFailure loadFailed, None, None)
+[debug] > Exec(loadp, None, None)
+[info] welcome to sbt 1.9.1 (Amazon.com Inc. Java 11.0.19)
+[debug]       Load.loadUnit: plugins took 269.6559ms
+[debug]       Load.loadUnit: defsScala took 1.4343ms
+[debug] [Loading] Scanning directory C:\Users\dmitr\.sbt\1.0\plugins
+[debug] [Loading] Found non-root projects 
+[debug] [Loading] Done in C:\Users\dmitr\.sbt\1.0\plugins, returning: ()
+[debug] deducing auto plugins based on known facts Set(Atom(sbt.plugins.CorePlugin)) and clauses Clauses(Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.IvyPlugin)))
+[debug] Clause(Atom(sbt.ScriptedPlugin),Set(Atom(sbt.plugins.JvmPlugin)))
+[debug] Clause(Atom(sbt.plugins.SbtPlugin),Set(Atom(sbt.ScriptedPlugin)))
+[debug] Clause(Atom(sbt.plugins.SemanticdbPlugin),Set(Atom(sbt.plugins.JvmPlugin)))
+[debug] Clause(Atom(sbt.plugins.JUnitXmlReportPlugin),Set(Atom(sbt.plugins.JvmPlugin)))
+[debug] Clause(Atom(sbt.plugins.MiniDependencyTreePlugin),Set(Atom(sbt.plugins.JvmPlugin)))
+[debug] Clause(Atom(sbt.plugins.CorePlugin),Set(Atom(sbt.plugins.IvyPlugin)))
+[debug] Clause(Atom(sbt.plugins.IvyPlugin),Set(Atom(sbt.plugins.JvmPlugin)))
+[debug] Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.SemanticdbPlugin)))
+[debug] Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.JUnitXmlReportPlugin)))
+[debug] Clause(Atom(sbt.plugins.CorePlugin),Set(Atom(sbt.plugins.Giter8TemplatePlugin)))
+[debug] Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.MiniDependencyTreePlugin))))
+[debug]   :: deduced result: Matched(sbt.plugins.CorePlugin,sbt.plugins.Giter8TemplatePlugin,sbt.plugins.IvyPlugin,sbt.plugins.JvmPlugin,sbt.plugins.MiniDependencyTreePlugin,sbt.plugins.JUnitXmlReportPlugin,sbt.plugins.SemanticdbPlugin)
+[debug] Plugins.deducer#function took 37.8296 ms
+[debug]           Load.resolveProject(global-plugins) took 81.2314ms
+[debug]         Load.loadTransitive: finalizeProject(Project(id global-plugins, base: C:\Users\dmitr\.sbt\1.0\plugins, plugins: List(<none>))) took 169.7171ms
+[debug] [Loading] Done in C:\Users\dmitr\.sbt\1.0\plugins, returning: (global-plugins)
+[debug]       Load.loadUnit: loadedProjectsRaw took 258.4225ms
+[debug]       Load.loadUnit: cleanEvalClasses took 0.2211ms
+[debug]     Load.loadUnit(file:/C:/Users/dmitr/.sbt/1.0/plugins/, ...) took 556.491ms
+[debug]   Load.apply: load took 849.7509ms
+[debug]   Load.apply: resolveProjects took 6.9065ms
+[debug]   Load.apply: finalTransforms took 116.9754ms
+[debug]   Load.apply: config.delegates took 21.7991ms
+[debug]   Load.apply: Def.make(settings)... took 883.1012ms
+[debug]   Load.apply: structureIndex took 201.5344ms
+[debug]   Load.apply: mkStreams took 8.5725ms
+[info] loading global plugins from C:\Users\dmitr\.sbt\1.0\plugins
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Load.defaultLoad until apply took 4299.6581ms
+[debug]           Load.loadUnit: plugins took 57.8061ms
+[debug]           Load.loadUnit: defsScala took 0.0036ms
+[debug] [Loading] Scanning directory D:\00 Project\00 My Project\IdeaProjects\Scala-IDX-Stock-Analysis\project
+[debug]             Load.loadUnit: mkEval took 8.7992ms
+[debug] [Loading] Found non-root projects 
+[debug] [Loading] Done in D:\00 Project\00 My Project\IdeaProjects\Scala-IDX-Stock-Analysis\project, returning: ()
+[debug] deducing auto plugins based on known facts Set(Atom(sbt.plugins.CorePlugin)) and clauses Clauses(Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.IvyPlugin)))
+[debug] Clause(Atom(sbt.ScriptedPlugin),Set(Atom(sbt.plugins.JvmPlugin)))
+[debug] Clause(Atom(sbt.plugins.SbtPlugin),Set(Atom(sbt.ScriptedPlugin)))
+[debug] Clause(Atom(sbt.plugins.SemanticdbPlugin),Set(Atom(sbt.plugins.JvmPlugin)))
+[debug] Clause(Atom(sbt.plugins.JUnitXmlReportPlugin),Set(Atom(sbt.plugins.JvmPlugin)))
+[debug] Clause(Atom(sbt.plugins.MiniDependencyTreePlugin),Set(Atom(sbt.plugins.JvmPlugin)))
+[debug] Clause(Atom(sbt.plugins.CorePlugin),Set(Atom(sbt.plugins.IvyPlugin)))
+[debug] Clause(Atom(sbt.plugins.IvyPlugin),Set(Atom(sbt.plugins.JvmPlugin)))
+[debug] Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.SemanticdbPlugin)))
+[debug] Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.JUnitXmlReportPlugin)))
+[debug] Clause(Atom(sbt.plugins.CorePlugin),Set(Atom(sbt.plugins.Giter8TemplatePlugin)))
+[debug] Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.MiniDependencyTreePlugin))))
+[debug]   :: deduced result: Matched(sbt.plugins.CorePlugin,sbt.plugins.Giter8TemplatePlugin,sbt.plugins.IvyPlugin,sbt.plugins.JvmPlugin,sbt.plugins.MiniDependencyTreePlugin,sbt.plugins.JUnitXmlReportPlugin,sbt.plugins.SemanticdbPlugin)
+[debug] Plugins.deducer#function took 2.5494 ms
+[info] loading settings for project scala-idx-stock-analysis-build from idea1.sbt ...
+[debug]               Load.resolveProject(scala-idx-stock-analysis-build) took 9.4057ms
+[debug]             Load.loadTransitive: finalizeProject(Project(id scala-idx-stock-analysis-build, base: D:\00 Project\00 My Project\IdeaProjects\Scala-IDX-Stock-Analysis\project, plugins: List(<none>))) took 12.636ms
+[debug] [Loading] Done in D:\00 Project\00 My Project\IdeaProjects\Scala-IDX-Stock-Analysis\project, returning: (scala-idx-stock-analysis-build)
+[debug]           Load.loadUnit: loadedProjectsRaw took 251.4334ms
+[debug]           Load.loadUnit: cleanEvalClasses took 9.4291ms
+[debug]         Load.loadUnit(file:/D:/00%20Project/00%20My%20Project/IdeaProjects/Scala-IDX-Stock-Analysis/project/, ...) took 319.9749ms
+[debug]       Load.apply: load took 321.8602ms
+[debug]       Load.apply: resolveProjects took 0.1234ms
+[debug]       Load.apply: finalTransforms took 12.8636ms
+[debug]       Load.apply: config.delegates took 0.3646ms
+[debug]       Load.apply: Def.make(settings)... took 90.1265ms
+[debug]       Load.apply: structureIndex took 54.5126ms
+[debug]       Load.apply: mkStreams took 0.0022ms
+[info] loading project definition from D:\00 Project\00 My Project\IdeaProjects\Scala-IDX-Stock-Analysis\project
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[warn] Unrecognized repository Scala Plugin Bundled Repository, ignoring it
+[warn] Unrecognized repository Scala Plugin Bundled Repository, ignoring it
+[debug]     Load.loadUnit: plugins took 2134.2793ms
+[debug]     Load.loadUnit: defsScala took 0.0032ms
+[debug] [Loading] Scanning directory D:\00 Project\00 My Project\IdeaProjects\Scala-IDX-Stock-Analysis
+[debug]       Load.loadUnit: mkEval took 0.3643ms
+[debug] [Loading] Found root project root w/ remaining 
+[debug] deducing auto plugins based on known facts Set(Atom(sbt.plugins.CorePlugin)) and clauses Clauses(Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.IvyPlugin)))
+[debug] Clause(Atom(sbt.ScriptedPlugin),Set(Atom(sbt.plugins.JvmPlugin)))
+[debug] Clause(Atom(sbt.plugins.SbtPlugin),Set(Atom(sbt.ScriptedPlugin)))
+[debug] Clause(Atom(sbt.plugins.SemanticdbPlugin),Set(Atom(sbt.plugins.JvmPlugin)))
+[debug] Clause(Atom(sbt.plugins.JUnitXmlReportPlugin),Set(Atom(sbt.plugins.JvmPlugin)))
+[debug] Clause(Atom(sbt.plugins.MiniDependencyTreePlugin),Set(Atom(sbt.plugins.JvmPlugin)))
+[debug] Clause(Atom(org.jetbrains.sbt.StructurePlugin),Set(Atom(sbt.plugins.JvmPlugin)))
+[debug] Clause(Atom(org.jetbrains.sbt.IdeaShellPlugin),Set(Atom(sbt.plugins.JvmPlugin)))
+[debug] Clause(Atom(org.jetbrains.sbt.indices.SbtIntellijIndicesPlugin),Set(Atom(sbt.plugins.JvmPlugin)))
+[debug] Clause(Atom(sbt.plugins.CorePlugin),Set(Atom(sbt.plugins.IvyPlugin)))
+[debug] Clause(Atom(sbt.plugins.IvyPlugin),Set(Atom(sbt.plugins.JvmPlugin)))
+[debug] Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.SemanticdbPlugin)))
+[debug] Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.JUnitXmlReportPlugin)))
+[debug] Clause(Atom(sbt.plugins.CorePlugin),Set(Atom(sbt.plugins.Giter8TemplatePlugin)))
+[debug] Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.MiniDependencyTreePlugin)))
+[debug] Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(org.jetbrains.sbt.StructurePlugin)))
+[debug] Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(org.jetbrains.sbt.IdeaShellPlugin)))
+[debug] Clause(And(Set(Atom(sbt.plugins.CorePlugin), Atom(sbt.plugins.JvmPlugin))),Set(Atom(org.jetbrains.sbt.indices.SbtIntellijIndicesPlugin))))
+[debug]   :: deduced result: Matched(sbt.plugins.CorePlugin,sbt.plugins.Giter8TemplatePlugin,sbt.plugins.IvyPlugin,sbt.plugins.JvmPlugin,sbt.plugins.SemanticdbPlugin,org.jetbrains.sbt.indices.SbtIntellijIndicesPlugin,sbt.plugins.JUnitXmlReportPlugin,org.jetbrains.sbt.IdeaShellPlugin,org.jetbrains.sbt.StructurePlugin,sbt.plugins.MiniDependencyTreePlugin)
+[debug] Plugins.deducer#function took 3.5243 ms
+[info] loading settings for project root from build.sbt ...
+[debug]         Load.resolveProject(root) took 76.8444ms
+[debug]       Load.loadTransitive: finalizeProject(Project(id root, base: D:\00 Project\00 My Project\IdeaProjects\Scala-IDX-Stock-Analysis, plugins: List(<none>))) took 83.5119ms
+[debug] [Loading] Done in D:\00 Project\00 My Project\IdeaProjects\Scala-IDX-Stock-Analysis, returning: (root)
+[debug]     Load.loadUnit: loadedProjectsRaw took 5815.875ms
+[debug]     Load.loadUnit: cleanEvalClasses took 41.4395ms
+[debug]   Load.loadUnit(file:/D:/00%20Project/00%20My%20Project/IdeaProjects/Scala-IDX-Stock-Analysis/, ...) took 7992.4587ms
+[debug] Load.apply: load took 7994.099ms
+[debug] Load.apply: resolveProjects took 0.1224ms
+[debug] Load.apply: finalTransforms took 51.0085ms
+[debug] Load.apply: config.delegates took 0.3809ms
+[debug] Load.apply: Def.make(settings)... took 105.7983ms
+[debug] Load.apply: structureIndex took 28.0362ms
+[debug] Load.apply: mkStreams took 0.0061ms
+[info] set current project to Scala-IDX-Stock-Analysis (in build file:/D:/00%20Project/00%20My%20Project/IdeaProjects/Scala-IDX-Stock-Analysis/)
+[debug] > Exec(sbtPopOnFailure, None, None)
+[debug] > Exec(resumeFromFailure, None, None)
+[debug] > Exec(notifyUsersAboutShell, None, None)
+[debug] > Exec(iflast shell, None, None)
+[debug] > Exec(; set ideaPort in Global := 57665 ; idea-shell, None, None)
+[debug] > Exec(set ideaPort in Global := 57665, None, None)
+[info] Defining Global / ideaPort
+[info] The new value will be used by Compile / compile, Test / compile
+[debug] Defining 
+[debug] 	Global / ideaPort
+[debug] 
+[debug] The new value will be used by 
+[debug] 	Compile / compile
+[debug] 	Test / compile
+[info] Reapplying settings...
+[info] set current project to Scala-IDX-Stock-Analysis (in build file:/D:/00%20Project/00%20My%20Project/IdeaProjects/Scala-IDX-Stock-Analysis/)
+[debug] > Exec(idea-shell, None, None)

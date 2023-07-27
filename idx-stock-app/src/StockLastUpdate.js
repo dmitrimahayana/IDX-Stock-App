@@ -5,13 +5,13 @@ import Box from '@mui/material/Box';
 import { DataGrid } from '@mui/x-data-grid';
 import ArrowUpwardIcon from '@mui/icons-material/ArrowUpward';
 import ArrowDownwardIcon from '@mui/icons-material/ArrowDownward';
+import RemoveIcon from '@mui/icons-material/Remove';
 import Typography from '@mui/material/Typography';
 import Avatar from '@mui/material/Avatar';
 import Link from "@mui/material/Link";
 
 function App() {
     const [data, setData] = useState([]);
-    const [data2, setData2] = useState([]);
     const [keyword, setKeyword] = useState('');
 
     // GET with fetch API
@@ -22,22 +22,15 @@ function App() {
             const result = await response.json();
             setData(result);
         };
-        fetchData(); 
+        // fetchData();
 
-        const fetchData2 = async () => {
-            const response = await fetch('http://localhost:9000/yesterdayStock');
-            const result = await response.text();
-            setData2(result);
+        const interval = setInterval(() => {
+            fetchData();
+        }, 1000);
+
+        return () => {
+            clearInterval(interval);
         };
-        fetchData2(); 
-
-        // const interval = setInterval(() => {
-        //     fetchData();
-        // }, 100);
-
-        // return () => {
-        //     clearInterval(interval);
-        // };
 
     }, []);
 
@@ -119,29 +112,29 @@ function App() {
             width: 100,
             editable: true,
         },
-        // {
-        //     field: "status",
-        //     headerName: "Status",
-        //     sortable: false,
-        //     headerAlign: 'center',
-        //     align: 'center',
-        //     width: 150,
-        //     disableClickEventBubbling: true,
-        //     renderCell: (params) => {
-        //         return (
-        //             <div
-        //                 className="d-flex justify-content-between align-items-center"
-        //                 style={{ cursor: "pointer" }}
-        //             >
-        //                 <MatUpDown id={params.row.id} index={params.row} />
-        //             </div>
-        //         );
-        //     }
-        // }
+        {
+            field: "status",
+            headerName: "Status",
+            sortable: false,
+            headerAlign: 'center',
+            align: 'center',
+            width: 200,
+            disableClickEventBubbling: true,
+            renderCell: (params) => {
+                return (
+                    <div
+                        className="d-flex justify-content-between align-items-center"
+                        style={{ cursor: "pointer" }}
+                    >
+                        <MatUpDown id={params.row.id} index={params.row} />
+                    </div>
+                );
+            }
+        }
     ];
 
     const MatUpDown = ({ index }) => {
-        if (index.status.toUpperCase() === "UP") {
+        if (index.change > 0) {
             return (
                 <Box sx={{
                     display: 'flex',
@@ -157,7 +150,7 @@ function App() {
 
                 </Box>
             );
-        } else {
+        } else if (index.change < 0) {
             return (
                 <Box sx={{
                     display: 'flex',
@@ -172,11 +165,25 @@ function App() {
                     </Typography>
                 </Box>
             );
+        } else {
+            return (
+                <Box sx={{
+                    display: 'flex',
+                }}>
+                    <RemoveIcon sx={{ m: 0.5 }} />
+                    <Typography sx={{ m: 0.5 }} variant="button" display="block" gutterBottom>
+                        {index.changeval}
+                    </Typography>
+                    <Typography sx={{ m: 0.5 }} variant="button" display="block" gutterBottom>
+                        {index.changepercent}
+                    </Typography>
+                </Box>
+            );
         }
     };
 
     const handleRowClick: GridEventListener<'rowClick'> = (params) => {
-        window.location.href = 'https://google.com';
+        // window.location.href = 'https://google.com';
     };
 
     return (

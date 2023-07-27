@@ -9,8 +9,8 @@ import java.util.Properties;
 
 public class KafkaStockProducer {
 
-    Boolean localServer;
-    KafkaProducer<String, String> producer;
+    public Boolean localServer;
+    public KafkaProducer<String, String> producer;
 
     private static final Logger log = LoggerFactory.getLogger(KafkaStockProducer.class.getSimpleName());
 
