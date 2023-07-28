@@ -18,6 +18,9 @@ import java.nio.charset.StandardCharsets;
 import java.math.BigInteger;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
+import java.io.FileInputStream;
+import java.io.InputStream;
+import java.util.Properties;
 
 public class GetStockPrice {
 
@@ -37,14 +40,20 @@ public class GetStockPrice {
         return response;
     }
 
-//    private static String CountCompany(String value) {
-//        return JsonParser.parseString(value)
-//            .getAsJsonObject()
-//            .get("data")
-//            .getAsJsonObject()
-//            .get("count")
-//            .getAsString();
-//    }
+    private static String getAPIKey(){
+        try (InputStream input = new FileInputStream("config.properties")) {
+            Properties prop = new Properties();
+            // load a properties file
+            prop.load(input);
+            // get the property value and print it out
+            String API_KEY = prop.getProperty("API_KEY");
+            return API_KEY;
+
+        } catch (IOException ex) {
+            ex.printStackTrace();
+            return ex.getMessage();
+        }
+    }
 
     private static JsonArray getAPIResults(String apiUrl){
         try {
@@ -61,7 +70,7 @@ public class GetStockPrice {
             connection.setRequestProperty("Accept", "*/*");
 
             // Set the X-API-KEY header
-            connection.setRequestProperty("X-API-KEY", "pKg7UnAUzqKj8GMKQWu2R83e2N7Jno");
+            connection.setRequestProperty("X-API-KEY", getAPIKey());
 
             // Set User Agent
             connection.setRequestProperty("User-Agent", "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.11 (KHTML, like Gecko) Chrome/23.0.1271.95 Safari/537.11");
