@@ -89,8 +89,9 @@ async function connectToDB() {
 // URL: http://localhost:9000/allCompany
 app.get('/allCompany', async (req, res) => {
     console.log("All Company Query")
+
     let db = await connectToDB();
-    let collection = db.collection("company-stream");
+    let collection = db.collection("ksql-company-stream");
     let results = await collection.find({}).toArray();
 
     res.send(results).status(200);
@@ -100,8 +101,9 @@ app.get('/allCompany', async (req, res) => {
 app.get('/company/:ticker', async (req, res) => {
     let ticker = req.params.ticker.toUpperCase()
     console.log("Company Query Ticker: " + ticker)
+
     let db = await connectToDB();
-    let collection = db.collection("company-stream");
+    let collection = db.collection("ksql-company-stream");
     let results = await collection.find({ ticker: ticker }).toArray();
 
     res.send(results).status(200);
@@ -112,15 +114,15 @@ app.get('/allStock', async (req, res) => {
     let dateNow = getCurrentDate();
     let dateYesterday = getYesterdayDate();
     console.log("All Stock Query Date: " + dateNow)
+
     let db = await connectToDB();
-    let collectionNow = db.collection("stock-stream");
-    let resultsNow = await collectionNow.find({ date: dateNow }).toArray();
+    let collectionNow = db.collection("ksql-stock-stream");
+    let resultsNow = await collectionNow.find({ date: dateNow}).sort({ ticker: -1 }).toArray();
     let resultsYesterday = await collectionNow.find({ date: dateYesterday }).toArray();
 
-    let collectionComp = db.collection("company-stream");
+    let collectionComp = db.collection("ksql-company-stream");
     let resultsComp = await collectionComp.find({}).toArray();
 
-    console.log(resultsNow.length+" "+resultsYesterday.length+" "+resultsComp.length)
     //Join the data
     resultsNow.forEach(row1 => {
         let change;
@@ -156,7 +158,6 @@ app.get('/allStock', async (req, res) => {
         row1.changepercent = changepercent;
         row1.name = name;
         row1.logo = logo;
-        // console.log(row1)
     })
 
     res.send(resultsNow).status(200);
@@ -166,8 +167,9 @@ app.get('/allStock', async (req, res) => {
 app.get('/history/:ticker', async (req, res) => {
     let ticker = req.params.ticker.toUpperCase()
     console.log("History Stock Query Ticker: " + ticker)
+
     let db = await connectToDB();
-    let collection = db.collection("stock-stream");
+    let collection = db.collection("ksql-stock-stream");
     let results = await collection.find({ ticker: ticker }).toArray();
 
     res.send(results).status(200);
@@ -178,8 +180,9 @@ app.get('/stock/:ticker/:date', async (req, res) => {
     let dateNow = req.params.date.toString();
     let ticker = req.params.ticker.toUpperCase()
     console.log("Stock Query Ticker: " + ticker + " Date: " + dateNow)
+
     let db = await connectToDB();
-    let collection = db.collection("stock-stream");
+    let collection = db.collection("ksql-stock-stream");
     let results = await collection.find({ date: dateNow, ticker: ticker }).toArray();
 
     res.send(results).status(200);
@@ -189,11 +192,12 @@ app.get('/stock/:ticker/:date', async (req, res) => {
 app.get('/predictAllStockNow', async (req, res) => {
     let dateNow = getCurrentDate();
     console.log("Prediction All Stock Query Date: " + dateNow)
+
     let db = await connectToDB();
     let collectionPredictNow = db.collection("predict-stock");
     let resultsPredictNow = await collectionPredictNow.find({ date: dateNow }).toArray();
 
-    let collectionStockNow = db.collection("stock-stream");
+    let collectionStockNow = db.collection("ksql-stock-stream");
     let resultsStockNow = await collectionStockNow.find({ date: dateNow }).toArray();
     if (resultsPredictNow.length == 0 && resultsStockNow.length > 0) {
         const bat = spawn('cmd.exe', ['/c', PredictStockJarPath]);
@@ -216,11 +220,12 @@ app.get('/predictStock/:ticker', async (req, res) => {
     let ticker = req.params.ticker.toUpperCase()
     let dateNow = getCurrentDate();
     console.log("Prediction Stock Stock Query Ticker: " + ticker + " Date: " + dateNow)
+
     let db = await connectToDB();
     let collectionPredictNow = db.collection("predict-stock");
     let resultsPredictNow = await collectionPredictNow.find({ date: dateNow, ticker: ticker }).toArray();
 
-    let collectionStockNow = db.collection("stock-stream");
+    let collectionStockNow = db.collection("ksql-stock-stream");
     let resultsStockNow = await collectionStockNow.find({ date: dateNow, ticker: ticker }).toArray();
     if (resultsPredictNow.length == 0 && resultsStockNow.length > 0) {
         const bat = spawn('cmd.exe', ['/c', PredictStockJarPath]);

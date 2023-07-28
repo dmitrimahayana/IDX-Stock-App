@@ -6,7 +6,7 @@ import java.util.concurrent.ExecutionException;
 
 public class KSQLDBConnection {
 
-     String KSQLDB_SERVER_HOST;
+    String KSQLDB_SERVER_HOST;
     private int KSQLDB_SERVER_PORT;
     private Client client;
     private static InsertsPublisher insertsPublisher = new InsertsPublisher();

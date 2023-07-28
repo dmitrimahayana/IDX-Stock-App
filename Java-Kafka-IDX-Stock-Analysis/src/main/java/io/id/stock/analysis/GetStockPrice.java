@@ -115,14 +115,31 @@ public class GetStockPrice {
             //Crete Kafka Connection
             producer.createProducerConn();
 
+//            //Only to save all company name and logo
+//            for (JsonElement listCompanyElement : listCompany) {
+//                //Get JSON Company
+//                JsonObject listCompanyObject = listCompanyElement.getAsJsonObject();
+//                String compTicker = listCompanyObject.get("ticker").getAsString();
+//                String compName = listCompanyObject.get("name").getAsString();
+//                String compLogo = listCompanyObject.get("logo").getAsString();
+//                System.out.println("name: " + compName);
+//                System.out.println("logo: " + compLogo);
+//                System.out.println(" ");
+//                IdxCompany company = new IdxCompany(compTicker, compTicker, compName, compLogo);
+//                String jsonCompany = new Gson().toJson(company);
+//                //Send Company Producer
+//                producer.startProducer(topic2, compTicker, jsonCompany);
+//            }
+
             //Counter
             int Counter = 0;
 
             // Encode the parameter values
-            DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
-            String dateNow = LocalDate.now().format(formatter);
+            DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd"); //Date format
+            String dateNow = LocalDate.now().format(formatter); //Date Now
+            String dateYesterday = LocalDate.now().minusDays(1).format(formatter);  //yesterday
 //            String encodedParam1 = URLEncoder.encode("2020-01-02", StandardCharsets.UTF_8.toString());
-            String encodedParam1 = URLEncoder.encode(dateNow, StandardCharsets.UTF_8.toString());
+            String encodedParam1 = URLEncoder.encode(dateYesterday, StandardCharsets.UTF_8.toString());
 //            String encodedParam2 = URLEncoder.encode("2020-01-02", StandardCharsets.UTF_8.toString());
             String encodedParam2 = URLEncoder.encode(dateNow, StandardCharsets.UTF_8.toString());
 
@@ -132,10 +149,7 @@ public class GetStockPrice {
                 String emitent = companyTrendObject.get("ticker").getAsString();
                 String change = companyTrendObject.get("change").getAsString();
                 String percent = companyTrendObject.get("percent").getAsString();
-                System.out.println("number: " + Counter);
-                System.out.println("emitent: " + emitent);
-                System.out.println("change: " + change);
-                System.out.println("percent: " + percent);
+                System.out.println("Counter: " + Counter + " emitent: " + emitent + " change: " + change + " percent: " + percent);
 
                 //Query Historical Stock Price
                 String apiUrl3 = baseUrl + emitent + "/historical";
@@ -155,14 +169,7 @@ public class GetStockPrice {
                             String close = historicalPriceObject.get("close").getAsString();
                             String volume = historicalPriceObject.get("volume").getAsString();
                             String id = ticker + "_" + date;
-
-                            System.out.println("ticker: " + ticker);
-                            System.out.println("date: " + date);
-                            System.out.println("open: " + open);
-                            System.out.println("high: " + high);
-                            System.out.println("low: " + low);
-                            System.out.println("close: " + close);
-                            System.out.println("volume: " + volume);
+                            System.out.println("Counter: " + Counter + " ticker: " + ticker + " date: " + date + " open: " + open + " high: " + high + " low: " + low + " close: " + close + " volume: " + volume);
 
                             IdxStock stock = new IdxStock(id, ticker, date, Double.valueOf(open),Double.valueOf(high),Double.valueOf(low),Double.valueOf(close),new BigInteger(volume));
                             String jsonStock = new Gson().toJson(stock);
@@ -176,17 +183,13 @@ public class GetStockPrice {
                                 String compName = listCompanyObject.get("name").getAsString();
                                 String compLogo = listCompanyObject.get("logo").getAsString();
                                 if(compTicker.equalsIgnoreCase(emitent)){
-                                    System.out.println("name: " + compName);
-                                    System.out.println("logo: " + compLogo);
-                                    System.out.println(" ");
+                                    System.out.println("Counter: " + Counter + " name: " + compName + " logo: " + compLogo);
                                     IdxCompany company = new IdxCompany(compTicker, compTicker, compName, compLogo);
                                     String jsonCompany = new Gson().toJson(company);
                                     //Send Company Producer
                                     producer.startProducer(topic2, id, jsonCompany);
                                 }
                             }
-
-
                         }
                     } else {
                         System.out.println("Empty array");
@@ -197,8 +200,6 @@ public class GetStockPrice {
 //                if (Counter >= 1){
 //                    break;
 //                }
-
-                System.out.println("-----------------------------");
             }
 
             //Close Producer

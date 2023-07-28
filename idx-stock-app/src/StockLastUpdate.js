@@ -26,7 +26,7 @@ function App() {
 
         const interval = setInterval(() => {
             fetchData();
-        }, 1000);
+        }, 1000); //Interval every x ms
 
         return () => {
             clearInterval(interval);

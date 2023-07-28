@@ -29,7 +29,7 @@ public class StockProducerDummy {
         String topic2 = "streaming.goapi.idx.companies.json";
         KafkaStockProducer producerObj = new KafkaStockProducer(true);
 
-        String filename1 = "kafka.stock-stream 2023-07-27.json";
+        String filename1 = "kafka.stock-stream 2023-07-28.json";
         String filename2 = "kafka.company-stream.json";
         try{
             //Crete Kafka Connection
@@ -73,9 +73,9 @@ public class StockProducerDummy {
                     for (IdxCompany row2 : dataCompany) {
                         if (row1.ticker.equals(row2.ticker)) {
                             Counter++;
-                            String ticker = row1.ticker;
                             String date = dateNow;
-//                            String date = "2023-07-26";
+//                            String date = "2023-07-27";
+                            String ticker = row1.ticker;
                             String id = ticker + "_" + date;
                             String open = String.valueOf(row1.open);
                             String high = String.valueOf(row1.high);
@@ -83,24 +83,16 @@ public class StockProducerDummy {
                             String close = String.valueOf(row1.close);
                             String volume = String.valueOf(row1.volume);
 
-                            double randomValue1 = rangeMin + (rangeMax - rangeMin) * r.nextDouble();
-                            double randomValue2 = rangeMin + (rangeMax - rangeMin) * r.nextDouble();
-                            double randomValue3 = rangeMin + (rangeMax - rangeMin) * r.nextDouble();
-                            double randomValue4 = rangeMin + (rangeMax - rangeMin) * r.nextDouble();
+                            double randomValue1 = row1.low + (row1.high - row1.low) * r.nextDouble(); //For Testing aggregation purpose
+                            double randomValue2 = row1.low + (row1.high - row1.low) * r.nextDouble(); //For Testing aggregation purpose
+                            double randomValue3 = row1.low + (row1.high - row1.low) * r.nextDouble(); //For Testing aggregation purpose
+                            double randomValue4 = row1.low + (row1.high - row1.low) * r.nextDouble(); //For Testing aggregation purpose
                             open = String.valueOf(f.format(randomValue1)); //For Testing aggregation purpose
                             high = String.valueOf(f.format(randomValue2)); //For Testing aggregation purpose
                             low = String.valueOf(f.format(randomValue3)); //For Testing aggregation purpose
                             close = String.valueOf(f.format(randomValue4)); //For Testing aggregation purpose
 
-                            System.out.println("Counter: " + Counter);
-                            System.out.println("ticker: " + ticker);
-                            System.out.println("date: " + date);
-                            System.out.println("open: " + open);
-                            System.out.println("high: " + high);
-                            System.out.println("low: " + low);
-                            System.out.println("close: " + close);
-                            System.out.println("volume: " + volume);
-
+                            System.out.println("Counter: " + Counter + " ticker: " + ticker + " date: " + date + " open: " + open + " high: " + high + " low: " + low + " close: " + close + " volume: " + volume);
                             IdxStock stock = new IdxStock(id, ticker, date, Double.valueOf(open), Double.valueOf(high), Double.valueOf(low), Double.valueOf(close), new BigInteger(volume));
                             String jsonStock = new Gson().toJson(stock);
                             //Send Stock Producer
@@ -109,10 +101,7 @@ public class StockProducerDummy {
                             String compTicker = row2.ticker;
                             String compName = row2.name;
                             String compLogo = row2.logo;
-                            System.out.println("name: " + compName);
-                            System.out.println("logo: " + compLogo);
-                            System.out.println(" ");
-                            System.out.println("-----------------------------");
+                            System.out.println("Counter: " + Counter + " name: " + compName + " logo: " + compLogo);
                             IdxCompany company = new IdxCompany(compTicker, compTicker, compName, compLogo);
                             String jsonCompany = new Gson().toJson(company);
                             //Send Company Producer
@@ -120,11 +109,11 @@ public class StockProducerDummy {
                         }
                     }
                 }
-
-//                //Close Producer
-//                producerObj.flushAndCloseProducer();
-                Thread.sleep(1000);
+                Thread.sleep(5000);
             }
+
+//            //Close Producer
+//            producerObj.flushAndCloseProducer();
         } catch (FileNotFoundException e) {
             throw new RuntimeException(e);
         } catch (Exception e) {
