@@ -38,7 +38,7 @@ public class KSQLStockAggregateSink {
 
     public static void main(String[] args) {
         String ksqlHost = "localhost";
-        int ksqlPort = 8088;
+        int ksqlPort = 9088;
         KSQLDBConnection conn = new KSQLDBConnection(ksqlHost, ksqlPort);
         Client ksqlClient = conn.createConnection();
 
