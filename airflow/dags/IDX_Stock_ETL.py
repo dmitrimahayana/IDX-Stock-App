@@ -31,7 +31,7 @@ def loaders(df):
     collection = "ksql-join-stock-company"
     load.insertOrUpdateCollection(collection, df)
 
-with DAG('IDX_Stock_ETL', schedule_interval=timedelta(seconds=30), default_args=default_args, catchup=False) as dag:
+with DAG('IDX_Stock_ETL', schedule_interval=timedelta(seconds=60), default_args=default_args, catchup=False) as dag:
     extract_data1 = extractStock()
     extract_data2 = extractCompany()
     transform_data = transformers(extract_data1, extract_data2)

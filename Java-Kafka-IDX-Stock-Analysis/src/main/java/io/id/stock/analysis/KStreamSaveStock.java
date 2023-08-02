@@ -39,7 +39,8 @@ public class KStreamSaveStock {
         kafkaStockConsumer consumer = new kafkaStockConsumer(localServer, groupId, offset);
 
         //Create MongoDB Connection
-        MongoDBStock mongoDBConn = new MongoDBStock("mongodb://localhost:27017");
+//        MongoDBStock mongoDBConn = new MongoDBStock("mongodb://localhost:27017");
+        MongoDBStock mongoDBConn = new MongoDBStock("mongodb://localhost:27017"); //Docker mongodb
         mongoDBConn.createConnection();
 
         //get a reference to the main thread
@@ -77,11 +78,11 @@ public class KStreamSaveStock {
                     try {
                         //Insert to MongoDB based on the topic
                         if (record.topic().equalsIgnoreCase(topic1)){
-                            mongoDBConn.insertOrUpdate("kafka", "stock-stream", record.value());
+                            mongoDBConn.insertOrUpdate("kafka", "kstream-stock-stream", record.value());
                         } else if(record.topic().equalsIgnoreCase(topic2)){
-                            mongoDBConn.insertOrUpdate("kafka", "company-stream", record.value());
+                            mongoDBConn.insertOrUpdate("kafka", "kstream-company-stream", record.value());
                         } else if(record.topic().equalsIgnoreCase(topic3)){
-                            mongoDBConn.insertOrUpdate("kafka", "join-stock-company-stream", record.value());
+                            mongoDBConn.insertOrUpdate("kafka", "kstream-join-stock-company-stream", record.value());
                         }
 
 //                        //Insert to flat file

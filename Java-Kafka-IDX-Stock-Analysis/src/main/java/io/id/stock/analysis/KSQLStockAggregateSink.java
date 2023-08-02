@@ -43,7 +43,8 @@ public class KSQLStockAggregateSink {
         Client ksqlClient = conn.createConnection();
 
         //Create MongoDB Connection
-        MongoDBStock mongoDBConn = new MongoDBStock("mongodb://localhost:27017");
+//        MongoDBStock mongoDBConn = new MongoDBStock("mongodb://localhost:27017");
+        MongoDBStock mongoDBConn = new MongoDBStock("mongodb://localhost:27017"); //Docker mongodb
         mongoDBConn.createConnection();
 
 //        Map<String, Object> properties = Collections.singletonMap(

@@ -8,8 +8,18 @@ import org.apache.spark.sql.types.{DoubleType, LongType, StringType}
 
 object CreateModel {
   def main(args: Array[String]): Unit = {
-    val sparkMaster = "spark://172.20.224.1:7077"
+//    val sparkMaster = "spark://172.20.224.1:7077"
+//    val sparkMaster = "spark://localhost:7077"
+    val sparkMaster = "local[*]"
     val appName = "Scala IDX Stock Create Model"
+    val localHostname = java.net.InetAddress.getLocalHost.getHostName
+    var mongoDBURL = ""
+    if(localHostname.equalsIgnoreCase("dmitri")){
+      mongoDBURL = "mongodb://localhost:27017/";
+    } else {
+      mongoDBURL = "mongodb://mongodb-server:27017/";
+    }
+    val mongoDBCollectionInput = mongoDBURL+"kafka.ksql-stock-stream"
     val spark = SparkSession.builder()
       .appName(appName)
       .master(sparkMaster)
@@ -24,20 +34,15 @@ object CreateModel {
       .config("spark.sql.broadcastTimeout", "1000")
       .config("spark.sql.autoBroadcastJoinThreshold", "100485760")
       .config("spark.sql.shuffle.partitions", "1000")
+      .config("spark.mongodb.read.connection.uri", mongoDBCollectionInput) //Docker mongodb
       .getOrCreate()
 
+    println("Hostname: " + localHostname + " MongoDB URL: " + mongoDBURL)
     println("spark: " + spark.version)
     println("scala: " + util.Properties.versionString)
     println("java: " + System.getProperty("java.version"))
 
-    val df = spark
-      .read
-      .format("mongodb")
-      .option("database", "kafka")
-      .option("collection", "stock-stream")
-      .option("spark.mongodb.input.partitioner", "MongoSinglePartitioner")
-      .option("connection.uri", "mongodb://localhost:27017/kafka.stock-stream")
-      .load()
+    val df = spark.read.format("mongodb").load()
     df.printSchema()
 
     val newDf = df.select("id", "ticker", "date", "open", "high", "low", "close", "volume")
@@ -130,11 +135,12 @@ object CreateModel {
 
     // Save Model
     println("save model...")
-    model1.write.overwrite().save(currentModelName)
+    model1.write.overwrite().save("/04 Model/Scala-IDX-Stock-Analysis/" + currentModelName)
 
     // And load it back in during production
     println("load model...")
-    val model2 = PipelineModel.load("D:/00 Project/00 My Project/IdeaProjects/Scala-IDX-Stock-Analysis/" + currentModelName)
+    val model2 = PipelineModel.load("/04 Model/Scala-IDX-Stock-Analysis/" + currentModelName)
+//    val model2 = PipelineModel.load("D:/00 Project/00 My Project/IdeaProjects/Scala-IDX-Stock-Analysis/" + currentModelName)
 
     // Make predictions.
     println("Testing Data Pipeline...")

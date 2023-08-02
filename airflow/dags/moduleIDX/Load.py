@@ -10,7 +10,8 @@ def getCollection(url, database, collection):
 
 def insertOrUpdateCollection(newCollectionName, df):
     print("Start Inserting to MongoDB...")
-    url = "mongodb://host.docker.internal:27017/"
+    # url = "mongodb://host.docker.internal:27017/"
+    url = "mongodb://mongodb-server:27017/" #Docker mongodb
     database = "kafka"
     myCollection = getCollection(url, database, newCollectionName)
     arrayJSON = df.to_dict('records')

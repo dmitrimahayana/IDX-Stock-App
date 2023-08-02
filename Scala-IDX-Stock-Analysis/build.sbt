@@ -55,7 +55,3 @@ libraryDependencies += "ch.megard" %% "akka-http-cors" % "1.2.0"
 
 // https://mvnrepository.com/artifact/org.apache.spark/spark-sql-kafka-0-10
 libraryDependencies += "org.apache.spark" %% "spark-sql-kafka-0-10" % "3.4.1" % Test
-
-//artifactName := { (sv: ScalaVersion, module: ModuleID, artifact: Artifact) =>
-//  artifact.name + "_" + sv.binary +  "_" + module.revision + "." + artifact.extension
-//}

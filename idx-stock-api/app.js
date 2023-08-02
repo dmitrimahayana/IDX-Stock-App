@@ -7,6 +7,10 @@ var CronJob = require('cron').CronJob;
 const { spawn } = require('node:child_process');
 
 var PredictStockJarPath = 'D:/00 Project/00 My Project/Run Scala_IDX_Stock_MongoDB.bat';
+var dateNow = "2023-07-28";
+var dateYesterday = "2023-07-27";
+// var dateNow = getCurrentDate();
+// var dateYesterday = getYesterdayDate();
 
 app.use(express.json());
 app.use(cors());
@@ -111,8 +115,6 @@ app.get('/company/:ticker', async (req, res) => {
 
 // URL: http://localhost:9000/allStock
 app.get('/allStock', async (req, res) => {
-    let dateNow = getCurrentDate();
-    let dateYesterday = getYesterdayDate();
     console.log("All Stock Query Date: " + dateNow)
 
     let db = await connectToDB();
@@ -190,11 +192,10 @@ app.get('/stock/:ticker/:date', async (req, res) => {
 
 // URL: http://localhost:9000/predictAllStockNow
 app.get('/predictAllStockNow', async (req, res) => {
-    let dateNow = getCurrentDate();
     console.log("Prediction All Stock Query Date: " + dateNow)
 
     let db = await connectToDB();
-    let collectionPredictNow = db.collection("predict-stock");
+    let collectionPredictNow = db.collection("ksql-predict-stock");
     let resultsPredictNow = await collectionPredictNow.find({ date: dateNow }).toArray();
 
     let collectionStockNow = db.collection("ksql-stock-stream");
@@ -218,11 +219,10 @@ app.get('/predictAllStockNow', async (req, res) => {
 // URL: http://localhost:9000/predictStock/{ticker}
 app.get('/predictStock/:ticker', async (req, res) => {
     let ticker = req.params.ticker.toUpperCase()
-    let dateNow = getCurrentDate();
     console.log("Prediction Stock Stock Query Ticker: " + ticker + " Date: " + dateNow)
 
     let db = await connectToDB();
-    let collectionPredictNow = db.collection("predict-stock");
+    let collectionPredictNow = db.collection("ksql-predict-stock");
     let resultsPredictNow = await collectionPredictNow.find({ date: dateNow, ticker: ticker }).toArray();
 
     let collectionStockNow = db.collection("ksql-stock-stream");

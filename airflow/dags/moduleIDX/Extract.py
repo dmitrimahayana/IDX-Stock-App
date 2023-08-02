@@ -11,7 +11,8 @@ def getCollection(url, database, collection):
 
 def extractKSQLStock(query):
     print("Start Extracting...")
-    url = "mongodb://host.docker.internal:27017/"
+    # url = "mongodb://host.docker.internal:27017/"
+    url = "mongodb://mongodb-server:27017/" #Docker mongodb
     database = "kafka"
     collection = "ksql-stock-stream"
     myCollection = getCollection(url, database, collection)
@@ -24,7 +25,8 @@ def extractKSQLStock(query):
 
 def extractKSQLCompany(query):
     print("Start Extracting...")
-    url = "mongodb://host.docker.internal:27017/"
+    # url = "mongodb://host.docker.internal:27017/"
+    url = "mongodb://mongodb-server:27017/" #Docker mongodb
     database = "kafka"
     collection = "ksql-company-stream"
     myCollection = getCollection(url, database, collection)

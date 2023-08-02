@@ -22,7 +22,7 @@ import scala.io.StdIn
 
 object APIJSONPredictData {
   // needed to run the route
-  implicit val system: ActorSystem[_] = ActorSystem(Behaviors.empty, "IDX-Stock-API")
+  implicit val system: ActorSystem[_] = ActorSystem(Behaviors.empty, "Scala IDX Stock API")
   // needed for the future map/flatmap in the end and future in fetchItem and saveOrder
   implicit val executionContext: ExecutionContext = system.executionContext
 
@@ -94,7 +94,7 @@ object APIJSONPredictData {
   def openSpark(): SparkConnection = {
     // Create Spark Session
     val sparkMaster = "spark://172.20.224.1:7077"
-    val sparkAppName = "Scala REST API IDX Stock Prediction"
+    val sparkAppName = "Scala IDX Stock API"
     val sparkConn = new SparkConnection(sparkMaster, sparkAppName)
     sparkConn.CreateSparkSession()
     val spark = sparkConn.spark.getOrCreate()
