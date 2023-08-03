@@ -1,2 +1,5 @@
 airflow webserver --port 8080
 airflow scheduler
+
+#airflow worker is not working due to pid exist then you need to perform this
+rm -rf /opt/airflow/airflow-worker.pid
