@@ -9,8 +9,6 @@ services:
       - ./scripts/create_cluster_id.sh:/tmp/create_cluster_id.sh
       - ./clusterID:/tmp/clusterID
     command: "bash -c '/tmp/create_cluster_id.sh'"
-    networks:
-      - app-network
 
   kafka1:
     image: confluentinc/cp-kafka:7.3.3
@@ -37,8 +35,6 @@ services:
       - ./scripts/update_run.sh:/tmp/update_run.sh
       - ./clusterID:/tmp/clusterID
     command: "bash -c '/tmp/update_run.sh && /etc/confluent/docker/run'"
-    networks:
-      - app-network
 
   kafka2:
     image: confluentinc/cp-kafka:7.3.3
@@ -65,8 +61,6 @@ services:
       - ./scripts/update_run.sh:/tmp/update_run.sh
       - ./clusterID:/tmp/clusterID
     command: "bash -c '/tmp/update_run.sh && /etc/confluent/docker/run'"
-    networks:
-      - app-network
 
   kafka3:
     image: confluentinc/cp-kafka:7.3.3
@@ -93,8 +87,6 @@ services:
       - ./scripts/update_run.sh:/tmp/update_run.sh
       - ./clusterID:/tmp/clusterID
     command: "bash -c '/tmp/update_run.sh && /etc/confluent/docker/run'"
-    networks:
-      - app-network
 
   ksqldb-server:
     image: confluentinc/ksqldb-server:0.29.0
@@ -111,8 +103,6 @@ services:
       KSQL_BOOTSTRAP_SERVERS: kafka1:19092,kafka2:19093,kafka3:19094
       KSQL_KSQL_LOGGING_PROCESSING_STREAM_AUTO_CREATE: "true"
       KSQL_KSQL_LOGGING_PROCESSING_TOPIC_AUTO_CREATE: "true"
-    networks:
-      - app-network
 
   ksqldb-cli:
     image: confluentinc/ksqldb-cli:0.29.0
@@ -124,8 +114,21 @@ services:
       - ksqldb-server
     entrypoint: /bin/sh
     tty: true
-    networks:
-      - app-network
+
+  schema-registry:
+    image: confluentinc/cp-schema-registry
+    hostname: schema-registry
+    container_name: schema-registry
+    ports:
+      - "8282:8282"
+    environment:
+      SCHEMA_REGISTRY_HOST_NAME: schema-registry
+      SCHEMA_REGISTRY_KAFKASTORE_BOOTSTRAP_SERVERS: kafka1:19092,kafka2:19093,kafka3:19094
+      SCHEMA_REGISTRY_LISTENERS: 'http://0.0.0.0:8282'
+    depends_on:
+      - kafka1
+      - kafka2
+      - kafka3
 
 volumes:
   kafka1-data:
@@ -133,5 +136,6 @@ volumes:
   kafka3-data:
 
 networks:
-  app-network:
-    driver: bridge
+  default:
+    name: my_docker_network
+    external: true

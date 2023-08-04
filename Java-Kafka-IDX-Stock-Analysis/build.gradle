@@ -49,6 +49,13 @@ dependencies {
     // https://mvnrepository.com/artifact/org.json/json
     implementation 'org.json:json:20230227'
 
+    // https://mvnrepository.com/artifact/io.confluent/kafka-avro-serializer
+    implementation 'io.confluent:kafka-avro-serializer:7.3.3'
+
+    // https://mvnrepository.com/artifact/org.apache.avro/avro
+    implementation 'org.apache.avro:avro:1.10.2'
+
+
 }
 
 test {
