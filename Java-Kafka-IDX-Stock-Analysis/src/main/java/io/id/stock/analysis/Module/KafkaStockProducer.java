@@ -1,5 +1,7 @@
 package io.id.stock.analysis.Module;
 
+import io.confluent.kafka.serializers.KafkaAvroSerializer;
+import org.apache.avro.generic.GenericRecord;
 import org.apache.kafka.clients.producer.*;
 import org.apache.kafka.common.serialization.StringSerializer;
 import org.slf4j.Logger;
@@ -10,7 +12,7 @@ import java.util.Properties;
 public class KafkaStockProducer {
 
     public Boolean localServer;
-    public KafkaProducer<String, String> producer;
+    public KafkaProducer<String, GenericRecord> producer;
 
     private static final Logger log = LoggerFactory.getLogger(KafkaStockProducer.class.getSimpleName());
 
@@ -18,9 +20,10 @@ public class KafkaStockProducer {
         this.localServer = localServer;
     }
 
-    private KafkaProducer<String, String> createConnection() {
+    private KafkaProducer<String, GenericRecord> createConnection() {
         String bootStrapServer1 = "localhost:39092,localhost:39093,localhost:39094";
         String bootStrapServer2 = "cluster.playground.cdkt.io:9092"; //kafka server from Conductor
+        String schemaHost = "http://localhost:8282";
 
         //Create producer properties
         Properties properties = new Properties();
@@ -34,7 +37,9 @@ public class KafkaStockProducer {
             properties.setProperty("sasl.jaas.config", "org.apache.kafka.common.security.plain.PlainLoginModule required username=\"6W1Ja4rpKmarggy5YCr7In\" password=\"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczovL2F1dGguY29uZHVrdG9yLmlvIiwic291cmNlQXBwbGljYXRpb24iOiJhZG1pbiIsInVzZXJNYWlsIjpudWxsLCJwYXlsb2FkIjp7InZhbGlkRm9yVXNlcm5hbWUiOiI2VzFKYTRycEttYXJnZ3k1WUNyN0luIiwib3JnYW5pemF0aW9uSWQiOjczMzM5LCJ1c2VySWQiOjg1MjY1LCJmb3JFeHBpcmF0aW9uQ2hlY2siOiIxNWRmZjljZC1hYTgwLTRlMmItYTAzYi1iMjUxYWMyNDA5YzMifX0.Dg8zCO6dJq9hDbVsuvzmlba2RWv6g0WBw0hkhpawX-w\";");
         }
         properties.setProperty(ProducerConfig.KEY_SERIALIZER_CLASS_CONFIG, StringSerializer.class.getName());
-        properties.setProperty(ProducerConfig.VALUE_SERIALIZER_CLASS_CONFIG, StringSerializer.class.getName());
+//        properties.setProperty(ProducerConfig.VALUE_SERIALIZER_CLASS_CONFIG, StringSerializer.class.getName()); //String Serializer
+        properties.setProperty(ProducerConfig.VALUE_SERIALIZER_CLASS_CONFIG, KafkaAvroSerializer.class.getName()); //Avro Serializer
+        properties.setProperty("schema.registry.url", schemaHost);
         properties.setProperty("sasl.mechanism", "PLAIN");
 
         properties.setProperty(ProducerConfig.PARTITIONER_CLASS_CONFIG, RoundRobinPartitioner.class.getName()); //For testing purposes use round robbin partition
@@ -60,9 +65,9 @@ public class KafkaStockProducer {
         this.producer = createConnection();
     }
 
-    public void startProducer(String topic, String key, String value){
+    public void startProducer(String topic, String key, GenericRecord obj){
         //Create a producer record
-        ProducerRecord<String, String> producerRecord = new ProducerRecord<>(topic, key, value);
+        ProducerRecord<String, GenericRecord> producerRecord = new ProducerRecord<>(topic, key, obj);
 
         //Send data
         producer.send(producerRecord, new Callback() {

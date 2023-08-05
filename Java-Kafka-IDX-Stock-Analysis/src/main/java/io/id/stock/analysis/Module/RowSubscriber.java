@@ -14,7 +14,7 @@ public class RowSubscriber implements Subscriber<Row> {
     public RowSubscriber() {
     }
 
-    MongoDBStock mongoDBConn = new MongoDBStock("mongodb://localhost:27017");
+    MongoDBConn mongoDBConn = new MongoDBConn("mongodb://localhost:27017");
 
     @Override
     public synchronized void onSubscribe(Subscription subscription) {

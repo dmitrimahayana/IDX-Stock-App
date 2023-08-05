@@ -4,7 +4,7 @@ import io.confluent.ksql.api.client.Client;
 import io.confluent.ksql.api.client.Row;
 import io.confluent.ksql.api.client.StreamedQueryResult;
 import io.id.stock.analysis.Module.KSQLDBConnection;
-import io.id.stock.analysis.Module.MongoDBStock;
+import io.id.stock.analysis.Module.MongoDBConn;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -43,13 +43,8 @@ public class KSQLCompanyAggregateSink {
         Client ksqlClient = conn.createConnection();
 
         //Create MongoDB Connection
-//        MongoDBStock mongoDBConn = new MongoDBStock("mongodb://localhost:27017");
-        MongoDBStock mongoDBConn = new MongoDBStock("mongodb://localhost:27017"); //Docker mongodb
+        MongoDBConn mongoDBConn = new MongoDBConn("mongodb://localhost:27017"); //Docker mongodb
         mongoDBConn.createConnection();
-
-//        Map<String, Object> properties = Collections.singletonMap(
-//                "auto.offset.reset", "earliest"
-//        );
 
         // Add shutdown hook to stop the Kafka client threads.
         // You can optionally provide a timeout to `close`.
@@ -77,7 +72,7 @@ public class KSQLCompanyAggregateSink {
                 if (rowCompany != null) {
                     String finalJsonComp = createJsonString(rowCompany);
                     mongoDBConn.insertOrUpdate("kafka", "ksql-company-stream", finalJsonComp);
-                    log.info("Sync Query Company Result "+ finalJsonComp);
+//                    log.info("Sync Query Company Result "+ finalJsonComp);
                 }
             }
         } catch (ExecutionException e) {

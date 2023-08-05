@@ -1,7 +1,8 @@
 package io.id.stock.analysis;
 
-import io.id.stock.analysis.Module.MongoDBStock;
+import io.id.stock.analysis.Module.MongoDBConn;
 import io.id.stock.analysis.Module.kafkaStockConsumer;
+import org.apache.avro.generic.GenericRecord;
 import org.apache.kafka.clients.consumer.ConsumerRecord;
 import org.apache.kafka.clients.consumer.ConsumerRecords;
 import org.apache.kafka.common.errors.WakeupException;
@@ -35,12 +36,12 @@ public class KStreamSaveStock {
         //Create Kafka Consumer Connection
         Boolean localServer = true;
         String groupId = "consumer-goapi-idx-stock";
-        String offset = "earliest"; //use  earliest for testing purposes
+        String offset = "earliest"; //use  earliest/latest for testing purposes
         kafkaStockConsumer consumer = new kafkaStockConsumer(localServer, groupId, offset);
 
         //Create MongoDB Connection
 //        MongoDBStock mongoDBConn = new MongoDBStock("mongodb://localhost:27017");
-        MongoDBStock mongoDBConn = new MongoDBStock("mongodb://localhost:27017"); //Docker mongodb
+        MongoDBConn mongoDBConn = new MongoDBConn("mongodb://localhost:27017"); //Docker mongodb
         mongoDBConn.createConnection();
 
         //get a reference to the main thread
@@ -70,19 +71,20 @@ public class KStreamSaveStock {
             //Show data
             while (true){
                 //Polling data from topics
-                ConsumerRecords<String, String> records = consumer.pollingData();
+                ConsumerRecords<String, GenericRecord> records = consumer.pollingData();
                 int recordCount = records.count();
                 log.info("Received "+recordCount+" records");
 
-                for(ConsumerRecord<String, String> record: records) {
+                for(ConsumerRecord<String, GenericRecord> record: records) {
                     try {
+                        System.out.println("key:"+record.topic()+" --- value:"+record.value());
                         //Insert to MongoDB based on the topic
                         if (record.topic().equalsIgnoreCase(topic1)){
-                            mongoDBConn.insertOrUpdate("kafka", "kstream-stock-stream", record.value());
+                            mongoDBConn.insertOrUpdateAvro("kafka", "kstream-stock-stream", record.value());
                         } else if(record.topic().equalsIgnoreCase(topic2)){
-                            mongoDBConn.insertOrUpdate("kafka", "kstream-company-stream", record.value());
+                            mongoDBConn.insertOrUpdateAvro("kafka", "kstream-company-stream", record.value());
                         } else if(record.topic().equalsIgnoreCase(topic3)){
-                            mongoDBConn.insertOrUpdate("kafka", "kstream-join-stock-company-stream", record.value());
+                            mongoDBConn.insertOrUpdateAvro("kafka", "kstream-join-stock-company", record.value());
                         }
 
 //                        //Insert to flat file

@@ -1,0 +1,210 @@
+{
+	"info": {
+		"_postman_id": "d9ca986e-6ec0-4f29-bb71-471a9cd2b3e5",
+		"name": "Kafka Schema Local",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "27786636"
+	},
+	"item": [
+		{
+			"name": "Create Stock Schema",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/vnd.schemaregistry.v1+json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \"schema\":\r\n\"{ \\\"type\\\": \\\"record\\\",\\\"name\\\": \\\"Stock\\\", \\\"fields\\\": [{\\\"name\\\": \\\"id\\\", \\\"type\\\": \\\"string\\\"}, {\\\"name\\\": \\\"ticker\\\", \\\"type\\\": \\\"string\\\"}, {\\\"name\\\": \\\"date\\\", \\\"type\\\": \\\"string\\\"}, {\\\"name\\\": \\\"open\\\", \\\"type\\\": \\\"double\\\"}, {\\\"name\\\": \\\"high\\\", \\\"type\\\": \\\"double\\\"}, {\\\"name\\\": \\\"low\\\", \\\"type\\\": \\\"double\\\"}, {\\\"name\\\": \\\"close\\\", \\\"type\\\": \\\"double\\\"}, {\\\"name\\\": \\\"volume\\\", \\\"type\\\": \\\"long\\\"}  ]}\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8282/subjects/IDX-Stock/versions/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8282",
+					"path": [
+						"subjects",
+						"IDX-Stock",
+						"versions",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Company Schema",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/vnd.schemaregistry.v1+json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \"schema\":\r\n\"{ \\\"type\\\": \\\"record\\\", \\\"name\\\": \\\"Company\\\", \\\"fields\\\": [ {\\\"name\\\": \\\"id\\\", \\\"type\\\": \\\"string\\\"}, {\\\"name\\\": \\\"ticker\\\", \\\"type\\\": \\\"string\\\"}, {\\\"name\\\": \\\"name\\\", \\\"type\\\": \\\"string\\\"}, {\\\"name\\\": \\\"logo\\\", \\\"type\\\": \\\"string\\\"} ]}\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8282/subjects/IDX-Company/versions",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8282",
+					"path": [
+						"subjects",
+						"IDX-Company",
+						"versions"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Stock Schema",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/vnd.schemaregistry.v1+json",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8282/subjects/IDX-Stock/versions/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8282",
+					"path": [
+						"subjects",
+						"IDX-Stock",
+						"versions",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Company Schema",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/vnd.schemaregistry.v1+json",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8282/subjects/IDX-Company/versions/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8282",
+					"path": [
+						"subjects",
+						"IDX-Company",
+						"versions",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Schema",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8282/subjects/IDX-Company",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8282",
+					"path": [
+						"subjects",
+						"IDX-Company"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Put Config",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/vnd.schemaregistry.v1+json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n   \"compatibility\": \"NONE\"\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8282/config",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8282",
+					"path": [
+						"config"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Config",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8282/config/IDX-Stock",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8282",
+					"path": [
+						"config",
+						"IDX-Stock"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

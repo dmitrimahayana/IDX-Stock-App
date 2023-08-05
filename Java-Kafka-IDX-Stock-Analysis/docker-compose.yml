@@ -88,6 +88,21 @@ services:
       - ./clusterID:/tmp/clusterID
     command: "bash -c '/tmp/update_run.sh && /etc/confluent/docker/run'"
 
+  schema-registry:
+    image: confluentinc/cp-schema-registry
+    hostname: schema-registry
+    container_name: schema-registry
+    ports:
+      - "8282:8282"
+    environment:
+      SCHEMA_REGISTRY_HOST_NAME: schema-registry
+      SCHEMA_REGISTRY_KAFKASTORE_BOOTSTRAP_SERVERS: kafka1:19092,kafka2:19093,kafka3:19094
+      SCHEMA_REGISTRY_LISTENERS: http://0.0.0.0:8282
+    depends_on:
+      - kafka1
+      - kafka2
+      - kafka3
+
   ksqldb-server:
     image: confluentinc/ksqldb-server:0.29.0
     hostname: ksqldb-server
@@ -103,6 +118,7 @@ services:
       KSQL_BOOTSTRAP_SERVERS: kafka1:19092,kafka2:19093,kafka3:19094
       KSQL_KSQL_LOGGING_PROCESSING_STREAM_AUTO_CREATE: "true"
       KSQL_KSQL_LOGGING_PROCESSING_TOPIC_AUTO_CREATE: "true"
+      KSQL_KSQL_SCHEMA_REGISTRY_URL: http://schema-registry:8282
 
   ksqldb-cli:
     image: confluentinc/ksqldb-cli:0.29.0
@@ -114,21 +130,6 @@ services:
       - ksqldb-server
     entrypoint: /bin/sh
     tty: true
-
-  schema-registry:
-    image: confluentinc/cp-schema-registry
-    hostname: schema-registry
-    container_name: schema-registry
-    ports:
-      - "8282:8282"
-    environment:
-      SCHEMA_REGISTRY_HOST_NAME: schema-registry
-      SCHEMA_REGISTRY_KAFKASTORE_BOOTSTRAP_SERVERS: kafka1:19092,kafka2:19093,kafka3:19094
-      SCHEMA_REGISTRY_LISTENERS: 'http://0.0.0.0:8282'
-    depends_on:
-      - kafka1
-      - kafka2
-      - kafka3
 
 volumes:
   kafka1-data:

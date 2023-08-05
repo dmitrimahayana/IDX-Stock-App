@@ -4,6 +4,10 @@ import com.google.gson.*;
 import io.id.stock.analysis.Module.IdxStock;
 import io.id.stock.analysis.Module.IdxCompany;
 import io.id.stock.analysis.Module.KafkaStockProducer;
+import org.apache.avro.Schema;
+import org.apache.avro.generic.GenericData;
+import org.apache.avro.generic.GenericRecord;
+import org.apache.kafka.clients.producer.ProducerRecord;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -16,6 +20,8 @@ import java.net.URL;
 import java.net.URLEncoder;
 import java.nio.charset.StandardCharsets;
 import java.math.BigInteger;
+import java.nio.file.Files;
+import java.nio.file.Paths;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.io.FileInputStream;
@@ -107,7 +113,7 @@ public class GetStockPrice {
         //Create Kafka Producer
         String topic1 = "streaming.goapi.idx.stock.json";
         String topic2 = "streaming.goapi.idx.companies.json";
-        KafkaStockProducer producer = new KafkaStockProducer(true);
+        KafkaStockProducer producerObj = new KafkaStockProducer(true);
 
         //Base API URL
         String baseUrl = "https://api.goapi.id/v1/stock/idx/";
@@ -121,8 +127,15 @@ public class GetStockPrice {
         JsonArray listCompany = getAPIResults(apiUrl2);
 
         try {
+            String SCHEMA_STOCK_PATH = "avro-stock.avsc"; //PLEASE CREATE THIS SCHEMA IN KAFKA SCHEMA FIRST BEFORE RUNNING THIS
+            String SCHEMA_COMPANY_PATH = "avro-company.avsc"; //PLEASE CREATE THIS SCHEMA IN KAFKA SCHEMA FIRST BEFORE RUNNING THIS
+            String avroStockSchema = new String(Files.readAllBytes(Paths.get(SCHEMA_STOCK_PATH)));
+            Schema schemaStock = new Schema.Parser().parse(avroStockSchema);
+            String avroCompanySchema = new String(Files.readAllBytes(Paths.get(SCHEMA_COMPANY_PATH)));
+            Schema schemaCompany = new Schema.Parser().parse(avroCompanySchema);
+
             //Crete Kafka Connection
-            producer.createProducerConn();
+            producerObj.createProducerConn();
 
 //            //Only to save all company name and logo
 //            for (JsonElement listCompanyElement : listCompany) {
@@ -147,8 +160,8 @@ public class GetStockPrice {
             DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd"); //Date format
             String dateNow = LocalDate.now().format(formatter); //Date Now
             String dateYesterday = LocalDate.now().minusDays(1).format(formatter);  //yesterday
-//            String encodedParam1 = URLEncoder.encode("2020-01-02", StandardCharsets.UTF_8.toString());
             String encodedParam1 = URLEncoder.encode(dateYesterday, StandardCharsets.UTF_8.toString());
+//            String encodedParam1 = URLEncoder.encode("2020-01-02", StandardCharsets.UTF_8.toString());
 //            String encodedParam2 = URLEncoder.encode("2020-01-02", StandardCharsets.UTF_8.toString());
             String encodedParam2 = URLEncoder.encode(dateNow, StandardCharsets.UTF_8.toString());
 
@@ -172,18 +185,32 @@ public class GetStockPrice {
                             JsonObject historicalPriceObject = historicalPriceElement.getAsJsonObject();
                             String ticker = historicalPriceObject.get("ticker").getAsString();
                             String date = historicalPriceObject.get("date").getAsString();
-                            String open = historicalPriceObject.get("open").getAsString();
-                            String high = historicalPriceObject.get("high").getAsString();
-                            String low = historicalPriceObject.get("low").getAsString();
-                            String close = historicalPriceObject.get("close").getAsString();
-                            String volume = historicalPriceObject.get("volume").getAsString();
                             String id = ticker + "_" + date;
+                            Double open = historicalPriceObject.get("open").getAsDouble();
+                            Double high = historicalPriceObject.get("high").getAsDouble();
+                            Double low = historicalPriceObject.get("low").getAsDouble();
+                            Double close = historicalPriceObject.get("close").getAsDouble();
+                            Long volume = historicalPriceObject.get("volume").getAsLong();
                             System.out.println("Counter: " + Counter + " ticker: " + ticker + " date: " + date + " open: " + open + " high: " + high + " low: " + low + " close: " + close + " volume: " + volume);
 
-                            IdxStock stock = new IdxStock(id, ticker, date, Double.valueOf(open),Double.valueOf(high),Double.valueOf(low),Double.valueOf(close),new BigInteger(volume));
-                            String jsonStock = new Gson().toJson(stock);
-                            //Send Stock Producer
-                            producer.startProducer(topic1, id, jsonStock);
+//                            //String Serializer
+//                            IdxStock stock = new IdxStock(id, ticker, date, Double.valueOf(open),Double.valueOf(high),Double.valueOf(low),Double.valueOf(close),new BigInteger(volume));
+//                            String jsonStock = new Gson().toJson(stock);
+//                            //Send Stock Producer
+//                            producer.startProducer(topic1, id, jsonStock);
+
+                            //Avro Serializer
+                            GenericRecord recordStock = new GenericData.Record(schemaStock);
+                            recordStock.put("id", id);
+                            recordStock.put("ticker", ticker);
+                            recordStock.put("date", date);
+                            recordStock.put("open", open);
+                            recordStock.put("high", high);
+                            recordStock.put("low", low);
+                            recordStock.put("close", close);
+                            recordStock.put("volume", volume);
+                            //Send Avro Stock to Producer
+                            producerObj.startProducer(topic1, id, recordStock);
 
                             for (JsonElement listCompanyElement : listCompany) {
                                 //Get JSON Company
@@ -193,10 +220,21 @@ public class GetStockPrice {
                                 String compLogo = listCompanyObject.get("logo").getAsString();
                                 if(compTicker.equalsIgnoreCase(emitent)){
                                     System.out.println("Counter: " + Counter + " name: " + compName + " logo: " + compLogo);
-                                    IdxCompany company = new IdxCompany(compTicker, compTicker, compName, compLogo);
-                                    String jsonCompany = new Gson().toJson(company);
-                                    //Send Company Producer
-                                    producer.startProducer(topic2, id, jsonCompany);
+
+//                                    //String Serializer
+//                                    IdxCompany company = new IdxCompany(compTicker, compTicker, compName, compLogo);
+//                                    String jsonCompany = new Gson().toJson(company);
+//                                    //Send Company Producer
+//                                    producer.startProducer(topic2, id, jsonCompany);
+
+                                    //Avro Company Serializer
+                                    GenericRecord recordCompany = new GenericData.Record(schemaCompany);
+                                    recordCompany.put("id", compTicker);
+                                    recordCompany.put("ticker", compTicker);
+                                    recordCompany.put("name", compName);
+                                    recordCompany.put("logo", compLogo);
+                                    //Send Avro Company to Producer
+                                    producerObj.startProducer(topic2, id, recordCompany);
                                 }
                             }
                         }
@@ -212,7 +250,7 @@ public class GetStockPrice {
             }
 
             //Close Producer
-            producer.flushAndCloseProducer();
+            producerObj.flushAndCloseProducer();
         } catch (Exception e) {
             System.out.println("Error producer: "+e);
         } finally {

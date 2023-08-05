@@ -4,14 +4,14 @@ import io.confluent.ksql.api.client.Client;
 import io.confluent.ksql.api.client.Row;
 import io.confluent.ksql.api.client.StreamedQueryResult;
 import io.id.stock.analysis.Module.KSQLDBConnection;
-import io.id.stock.analysis.Module.MongoDBStock;
+import io.id.stock.analysis.Module.MongoDBConn;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import java.util.concurrent.ExecutionException;
 
 public class KSQLStockAggregateSink {
-    private static final Logger log = LoggerFactory.getLogger(KStreamStockAggregate.class.getSimpleName());
+    private static final Logger log = LoggerFactory.getLogger(KSQLStockAggregateSink.class.getSimpleName());
 
     public static String createJsonString(Row row){
         String jsonCol = row.columnNames().toString().replace("[", "").replace("]", "").replace(" ", "").toLowerCase();
@@ -43,13 +43,8 @@ public class KSQLStockAggregateSink {
         Client ksqlClient = conn.createConnection();
 
         //Create MongoDB Connection
-//        MongoDBStock mongoDBConn = new MongoDBStock("mongodb://localhost:27017");
-        MongoDBStock mongoDBConn = new MongoDBStock("mongodb://localhost:27017"); //Docker mongodb
+        MongoDBConn mongoDBConn = new MongoDBConn("mongodb://localhost:27017"); //Docker mongodb
         mongoDBConn.createConnection();
-
-//        Map<String, Object> properties = Collections.singletonMap(
-//                "auto.offset.reset", "earliest"
-//        );
 
         // Add shutdown hook to stop the Kafka client threads.
         // You can optionally provide a timeout to `close`.
@@ -77,7 +72,7 @@ public class KSQLStockAggregateSink {
                 if (rowStock != null) {
                     String finalJson = createJsonString(rowStock);
                     mongoDBConn.insertOrUpdate("kafka", "ksql-stock-stream", finalJson);
-                    log.info("Sync Query Stock Result "+ finalJson);
+//                    log.info("Sync Query Stock Result "+ finalJson);
                 }
             }
         } catch (ExecutionException e) {

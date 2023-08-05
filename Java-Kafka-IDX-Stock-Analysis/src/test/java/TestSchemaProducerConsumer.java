@@ -1,4 +1,5 @@
-import io.id.stock.analysis.KStreamSaveStock;
+import io.confluent.kafka.serializers.KafkaAvroDeserializer;
+import io.confluent.kafka.serializers.KafkaAvroSerializer;
 import org.apache.avro.Schema;
 import org.apache.avro.generic.GenericData;
 import org.apache.avro.generic.GenericRecord;
@@ -17,8 +18,8 @@ import java.util.Properties;
 import java.util.Random;
 
 public class TestSchemaProducerConsumer {
-    private static final String TOPIC = "test-stock";
-    private static final String SCHEMA_FILE_PATH = "stock.avsc";
+    private static final String TOPIC = "streaming.goapi.idx.stock.json";
+    private static final String SCHEMA_FILE_PATH = "avro-stock.avsc";
 
     public static void main(String[] args) {
         produceAvroRecord();
@@ -28,13 +29,13 @@ public class TestSchemaProducerConsumer {
     public static void produceAvroRecord() {
         String bootStrapServer1 = "localhost:39092,localhost:39093,localhost:39094";
         String schemaHost = "http://localhost:8282";
-        Properties props = new Properties();
-        props.put(ProducerConfig.BOOTSTRAP_SERVERS_CONFIG, bootStrapServer1);
-        props.put(ProducerConfig.KEY_SERIALIZER_CLASS_CONFIG, StringSerializer.class.getName());
-        props.put(ProducerConfig.VALUE_SERIALIZER_CLASS_CONFIG, io.confluent.kafka.serializers.KafkaAvroSerializer.class.getName());
-        props.put("schema.registry.url", schemaHost);
+        Properties properties = new Properties();
+        properties.put(ProducerConfig.BOOTSTRAP_SERVERS_CONFIG, bootStrapServer1);
+        properties.put(ProducerConfig.KEY_SERIALIZER_CLASS_CONFIG, StringSerializer.class.getName());
+        properties.put(ProducerConfig.VALUE_SERIALIZER_CLASS_CONFIG, KafkaAvroSerializer.class.getName());
+        properties.put("schema.registry.url", schemaHost);
 
-        KafkaProducer<String, GenericRecord> producer = new KafkaProducer<>(props);
+        KafkaProducer<String, GenericRecord> producer = new KafkaProducer<>(properties);
 
         try {
             String avroSchema = new String(Files.readAllBytes(Paths.get(SCHEMA_FILE_PATH)));
@@ -83,19 +84,19 @@ public class TestSchemaProducerConsumer {
         }
     }
 
-    private static final Logger log = LoggerFactory.getLogger(KStreamSaveStock.class.getSimpleName());
+    private static final Logger log = LoggerFactory.getLogger(TestSchemaProducerConsumer.class.getSimpleName());
     public static void consumeAvroRecord() {
         String bootStrapServer1 = "localhost:39092,localhost:39093,localhost:39094";
         String schemaHost = "http://localhost:8282";
-        Properties props = new Properties();
-        props.put(ConsumerConfig.BOOTSTRAP_SERVERS_CONFIG, bootStrapServer1);
-        props.put(ConsumerConfig.GROUP_ID_CONFIG, "avro-consumer-group");
-        props.put(ConsumerConfig.AUTO_OFFSET_RESET_CONFIG, "earliest"); //chose none/earliest/latest
-        props.put(ConsumerConfig.KEY_DESERIALIZER_CLASS_CONFIG, StringDeserializer.class.getName());
-        props.put(ConsumerConfig.VALUE_DESERIALIZER_CLASS_CONFIG, io.confluent.kafka.serializers.KafkaAvroDeserializer.class.getName());
-        props.put("schema.registry.url", schemaHost);
+        Properties properties = new Properties();
+        properties.put(ConsumerConfig.BOOTSTRAP_SERVERS_CONFIG, bootStrapServer1);
+        properties.put(ConsumerConfig.GROUP_ID_CONFIG, "avro-consumer-group");
+        properties.put(ConsumerConfig.AUTO_OFFSET_RESET_CONFIG, "earliest"); //chose none/earliest/latest
+        properties.put(ConsumerConfig.KEY_DESERIALIZER_CLASS_CONFIG, StringDeserializer.class.getName());
+        properties.put(ConsumerConfig.VALUE_DESERIALIZER_CLASS_CONFIG, KafkaAvroDeserializer.class.getName());
+        properties.put("schema.registry.url", schemaHost);
 
-        KafkaConsumer<String, GenericRecord> consumer = new KafkaConsumer<>(props);
+        KafkaConsumer<String, GenericRecord> consumer = new KafkaConsumer<>(properties);
 
         consumer.subscribe(java.util.Collections.singletonList(TOPIC));
 

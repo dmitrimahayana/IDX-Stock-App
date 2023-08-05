@@ -1,0 +1,10 @@
+{
+  "type": "record",
+  "name": "Company",
+  "fields": [
+    {"name": "id", "type": "string"},
+    {"name": "ticker", "type": "string"},
+    {"name": "name", "type": "string"},
+    {"name": "logo", "type": "string"}
+  ]
+}

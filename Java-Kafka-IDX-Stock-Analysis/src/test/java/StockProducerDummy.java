@@ -4,11 +4,16 @@ import com.google.gson.stream.JsonReader;
 import io.id.stock.analysis.Module.IdxStock;
 import io.id.stock.analysis.Module.IdxCompany;
 import io.id.stock.analysis.Module.KafkaStockProducer;
+import org.apache.avro.Schema;
+import org.apache.avro.generic.GenericData;
+import org.apache.avro.generic.GenericRecord;
 
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.lang.reflect.Type;
 import java.math.BigInteger;
+import java.nio.file.Files;
+import java.nio.file.Paths;
 import java.text.DecimalFormat;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
@@ -17,11 +22,9 @@ import java.util.Random;
 
 public class StockProducerDummy {
 
-    private static final Type REVIEW_TYPE1 = new TypeToken<List<IdxStock>>() {
-    }.getType();
+    private static final Type REVIEW_TYPE1 = new TypeToken<List<IdxStock>>() {}.getType();
 
-    private static final Type REVIEW_TYPE2 = new TypeToken<List<IdxCompany>>() {
-    }.getType();
+    private static final Type REVIEW_TYPE2 = new TypeToken<List<IdxCompany>>() {}.getType();
 
     public static void main(String[] args) {
         //Create Kafka Producer
@@ -32,6 +35,13 @@ public class StockProducerDummy {
         String filename1 = "kafka.stock-stream 2023-07-28.json";
         String filename2 = "kafka.company-stream.json";
         try{
+            String SCHEMA_STOCK_PATH = "avro-stock.avsc";
+            String SCHEMA_COMPANY_PATH = "avro-company.avsc";
+            String avroStockSchema = new String(Files.readAllBytes(Paths.get(SCHEMA_STOCK_PATH)));
+            Schema schemaStock = new Schema.Parser().parse(avroStockSchema);
+            String avroCompanySchema = new String(Files.readAllBytes(Paths.get(SCHEMA_COMPANY_PATH)));
+            Schema schemaCompany = new Schema.Parser().parse(avroCompanySchema);
+
             //Crete Kafka Connection
             producerObj.createProducerConn();
 
@@ -66,46 +76,69 @@ public class StockProducerDummy {
             Random r = new Random();
             DecimalFormat f = new DecimalFormat("##.00");
 
-            while(true){
+            int Counter = 0;
+            while(Counter <= 5){
                 //Counter
-                int Counter = 0;
                 for (IdxStock row1 : dataLastStock) {
                     for (IdxCompany row2 : dataCompany) {
                         if (row1.ticker.equals(row2.ticker)) {
                             Counter++;
+//                            String date = "2023-08-04";
+//                            String date = row1.date;
                             String date = dateNow;
-//                            String date = "2023-07-27";
                             String ticker = row1.ticker;
                             String id = ticker + "_" + date;
-                            String open = String.valueOf(row1.open);
-                            String high = String.valueOf(row1.high);
-                            String low = String.valueOf(row1.low);
-                            String close = String.valueOf(row1.close);
-                            String volume = String.valueOf(row1.volume);
+                            Double open = row1.open;
+                            Double high = row1.high;
+                            Double low = row1.low;
+                            Double close = row1.close;
+                            Long volume = Long.parseLong(String.valueOf(row1.volume));
 
                             double randomValue1 = row1.low + (row1.high - row1.low) * r.nextDouble(); //For Testing aggregation purpose
                             double randomValue2 = row1.low + (row1.high - row1.low) * r.nextDouble(); //For Testing aggregation purpose
                             double randomValue3 = row1.low + (row1.high - row1.low) * r.nextDouble(); //For Testing aggregation purpose
                             double randomValue4 = row1.low + (row1.high - row1.low) * r.nextDouble(); //For Testing aggregation purpose
-                            open = String.valueOf(f.format(randomValue1)); //For Testing aggregation purpose
-                            high = String.valueOf(f.format(randomValue2)); //For Testing aggregation purpose
-                            low = String.valueOf(f.format(randomValue3)); //For Testing aggregation purpose
-                            close = String.valueOf(f.format(randomValue4)); //For Testing aggregation purpose
+                            open = randomValue1; //For Testing aggregation purpose
+                            high = randomValue2; //For Testing aggregation purpose
+                            low = randomValue3; //For Testing aggregation purpose
+                            close = randomValue4; //For Testing aggregation purpose
 
                             System.out.println("Counter: " + Counter + " ticker: " + ticker + " date: " + date + " open: " + open + " high: " + high + " low: " + low + " close: " + close + " volume: " + volume);
-                            IdxStock stock = new IdxStock(id, ticker, date, Double.valueOf(open), Double.valueOf(high), Double.valueOf(low), Double.valueOf(close), new BigInteger(volume));
-                            String jsonStock = new Gson().toJson(stock);
-                            //Send Stock Producer
-                            producerObj.startProducer(topic1, id, jsonStock);
+//                            IdxStock stock = new IdxStock(id, ticker, date, Double.valueOf(open), Double.valueOf(high), Double.valueOf(low), Double.valueOf(close), new BigInteger(volume));
+//                            String jsonStock = new Gson().toJson(stock);
+//                            //Send Stock Producer
+//                            producerObj.startProducer(topic1, id, jsonStock);
+
+                            GenericRecord recordStock = new GenericData.Record(schemaStock);
+                            recordStock.put("id", id);
+                            recordStock.put("ticker", ticker);
+                            recordStock.put("date", date);
+                            recordStock.put("open", open);
+                            recordStock.put("high", high);
+                            recordStock.put("low", low);
+                            recordStock.put("close", close);
+                            recordStock.put("volume", volume);
+                            //Send Avro Stock to Producer
+                            producerObj.startProducer(topic1, id, recordStock);
 
                             String compTicker = row2.ticker;
                             String compName = row2.name;
                             String compLogo = row2.logo;
                             System.out.println("Counter: " + Counter + " name: " + compName + " logo: " + compLogo);
-                            IdxCompany company = new IdxCompany(compTicker, compTicker, compName, compLogo);
-                            String jsonCompany = new Gson().toJson(company);
-                            //Send Company Producer
-                            producerObj.startProducer(topic2, id, jsonCompany);
+
+//                            IdxCompany company = new IdxCompany(compTicker, compTicker, compName, compLogo);
+//                            String jsonCompany = new Gson().toJson(company);
+//                            //Send Company Producer
+//                            producerObj.startProducer(topic2, id, jsonCompany);
+
+                            //Avro Company Serializer
+                            GenericRecord recordCompany = new GenericData.Record(schemaCompany);
+                            recordCompany.put("id", compTicker);
+                            recordCompany.put("ticker", compTicker);
+                            recordCompany.put("name", compName);
+                            recordCompany.put("logo", compLogo);
+                            //Send Avro Company to Producer
+                            producerObj.startProducer(topic2, id, recordCompany);
                         }
                     }
                 }
