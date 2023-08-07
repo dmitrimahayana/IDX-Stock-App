@@ -10,8 +10,8 @@ import org.slf4j.LoggerFactory;
 
 import java.util.concurrent.ExecutionException;
 
-public class KSQLCompanyAggregateSink {
-    private static final Logger log = LoggerFactory.getLogger(KSQLCompanyAggregateSink.class.getSimpleName());
+public class KSQLAggregateSinkStock extends Thread{
+    private static final Logger log = LoggerFactory.getLogger(KSQLAggregateSinkStock.class.getSimpleName());
 
     public static String createJsonString(Row row){
         String jsonCol = row.columnNames().toString().replace("[", "").replace("]", "").replace(" ", "").toLowerCase();
@@ -36,6 +36,52 @@ public class KSQLCompanyAggregateSink {
         return finalJson;
     }
 
+    public void run(){
+        String ksqlHost = "localhost";
+        int ksqlPort = 9088;
+        KSQLDBConnection conn = new KSQLDBConnection(ksqlHost, ksqlPort);
+        Client ksqlClient = conn.createConnection();
+
+        //Create MongoDB Connection
+        MongoDBConn mongoDBConn = new MongoDBConn("mongodb://localhost:27017"); //Docker mongodb
+        mongoDBConn.createConnection();
+
+        // Add shutdown hook to stop the Kafka client threads.
+        // You can optionally provide a timeout to `close`.
+        Runtime.getRuntime().addShutdownHook(new Thread(ksqlClient::close));
+
+        // Add shutdown hook to stop the Kafka client threads.
+        // You can optionally provide a timeout to `close`.
+        Runtime.getRuntime().addShutdownHook(new Thread(new Runnable() {
+            @Override
+            public void run() {
+                log.info("close ksql client...");
+                ksqlClient.close();
+            }
+        }));
+
+        String pushQueryStock = "SELECT * FROM KSQLGROUPSTOCK EMIT CHANGES;";
+
+        //Using Sync query
+        try {
+            StreamedQueryResult streamedQueryStock = ksqlClient.streamQuery(pushQueryStock).get();
+
+            while(true) {
+                // Block until a new row is available
+                Row rowStock = streamedQueryStock.poll();
+                if (rowStock != null) {
+                    String finalJson = createJsonString(rowStock);
+                    mongoDBConn.insertOrUpdate("kafka", "ksql-stock-stream", finalJson);
+                    log.info("Sync Query Stock Result "+ finalJson);
+                }
+            }
+        } catch (ExecutionException e) {
+            throw new RuntimeException(e);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
     public static void main(String[] args) {
         String ksqlHost = "localhost";
         int ksqlPort = 9088;
@@ -55,24 +101,24 @@ public class KSQLCompanyAggregateSink {
         Runtime.getRuntime().addShutdownHook(new Thread(new Runnable() {
             @Override
             public void run() {
-                log.info("close ksql client");
+                log.info("close ksql client...");
                 ksqlClient.close();
             }
         }));
 
-        String pushQueryCompany = "SELECT * FROM KSQLGROUPCOMPANY EMIT CHANGES;";
+        String pushQueryStock = "SELECT * FROM KSQLGROUPSTOCK EMIT CHANGES;";
 
         //Using Sync query
         try {
-            StreamedQueryResult streamedQueryCompany = ksqlClient.streamQuery(pushQueryCompany).get();
+            StreamedQueryResult streamedQueryStock = ksqlClient.streamQuery(pushQueryStock).get();
 
             while(true) {
                 // Block until a new row is available
-                Row rowCompany = streamedQueryCompany.poll();
-                if (rowCompany != null) {
-                    String finalJsonComp = createJsonString(rowCompany);
-                    mongoDBConn.insertOrUpdate("kafka", "ksql-company-stream", finalJsonComp);
-//                    log.info("Sync Query Company Result "+ finalJsonComp);
+                Row rowStock = streamedQueryStock.poll();
+                if (rowStock != null) {
+                    String finalJson = createJsonString(rowStock);
+                    mongoDBConn.insertOrUpdate("kafka", "ksql-stock-stream", finalJson);
+//                    log.info("Sync Query Stock Result "+ finalJson);
                 }
             }
         } catch (ExecutionException e) {
@@ -82,7 +128,7 @@ public class KSQLCompanyAggregateSink {
         }
 
 //        //Using Async query
-//        ksqlClient.streamQuery(pushQueryCompany, properties)
+//        ksqlClient.streamQuery(pushQueryStock, properties)
 //                .thenAccept(localStreamQuery -> {
 //                    log.info("Push query has started. Query ID: " + localStreamQuery.queryID());
 //                    //Use RowSubscr

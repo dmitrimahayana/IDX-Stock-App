@@ -1,8 +1,6 @@
 package io.id.stock.analysis;
 
 
-import com.fasterxml.jackson.databind.JsonNode;
-import com.fasterxml.jackson.databind.ObjectMapper;
 import io.confluent.kafka.serializers.*;
 import org.apache.avro.Schema;
 import org.apache.avro.generic.GenericData;
@@ -11,7 +9,6 @@ import org.apache.kafka.common.serialization.Serde;
 import org.apache.kafka.common.serialization.Serdes;
 import io.confluent.kafka.streams.serdes.avro.GenericAvroSerde;
 import org.apache.avro.generic.GenericRecord;
-import org.apache.kafka.common.utils.Bytes;
 import org.apache.kafka.streams.KafkaStreams;
 import org.apache.kafka.streams.StreamsBuilder;
 import org.apache.kafka.streams.StreamsConfig;
@@ -20,7 +17,6 @@ import org.apache.kafka.streams.kstream.KStream;
 import org.apache.kafka.streams.kstream.KTable;
 import org.apache.kafka.streams.kstream.Materialized;
 import org.apache.kafka.streams.kstream.Produced;
-import org.apache.kafka.streams.state.KeyValueStore;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -30,9 +26,9 @@ import java.nio.file.Paths;
 import java.util.Collections;
 import java.util.Properties;
 
-public class KStreamAvroStockAggregate {
+public class KStreamAggregateAvroStock {
 
-    private static final Logger log = LoggerFactory.getLogger(KStreamAvroStockAggregate.class.getSimpleName());
+    private static final Logger log = LoggerFactory.getLogger(KStreamAggregateAvroStock.class.getSimpleName());
 
     private static Properties properties;
 
