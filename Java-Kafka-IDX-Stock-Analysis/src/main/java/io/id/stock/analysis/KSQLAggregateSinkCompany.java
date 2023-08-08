@@ -82,51 +82,6 @@ public class KSQLAggregateSinkCompany extends Thread {
         }
     }
 
-    public static void main(String[] args) {
-        String ksqlHost = "localhost";
-        int ksqlPort = 9088;
-        KSQLDBConnection conn = new KSQLDBConnection(ksqlHost, ksqlPort);
-        Client ksqlClient = conn.createConnection();
-
-        //Create MongoDB Connection
-        MongoDBConn mongoDBConn = new MongoDBConn("mongodb://localhost:27017"); //Docker mongodb
-        mongoDBConn.createConnection();
-
-        // Add shutdown hook to stop the Kafka client threads.
-        // You can optionally provide a timeout to `close`.
-        Runtime.getRuntime().addShutdownHook(new Thread(ksqlClient::close));
-
-        // Add shutdown hook to stop the Kafka client threads.
-        // You can optionally provide a timeout to `close`.
-        Runtime.getRuntime().addShutdownHook(new Thread(new Runnable() {
-            @Override
-            public void run() {
-                log.info("close ksql client");
-                ksqlClient.close();
-            }
-        }));
-
-        String pushQueryCompany = "SELECT * FROM KSQLGROUPCOMPANY EMIT CHANGES;";
-
-        //Using Sync query
-        try {
-            StreamedQueryResult streamedQueryCompany = ksqlClient.streamQuery(pushQueryCompany).get();
-
-            while(true) {
-                // Block until a new row is available
-                Row rowCompany = streamedQueryCompany.poll();
-                if (rowCompany != null) {
-                    String finalJsonComp = createJsonString(rowCompany);
-                    mongoDBConn.insertOrUpdate("kafka", "ksql-company-stream", finalJsonComp);
-//                    log.info("Sync Query Company Result "+ finalJsonComp);
-                }
-            }
-        } catch (ExecutionException e) {
-            throw new RuntimeException(e);
-        } catch (InterruptedException e) {
-            throw new RuntimeException(e);
-        }
-
 //        //Using Async query
 //        ksqlClient.streamQuery(pushQueryCompany, properties)
 //                .thenAccept(localStreamQuery -> {
@@ -138,5 +93,4 @@ public class KSQLAggregateSinkCompany extends Thread {
 //                    log.info("Request failed: " + e);
 //                    return null;
 //                });
-    }
 }

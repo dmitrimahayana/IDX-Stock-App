@@ -10,6 +10,7 @@ import org.apache.avro.generic.GenericRecord;
 
 import java.io.FileNotFoundException;
 import java.io.FileReader;
+import java.io.IOException;
 import java.lang.reflect.Type;
 import java.math.BigInteger;
 import java.nio.file.Files;
@@ -26,6 +27,17 @@ public class StockProducerDummy {
 
     private static final Type REVIEW_TYPE2 = new TypeToken<List<IdxCompany>>() {}.getType();
 
+    final static Schema createSchemaFromFile(String filepath) {
+        String avroSchema = null;
+        try {
+            avroSchema = new String(Files.readAllBytes(Paths.get(filepath)));
+            Schema schema = new Schema.Parser().parse(avroSchema);
+            return schema;
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
     public static void main(String[] args) {
         //Create Kafka Producer
         String topic1 = "streaming.goapi.idx.stock.json";
@@ -37,10 +49,8 @@ public class StockProducerDummy {
         try{
             String SCHEMA_STOCK_PATH = "avro-stock.avsc";
             String SCHEMA_COMPANY_PATH = "avro-company.avsc";
-            String avroStockSchema = new String(Files.readAllBytes(Paths.get(SCHEMA_STOCK_PATH)));
-            Schema schemaStock = new Schema.Parser().parse(avroStockSchema);
-            String avroCompanySchema = new String(Files.readAllBytes(Paths.get(SCHEMA_COMPANY_PATH)));
-            Schema schemaCompany = new Schema.Parser().parse(avroCompanySchema);
+            Schema schemaStock = createSchemaFromFile(SCHEMA_STOCK_PATH);
+            Schema schemaCompany = createSchemaFromFile(SCHEMA_COMPANY_PATH);
 
             //Crete Kafka Connection
             producerObj.createProducerConn();
@@ -102,8 +112,8 @@ public class StockProducerDummy {
                             high = randomValue2; //For Testing aggregation purpose
                             low = randomValue3; //For Testing aggregation purpose
                             close = randomValue4; //For Testing aggregation purpose
-
                             System.out.println("Counter: " + Counter + " ticker: " + ticker + " date: " + date + " open: " + open + " high: " + high + " low: " + low + " close: " + close + " volume: " + volume);
+
 //                            IdxStock stock = new IdxStock(id, ticker, date, Double.valueOf(open), Double.valueOf(high), Double.valueOf(low), Double.valueOf(close), new BigInteger(volume));
 //                            String jsonStock = new Gson().toJson(stock);
 //                            //Send Stock Producer

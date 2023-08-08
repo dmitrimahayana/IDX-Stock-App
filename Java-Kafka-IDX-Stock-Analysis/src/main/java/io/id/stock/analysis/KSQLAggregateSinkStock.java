@@ -82,51 +82,6 @@ public class KSQLAggregateSinkStock extends Thread{
         }
     }
 
-    public static void main(String[] args) {
-        String ksqlHost = "localhost";
-        int ksqlPort = 9088;
-        KSQLDBConnection conn = new KSQLDBConnection(ksqlHost, ksqlPort);
-        Client ksqlClient = conn.createConnection();
-
-        //Create MongoDB Connection
-        MongoDBConn mongoDBConn = new MongoDBConn("mongodb://localhost:27017"); //Docker mongodb
-        mongoDBConn.createConnection();
-
-        // Add shutdown hook to stop the Kafka client threads.
-        // You can optionally provide a timeout to `close`.
-        Runtime.getRuntime().addShutdownHook(new Thread(ksqlClient::close));
-
-        // Add shutdown hook to stop the Kafka client threads.
-        // You can optionally provide a timeout to `close`.
-        Runtime.getRuntime().addShutdownHook(new Thread(new Runnable() {
-            @Override
-            public void run() {
-                log.info("close ksql client...");
-                ksqlClient.close();
-            }
-        }));
-
-        String pushQueryStock = "SELECT * FROM KSQLGROUPSTOCK EMIT CHANGES;";
-
-        //Using Sync query
-        try {
-            StreamedQueryResult streamedQueryStock = ksqlClient.streamQuery(pushQueryStock).get();
-
-            while(true) {
-                // Block until a new row is available
-                Row rowStock = streamedQueryStock.poll();
-                if (rowStock != null) {
-                    String finalJson = createJsonString(rowStock);
-                    mongoDBConn.insertOrUpdate("kafka", "ksql-stock-stream", finalJson);
-//                    log.info("Sync Query Stock Result "+ finalJson);
-                }
-            }
-        } catch (ExecutionException e) {
-            throw new RuntimeException(e);
-        } catch (InterruptedException e) {
-            throw new RuntimeException(e);
-        }
-
 //        //Using Async query
 //        ksqlClient.streamQuery(pushQueryStock, properties)
 //                .thenAccept(localStreamQuery -> {
@@ -138,5 +93,4 @@ public class KSQLAggregateSinkStock extends Thread{
 //                    log.info("Request failed: " + e);
 //                    return null;
 //                });
-    }
 }
