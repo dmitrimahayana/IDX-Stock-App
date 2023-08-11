@@ -33,6 +33,7 @@ dependencies {
     // https://mvnrepository.com/artifact/org.apache.spark/spark-sql
     implementation 'org.apache.spark:spark-sql_2.12:3.2.4'
 
+    //MongoDB Dependencies
     // https://mvnrepository.com/artifact/org.mongodb/mongodb-driver-sync
     implementation 'org.mongodb:mongodb-driver-sync:4.9.1'
 

@@ -87,7 +87,7 @@ public class StockProducerDummy {
             DecimalFormat f = new DecimalFormat("##.00");
 
             int Counter = 0;
-            while(Counter <= 5){
+            while(Counter <= 1){
                 //Counter
                 for (IdxStock row1 : dataLastStock) {
                     for (IdxCompany row2 : dataCompany) {

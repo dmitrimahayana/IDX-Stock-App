@@ -8,6 +8,8 @@ import io.id.stock.analysis.Module.MongoDBConn;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.concurrent.ExecutionException;
 
 public class KSQLAggregateSinkCompany extends Thread {
@@ -72,7 +74,8 @@ public class KSQLAggregateSinkCompany extends Thread {
                 if (rowCompany != null) {
                     String finalJsonComp = createJsonString(rowCompany);
                     mongoDBConn.insertOrUpdate("kafka", "ksql-company-stream", finalJsonComp);
-                    log.info("Sync Query Company Result "+ finalJsonComp);
+                    SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss.SSS");
+                    log.info(sdf.format(new Date())+" Sync Query Company Result "+ finalJsonComp);
                 }
             }
         } catch (ExecutionException e) {

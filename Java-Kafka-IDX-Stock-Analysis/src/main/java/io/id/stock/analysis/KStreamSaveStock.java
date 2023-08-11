@@ -16,23 +16,6 @@ public class KStreamSaveStock {
     private static final Logger log = LoggerFactory.getLogger(KStreamSaveStock.class.getSimpleName());
 
     public static void main(String[] args) {
-//        #Create KSQL Stream
-//        CREATE OR REPLACE STREAM StreamIdxStockPrice (id VARCHAR, ticker VARCHAR, date VARCHAR, open DOUBLE, high DOUBLE, low DOUBLE, close DOUBLE, volume BIGINT)
-//        WITH (kafka_topic='streaming.goapi.idx.stock.json', value_format='json', partitions=6);
-//
-//        #Create KSQL Materialized View to remove duplication
-//        CREATE TABLE currentIdxStockPrice AS
-//        SELECT
-//            id,
-//            latest_by_offset(ticker) AS ticker,
-//            latest_by_offset(date) AS date,
-//            latest_by_offset(open) AS open,
-//            latest_by_offset(high) AS high,
-//            latest_by_offset(low) AS low,
-//            latest_by_offset(close) AS close,
-//            latest_by_offset(volume) AS volume
-//            FROM StreamIdxStockPrice GROUP BY id EMIT CHANGES;
-
         //Create Kafka Consumer Connection
         Boolean localServer = true;
         String groupId = "consumer-goapi-idx-stock";
