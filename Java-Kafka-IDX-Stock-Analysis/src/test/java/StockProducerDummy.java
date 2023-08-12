@@ -94,8 +94,8 @@ public class StockProducerDummy {
                         if (row1.ticker.equals(row2.ticker)) {
                             Counter++;
 //                            String date = "2023-08-04";
-//                            String date = row1.date;
-                            String date = dateNow;
+                            String date = row1.date;
+//                            String date = dateNow;
                             String ticker = row1.ticker;
                             String id = ticker + "_" + date;
                             Double open = row1.open;
