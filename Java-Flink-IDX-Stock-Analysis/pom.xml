@@ -153,7 +153,13 @@ under the License.
 			</exclusions>
 		</dependency>
 		<!-- End Dependencies ML Packages -->
-
+		<!-- Start Dependencies MongoDB -->
+		<dependency>
+			<groupId>org.apache.flink</groupId>
+			<artifactId>flink-connector-mongodb</artifactId>
+			<version>1.0.1-1.17</version>
+		</dependency>
+		<!-- End Dependencies MongoDB -->
 
 		<!-- Add logging framework, to produce console output when running in the IDE. -->
 		<!-- These dependencies are excluded from the application JAR by default. -->

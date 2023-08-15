@@ -14,6 +14,7 @@ public class RemoteServer {
     public StreamTableEnvironment tableEnv;
     public String bootStrapServer;
     public String schemaHost;
+    public String mongodbHost;
     Boolean runLocal;
     String jarsPath;
 
@@ -28,10 +29,12 @@ public class RemoteServer {
             bootStrapServer = "localhost:39092,localhost:39093,localhost:39094";
             schemaHost = "http://localhost:8282";
             env = StreamExecutionEnvironment.getExecutionEnvironment();
+            mongodbHost = "mongodb://localhost:27017";
         } else {
             System.out.println("Connected to Docker Flink");
             bootStrapServer = ",kafka1:19092,kafka2:19093,kafka3:19094"; //Docker Kafka URL
             schemaHost = "http://schema-registry:8282"; //Docker Schema Registry URL
+            mongodbHost = "mongodb://mongodb-server:27017";
             env = StreamExecutionEnvironment.createRemoteEnvironment(
                     "localhost",
                     8383,
@@ -48,7 +51,11 @@ public class RemoteServer {
                     jarsPath + "flink-table-runtime-1.17.1.jar",
                     jarsPath + "flink-connector-files-1.17.1.jar",
                     jarsPath + "flink-ml-uber-1.17-2.3.0.jar",
-                    jarsPath + "statefun-flink-core-3.2.0.jar"
+                    jarsPath + "statefun-flink-core-3.2.0.jar",
+                    jarsPath + "flink-connector-mongodb-1.0.1-1.17.jar",
+                    jarsPath + "bson-4.7.2.jar",
+                    jarsPath + "mongodb-driver-sync-4.7.2.jar",
+                    jarsPath + "mongodb-driver-core-4.7.2.jar"
             );
 
             // start a checkpoint every x ms

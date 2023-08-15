@@ -89,6 +89,10 @@
       <element id="library" level="project" name="Maven: org.apache.flink:flink-table-api-bridge-base:1.17.1" />
       <element id="library" level="project" name="Maven: com.esotericsoftware.minlog:minlog:1.2" />
       <element id="library" level="project" name="Maven: commons-cli:commons-cli:1.5.0" />
+      <element id="library" level="project" name="Maven: org.apache.flink:flink-connector-mongodb:1.0.1-1.17" />
+      <element id="library" level="project" name="Maven: org.mongodb:bson:4.7.2" />
+      <element id="library" level="project" name="Maven: org.mongodb:mongodb-driver-core:4.7.2" />
+      <element id="library" level="project" name="Maven: org.mongodb:mongodb-driver-sync:4.7.2" />
     </root>
   </artifact>
 </component>

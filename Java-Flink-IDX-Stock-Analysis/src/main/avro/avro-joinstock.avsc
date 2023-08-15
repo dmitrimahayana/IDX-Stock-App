@@ -1,0 +1,17 @@
+{
+  "namespace": "org.avro",
+  "type": "record",
+  "name": "JoinStock",
+  "fields": [
+    {"name": "id", "type": "string"},
+    {"name": "ticker", "type": "string"},
+    {"name": "date", "type": "string"},
+    {"name": "open", "type": "double"},
+    {"name": "high", "type": "double"},
+    {"name": "low", "type": "double"},
+    {"name": "close", "type": "double"},
+    {"name": "volume", "type": "long"},
+    {"name": "name", "type": "string"},
+    {"name": "logo", "type": "string"}
+  ]
+}

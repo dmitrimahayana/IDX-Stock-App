@@ -1,0 +1,16 @@
+{
+  "type":"record",
+  "namespace":"ksql.avro_schemas",
+  "name":"KSQLStock",
+  "fields":[
+    {"name":"ID","type":["null","string"],"default":null},
+    {"name":"STOCKID","type":"string"},
+    {"name":"TICKER","type":"string"},
+    {"name":"DATE","type":"string"},
+    {"name":"OPEN","type":"double"},
+    {"name":"HIGH","type":"double"},
+    {"name":"LOW","type":"double"},
+    {"name":"CLOSE","type":"double"},
+    {"name":"VOLUME","type":"long"}
+  ]
+}
