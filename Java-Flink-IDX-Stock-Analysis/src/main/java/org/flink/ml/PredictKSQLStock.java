@@ -63,35 +63,17 @@ public class PredictKSQLStock {
                 "  'value.format' = 'avro-confluent', " +
                 "  'value.avro-confluent.url' = '" + remoteServer.schemaHost + "' " +
                 ");");
-        // Define a query using the Kafka source
-//        Table inputTable = tableEnv.sqlQuery("SELECT * FROM flink_ksql_groupstock WHERE `DATE` LIKE '%2023-08-10%' AND `TICKER` LIKE 'B%'");
-
-//        // Generates input data.
-//        double scalerVolume = 1;
-//        DataStream<Row> inputStream =
-//                remoteServer.env.fromElements(
-//                        Row.of("ITMG", "2020-05-12", 7800.0, 8025.0, 7700.0, 7700.0 * scalerVolume, 1421900),
-//                        Row.of("ITMG", "2020-04-28", 7100.0, 7200.0, 6875.0, 6900.0 * scalerVolume, 1376100),
-//                        Row.of("ITMG", "2020-03-19", 6350.0, 6350.0, 6025.0, 6025.0 * scalerVolume, 1769200),
-//                        Row.of("ITMG", "2020-03-05", 10950.0, 11150.0, 10875.0, 10900.0 * scalerVolume, 1200100),
-//                        Row.of("ITMG", "2020-02-24", 10400.0, 10675.0, 10300.0, 10650.0 * scalerVolume, 1927500),
-//                        Row.of("BMRI", "2020-05-12", 10800.0, 11075.0, 10775.0, 10925.0 * scalerVolume, 1956000),
-//                        Row.of("BMRI", "2020-04-28", 10750.0, 10775.0, 10475.0, 10525.0 * scalerVolume, 1858900),
-//                        Row.of("BMRI", "2020-03-19", 13000.0, 13100.0, 12425.0, 12700.0 * scalerVolume, 3030500),
-//                        Row.of("BMRI", "2020-03-05", 12975.0, 13400.0, 12975.0, 13350.0 * scalerVolume, 3302800),
-//                        Row.of("BMRI", "2020-02-24", 11900.0, 11950.0, 11750.0, 11900.0 * scalerVolume, 1004200),
-//                        Row.of("BBCA", "2020-05-12", 11550.0, 11775.0, 11400.0, 11725.0 * scalerVolume, 1902800),
-//                        Row.of("BBCA", "2020-04-28", 10125.0, 10500.0, 10075.0, 10500.0 * scalerVolume, 1853300),
-//                        Row.of("BBCA", "2020-03-19", 10525.0, 10550.0, 10325.0, 10425.0 * scalerVolume, 1145100),
-//                        Row.of("BBCA", "2020-03-05", 10050.0, 10400.0, 9800.0, 10050.0 * scalerVolume, 3045400),
-//                        Row.of("BBCA", "2020-02-24", 11875.0, 12050.0, 11725.0, 11725.0 * scalerVolume, 1420400),
-//                        Row.of("BBRI", "2020-05-12", 11550.0, 11775.0, 11400.0, 11725.0 * scalerVolume, 1902800),
-//                        Row.of("BBRI", "2020-04-28", 10125.0, 10500.0, 10075.0, 10500.0 * scalerVolume, 1853300),
-//                        Row.of("BBRI", "2020-03-19", 10525.0, 10550.0, 10325.0, 10425.0 * scalerVolume, 1145100),
-//                        Row.of("BBRI", "2020-03-05", 10050.0, 10400.0, 9800.0, 10050.0 * scalerVolume, 3045400),
-//                        Row.of("BBRI", "2020-02-24", 11875.0, 12050.0, 11725.0, 11725.0 * scalerVolume, 1420400)
+//        // Define a query using the Kafka source
+//        Table inputTable = tableEnv.sqlQuery("SELECT * FROM flink_ksql_groupstock WHERE `DATE` LIKE '%2023-08%'")
+//                .select(
+//                        $("TICKER").as("ticker"),
+//                        $("DATE").as("date"),
+//                        $("OPEN").as("open"),
+//                        $("HIGH").as("high"),
+//                        $("LOW").as("low"),
+//                        $("CLOSE").as("close"),
+//                        $("VOLUME").as("volume")
 //                );
-//        Table inputTable = tableEnv.fromDataStream(inputStream).as("TICKER", "DATE", "OPEN", "HIGH", "LOW", "CLOSE", "VOLUME");
 
         tableEnv.executeSql("CREATE TABLE flink_mongodb_stock (" +
                 "  `id` STRING, " +
@@ -112,7 +94,6 @@ public class PredictKSQLStock {
 //        inputTable.printSchema();
 //        for (CloseableIterator<Row> it = inputTable.execute().collect(); it.hasNext(); ) {
 //            Row row = it.next();
-////            System.out.println("Ticker: " + row.getField("TICKER") + " --- Date: " + row.getField("DATE") + " --- Open: " + row.getField("OPEN") + " --- Close: " + row.getField("CLOSE"));
 //            System.out.println("Ticker: " + row.getField("ticker") + " --- Date: " + row.getField("date") + " --- Open: " + row.getField("open") + " --- Close: " + row.getField("close"));
 //        }
 
@@ -120,8 +101,7 @@ public class PredictKSQLStock {
         StringIndexer stringIndexer =
                 new StringIndexer()
                         .setStringOrderType(StringIndexerParams.ALPHABET_ASC_ORDER)
-//                        .setInputCols("TICKER", "DATE") //KSQLDB Datasource
-                        .setInputCols("ticker", "date") //MongoDB Datasource
+                        .setInputCols("ticker", "date")
                         .setOutputCols("tickerIndex", "dateIndex");
 
         // Trains the StringIndexer Model.
@@ -174,22 +154,23 @@ public class PredictKSQLStock {
         //Get Ticker and Date Vector Size
         int tickerSize = 0, dateSize = 0;
         CloseableIterator<Row> iterator = oneHotTable.execute().collect();
-        if (iterator.hasNext()){
+        if (iterator.hasNext()) {
             Row row = iterator.next();
             SparseVector tickerVec = (SparseVector) row.getField("tickerOneHot");
             SparseVector dateVec = (SparseVector) row.getField("dateOneHot");
             tickerSize = tickerVec.size();
             dateSize = dateVec.size();
-            System.out.printf("TickerOneHote Vec Size: %s\tDateOneHot Vec Size: %s\n", tickerSize, dateSize);
+//            System.out.printf("TickerOneHote Vec Size: %s\tDateOneHot Vec Size: %s\n", tickerSize, dateSize);
         }
 
         // Creates a VectorAssembler object and initializes its parameters.
         VectorAssembler vectorAssembler =
                 new VectorAssembler()
-//                        .setInputCols("tickerOneHot", "dateOneHot", "OPEN", "HIGH", "LOW", "VOLUME")
-                        .setInputCols("tickerOneHot", "dateOneHot")
+//                        .setInputCols("tickerOneHot", "dateOneHot", "open", "high", "low")
+                        .setInputCols("tickerOneHot", "dateOneHot", "open")
                         .setOutputCol("vectorAssembly")
-                        .setInputSizes(tickerSize, dateSize); //MongoDB DataSource
+//                        .setInputSizes(tickerSize, dateSize, 1, 1, 1);
+                        .setInputSizes(tickerSize, dateSize, 1);
 
         // Uses the VectorAssembler object for feature transformations.
         Table vectorTable = vectorAssembler.transform(oneHotTable)[0];
@@ -231,20 +212,18 @@ public class PredictKSQLStock {
 //            System.out.printf("Input Value: %s\tOutput Value: %s\n", inputValue, outputValue);
 //        }
 
-//        Table trainTable = scaleTable.select($("scaledFeatures").as("features"), $("CLOSE").as("label")); //KSQLDB Datasource
-        Table trainTable = scaleTable.select($("scaledFeatures").as("features"), $("close").as("label"));  //MongoDB Datasource
+        Table trainTable = scaleTable.select($("scaledFeatures").as("features"), $("close").as("label"));
 
-        //Show Features and Label
-        for (CloseableIterator<Row> it = trainTable.execute().collect(); it.hasNext(); ) {
-            Row row = it.next();
-            Vector features = (Vector) row.getField("features");
-            Double label = (Double) row.getField("label");
-            System.out.printf("Scaled Features Value: %s\tLabel Value: %s\n", features, label);
-        }
+//        //Show Features and Label
+//        for (CloseableIterator<Row> it = trainTable.execute().collect(); it.hasNext(); ) {
+//            Row row = it.next();
+//            Vector features = (Vector) row.getField("features");
+//            Double label = (Double) row.getField("label");
+//            System.out.printf("Scaled Features Value: %s\tLabel Value: %s\n", features, label);
+//        }
 
         // Creates a LinearRegression object and initializes its parameters.
         LinearRegression lr = new LinearRegression()
-//                .setMaxIter(100);
                 .setReg(0.3)
                 .setElasticNet(0.8);
 
@@ -262,8 +241,8 @@ public class PredictKSQLStock {
             double expectedResult = (Double) row.getField(lr.getLabelCol());
             double predictionResult = (Double) row.getField(lr.getPredictionCol());
             System.out.printf(
-                    "Features: %s \tExpected Result: %s \tPrediction Result: %s\n",
-                    features, expectedResult, predictionResult);
+                    "Expected Result: %s \tPrediction Result: %s\n",
+                    expectedResult, predictionResult);
         }
 
         // Execute the Flink job
