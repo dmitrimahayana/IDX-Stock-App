@@ -1,0 +1,688 @@
+[{
+  "_id": {
+    "$oid": "64d73dccc8261077fd6fdd7d"
+  },
+  "id": "EXCL_2023-07-28",
+  "stockid": "EXCL_2023-07-28",
+  "ticker": "EXCL",
+  "date": "2023-07-28",
+  "open": 2127.754808305778,
+  "high": 2125.5072394863537,
+  "low": 2167.58411387951,
+  "close": 2147.7659372818407,
+  "volume": 57073400,
+  "name": "PT XL Axiata Tbk",
+  "logo": "https://s3.goapi.id/logo/EXCL.jpg"
+},
+{
+  "_id": {
+    "$oid": "64d73dccc8261077fd6fdd80"
+  },
+  "id": "MEDC_2023-07-28",
+  "stockid": "MEDC_2023-07-28",
+  "ticker": "MEDC",
+  "date": "2023-07-28",
+  "open": 1112.1072971317853,
+  "high": 1076.761898263181,
+  "low": 1117.0232362527229,
+  "close": 1115.6906763566983,
+  "volume": 68210900,
+  "name": "PT Medco Energi Internasional Tbk",
+  "logo": "https://s3.goapi.id/logo/MEDC.jpg"
+},
+{
+  "_id": {
+    "$oid": "64d73dccc8261077fd6fdd82"
+  },
+  "id": "ARTO_2023-07-28",
+  "stockid": "ARTO_2023-07-28",
+  "ticker": "ARTO",
+  "date": "2023-07-28",
+  "open": 2796.114553832649,
+  "high": 1441.7572696144261,
+  "low": 2136.2576323620515,
+  "close": 2064.7436839271713,
+  "volume": 18969200,
+  "name": "PT Bank Jago Tbk.",
+  "logo": "https://s3.goapi.id/logo/ARTO.jpg"
+},
+{
+  "_id": {
+    "$oid": "64d73dccc8261077fd6fdd85"
+  },
+  "id": "ICBP_2023-07-28",
+  "stockid": "ICBP_2023-07-28",
+  "ticker": "ICBP",
+  "date": "2023-07-28",
+  "open": 2732.0563027772682,
+  "high": 2856.915767629588,
+  "low": 2874.010585189488,
+  "close": 2596.1282354646128,
+  "volume": 4539400,
+  "name": "Indofood CBP Sukses Makmur Tbk",
+  "logo": "https://s3.goapi.id/logo/ICBP.jpg"
+},
+{
+  "_id": {
+    "$oid": "64d73dccc8261077fd6fdd88"
+  },
+  "id": "MIDI_2023-07-28",
+  "stockid": "MIDI_2023-07-28",
+  "ticker": "MIDI",
+  "date": "2023-07-28",
+  "open": 429.8345236806351,
+  "high": 443.8308240792802,
+  "low": 431.23028516959573,
+  "close": 420.1757853449786,
+  "volume": 117954100,
+  "name": "Midi Utama Indonesia Tbk",
+  "logo": "https://s3.goapi.id/logo/MIDI.jpg"
+},
+{
+  "_id": {
+    "$oid": "64d73dccc8261077fd6fdd8b"
+  },
+  "id": "MAPA_2023-07-28",
+  "stockid": "MAPA_2023-07-28",
+  "ticker": "MAPA",
+  "date": "2023-07-28",
+  "open": 2475.567736276452,
+  "high": 2201.6951601508963,
+  "low": 1990.037367190497,
+  "close": 3425.7434300395666,
+  "volume": 78396700,
+  "name": "PT MAP Aktif Adiperkasa Tbk.",
+  "logo": "https://s3.goapi.id/logo/MAPA.jpg"
+},
+{
+  "_id": {
+    "$oid": "64d73dcdc8261077fd6fdecf"
+  },
+  "id": "FILM_2023-07-28",
+  "stockid": "FILM_2023-07-28",
+  "ticker": "FILM",
+  "date": "2023-07-28",
+  "open": 3879.6565998331553,
+  "high": 3852.5995650560885,
+  "low": 3974.0268682044084,
+  "close": 3979.4489764232794,
+  "volume": 25551700,
+  "name": "PT MD Pictures Tbk.",
+  "logo": "https://s3.goapi.id/logo/FILM.jpg"
+},
+{
+  "_id": {
+    "$oid": "64d73dcdc8261077fd6fded2"
+  },
+  "id": "UNVR_2023-07-28",
+  "stockid": "UNVR_2023-07-28",
+  "ticker": "UNVR",
+  "date": "2023-07-28",
+  "open": 844.2037504923125,
+  "high": 867.8823644664608,
+  "low": 873.5525354760343,
+  "close": 783.0623970562776,
+  "volume": 40562400,
+  "name": "Unilever Indonesia Tbk",
+  "logo": "https://s3.goapi.id/logo/UNVR.jpg"
+},
+{
+  "_id": {
+    "$oid": "64d73dcdc8261077fd6fded4"
+  },
+  "id": "PTBA_2023-07-28",
+  "stockid": "PTBA_2023-07-28",
+  "ticker": "PTBA",
+  "date": "2023-07-28",
+  "open": 4553.74673536925,
+  "high": 4443.07747082827,
+  "low": 4493.809612298595,
+  "close": 4561.993402694271,
+  "volume": 19828800,
+  "name": "Bukit Asam Tbk",
+  "logo": "https://s3.goapi.id/logo/PTBA.jpg"
+},
+{
+  "_id": {
+    "$oid": "64d73dcdc8261077fd6fded5"
+  },
+  "id": "TCPI_2023-07-28",
+  "stockid": "TCPI_2023-07-28",
+  "ticker": "TCPI",
+  "date": "2023-07-28",
+  "open": 1711.149628071392,
+  "high": 1713.9332357413336,
+  "low": 1830.3610502811864,
+  "close": 1658.750903387605,
+  "volume": 9737600,
+  "name": "PT Transcoal Pacific Tbk.",
+  "logo": "https://s3.goapi.id/logo/TCPI.jpg"
+},
+{
+  "_id": {
+    "$oid": "64d73dcdc8261077fd6fded8"
+  },
+  "id": "SLIS_2023-07-28",
+  "stockid": "SLIS_2023-07-28",
+  "ticker": "SLIS",
+  "date": "2023-07-28",
+  "open": 163.96158464341613,
+  "high": 160.71228798577556,
+  "low": 158.40409775949908,
+  "close": 162.73330221272013,
+  "volume": 349979700,
+  "name": "PT Gaya Abadi Sempurna Tbk",
+  "logo": "https://s3.goapi.id/logo/SLIS.jpg"
+},
+{
+  "_id": {
+    "$oid": "64d73dcdc8261077fd6fded9"
+  },
+  "id": "AKRA_2023-07-28",
+  "stockid": "AKRA_2023-07-28",
+  "ticker": "AKRA",
+  "date": "2023-07-28",
+  "open": 3623.974774056083,
+  "high": 1205.4457866924718,
+  "low": 2781.582482872255,
+  "close": 3202.340845548166,
+  "volume": 36118800,
+  "name": "PT AKR Corporindo Tbk.",
+  "logo": "https://s3.goapi.id/logo/AKRA.jpg"
+},
+{
+  "_id": {
+    "$oid": "64d73dcdc8261077fd6fdedc"
+  },
+  "id": "KLBF_2023-07-28",
+  "stockid": "KLBF_2023-07-28",
+  "ticker": "KLBF",
+  "date": "2023-07-28",
+  "open": 1708.2446149531388,
+  "high": 1988.1426566455198,
+  "low": 1966.2048603029411,
+  "close": 1735.2861921188971,
+  "volume": 62633600,
+  "name": "Kalbe Farma Tbk",
+  "logo": "https://s3.goapi.id/logo/KLBF.jpg"
+},
+{
+  "_id": {
+    "$oid": "64d73dcdc8261077fd6fdede"
+  },
+  "id": "BBNI_2023-07-28",
+  "stockid": "BBNI_2023-07-28",
+  "ticker": "BBNI",
+  "date": "2023-07-28",
+  "open": 8873.045779538843,
+  "high": 8862.468667158566,
+  "low": 8905.411320544634,
+  "close": 8880.089568008267,
+  "volume": 13448700,
+  "name": "PT Bank Negara Indonesia (Persero) Tbk",
+  "logo": "https://s3.goapi.id/logo/BBNI.jpg"
+},
+{
+  "_id": {
+    "$oid": "64d73dcdc8261077fd6fdedf"
+  },
+  "id": "HMSP_2023-07-28",
+  "stockid": "HMSP_2023-07-28",
+  "ticker": "HMSP",
+  "date": "2023-07-28",
+  "open": 1399.2455759626482,
+  "high": 1403.8981427545687,
+  "low": 1404.4922497541277,
+  "close": 1401.9725083421354,
+  "volume": 91235000,
+  "name": "HM Sampoerna Tbk",
+  "logo": "https://s3.goapi.id/logo/HMSP.jpg"
+},
+{
+  "_id": {
+    "$oid": "64d73dcdc8261077fd6fdee3"
+  },
+  "id": "PGEO_2023-07-28",
+  "stockid": "PGEO_2023-07-28",
+  "ticker": "PGEO",
+  "date": "2023-07-28",
+  "open": 800,
+  "high": 815,
+  "low": 775,
+  "close": 805,
+  "volume": 11597200,
+  "name": "PT Pertamina Geothermal Energy Tbk",
+  "logo": "https://s3.goapi.id/logo/PGEO.jpg"
+},
+{
+  "_id": {
+    "$oid": "64d73dcdc8261077fd6fdefa"
+  },
+  "id": "GOTO_2023-07-28",
+  "stockid": "GOTO_2023-07-28",
+  "ticker": "GOTO",
+  "date": "2023-07-28",
+  "open": 111.43834432786821,
+  "high": 111.69823779511597,
+  "low": 111.92934399800401,
+  "close": 112.07789645403666,
+  "volume": 457180700,
+  "name": "PT GoTo Gojek Tokopedia Tbk",
+  "logo": "https://s3.goapi.id/logo/GOTO.jpg"
+},
+{
+  "_id": {
+    "$oid": "64d73dcec8261077fd6fdf79"
+  },
+  "id": "UNTR_2023-07-28",
+  "stockid": "UNTR_2023-07-28",
+  "ticker": "UNTR",
+  "date": "2023-07-28",
+  "open": 3796.50844737373,
+  "high": 2495.2566710285764,
+  "low": 1751.8053871917418,
+  "close": 1881.3343070252245,
+  "volume": 6529600,
+  "name": "United Tractors Tbk",
+  "logo": "https://s3.goapi.id/logo/UNTR.jpg"
+},
+{
+  "_id": {
+    "$oid": "64d73dcec8261077fd6fdf7d"
+  },
+  "id": "SMGR_2023-07-28",
+  "stockid": "SMGR_2023-07-28",
+  "ticker": "SMGR",
+  "date": "2023-07-28",
+  "open": 1707.4871437867314,
+  "high": 3261.8185329153694,
+  "low": 4049.5114035924735,
+  "close": 2863.7735443577567,
+  "volume": 9332800,
+  "name": "Semen Indonesia (Persero) Tbk",
+  "logo": "https://s3.goapi.id/logo/SMGR.jpg"
+},
+{
+  "_id": {
+    "$oid": "64d73dcec8261077fd6fdf82"
+  },
+  "id": "BFIN_2023-07-28",
+  "stockid": "BFIN_2023-07-28",
+  "ticker": "BFIN",
+  "date": "2023-07-28",
+  "open": 2090.1907219681934,
+  "high": 2179.4599532658185,
+  "low": 1959.7186254366795,
+  "close": 2025.6397174684134,
+  "volume": 102575700,
+  "name": "BFI Finance Indonesia Tbk",
+  "logo": "https://s3.goapi.id/logo/BFIN.jpg"
+},
+{
+  "_id": {
+    "$oid": "64d73dcec8261077fd6fdf86"
+  },
+  "id": "MAPI_2023-07-28",
+  "stockid": "MAPI_2023-07-28",
+  "ticker": "MAPI",
+  "date": "2023-07-28",
+  "open": 2454.756670081268,
+  "high": 2348.6128022108032,
+  "low": 2521.852648823625,
+  "close": 2403.0172797675796,
+  "volume": 34307800,
+  "name": "Mitra Adiperkasa Tbk",
+  "logo": "https://s3.goapi.id/logo/MAPI.jpg"
+},
+{
+  "_id": {
+    "$oid": "64d73dcec8261077fd6fdf87"
+  },
+  "id": "BRMS_2023-07-28",
+  "stockid": "BRMS_2023-07-28",
+  "ticker": "BRMS",
+  "date": "2023-07-28",
+  "open": 4301.656608876247,
+  "high": 4239.292441352389,
+  "low": 3834.1887049112133,
+  "close": 4102.868738555363,
+  "volume": 728780000,
+  "name": "Bumi Resources Minerals Tbk",
+  "logo": "https://s3.goapi.id/logo/BRMS.jpg"
+},
+{
+  "_id": {
+    "$oid": "64d73dcec8261077fd6fdf8a"
+  },
+  "id": "CFIN_2023-07-28",
+  "stockid": "CFIN_2023-07-28",
+  "ticker": "CFIN",
+  "date": "2023-07-28",
+  "open": 1620.213621611469,
+  "high": 975.2145740863565,
+  "low": 1604.2350763039751,
+  "close": 1189.589497017365,
+  "volume": 101311500,
+  "name": "Clipan Finance Indonesia Tbk",
+  "logo": "https://s3.goapi.id/logo/CFIN.jpg"
+},
+{
+  "_id": {
+    "$oid": "64d73dd0c8261077fd6fe1c7"
+  },
+  "id": "BBRI_2023-07-28",
+  "stockid": "BBRI_2023-07-28",
+  "ticker": "BBRI",
+  "date": "2023-07-28",
+  "open": 5645.00376733268,
+  "high": 5643.535321790134,
+  "low": 5662.441232641995,
+  "close": 5672.163303191309,
+  "volume": 32748000,
+  "name": "PT Bank Rakyat Indonesia (Persero) Tbk",
+  "logo": "https://s3.goapi.id/logo/BBRI.jpg"
+},
+{
+  "_id": {
+    "$oid": "64d73dd2c8261077fd6fe58c"
+  },
+  "id": "BRPT_2023-07-28",
+  "stockid": "BRPT_2023-07-28",
+  "ticker": "BRPT",
+  "date": "2023-07-28",
+  "open": 755,
+  "high": 770,
+  "low": 755,
+  "close": 765,
+  "volume": 12738100,
+  "name": "Barito Pacific Tbk",
+  "logo": "https://s3.goapi.id/logo/BRPT.jpg"
+},
+{
+  "_id": {
+    "$oid": "64d73dd2c8261077fd6fe5fa"
+  },
+  "id": "MPPA_2023-07-28",
+  "stockid": "MPPA_2023-07-28",
+  "ticker": "MPPA",
+  "date": "2023-07-28",
+  "open": 2680.978402020991,
+  "high": 3074.7181910170475,
+  "low": 1910.3820544833466,
+  "close": 2591.2001556460455,
+  "volume": 470890000,
+  "name": "Matahari Putra Prima Tbk",
+  "logo": "https://s3.goapi.id/logo/MPPA.jpg"
+},
+{
+  "_id": {
+    "$oid": "64d73dd2c8261077fd6fe600"
+  },
+  "id": "BUMI_2023-07-28",
+  "stockid": "BUMI_2023-07-28",
+  "ticker": "BUMI",
+  "date": "2023-07-28",
+  "open": 1955.272009456229,
+  "high": 2479.830874853762,
+  "low": 1402.661023985894,
+  "close": 1794.147558697312,
+  "volume": 431870700,
+  "name": "Bumi Resources Tbk",
+  "logo": "https://s3.goapi.id/logo/BUMI.jpg"
+},
+{
+  "_id": {
+    "$oid": "64d73dd2c8261077fd6fe604"
+  },
+  "id": "PGAS_2023-07-28",
+  "stockid": "PGAS_2023-07-28",
+  "ticker": "PGAS",
+  "date": "2023-07-28",
+  "open": 1955.1713263788374,
+  "high": 2020.3755533213603,
+  "low": 1938.8701777553229,
+  "close": 2083.9801614745884,
+  "volume": 46030700,
+  "name": "PT Perusahaan Gas Negara Tbk.",
+  "logo": "https://s3.goapi.id/logo/PGAS.jpg"
+},
+{
+  "_id": {
+    "$oid": "64d73dd2c8261077fd6fe607"
+  },
+  "id": "HILL_2023-07-28",
+  "stockid": "HILL_2023-07-28",
+  "ticker": "HILL",
+  "date": "2023-07-28",
+  "open": 4458.3185097146625,
+  "high": 4283.707137099368,
+  "low": 4201.509535378885,
+  "close": 4301.629744266292,
+  "volume": 23537000,
+  "name": "PT Hillcon Tbk",
+  "logo": "https://s3.goapi.id/logo/HILL.jpg"
+},
+{
+  "_id": {
+    "$oid": "64d73dd2c8261077fd6fe60c"
+  },
+  "id": "SIDO_2023-07-28",
+  "stockid": "SIDO_2023-07-28",
+  "ticker": "SIDO",
+  "date": "2023-07-28",
+  "open": 3672.7648742171004,
+  "high": 3598.3897917865797,
+  "low": 3251.7126290426045,
+  "close": 3056.8719921522807,
+  "volume": 186532600,
+  "name": "PT Industri Jamu Dan Farmasi Sido Muncul Tbk",
+  "logo": "https://s3.goapi.id/logo/SIDO.jpg"
+},
+{
+  "_id": {
+    "$oid": "64d73dd2c8261077fd6fe616"
+  },
+  "id": "AMRT_2023-07-28",
+  "stockid": "AMRT_2023-07-28",
+  "ticker": "AMRT",
+  "date": "2023-07-28",
+  "open": 3931.512332224351,
+  "high": 4089.086545540727,
+  "low": 3652.0781686105097,
+  "close": 4292.113217989489,
+  "volume": 23725100,
+  "name": "PT Sumber Alfaria Trijaya Tbk.",
+  "logo": "https://s3.goapi.id/logo/AMRT.jpg"
+},
+{
+  "_id": {
+    "$oid": "64d73dd5c8261077fd6feb32"
+  },
+  "id": "BBCA_2023-07-28",
+  "stockid": "BBCA_2023-07-28",
+  "ticker": "BBCA",
+  "date": "2023-07-28",
+  "open": 9186.168280398853,
+  "high": 9168.468271014612,
+  "low": 9186.46861802932,
+  "close": 9208.882888716205,
+  "volume": 30628200,
+  "name": "PT Bank Central Asia Tbk.",
+  "logo": "https://s3.goapi.id/logo/BBCA.jpg"
+},
+{
+  "_id": {
+    "$oid": "64d73ddac8261077fd6ff215"
+  },
+  "id": "NATO_2023-07-28",
+  "stockid": "NATO_2023-07-28",
+  "ticker": "NATO",
+  "date": "2023-07-28",
+  "open": 499.8662801312552,
+  "high": 503.7022281948696,
+  "low": 494.9413343861871,
+  "close": 492.41067957118787,
+  "volume": 269934600,
+  "name": "PT Surya Permata Andalan Tbk",
+  "logo": "https://s3.goapi.id/logo/NATO.jpg"
+},
+{
+  "_id": {
+    "$oid": "64d73dddc8261077fd6ff5c3"
+  },
+  "id": "BOGA_2023-07-28",
+  "stockid": "BOGA_2023-07-28",
+  "ticker": "BOGA",
+  "date": "2023-07-28",
+  "open": 1232.6431696189136,
+  "high": 1227.456716216623,
+  "low": 1221.7988659925122,
+  "close": 1227.7096482738618,
+  "volume": 121550200,
+  "name": "PT Bintang Oto Global Tbk",
+  "logo": "https://s3.goapi.id/logo/BOGA.jpg"
+},
+{
+  "_id": {
+    "$oid": "64d73de7c8261077fd700192"
+  },
+  "id": "ASII_2023-07-28",
+  "stockid": "ASII_2023-07-28",
+  "ticker": "ASII",
+  "date": "2023-07-28",
+  "open": 1247.776887049636,
+  "high": 941.7175931348634,
+  "low": 1063.934190289605,
+  "close": 933.9467546921928,
+  "volume": 11238100,
+  "name": "Astra International Tbk",
+  "logo": "https://s3.goapi.id/logo/ASII.jpg"
+},
+{
+  "_id": {
+    "$oid": "64d73decc8261077fd7007d7"
+  },
+  "id": "TLKM_2023-07-28",
+  "stockid": "TLKM_2023-07-28",
+  "ticker": "TLKM",
+  "date": "2023-07-28",
+  "open": 3701.9438988397555,
+  "high": 3734.6886768483487,
+  "low": 3741.9321849128523,
+  "close": 3731.1343590778797,
+  "volume": 56518800,
+  "name": "PT Telkom Indonesia (Persero) Tbk",
+  "logo": "https://s3.goapi.id/logo/TLKM.jpg"
+},
+{
+  "_id": {
+    "$oid": "64d73df3c8261077fd700e10"
+  },
+  "id": "MDKA_2023-07-28",
+  "stockid": "MDKA_2023-07-28",
+  "ticker": "MDKA",
+  "date": "2023-07-28",
+  "open": 3222.6457733639018,
+  "high": 4254.478678461032,
+  "low": 4060.074566672352,
+  "close": 4455.804126376769,
+  "volume": 26060600,
+  "name": "PT Merdeka Copper Gold Tbk.",
+  "logo": "https://s3.goapi.id/logo/MDKA.jpg"
+},
+{
+  "_id": {
+    "$oid": "64d73df5c8261077fd701034"
+  },
+  "id": "BMRI_2023-07-28",
+  "stockid": "BMRI_2023-07-28",
+  "ticker": "BMRI",
+  "date": "2023-07-28",
+  "open": 5662.555508569118,
+  "high": 5678.2681120069565,
+  "low": 5664.349108110632,
+  "close": 5674.603485186468,
+  "volume": 50389800,
+  "name": "PT Bank Mandiri (Persero) Tbk",
+  "logo": "https://s3.goapi.id/logo/BMRI.jpg"
+},
+{
+  "_id": {
+    "$oid": "64d73df6c8261077fd7011e3"
+  },
+  "id": "ADRO_2023-07-28",
+  "stockid": "ADRO_2023-07-28",
+  "ticker": "ADRO",
+  "date": "2023-07-28",
+  "open": 4551.41013760626,
+  "high": 4394.147348487051,
+  "low": 4508.651500528604,
+  "close": 4384.810386896178,
+  "volume": 37905300,
+  "name": "Adaro Energy Indonesia Tbk",
+  "logo": "https://s3.goapi.id/logo/ADRO.jpg"
+},
+{
+  "_id": {
+    "$oid": "64d73df8c8261077fd70140f"
+  },
+  "id": "CARE_2023-07-28",
+  "stockid": "CARE_2023-07-28",
+  "ticker": "CARE",
+  "date": "2023-07-28",
+  "open": 518.5629165615422,
+  "high": 523.6719129099764,
+  "low": 531.0769119643093,
+  "close": 512.9579696605866,
+  "volume": 168477100,
+  "name": "PT Metro Healthcare Indonesia Tbk",
+  "logo": "https://s3.goapi.id/logo/CARE.jpg"
+},
+{
+  "_id": {
+    "$oid": "64d73e0fc8261077fd70225c"
+  },
+  "id": "ITMG_2023-07-28",
+  "stockid": "ITMG_2023-07-28",
+  "ticker": "ITMG",
+  "date": "2023-07-28",
+  "open": 28000,
+  "high": 28000,
+  "low": 27075,
+  "close": 27875,
+  "volume": 1673400,
+  "name": "Indo Tambangraya Megah Tbk",
+  "logo": "https://s3.goapi.id/logo/ITMG.jpg"
+},
+{
+  "_id": {
+    "$oid": "64d73e48c8261077fd704669"
+  },
+  "id": "CMNT_2023-07-28",
+  "stockid": "CMNT_2023-07-28",
+  "ticker": "CMNT",
+  "date": "2023-07-28",
+  "open": 895,
+  "high": 900,
+  "low": 875,
+  "close": 890,
+  "volume": 6444700,
+  "name": "PT Cemindo Gemilang Tbk",
+  "logo": "https://s3.goapi.id/logo/CMNT.jpg"
+},
+{
+  "_id": {
+    "$oid": "64d73e73c8261077fd70583d"
+  },
+  "id": "INDF_2023-07-28",
+  "stockid": "INDF_2023-07-28",
+  "ticker": "INDF",
+  "date": "2023-07-28",
+  "open": 7275,
+  "high": 7325,
+  "low": 7200,
+  "close": 7325,
+  "volume": 6679800,
+  "name": "Indofood Sukses Makmur Tbk",
+  "logo": "https://s3.goapi.id/logo/INDF.jpg"
+}]

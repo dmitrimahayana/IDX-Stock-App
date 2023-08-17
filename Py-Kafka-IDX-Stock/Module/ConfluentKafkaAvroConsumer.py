@@ -1,46 +1,12 @@
 from confluent_kafka import Consumer
-from confluent_kafka.serialization import StringDeserializer, SerializationContext, MessageField
+from confluent_kafka.serialization import SerializationContext, MessageField
 from confluent_kafka.schema_registry import SchemaRegistryClient
 from confluent_kafka.schema_registry.avro import AvroDeserializer
 from Config import config, srConfig
+from ClassStock import dictToStock
+from ClassCompany import dictToCompany
+import time
 
-class Stock(object):
-    def __init__(self, id, ticker, date, open, high, low, close, volume):
-        self.id = id
-        self.ticker = ticker
-        self.date = date
-        self.open = open
-        self.high = high
-        self.low = low
-        self.close = close
-        self.volume = volume
-
-
-class Company(object):
-    def __init__(self, id, ticker, name, logo):
-        self.id = id
-        self.ticker = ticker
-        self.name = name
-        self.logo = logo
-
-def dictToStock(dict, ctx):
-    return dict;
-    # return Stock(dict["id"],
-    #              dict["ticker"],
-    #              dict["date"],
-    #              dict["open"],
-    #              dict["high"],
-    #              dict["low"],
-    #              dict["close"],
-    #              dict["volume"])
-
-
-def dictToCompany(Company, ctx):
-    return dict;
-    # return Company(dict["id"],
-    #                dict["ticker"],
-    #                dict["name"],
-    #                dict["logo"])
 
 def set_consumer_configs():
     config['group.id'] = 'my-py-stock-consumer'
@@ -51,23 +17,34 @@ if __name__ == '__main__':
     topic2 = 'streaming.goapi.idx.companies.json'
 
     schema_registry_client = SchemaRegistryClient(srConfig)
-    mySchema2 = schema_registry_client.get_latest_version("IDX-Stock")
-    print("Schema: " + mySchema2.schema.schema_str)
-    avro_deserializer = AvroDeserializer(schema_registry_client, mySchema2.schema.schema_str, dictToStock)
+    stockSchema = schema_registry_client.get_latest_version("IDX-Stock")
+    stockAvroSerializer = AvroDeserializer(schema_registry_client,
+                                           stockSchema.schema.schema_str,
+                                           dictToStock)
+    companySchema = schema_registry_client.get_latest_version("IDX-Company")
+    companyAvroSerializer = AvroDeserializer(schema_registry_client,
+                                           companySchema.schema.schema_str,
+                                           dictToCompany)
 
     set_consumer_configs()
     consumer = Consumer(config)
-    consumer.subscribe([topic1])
+    consumer.subscribe([topic1, topic2])
 
     while True:
         try:
             event = consumer.poll(1.0)
+
             if event is None:
                 continue
-            stock = avro_deserializer(event.value(), SerializationContext(topic1, MessageField.VALUE))
-            if stock is not None:
-                print(stock)
-            #     print(f'Latest data in {stock.id} is {stock.open} {stock.close}.')
+            else:
+                if event.topic() == topic1:
+                    stock = stockAvroSerializer(event.value(), SerializationContext(topic1, MessageField.VALUE))
+                    if stock is not None:
+                        print(stock)
+                elif event.topic() == topic2:
+                    company = companyAvroSerializer(event.value(), SerializationContext(topic2, MessageField.VALUE))
+                    if company is not None:
+                        print(company)
 
         except KeyboardInterrupt:
             break
