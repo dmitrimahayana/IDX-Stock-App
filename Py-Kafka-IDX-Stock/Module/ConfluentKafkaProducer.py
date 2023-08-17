@@ -1,11 +1,8 @@
 from confluent_kafka import Producer
-import socket
+from Config import config
 
 bootStrapServer = 'localhost:39092,localhost:39093,localhost:39094'
 topic = 'Dummy_Python'
-conf = {'bootstrap.servers': bootStrapServer,
-        'client.id': socket.gethostname()}
-
 
 def acked(err, msg):
     if err is not None:
@@ -13,8 +10,7 @@ def acked(err, msg):
     else:
         print("Topic:%s Partition:%d Timestamp%s" % (msg.topic(), msg.partition(), msg.timestamp()[1]))
 
-
-producer = Producer(conf)
+producer = Producer(config)
 
 # produce asynchronously
 for i in range(10):
