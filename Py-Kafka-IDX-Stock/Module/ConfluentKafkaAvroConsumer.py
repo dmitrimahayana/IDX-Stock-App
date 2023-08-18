@@ -3,8 +3,8 @@ from confluent_kafka.serialization import SerializationContext, MessageField
 from confluent_kafka.schema_registry import SchemaRegistryClient
 from confluent_kafka.schema_registry.avro import AvroDeserializer
 from Config import config, srConfig
-from ClassStock import dictToStock
-from ClassCompany import dictToCompany
+from Module.ClassStock import dictToStock
+from Module.ClassCompany import dictToCompany
 import time
 
 
@@ -47,6 +47,7 @@ if __name__ == '__main__':
                         print(company)
 
         except KeyboardInterrupt:
+            print("Shutdown Starting...")
             break
 
     consumer.close()
