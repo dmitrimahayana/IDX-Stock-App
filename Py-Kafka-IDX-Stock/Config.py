@@ -9,4 +9,7 @@ srConfig = {
 ksqlConfig = {
     'url': 'http://localhost:9088'
 }
+mongoConfig = {
+    'url': 'mongodb://localhost:27017'
+}
 rootDirectory = os.path.dirname(os.path.abspath(__file__)) # This is Project Root

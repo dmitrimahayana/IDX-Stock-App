@@ -1,0 +1,6 @@
+confluent_kafka
+requests
+fastavro
+ksqldb
+pymongo
+motor

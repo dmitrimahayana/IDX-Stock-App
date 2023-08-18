@@ -6,7 +6,7 @@ from Config import config, srConfig, rootDirectory
 from ClassStock import Stock, stockToDict
 from ClassCompany import Company, companyToDict
 from datetime import datetime
-import os, json, random
+import os, json, random, time
 
 def deliveryReport(err, event):
     if err is not None:
@@ -48,12 +48,14 @@ if __name__ == '__main__':
     jsonData = json.load(file)
 
     producer = Producer(config)
-    for row in jsonData:
-        close = random.uniform(row["low"], row["high"])
-        stock = Stock(row["id"], row["ticker"], row["date"], row["open"], row["high"], row["low"], close, row["volume"])
-        company = Company(row["ticker"], row["ticker"], row["name"], row["logo"], str(datetime.today().strftime('%Y-%m-%d %H:%M:%S')))
-        print(f'id:{row["id"]} high:{row["high"]} open:{row["open"]} low:{row["low"]} close:{close} name:{row["name"]} logo:{row["logo"]}')
-        sendProducer(topic1, stock, producer, stockAvroSerializer)
-        sendProducer(topic2, company, producer, companyAvroSerializer)
+    while True:
+        for row in jsonData:
+            close = random.uniform(row["low"], row["high"])
+            stock = Stock(row["id"], row["ticker"], row["date"], row["open"], row["high"], row["low"], close, row["volume"])
+            company = Company(row["ticker"], row["ticker"], row["name"], row["logo"], str(datetime.today().strftime('%Y-%m-%d %H:%M:%S')))
+            print(f'id:{row["id"]} high:{row["high"]} open:{row["open"]} low:{row["low"]} close:{close} name:{row["name"]} logo:{row["logo"]}')
+            sendProducer(topic1, stock, producer, stockAvroSerializer)
+            sendProducer(topic2, company, producer, companyAvroSerializer)
+        time.sleep(5)
 
     producer.flush()
