@@ -6,5 +6,7 @@ config = {
 srConfig = {
     'url': 'http://localhost:8282'
 }
-
+ksqlConfig = {
+    'url': 'http://localhost:9088'
+}
 rootDirectory = os.path.dirname(os.path.abspath(__file__)) # This is Project Root
