@@ -16,21 +16,24 @@ async def buildJsonValue(colNames, Rows):
             value = Rows[i]
             if 'str' in str(type(Rows[i])):
                 value = '"' + str(Rows[i]) + '"'
-            if i == 0:
-                finalJson = '{"' + colNames[i].lower() + '":' + str(value) + ''
-            elif i == len(Rows) - 1:
-                finalJson = finalJson + ',"' + colNames[i].lower() + '":' + str(value) + '}'
-            else:
-                finalJson = finalJson + ',"' + colNames[i].lower() + '":' + str(value)
+            if colNames[i].lower() != 'windowstart' and colNames[i].lower() != 'windowend':  # Skip this column
+                if i == 0:
+                    finalJson = '{"' + colNames[i].lower() + '":' + str(value) + ''
+                elif i == len(Rows) - 1:
+                    finalJson = finalJson + ',"' + colNames[i].lower() + '":' + str(value) + '}'
+                else:
+                    finalJson = finalJson + ',"' + colNames[i].lower() + '":' + str(value)
     else:
         raise Exception("Total Column " + str(len(colNames)) + "is not match with Total Value " + str(len(Rows)))
+    # print(finalJson)
     return finalJson
 
 
 async def queryAsyncStock():
     global stockQueryID
-    query = ksqlClient.query_async("select * from KSQLGROUPSTOCK emit changes;",
-                                   stream_properties={"ksql.streams.auto.offset.reset": "earliest"}, timeout=None)
+    query = ksqlClient.query_async("select * from KSQLTABLEGROUPSTOCK emit changes;",
+                                   stream_properties={"ksql.streams.auto.offset.reset": ksqlConfig['mode']},
+                                   timeout=None)
     counter = 0
     global colNamesStock
     async for row in query:
@@ -49,16 +52,17 @@ async def queryAsyncStock():
             mongoResult = mongoDB[collectionName].find_one(query)
             if mongoResult is not None:
                 updateResult = mongoDB[collectionName].replace_one(query, jsonObject)
-                # print(dateTime+" Existing collection "+collectionName+" documentID " + str(row[0]) + " modified document count: " + str(updateResult.modified_count))
+                print(dateTime+" Existing collection "+collectionName+" documentID " + str(row[0]) + " modified document count: " + str(updateResult.modified_count))
             else:
                 insertResult = mongoDB[collectionName].insert_one(jsonObject)
-                # print(dateTime+" Inserted collection "+collectionName+" documentID " + str(row[0]) + " with the following mongoID: " + str(insertResult.inserted_id))
+                print(dateTime+" Inserted collection "+collectionName+" documentID " + str(row[0]) + " with the following mongoID: " + str(insertResult.inserted_id))
 
 
 async def queryAsyncCompany():
     global companyQueryID
-    query = ksqlClient.query_async("select * from KSQLGROUPCOMPANY emit changes;",
-                                   stream_properties={"ksql.streams.auto.offset.reset": "earliest"}, timeout=None)
+    query = ksqlClient.query_async("select * from KSQLTABLEGROUPCOMPANY emit changes;",
+                                   stream_properties={"ksql.streams.auto.offset.reset": ksqlConfig['mode']},
+                                   timeout=None)
     counter = 0
     global colNamesCompany
     async for row in query:
@@ -77,15 +81,17 @@ async def queryAsyncCompany():
             mongoResult = mongoDB[collectionName].find_one(query)
             if mongoResult is not None:
                 updateResult = mongoDB[collectionName].replace_one(query, jsonObject)
-                # print(dateTime+" Existing collection "+collectionName+" documentID " + str(row[0]) + " modified document count: " + str(updateResult.modified_count))
+                print(dateTime+" Existing collection "+collectionName+" documentID " + str(row[0]) + " modified document count: " + str(updateResult.modified_count))
             else:
                 insertResult = mongoDB[collectionName].insert_one(jsonObject)
-                # print(dateTime+" Inserted collection "+collectionName+" documentID " + str(row[0]) + " with the following mongoID: " + str(insertResult.inserted_id))
+                print(dateTime+" Inserted collection "+collectionName+" documentID " + str(row[0]) + " with the following mongoID: " + str(insertResult.inserted_id))
+
 
 async def queryAsyncJoinStockCompany():
     global joinStockCompQueryID
     query = ksqlClient.query_async("select * from KSQLTABLEJOINSTOCKCOMPANY emit changes;",
-                                   stream_properties={"ksql.streams.auto.offset.reset": "earliest"}, timeout=None)
+                                   stream_properties={"ksql.streams.auto.offset.reset": ksqlConfig['mode']},
+                                   timeout=None)
     counter = 0
     global colNamesJoinStockComp
     async for row in query:
@@ -104,10 +110,11 @@ async def queryAsyncJoinStockCompany():
             mongoResult = mongoDB[collectionName].find_one(query)
             if mongoResult is not None:
                 updateResult = mongoDB[collectionName].replace_one(query, jsonObject)
-                # print(dateTime+" Existing collection "+collectionName+" documentID " + str(row[0]) + " modified document count: " + str(updateResult.modified_count))
+                print(dateTime+" Existing collection "+collectionName+" documentID " + str(row[0]) + " modified document count: " + str(updateResult.modified_count))
             else:
                 insertResult = mongoDB[collectionName].insert_one(jsonObject)
-                # print(dateTime+" Inserted collection "+collectionName+" documentID " + str(row[0]) + " with the following mongoID: " + str(insertResult.inserted_id))
+                print(dateTime+" Inserted collection "+collectionName+" documentID " + str(row[0]) + " with the following mongoID: " + str(insertResult.inserted_id))
+
 
 def shutDown():
     print("Shutdown Query Stock ID: ", stockQueryID)
@@ -124,7 +131,7 @@ if __name__ == '__main__':
     ksqlClient = KSQLdbClient(ksqlConfig['url'])
     loop = asyncio.get_event_loop()
     try:
-        # loop.create_task(queryAsyncStock())
+        loop.create_task(queryAsyncStock())
         loop.create_task(queryAsyncCompany())
         loop.create_task(queryAsyncJoinStockCompany())
         loop.run_forever()

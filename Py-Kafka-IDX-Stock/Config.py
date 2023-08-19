@@ -7,7 +7,8 @@ srConfig = {
     'url': 'http://localhost:8282'
 }
 ksqlConfig = {
-    'url': 'http://localhost:9088'
+    'url': 'http://localhost:9088',
+    'mode': 'earliest'  # earliest/latest
 }
 mongoConfig = {
     'url': 'mongodb://localhost:27017'
