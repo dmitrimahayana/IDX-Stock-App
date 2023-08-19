@@ -9,6 +9,7 @@ services:
       - ./scripts/create_cluster_id.sh:/tmp/create_cluster_id.sh
       - ./clusterID:/tmp/clusterID
     command: "bash -c '/tmp/create_cluster_id.sh'"
+#    restart: always
 
   kafka1:
     image: confluentinc/cp-kafka:7.3.3
@@ -27,14 +28,19 @@ services:
       KAFKA_GROUP_INITIAL_REBALANCE_DELAY_MS: 0
       KAFKA_LISTENER_SECURITY_PROTOCOL_MAP: CONTROLLER:PLAINTEXT,BROKER:PLAINTEXT,EXTERNAL:PLAINTEXT
       KAFKA_PROCESS_ROLES: 'controller,broker'
-      KAFKA_METADATA_LOG_SEGMENT_MS: 15000
-      KAFKA_METADATA_MAX_RETENTION_MS: 1200000
-      KAFKA_METADATA_LOG_MAX_RECORD_BYTES_BETWEEN_SNAPSHOTS: 2800
+      # For testing small segments 16MB and retention of 128MB
+      KAFKA_LOG_SEGMENT_BYTES: 16777216
+      KAFKA_LOG_RETENTION_BYTES: 134217728
+      KAFKA_LOG_RETENTION_HOURS: 48   # Set the desired retention hours
+#      KAFKA_METADATA_LOG_SEGMENT_MS: 15000
+#      KAFKA_METADATA_MAX_RETENTION_MS: 1200000
+#      KAFKA_METADATA_LOG_MAX_RECORD_BYTES_BETWEEN_SNAPSHOTS: 2800
     volumes:
       - kafka1-data:/var/lib/kafka/data
       - ./scripts/update_run.sh:/tmp/update_run.sh
       - ./clusterID:/tmp/clusterID
     command: "bash -c '/tmp/update_run.sh && /etc/confluent/docker/run'"
+    restart: always
 
   kafka2:
     image: confluentinc/cp-kafka:7.3.3
@@ -53,14 +59,19 @@ services:
       KAFKA_LISTENER_SECURITY_PROTOCOL_MAP: CONTROLLER:PLAINTEXT,BROKER:PLAINTEXT,EXTERNAL:PLAINTEXT
       KAFKA_GROUP_INITIAL_REBALANCE_DELAY_MS: 0
       KAFKA_PROCESS_ROLES: 'controller,broker'
-      KAFKA_METADATA_LOG_SEGMENT_MS: 15000
-      KAFKA_METADATA_MAX_RETENTION_MS: 1200000
-      KAFKA_METADATA_LOG_MAX_RECORD_BYTES_BETWEEN_SNAPSHOTS: 2800
+      # For testing small segments 16MB and retention of 128MB
+      KAFKA_LOG_SEGMENT_BYTES: 16777216
+      KAFKA_LOG_RETENTION_BYTES: 134217728
+      KAFKA_LOG_RETENTION_HOURS: 48   # Set the desired retention hours
+#      KAFKA_METADATA_LOG_SEGMENT_MS: 15000
+#      KAFKA_METADATA_MAX_RETENTION_MS: 1200000
+#      KAFKA_METADATA_LOG_MAX_RECORD_BYTES_BETWEEN_SNAPSHOTS: 2800
     volumes:
       - kafka2-data:/var/lib/kafka/data
       - ./scripts/update_run.sh:/tmp/update_run.sh
       - ./clusterID:/tmp/clusterID
     command: "bash -c '/tmp/update_run.sh && /etc/confluent/docker/run'"
+    restart: always
 
   kafka3:
     image: confluentinc/cp-kafka:7.3.3
@@ -79,14 +90,19 @@ services:
       KAFKA_LISTENER_SECURITY_PROTOCOL_MAP: CONTROLLER:PLAINTEXT,BROKER:PLAINTEXT,EXTERNAL:PLAINTEXT
       KAFKA_GROUP_INITIAL_REBALANCE_DELAY_MS: 0
       KAFKA_PROCESS_ROLES: 'controller,broker'
-      KAFKA_METADATA_LOG_SEGMENT_MS: 15000
-      KAFKA_METADATA_MAX_RETENTION_MS: 1200000
-      KAFKA_METADATA_LOG_MAX_RECORD_BYTES_BETWEEN_SNAPSHOTS: 2800
+      # For testing small segments 16MB and retention of 128MB
+      KAFKA_LOG_SEGMENT_BYTES: 16777216
+      KAFKA_LOG_RETENTION_BYTES: 134217728
+      KAFKA_LOG_RETENTION_HOURS: 48   # Set the desired retention hours
+#      KAFKA_METADATA_LOG_SEGMENT_MS: 15000
+#      KAFKA_METADATA_MAX_RETENTION_MS: 1200000
+#      KAFKA_METADATA_LOG_MAX_RECORD_BYTES_BETWEEN_SNAPSHOTS: 2800
     volumes:
       - kafka3-data:/var/lib/kafka/data
       - ./scripts/update_run.sh:/tmp/update_run.sh
       - ./clusterID:/tmp/clusterID
     command: "bash -c '/tmp/update_run.sh && /etc/confluent/docker/run'"
+    restart: always
 
   schema-registry:
     image: confluentinc/cp-schema-registry
@@ -102,15 +118,17 @@ services:
       - kafka1
       - kafka2
       - kafka3
+    restart: always
 
   ksqldb-server:
     image: confluentinc/ksqldb-server:0.29.0
     hostname: ksqldb-server
     container_name: ksqldb-server
     depends_on:
-      - kafka1
-      - kafka2
-      - kafka3
+#      - kafka1
+#      - kafka2
+#      - kafka3
+      - schema-registry
     ports:
       - "9088:9088"
     environment:
@@ -119,17 +137,19 @@ services:
       KSQL_KSQL_LOGGING_PROCESSING_STREAM_AUTO_CREATE: "true"
       KSQL_KSQL_LOGGING_PROCESSING_TOPIC_AUTO_CREATE: "true"
       KSQL_KSQL_SCHEMA_REGISTRY_URL: http://schema-registry:8282
+    restart: always
 
   ksqldb-cli:
     image: confluentinc/ksqldb-cli:0.29.0
     container_name: ksqldb-cli
     depends_on:
-      - kafka1
-      - kafka2
-      - kafka3
+#      - kafka1
+#      - kafka2
+#      - kafka3
       - ksqldb-server
     entrypoint: /bin/sh
     tty: true
+    restart: always
 
 volumes:
   kafka1-data:

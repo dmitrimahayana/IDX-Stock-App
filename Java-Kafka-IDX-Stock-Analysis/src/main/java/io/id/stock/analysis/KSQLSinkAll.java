@@ -6,8 +6,8 @@ public class KSQLSinkAll {
         KSQLAggregateSinkStock ksqlAggregateSinkStock = new KSQLAggregateSinkStock();
         KSQLAggregateSinkJoinStockCompany ksqlAggregateSinkJoinStockCompany = new KSQLAggregateSinkJoinStockCompany();
 
-//        ksqlAggregateSinkCompany.start();
-//        ksqlAggregateSinkStock.start();
+        ksqlAggregateSinkCompany.start();
+        ksqlAggregateSinkStock.start();
         ksqlAggregateSinkJoinStockCompany.start();
     }
 }

@@ -74,8 +74,8 @@ public class KSQLAggregateSinkJoinStockCompany extends Thread {
                 if (rowStock != null) {
                     String finalJson = createJsonString(rowStock);
                     mongoDBConn.insertOrUpdate("kafka", "ksql-join-stock-company", finalJson);
-                    SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss.SSS");
-                    log.info(sdf.format(new Date())+" Sync Query Stock Result " + finalJson);
+//                    SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss.SSS");
+//                    log.info(sdf.format(new Date()) + " Sync Query Stock Result " + finalJson);
                 }
             }
         } catch (ExecutionException e) {

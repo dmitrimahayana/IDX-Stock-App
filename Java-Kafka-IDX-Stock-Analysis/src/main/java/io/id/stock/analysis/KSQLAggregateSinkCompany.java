@@ -15,30 +15,30 @@ import java.util.concurrent.ExecutionException;
 public class KSQLAggregateSinkCompany extends Thread {
     private static final Logger log = LoggerFactory.getLogger(KSQLAggregateSinkCompany.class.getSimpleName());
 
-    public static String createJsonString(Row row){
+    public static String createJsonString(Row row) {
         String jsonCol = row.columnNames().toString().replace("[", "").replace("]", "").replace(" ", "").toLowerCase();
         String jsonVal = row.values().toString().replace("[", "").replace("]", "").replace(", ", " ");
         String[] jsonColSplit = jsonCol.split(",");
         String[] jsonValSplit = jsonVal.split(",");
-        String finalJson= "";
-        if (jsonColSplit.length == jsonValSplit.length){
-            for(int i = 0; i < jsonColSplit.length; i++){
-                if(i == 0){
+        String finalJson = "";
+        if (jsonColSplit.length == jsonValSplit.length) {
+            for (int i = 0; i < jsonColSplit.length; i++) {
+                if (i == 0) {
                     finalJson = "{" + jsonColSplit[i] + ":" + jsonValSplit[i];
-                } else if (i == jsonColSplit.length-1) {
+                } else if (i == jsonColSplit.length - 1) {
                     finalJson = finalJson + "," + jsonColSplit[i] + ":" + jsonValSplit[i] + "}";
                 } else {
                     finalJson = finalJson + "," + jsonColSplit[i] + ":" + jsonValSplit[i];
                 }
             }
         } else {
-            log.error("Column: "+row.columnNames()+" - value: "+row.values());
+            log.error("Column: " + row.columnNames() + " - value: " + row.values());
             log.error("Total Column " + jsonColSplit.length + "is not match with Total Value " + jsonValSplit.length);
         }
         return finalJson;
     }
 
-    public void run(){
+    public void run() {
         String ksqlHost = "localhost";
         int ksqlPort = 9088;
         KSQLDBConnection conn = new KSQLDBConnection(ksqlHost, ksqlPort);
@@ -62,20 +62,20 @@ public class KSQLAggregateSinkCompany extends Thread {
             }
         }));
 
-        String pushQueryCompany = "SELECT * FROM KSQLGROUPCOMPANY EMIT CHANGES;";
+        String pushQueryCompany = "SELECT * FROM KSQLTABLEGROUPCOMPANY EMIT CHANGES;";
 
         //Using Sync query
         try {
             StreamedQueryResult streamedQueryCompany = ksqlClient.streamQuery(pushQueryCompany).get();
 
-            while(true) {
+            while (true) {
                 // Block until a new row is available
                 Row rowCompany = streamedQueryCompany.poll();
                 if (rowCompany != null) {
                     String finalJsonComp = createJsonString(rowCompany);
                     mongoDBConn.insertOrUpdate("kafka", "ksql-company-stream", finalJsonComp);
-                    SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss.SSS");
-                    log.info(sdf.format(new Date())+" Sync Query Company Result "+ finalJsonComp);
+//                    SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss.SSS");
+//                    log.info(sdf.format(new Date()) + " Sync Query Company Result " + finalJsonComp);
                 }
             }
         } catch (ExecutionException e) {

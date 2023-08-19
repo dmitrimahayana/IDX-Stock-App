@@ -93,8 +93,8 @@ public class StockProducerDummy {
                     for (IdxCompany row2 : dataCompany) {
                         if (row1.ticker.equals(row2.ticker)) {
                             Counter++;
-//                            String date = "2023-08-04";
-                            String date = row1.date;
+                            String date = "2023-07-28";
+//                            String date = row1.date;
 //                            String date = dateNow;
                             String ticker = row1.ticker;
                             String id = ticker + "_" + date;

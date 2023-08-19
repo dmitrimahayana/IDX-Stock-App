@@ -62,7 +62,7 @@ public class KSQLAggregateSinkStock extends Thread {
             }
         }));
 
-        String pushQueryStock = "SELECT * FROM KSQLGROUPSTOCK EMIT CHANGES;";
+        String pushQueryStock = "SELECT * FROM KSQLTABLEGROUPSTOCK EMIT CHANGES;";
 
         //Using Sync query
         try {
@@ -74,8 +74,7 @@ public class KSQLAggregateSinkStock extends Thread {
                 if (rowStock != null) {
                     String finalJson = createJsonString(rowStock);
                     mongoDBConn.insertOrUpdate("kafka", "ksql-stock-stream", finalJson);
-                    SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss.SSS");
-                    log.info(sdf.format(new Date())+" Sync Query Stock Result " + finalJson);
+//                    log.info(new SimpleDateFormat("yyyy-MM-dd HH:mm:ss.SSS").format(new Date()) + " Sync Query Stock Result " + finalJson);
                 }
             }
         } catch (ExecutionException e) {
