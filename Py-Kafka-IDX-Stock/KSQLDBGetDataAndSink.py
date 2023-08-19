@@ -5,6 +5,7 @@ import asyncio, pymongo, json
 
 stockQueryID = ""
 companyQueryID = ""
+joinStockCompQueryID = ""
 
 
 async def buildJsonValue(colNames, Rows):
@@ -28,7 +29,7 @@ async def buildJsonValue(colNames, Rows):
 
 async def queryAsyncStock():
     global stockQueryID
-    query = ksqlClient.query_async("select * from ksqlgroupstock emit changes;",
+    query = ksqlClient.query_async("select * from KSQLGROUPSTOCK emit changes;",
                                    stream_properties={"ksql.streams.auto.offset.reset": "earliest"}, timeout=None)
     counter = 0
     global colNamesStock
@@ -48,15 +49,15 @@ async def queryAsyncStock():
             mongoResult = mongoDB[collectionName].find_one(query)
             if mongoResult is not None:
                 updateResult = mongoDB[collectionName].replace_one(query, jsonObject)
-                print(dateTime+" Existing collection "+collectionName+" documentID " + str(row[0]) + " modified document count: " + str(updateResult.modified_count))
+                # print(dateTime+" Existing collection "+collectionName+" documentID " + str(row[0]) + " modified document count: " + str(updateResult.modified_count))
             else:
                 insertResult = mongoDB[collectionName].insert_one(jsonObject)
-                print(dateTime+" Inserted collection "+collectionName+" documentID " + str(row[0]) + " with the following mongoID: " + str(insertResult.inserted_id))
+                # print(dateTime+" Inserted collection "+collectionName+" documentID " + str(row[0]) + " with the following mongoID: " + str(insertResult.inserted_id))
 
 
 async def queryAsyncCompany():
     global companyQueryID
-    query = ksqlClient.query_async("select * from ksqlgroupcompany emit changes;",
+    query = ksqlClient.query_async("select * from KSQLGROUPCOMPANY emit changes;",
                                    stream_properties={"ksql.streams.auto.offset.reset": "earliest"}, timeout=None)
     counter = 0
     global colNamesCompany
@@ -76,17 +77,45 @@ async def queryAsyncCompany():
             mongoResult = mongoDB[collectionName].find_one(query)
             if mongoResult is not None:
                 updateResult = mongoDB[collectionName].replace_one(query, jsonObject)
-                print(dateTime+" Existing collection "+collectionName+" documentID " + str(row[0]) + " modified document count: " + str(updateResult.modified_count))
+                # print(dateTime+" Existing collection "+collectionName+" documentID " + str(row[0]) + " modified document count: " + str(updateResult.modified_count))
             else:
                 insertResult = mongoDB[collectionName].insert_one(jsonObject)
-                print(dateTime+" Inserted collection "+collectionName+" documentID " + str(row[0]) + " with the following mongoID: " + str(insertResult.inserted_id))
+                # print(dateTime+" Inserted collection "+collectionName+" documentID " + str(row[0]) + " with the following mongoID: " + str(insertResult.inserted_id))
 
+async def queryAsyncJoinStockCompany():
+    global joinStockCompQueryID
+    query = ksqlClient.query_async("select * from KSQLTABLEJOINSTOCKCOMPANY emit changes;",
+                                   stream_properties={"ksql.streams.auto.offset.reset": "earliest"}, timeout=None)
+    counter = 0
+    global colNamesJoinStockComp
+    async for row in query:
+        counter = counter + 1
+        if counter == 1:
+            joinStockCompQueryID = row['queryId']
+            colNamesJoinStockComp = row['columnNames']
+            print("Company Column Names: ", colNamesJoinStockComp)
+            print("Query ID: ", joinStockCompQueryID)
+        else:
+            jsonValue = await buildJsonValue(colNamesJoinStockComp, row)
+            jsonObject = json.loads(jsonValue)
+            collectionName = 'ksql-join-stock-company'
+            query = {'id': row[0]}
+            dateTime = datetime.today().strftime('%Y-%m-%d %H:%M:%S')
+            mongoResult = mongoDB[collectionName].find_one(query)
+            if mongoResult is not None:
+                updateResult = mongoDB[collectionName].replace_one(query, jsonObject)
+                # print(dateTime+" Existing collection "+collectionName+" documentID " + str(row[0]) + " modified document count: " + str(updateResult.modified_count))
+            else:
+                insertResult = mongoDB[collectionName].insert_one(jsonObject)
+                # print(dateTime+" Inserted collection "+collectionName+" documentID " + str(row[0]) + " with the following mongoID: " + str(insertResult.inserted_id))
 
 def shutDown():
     print("Shutdown Query Stock ID: ", stockQueryID)
-    print("Shutdown Company ID: ", companyQueryID)
     ksqlClient.close_query(stockQueryID)
+    print("Shutdown Query Company ID: ", companyQueryID)
     ksqlClient.close_query(companyQueryID)
+    print("Shutdown Query Join Stock Company ID: ", joinStockCompQueryID)
+    ksqlClient.close_query(joinStockCompQueryID)
 
 
 if __name__ == '__main__':
@@ -95,8 +124,9 @@ if __name__ == '__main__':
     ksqlClient = KSQLdbClient(ksqlConfig['url'])
     loop = asyncio.get_event_loop()
     try:
-        loop.create_task(queryAsyncStock())
+        # loop.create_task(queryAsyncStock())
         loop.create_task(queryAsyncCompany())
+        loop.create_task(queryAsyncJoinStockCompany())
         loop.run_forever()
     except KeyboardInterrupt:
         print("Shutdown Starting...")
