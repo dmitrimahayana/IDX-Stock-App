@@ -8,9 +8,9 @@ import org.apache.spark.sql.types.{DoubleType, LongType, StringType}
 
 object CreateModel {
   def main(args: Array[String]): Unit = {
-//    val sparkMaster = "spark://172.20.224.1:7077"
+    val sparkMaster = "spark://192.168.1.7:7077"
 //    val sparkMaster = "spark://localhost:7077"
-    val sparkMaster = "local[*]"
+//    val sparkMaster = "local[*]"
     val appName = "Scala IDX Stock Create Model"
     val localHostname = java.net.InetAddress.getLocalHost.getHostName
     var mongoDBURL = ""
@@ -23,17 +23,17 @@ object CreateModel {
     val spark = SparkSession.builder()
       .appName(appName)
       .master(sparkMaster)
-      .config("spark.executor.instances", "2")
-      .config("spark.executor.memory", "6g")
-      .config("spark.executor.cores", "3")
-      .config("spark.driver.memory", "6g")
-      .config("spark.driver.cores", "3")
-      .config("spark.cores.max", "6")
-      .config("spark.sql.files.maxPartitionBytes", "12345678")
-      .config("spark.sql.files.openCostInBytes", "12345678")
-      .config("spark.sql.broadcastTimeout", "1000")
-      .config("spark.sql.autoBroadcastJoinThreshold", "100485760")
-      .config("spark.sql.shuffle.partitions", "1000")
+//      .config("spark.executor.instances", "2")
+//      .config("spark.executor.memory", "6g")
+//      .config("spark.executor.cores", "3")
+//      .config("spark.driver.memory", "6g")
+//      .config("spark.driver.cores", "3")
+//      .config("spark.cores.max", "6")
+//      .config("spark.sql.files.maxPartitionBytes", "12345678")
+//      .config("spark.sql.files.openCostInBytes", "12345678")
+//      .config("spark.sql.broadcastTimeout", "1000")
+//      .config("spark.sql.autoBroadcastJoinThreshold", "100485760")
+//      .config("spark.sql.shuffle.partitions", "1000")
       .config("spark.mongodb.read.connection.uri", mongoDBCollectionInput) //Docker mongodb
       .getOrCreate()
 
@@ -41,6 +41,9 @@ object CreateModel {
     println("spark: " + spark.version)
     println("scala: " + util.Properties.versionString)
     println("java: " + System.getProperty("java.version"))
+
+    //Set Log Level
+    spark.sparkContext.setLogLevel("WARN")
 
     val df = spark.read.format("mongodb").load()
     df.printSchema()
@@ -94,6 +97,7 @@ object CreateModel {
     var decisionTreeRegressor = new DecisionTreeRegressor()
     var pipeline = new Pipeline()
     val currentModelName = "modelGaussian"
+    val pathModel = "D:/04 Model/Scala-IDX-Stock-Analysis/" + currentModelName
 
     if (currentModelName.equalsIgnoreCase("modelGaussian")){
       generalizedLinearRegression = new GeneralizedLinearRegression()
@@ -135,12 +139,11 @@ object CreateModel {
 
     // Save Model
     println("save model...")
-    model1.write.overwrite().save("/04 Model/Scala-IDX-Stock-Analysis/" + currentModelName)
+    model1.write.overwrite().save(pathModel)
 
     // And load it back in during production
     println("load model...")
-    val model2 = PipelineModel.load("/04 Model/Scala-IDX-Stock-Analysis/" + currentModelName)
-//    val model2 = PipelineModel.load("D:/00 Project/00 My Project/IdeaProjects/Scala-IDX-Stock-Analysis/" + currentModelName)
+    val model2 = PipelineModel.load(pathModel)
 
     // Make predictions.
     println("Testing Data Pipeline...")

@@ -10,25 +10,25 @@ lazy val root = (project in file("."))
 // If you're running from inside Intellij IDEA, and you've marked your spark library as "provided"
 // like so: "org.apache.spark" %% "spark-sql" % "3.0.1" % "provided",
 // Then you need edit your Run/Debug configuration and check the "Include dependencies with Provided scope" box.
-//NOTED!!! YOU NEED TO RUN ML PROCESS VIA spark-submit
-
+//NOTE!!! YOU NEED TO RUN ML PROCESS VIA spark-submit
+val SparkVersion = "3.4.1"
 // https://mvnrepository.com/artifact/org.apache.spark/spark-core
-libraryDependencies += "org.apache.spark" %% "spark-core" % "3.4.1"
+libraryDependencies += "org.apache.spark" %% "spark-core" % SparkVersion
 //libraryDependencies += "org.apache.spark" %% "spark-core" % "3.3.1"
 
-  // https://mvnrepository.com/artifact/org.apache.spark/spark-sql
-libraryDependencies += "org.apache.spark" %% "spark-sql" % "3.4.1" % "provided"
+// https://mvnrepository.com/artifact/org.apache.spark/spark-sql
+libraryDependencies += "org.apache.spark" %% "spark-sql" % SparkVersion % "provided"
 //libraryDependencies += "org.apache.spark" %% "spark-sql" % "3.3.1"
 
 // https://mvnrepository.com/artifact/org.apache.spark/spark-mllib
-libraryDependencies += "org.apache.spark" %% "spark-mllib" % "3.4.1" % "provided"
+libraryDependencies += "org.apache.spark" %% "spark-mllib" % SparkVersion % "provided"
 //libraryDependencies += "org.apache.spark" %% "spark-mllib" % "3.3.1"
 
-  // https://mvnrepository.com/artifact/org.mongodb.spark/mongo-spark-connector
+// https://mvnrepository.com/artifact/org.mongodb.spark/mongo-spark-connector
 libraryDependencies += "org.mongodb.spark" %% "mongo-spark-connector" % "10.2.0"
 
-// https://mvnrepository.com/artifact/org.mongodb/mongodb-driver-sync
-libraryDependencies += "org.mongodb" % "mongodb-driver-sync" % "4.10.1"
+//// https://mvnrepository.com/artifact/org.mongodb/mongodb-driver-sync
+//libraryDependencies += "org.mongodb" % "mongodb-driver-sync" % "4.10.1"
 
 val AkkaVersion = "2.7.0"
 val AkkaHttpVersion = "10.5.2"
@@ -54,4 +54,4 @@ libraryDependencies += "org.json4s" %% "json4s-scalap" % json4sVersion
 libraryDependencies += "ch.megard" %% "akka-http-cors" % "1.2.0"
 
 // https://mvnrepository.com/artifact/org.apache.spark/spark-sql-kafka-0-10
-libraryDependencies += "org.apache.spark" %% "spark-sql-kafka-0-10" % "3.4.1" % Test
+//libraryDependencies += "org.apache.spark" %% "spark-sql-kafka-0-10" % SparkVersion % Test
