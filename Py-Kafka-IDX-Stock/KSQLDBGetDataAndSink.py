@@ -1,7 +1,10 @@
 from ksqldb import KSQLdbClient
 from Config import ksqlConfig, mongoConfig
 from datetime import datetime
-import asyncio, pymongo, json
+import asyncio
+import json
+from motor.motor_asyncio import AsyncIOMotorClient
+from pymongo.server_api import ServerApi
 
 stockQueryID = ""
 companyQueryID = ""
@@ -49,13 +52,16 @@ async def queryAsyncStock():
             collectionName = 'ksql-stock-stream'
             query = {'id': row[0]}
             dateTime = datetime.today().strftime('%Y-%m-%d %H:%M:%S')
-            mongoResult = mongoDB[collectionName].find_one(query)
+            mongoResult = await mongoDB[collectionName].find_one(query)
+            # print(mongoResult)
             if mongoResult is not None:
-                updateResult = mongoDB[collectionName].replace_one(query, jsonObject)
-                print(dateTime+" Existing collection "+collectionName+" documentID " + str(row[0]) + " modified document count: " + str(updateResult.modified_count))
+                updateResult = await mongoDB[collectionName].replace_one(query, jsonObject)
+                print(dateTime + " Existing collection " + collectionName + " documentID " + str(
+                    row[0]) + " modified document count: " + str(updateResult.modified_count))
             else:
-                insertResult = mongoDB[collectionName].insert_one(jsonObject)
-                print(dateTime+" Inserted collection "+collectionName+" documentID " + str(row[0]) + " with the following mongoID: " + str(insertResult.inserted_id))
+                insertResult = await mongoDB[collectionName].insert_one(jsonObject)
+                print(dateTime + " Inserted collection " + collectionName + " documentID " + str(
+                    row[0]) + " with the following mongoID: " + str(insertResult.inserted_id))
 
 
 async def queryAsyncCompany():
@@ -78,13 +84,16 @@ async def queryAsyncCompany():
             collectionName = 'ksql-company-stream'
             query = {'id': row[0]}
             dateTime = datetime.today().strftime('%Y-%m-%d %H:%M:%S')
-            mongoResult = mongoDB[collectionName].find_one(query)
+            mongoResult = await mongoDB[collectionName].find_one(query)
+            # print(mongoResult)
             if mongoResult is not None:
-                updateResult = mongoDB[collectionName].replace_one(query, jsonObject)
-                print(dateTime+" Existing collection "+collectionName+" documentID " + str(row[0]) + " modified document count: " + str(updateResult.modified_count))
+                updateResult = await mongoDB[collectionName].replace_one(query, jsonObject)
+                print(dateTime + " Existing collection " + collectionName + " documentID " + str(
+                    row[0]) + " modified document count: " + str(updateResult.modified_count))
             else:
-                insertResult = mongoDB[collectionName].insert_one(jsonObject)
-                print(dateTime+" Inserted collection "+collectionName+" documentID " + str(row[0]) + " with the following mongoID: " + str(insertResult.inserted_id))
+                insertResult = await mongoDB[collectionName].insert_one(jsonObject)
+                print(dateTime + " Inserted collection " + collectionName + " documentID " + str(
+                    row[0]) + " with the following mongoID: " + str(insertResult.inserted_id))
 
 
 async def queryAsyncJoinStockCompany():
@@ -107,13 +116,16 @@ async def queryAsyncJoinStockCompany():
             collectionName = 'ksql-join-stock-company'
             query = {'id': row[0]}
             dateTime = datetime.today().strftime('%Y-%m-%d %H:%M:%S')
-            mongoResult = mongoDB[collectionName].find_one(query)
+            mongoResult = await mongoDB[collectionName].find_one(query)
+            # print(mongoResult)
             if mongoResult is not None:
-                updateResult = mongoDB[collectionName].replace_one(query, jsonObject)
-                print(dateTime+" Existing collection "+collectionName+" documentID " + str(row[0]) + " modified document count: " + str(updateResult.modified_count))
+                updateResult = await mongoDB[collectionName].replace_one(query, jsonObject)
+                print(dateTime + " Existing collection " + collectionName + " documentID " + str(
+                    row[0]) + " modified document count: " + str(updateResult.modified_count))
             else:
-                insertResult = mongoDB[collectionName].insert_one(jsonObject)
-                print(dateTime+" Inserted collection "+collectionName+" documentID " + str(row[0]) + " with the following mongoID: " + str(insertResult.inserted_id))
+                insertResult = await mongoDB[collectionName].insert_one(jsonObject)
+                print(dateTime + " Inserted collection " + collectionName + " documentID " + str(
+                    row[0]) + " with the following mongoID: " + str(insertResult.inserted_id))
 
 
 def shutDown():
@@ -126,9 +138,9 @@ def shutDown():
 
 
 if __name__ == '__main__':
-    mongoClient = pymongo.MongoClient(mongoConfig['url'])
-    mongoDB = mongoClient["kafka"]
     ksqlClient = KSQLdbClient(ksqlConfig['url'])
+    mongoClient = AsyncIOMotorClient(mongoConfig['url'], server_api=ServerApi('1'))
+    mongoDB = mongoClient["kafka"]  # Get Database Name
     loop = asyncio.get_event_loop()
     try:
         loop.create_task(queryAsyncStock())

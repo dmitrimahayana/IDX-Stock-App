@@ -4,3 +4,6 @@ fastavro
 ksqldb
 pymongo
 motor
+pandas
+pyarrow
+pyspark == 3.4.1
