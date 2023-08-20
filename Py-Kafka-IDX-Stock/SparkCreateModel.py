@@ -3,7 +3,7 @@ from pyspark.ml.evaluation import RegressionEvaluator
 from pyspark.ml.feature import StringIndexer, OneHotEncoder, VectorAssembler, StandardScaler
 from pyspark.ml.regression import GeneralizedLinearRegression
 from pyspark.sql import SparkSession
-from Config import sparkMasterConfig
+from Config import sparkMasterConfig, mongoConfig
 
 sparkMaster = sparkMasterConfig['url']
 sparkAppName = 'Py-IDX-Stock-CreateModel'
@@ -11,8 +11,8 @@ spark = SparkSession \
     .builder \
     .master(sparkMaster) \
     .appName(sparkAppName) \
-    .config('spark.mongodb.read.connection.uri', 'mongodb://127.0.0.1/kafka.ksql-stock-stream') \
-    .config('spark.mongodb.write.connection.uri', 'mongodb://127.0.0.1/kafka.ksql-predict-stock') \
+    .config('spark.mongodb.read.connection.uri', mongoConfig['url']+'/kafka.ksql-stock-stream') \
+    .config('spark.mongodb.write.connection.uri', mongoConfig['url']+'/kafka.ksql-predict-stock') \
     .getOrCreate()
 
 # Set Log Level
@@ -26,6 +26,7 @@ newDf = df.select("id", "ticker", "date", "open", "high", "low", "close", "volum
 newDf.printSchema()
 print("Original Total Row: ", newDf.count())
 
+# Filter data by date
 filterDf = newDf.filter("date like '%2022%' OR date like '%2023%'")
 print("Filtered Total Row: ", filterDf.count())
 
