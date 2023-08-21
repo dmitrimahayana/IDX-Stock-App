@@ -22,13 +22,8 @@ import scala.concurrent.{ExecutionContext, Future}
 import scala.io.StdIn
 
 object APIJSONPredictData {
-  //Define Config File
-  val conf: Config = ConfigFactory.load("Config/app.conf")
-  val sparkMaster = conf.getString("sparkMaster")
-  val mongoDBURL = conf.getString("mongoDBURL")
-
   // needed to run the route
-  implicit val system: ActorSystem[_] = ActorSystem(Behaviors.empty, "Scala IDX Stock API")
+  implicit val system: ActorSystem[_] = ActorSystem(Behaviors.empty, "Scala-IDX-Stock-API")
   // needed for the future map/flatmap in the end and future in fetchItem and saveOrder
   implicit val executionContext: ExecutionContext = system.executionContext
 
@@ -36,66 +31,31 @@ object APIJSONPredictData {
 
   // domain model
   final case class Ticker(id: String, ticker: String)
-  final case class Stock(id: String, date: String, ticker: String, open: Double, volume: Long, close: Double)
-  final case class LastStock(id: String, date: String, ticker: String, open: Double, volume: Long, close: Double, changeval: String, changepercent: String, status: String, name: String, logo: String)
-  final case class StockReqPrediction(date: String, ticker: String, open: Double, volume: Long)
+
+  final case class Stock(id: String, date: String, ticker: String, open: Double, high: Double, low: Double, close: Double, volume: Long)
+
+  final case class LastStock(id: String, date: String, ticker: String, open: Double, high: Double, low: Double, close: Double, volume: Long, changeval: String, changepercent: String, status: String, name: String, logo: String)
+
+  final case class StockReqPrediction(date: String, ticker: String, open: Double, high: Double, low: Double, volume: Long)
+
   final case class ListStockReqPrediction(listStock: List[StockReqPrediction])
 
   // formats for unmarshalling and marshalling
   implicit val itemFormat1: RootJsonFormat[Ticker] = jsonFormat2(Ticker.apply)
-  implicit val itemFormat2: RootJsonFormat[Stock] = jsonFormat6(Stock.apply)
-  implicit val itemFormat3: RootJsonFormat[LastStock] = jsonFormat11(LastStock.apply)
-  implicit val itemFormat4: RootJsonFormat[StockReqPrediction] = jsonFormat4(StockReqPrediction.apply)
+  implicit val itemFormat2: RootJsonFormat[Stock] = jsonFormat8(Stock.apply)
+  implicit val itemFormat3: RootJsonFormat[LastStock] = jsonFormat13(LastStock.apply)
+  implicit val itemFormat4: RootJsonFormat[StockReqPrediction] = jsonFormat6(StockReqPrediction.apply)
   implicit val orderFormat2: RootJsonFormat[ListStockReqPrediction] = jsonFormat1(ListStockReqPrediction.apply)
+
+  //Define Config File
+  val conf: Config = ConfigFactory.load("Config/app.conf")
+  val sparkMaster = conf.getString("sparkMaster")
+  val mongoDBURL = conf.getString("mongoDBURL")
 
   //Spark instance and stock dataframes
   val sparkConn = openSpark()
-  val MongoStocksDF = sparkConn.MongoDBGetAllStock(mongoDBURL+"kafka.stock-stream");
-  val MongoCompanyInfoDF = sparkConn.MongoDBGetCompanyInfo(mongoDBURL+"kafka.stock-stream");
-
-  // Return into JSON format
-  def GetStockJSON(dataframe: sql.DataFrame): List[Stock] = {
-    import org.json4s._
-    import org.json4s.native.JsonMethods._
-    implicit val formats = DefaultFormats
-    var listObj: List[Stock] = Nil
-    val jsonStringArray = dataframe.toJSON.collect()
-    for (row <- jsonStringArray) {
-      val result = parse(row).extract[Stock]
-//      println(result)
-      listObj = listObj :+ result
-    }
-    listObj
-  }
-
-  // Return into JSON format
-  def GetLastStockJSON(dataframe: sql.DataFrame): List[LastStock] = {
-    import org.json4s._
-    import org.json4s.native.JsonMethods._
-    implicit val formats = DefaultFormats
-    var listObj: List[LastStock] = Nil
-    val jsonStringArray = dataframe.toJSON.collect()
-    for (row <- jsonStringArray) {
-      val result = parse(row).extract[LastStock]
-//      println(result)
-      listObj = listObj :+ result
-    }
-    listObj
-  }
-
-  def GetTickerJSON(dataframe: sql.DataFrame): List[Ticker] = {
-    import org.json4s._
-    import org.json4s.native.JsonMethods._
-    implicit val formats = DefaultFormats
-    var listObj: List[Ticker] = Nil
-    val jsonStringArray = dataframe.toJSON.collect()
-    for (row <- jsonStringArray) {
-      val result = parse(row).extract[Ticker]
-//      println(result)
-      listObj = listObj :+ result
-    }
-    listObj
-  }
+  val MongoStocksDF = sparkConn.MongoDBGetAllStock(mongoDBURL + "kafka.ksql-stock-stream");
+  val MongoCompanyInfoDF = sparkConn.MongoDBGetCompanyInfo(mongoDBURL + "kafka.ksql-company-stream");
 
   def openSpark(): SparkConnection = {
     // Create Spark Session
@@ -103,6 +63,8 @@ object APIJSONPredictData {
     val sparkConn = new SparkConnection(sparkMaster, sparkAppName)
     sparkConn.CreateSparkSession()
     val spark = sparkConn.spark.getOrCreate()
+    //Set Log Level
+    sparkConn.spark.getOrCreate().sparkContext.setLogLevel("INFO")
     println("Spark Version: " + spark.version)
 
     sparkConn
@@ -112,7 +74,7 @@ object APIJSONPredictData {
   def findTickerHistory(ticker: String): Future[List[Stock]] = Future {
     var histTicker = MongoStocksDF.filter("ticker == '" + ticker + "'")
     histTicker = histTicker.withColumn("id", functions.concat(col("ticker"), lit("-"), col("date")))
-    histTicker = histTicker.select("id","date", "ticker", "open", "volume", "close")
+    histTicker = histTicker.select("id", "date", "ticker", "open", "high", "low", "close", "volume")
 
     GetStockJSON(histTicker)
   }
@@ -162,7 +124,7 @@ object APIJSONPredictData {
     companyInfo = companyInfo.select("ticker3", "name", "logo")
     //Inner join between joinTable1 and companyInfo dataframe
     var joinTable2 = joinTable1.join(companyInfo, joinTable1("ticker") === companyInfo("ticker3"), "inner")
-    joinTable2 = joinTable2.select("id", "date", "ticker", "open", "volume", "close", "change", "changeval", "changepercent", "status", "name", "logo" )
+    joinTable2 = joinTable2.select("id", "date", "ticker", "open", "high", "low", "close", "volume", "change", "changeval", "changepercent", "status", "name", "logo")
 
     GetLastStockJSON(joinTable2)
   }
@@ -178,12 +140,12 @@ object APIJSONPredictData {
   def predictStock(order: ListStockReqPrediction): Future[Done] = {
     val spark = sparkConn.spark.getOrCreate()
     var df = spark.createDataFrame(order.listStock)
-    df = df.select("date", "ticker", "open", "volume")
+    df = df.select("date", "ticker", "open", "high", "low", "volume")
     println(df.printSchema)
 
     // And load it back in during production
     println("load model...")
-    val model2 = PipelineModel.load("D:/00 Project/00 My Project/IdeaProjects/Scala-IDX-Stock-Analysis/modelGaussian")
+    val model2 = PipelineModel.load(conf.getString("pathModel") + "modelGaussian")
 
     // Make predictions.
     println("Testing Data Pipeline...")
@@ -192,13 +154,60 @@ object APIJSONPredictData {
     // Select example rows to display.
     predictions = predictions.withColumn("close", col("prediction"))
     predictions = predictions.withColumn("id", functions.concat(col("ticker"), lit("-"), col("date")))
-    predictions.select("id","date", "ticker", "open", "volume", "prediction", "close").show(20)
+    predictions.select("id", "date", "ticker", "open", "high", "low", "close", "volume").show(20)
 
     // Return JSON
-    val listObj = GetStockJSON(predictions.select("id","date", "ticker", "open", "volume", "close"))
+    val listObj = GetStockJSON(predictions.select("id", "date", "ticker", "open", "high", "low", "close", "volume"))
 
     listStockObj = listObj
-    Future {Done}
+    Future {
+      Done
+    }
+  }
+
+  // Return into JSON format
+  def GetStockJSON(dataframe: sql.DataFrame): List[Stock] = {
+    import org.json4s._
+    import org.json4s.native.JsonMethods._
+    implicit val formats = DefaultFormats
+    var listObj: List[Stock] = Nil
+    val jsonStringArray = dataframe.toJSON.collect()
+    for (row <- jsonStringArray) {
+      val result = parse(row).extract[Stock]
+      //      println(result)
+      listObj = listObj :+ result
+    }
+    listObj
+  }
+
+  // Return into JSON format
+  def GetLastStockJSON(dataframe: sql.DataFrame): List[LastStock] = {
+    import org.json4s._
+    import org.json4s.native.JsonMethods._
+    implicit val formats = DefaultFormats
+    var listObj: List[LastStock] = Nil
+    val jsonStringArray = dataframe.toJSON.collect()
+    for (row <- jsonStringArray) {
+      val result = parse(row).extract[LastStock]
+      //      println(result)
+      listObj = listObj :+ result
+    }
+    listObj
+  }
+
+  // Return into JSON format
+  def GetTickerJSON(dataframe: sql.DataFrame): List[Ticker] = {
+    import org.json4s._
+    import org.json4s.native.JsonMethods._
+    implicit val formats = DefaultFormats
+    var listObj: List[Ticker] = Nil
+    val jsonStringArray = dataframe.toJSON.collect()
+    for (row <- jsonStringArray) {
+      val result = parse(row).extract[Ticker]
+      //      println(result)
+      listObj = listObj :+ result
+    }
+    listObj
   }
 
   def findAllPrediction(): Future[List[Stock]] = Future {

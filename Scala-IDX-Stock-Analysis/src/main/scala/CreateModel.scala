@@ -91,7 +91,7 @@ object CreateModel {
     var decisionTreeRegressor = new DecisionTreeRegressor()
     var pipeline = new Pipeline()
     val currentModelName = "modelGaussian"
-    val pathModel = "D:/04 Model/Scala-IDX-Stock-Analysis/" + currentModelName
+    val pathModel = conf.getString("pathModel") + currentModelName
 
     if (currentModelName.equalsIgnoreCase("modelGaussian")){
       generalizedLinearRegression = new GeneralizedLinearRegression()

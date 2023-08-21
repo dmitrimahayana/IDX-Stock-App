@@ -14,18 +14,18 @@ class SparkConnection(var ConnString: String, var AppName: String){
       .builder()
       .appName(AppName)
       .master(ConnString)
-      .config("spark.executor.instances", "2")
-      .config("spark.executor.memory", "6g")
-      .config("spark.executor.cores", "3")
-      .config("spark.driver.memory", "6g")
-      .config("spark.driver.cores", "3")
-      .config("spark.cores.max", "6")
-      .config("spark.sql.files.maxPartitionBytes", "12345678")
-      .config("spark.sql.files.openCostInBytes", "12345678")
-      .config("spark.sql.broadcastTimeout", "1000")
-      .config("spark.sql.autoBroadcastJoinThreshold", "100485760")
-      .config("spark.sql.shuffle.partitions", "1000")
-      .config("spark.serializer", "org.apache.spark.serializer.KryoSerializer")
+//      .config("spark.executor.instances", "2")
+//      .config("spark.executor.memory", "6g")
+//      .config("spark.executor.cores", "3")
+//      .config("spark.driver.memory", "6g")
+//      .config("spark.driver.cores", "3")
+//      .config("spark.cores.max", "6")
+//      .config("spark.sql.files.maxPartitionBytes", "12345678")
+//      .config("spark.sql.files.openCostInBytes", "12345678")
+//      .config("spark.sql.broadcastTimeout", "1000")
+//      .config("spark.sql.autoBroadcastJoinThreshold", "100485760")
+//      .config("spark.sql.shuffle.partitions", "1000")
+//      .config("spark.serializer", "org.apache.spark.serializer.KryoSerializer")
 
     this.spark = localSpark
   }
@@ -34,15 +34,12 @@ class SparkConnection(var ConnString: String, var AppName: String){
     val df = spark.getOrCreate()
       .read
       .format("mongodb")
-      .option("database", "kafka")
-      .option("collection", "stock-stream")
       .option("spark.mongodb.input.partitioner", "MongoSinglePartitioner")
       .option("connection.uri", ConnString)
       .load()
     println("Old Stock Schema:")
     df.printSchema()
 
-//    var newDf = df.select("date", "ticker", "open", "volume", "close")
     var newDf = df
       .withColumn("date", col("date").cast(StringType))
       .withColumn("ticker", col("ticker").cast(StringType))
@@ -53,7 +50,7 @@ class SparkConnection(var ConnString: String, var AppName: String){
     newDf = newDf.withColumn("rank", dense_rank().over(Window.partitionBy("ticker").orderBy(desc("date"))))
     println("New Stock Schema:")
     newDf.printSchema()
-    println("Original Total Row: " + newDf.count())
+    println("Original Stock Row: " + newDf.count())
 
     newDf
   }
@@ -62,8 +59,6 @@ class SparkConnection(var ConnString: String, var AppName: String){
     val df = spark.getOrCreate()
       .read
       .format("mongodb")
-      .option("database", "kafka")
-      .option("collection", "company-stream")
       .option("spark.mongodb.input.partitioner", "MongoSinglePartitioner")
       .option("connection.uri", ConnString)
       .load()

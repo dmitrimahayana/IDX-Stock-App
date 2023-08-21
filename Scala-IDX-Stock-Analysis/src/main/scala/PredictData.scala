@@ -70,7 +70,7 @@ object PredictData {
     // And load it back in during production
     println("load model...")
     val currentModelName = "modelGaussian"
-    val pathModel = "D:/04 Model/Scala-IDX-Stock-Analysis/" + currentModelName
+    val pathModel = conf.getString("pathModel") + currentModelName
     val model2 = PipelineModel.load(pathModel)
     //        val model2 = PipelineModel.load("D:/00 Project/00 My Project/IdeaProjects/Scala-IDX-Stock-Analysis/modelGaussian")
 
