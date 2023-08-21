@@ -3,24 +3,23 @@ import org.apache.spark.ml.evaluation.RegressionEvaluator
 import org.apache.spark.sql.{SparkSession, functions}
 import org.apache.spark.sql.functions.{col, lit}
 import org.apache.spark.sql.types.{DoubleType, IntegerType, LongType, StringType}
+import com.typesafe.config.{Config, ConfigFactory}
 
 import java.text.SimpleDateFormat
 import java.util.Calendar
 
 object PredictData {
   def main(args: Array[String]): Unit = {
-    val sparkMaster = "spark://192.168.1.7:7077"
-    //    val sparkMaster = "spark://localhost:7077"
-    //    val sparkMaster = "local[*]"
     val appName = "Scala IDX Stock Prediction"
-    val localHostname = java.net.InetAddress.getLocalHost.getHostName
-    val mongoDBURL = "mongodb://localhost:27017/"
+    val conf: Config = ConfigFactory.load("Config/app.conf")
+    val sparkMaster = conf.getString("sparkMaster")
+    val mongoDBURL = conf.getString("mongoDBURL")
     val mongoDBCollectionInput = mongoDBURL + "kafka.ksql-stock-stream"
     val mongoDBCollectionOutput = mongoDBURL + "kafka.ksql-predict-stock"
     val spark = SparkSession.builder()
       .appName(appName)
-      .master(sparkMaster)
-      .config("spark.jars.packages", "org.mongodb.spark:mongo-spark-connector_2.12:10.2.0")
+//      .master(sparkMaster) //No need Master when running using Intellij Configuration Spark Local
+//      .config("spark.jars.packages", "org.mongodb.spark:mongo-spark-connector_2.12:10.2.0")
 //      .config("spark.executor.instances", "2")
 //      .config("spark.executor.memory", "6g")
 //      .config("spark.executor.cores", "3")
@@ -39,7 +38,6 @@ object PredictData {
     //Set Log Level
     spark.sparkContext.setLogLevel("WARN")
 
-    println("Hostname: " + localHostname)
     println("MongoDB URL: " + mongoDBURL)
     println("spark: " + spark.version)
     println("scala: " + util.Properties.versionString)
@@ -103,5 +101,7 @@ object PredictData {
     // Write to MongoDB with overwrite/append mode and MUST RUN THIS USING SPARK SUBMIT
     println("Updating MongoDB...")
     resultDf.write.format("mongodb").mode("overwrite").save() //MUST RUN THIS USING SPARK SUBMIT
+
+    println("Done...")
   }
 }

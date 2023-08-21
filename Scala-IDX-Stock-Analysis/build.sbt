@@ -27,8 +27,7 @@ libraryDependencies += "org.apache.spark" %% "spark-mllib" % SparkVersion % "pro
 // https://mvnrepository.com/artifact/org.mongodb.spark/mongo-spark-connector
 libraryDependencies += "org.mongodb.spark" %% "mongo-spark-connector" % "10.2.0"
 
-//// https://mvnrepository.com/artifact/org.mongodb/mongodb-driver-sync
-//libraryDependencies += "org.mongodb" % "mongodb-driver-sync" % "4.10.1"
+libraryDependencies += "com.typesafe" % "config" % "1.4.2"
 
 val AkkaVersion = "2.7.0"
 val AkkaHttpVersion = "10.5.2"

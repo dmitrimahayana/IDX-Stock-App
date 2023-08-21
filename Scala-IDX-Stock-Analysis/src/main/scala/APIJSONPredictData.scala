@@ -8,6 +8,7 @@ import akka.http.scaladsl.model.StatusCodes
 import akka.http.scaladsl.server.Directives._
 import akka.http.scaladsl.server.Route
 import ch.megard.akka.http.cors.scaladsl.CorsDirectives._
+import com.typesafe.config.{Config, ConfigFactory}
 import org.apache.spark.ml.PipelineModel
 import org.apache.spark.sql
 import org.apache.spark.sql.expressions.Window
@@ -21,6 +22,11 @@ import scala.concurrent.{ExecutionContext, Future}
 import scala.io.StdIn
 
 object APIJSONPredictData {
+  //Define Config File
+  val conf: Config = ConfigFactory.load("Config/app.conf")
+  val sparkMaster = conf.getString("sparkMaster")
+  val mongoDBURL = conf.getString("mongoDBURL")
+
   // needed to run the route
   implicit val system: ActorSystem[_] = ActorSystem(Behaviors.empty, "Scala IDX Stock API")
   // needed for the future map/flatmap in the end and future in fetchItem and saveOrder
@@ -44,8 +50,8 @@ object APIJSONPredictData {
 
   //Spark instance and stock dataframes
   val sparkConn = openSpark()
-  val MongoStocksDF = sparkConn.MongoDBGetAllStock("mongodb://localhost:27017/kafka.stock-stream");
-  val MongoCompanyInfoDF = sparkConn.MongoDBGetCompanyInfo("mongodb://localhost:27017/kafka.stock-stream");
+  val MongoStocksDF = sparkConn.MongoDBGetAllStock(mongoDBURL+"kafka.stock-stream");
+  val MongoCompanyInfoDF = sparkConn.MongoDBGetCompanyInfo(mongoDBURL+"kafka.stock-stream");
 
   // Return into JSON format
   def GetStockJSON(dataframe: sql.DataFrame): List[Stock] = {
@@ -93,7 +99,6 @@ object APIJSONPredictData {
 
   def openSpark(): SparkConnection = {
     // Create Spark Session
-    val sparkMaster = "spark://172.20.224.1:7077"
     val sparkAppName = "Scala IDX Stock API"
     val sparkConn = new SparkConnection(sparkMaster, sparkAppName)
     sparkConn.CreateSparkSession()

@@ -1,3 +1,4 @@
+import com.typesafe.config.{Config, ConfigFactory}
 import org.apache.spark.ml.evaluation.RegressionEvaluator
 import org.apache.spark.ml.feature.{OneHotEncoder, StandardScaler, StringIndexer, VectorAssembler}
 import org.apache.spark.ml.regression.{DecisionTreeRegressor, GeneralizedLinearRegression, LinearRegression}
@@ -8,21 +9,14 @@ import org.apache.spark.sql.types.{DoubleType, LongType, StringType}
 
 object CreateModel {
   def main(args: Array[String]): Unit = {
-    val sparkMaster = "spark://192.168.1.7:7077"
-//    val sparkMaster = "spark://localhost:7077"
-//    val sparkMaster = "local[*]"
     val appName = "Scala IDX Stock Create Model"
-    val localHostname = java.net.InetAddress.getLocalHost.getHostName
-    var mongoDBURL = ""
-    if(localHostname.equalsIgnoreCase("dmitri")){
-      mongoDBURL = "mongodb://localhost:27017/";
-    } else {
-      mongoDBURL = "mongodb://mongodb-server:27017/";
-    }
+    val conf: Config = ConfigFactory.load("Config/app.conf")
+    val sparkMaster = conf.getString("sparkMaster")
+    val mongoDBURL = conf.getString("mongoDBURL")
     val mongoDBCollectionInput = mongoDBURL+"kafka.ksql-stock-stream"
     val spark = SparkSession.builder()
       .appName(appName)
-      .master(sparkMaster)
+//      .master(sparkMaster) //No need Master when running using Intellij Configuration Spark Local
 //      .config("spark.executor.instances", "2")
 //      .config("spark.executor.memory", "6g")
 //      .config("spark.executor.cores", "3")
@@ -37,7 +31,7 @@ object CreateModel {
       .config("spark.mongodb.read.connection.uri", mongoDBCollectionInput) //Docker mongodb
       .getOrCreate()
 
-    println("Hostname: " + localHostname + " MongoDB URL: " + mongoDBURL)
+    println("MongoDB URL: " + mongoDBURL)
     println("spark: " + spark.version)
     println("scala: " + util.Properties.versionString)
     println("java: " + System.getProperty("java.version"))
@@ -161,5 +155,6 @@ object CreateModel {
     val rmse = evaluator.evaluate(predictions)
     println(s"Root Mean Squared Error (RMSE) on test data = $rmse")
 
+    println("Done...")
   }
 }
