@@ -8,8 +8,8 @@ import org.flink.ml.connection.RemoteServer;
 
 public class StreamGetKSQLData {
     public static void main(String[] args) throws Exception {
-        String topic1 = "KSQLGROUPSTOCK"; //KSQLDB Table
-        String topic2 = "KSQLGROUPCOMPANY"; //KSQLDB Table
+        String topic1 = "KSQLTABLEGROUPSTOCK"; //KSQLDB Table
+        String topic2 = "KSQLTABLEGROUPCOMPANY"; //KSQLDB Table
         String group = "flink-group-idx-stock-consumer";
         String jarsPath = "D:/00 Project/00 My Project/Jars/Java-Flink-IDX-Stock-Analysis/";
 
@@ -74,7 +74,7 @@ public class StreamGetKSQLData {
 
         for (CloseableIterator<Row> it = resultTable.execute().collect(); it.hasNext(); ) {
             Row row = it.next();
-            System.out.println("DMITRICS Value: " + row.getField("EVENT_TIME") + " --- " + row.getField("STOCKID") + " --- " + row.getField("CLOSE") + " --- " + row.getField("NAME"));
+            System.out.println("Flink KSQL Value: " + row.getField("EVENT_TIME") + " --- " + row.getField("STOCKID") + " --- " + row.getField("CLOSE") + " --- " + row.getField("NAME"));
         }
 
         // Execute the Flink job

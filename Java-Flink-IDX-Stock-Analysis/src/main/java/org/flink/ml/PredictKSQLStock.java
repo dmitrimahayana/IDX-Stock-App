@@ -8,12 +8,15 @@ import org.apache.flink.ml.feature.onehotencoder.OneHotEncoder;
 import org.apache.flink.ml.feature.onehotencoder.OneHotEncoderModel;
 import org.apache.flink.ml.feature.standardscaler.StandardScaler;
 import org.apache.flink.ml.feature.standardscaler.StandardScalerModel;
+import org.apache.flink.ml.feature.univariatefeatureselector.UnivariateFeatureSelector;
+import org.apache.flink.ml.feature.univariatefeatureselector.UnivariateFeatureSelectorModel;
 import org.apache.flink.ml.feature.vectorassembler.VectorAssembler;
 import org.apache.flink.ml.linalg.DenseVector;
 import org.apache.flink.ml.linalg.SparseVector;
 import org.apache.flink.ml.linalg.Vector;
 import org.apache.flink.ml.regression.linearregression.LinearRegression;
 import org.apache.flink.ml.regression.linearregression.LinearRegressionModel;
+import org.apache.flink.ml.stats.chisqtest.ChiSqTest;
 import org.apache.flink.streaming.api.datastream.DataStream;
 import org.apache.flink.streaming.api.datastream.DataStreamSource;
 import org.apache.flink.streaming.connectors.kafka.FlinkKafkaConsumer;
@@ -36,7 +39,7 @@ import static org.apache.flink.table.api.Expressions.$;
 
 public class PredictKSQLStock {
     public static void main(String[] args) throws Exception {
-        String topic1 = "KSQLGROUPSTOCK"; //KSQLDB Table
+        String topic1 = "KSQLTABLEGROUPSTOCK"; //KSQLDB Table
         String group = "flink-group-idx-stock-consumer";
         String jarsPath = "D:/00 Project/00 My Project/Jars/Java-Flink-IDX-Stock-Analysis/";
 
@@ -166,11 +169,11 @@ public class PredictKSQLStock {
         // Creates a VectorAssembler object and initializes its parameters.
         VectorAssembler vectorAssembler =
                 new VectorAssembler()
-//                        .setInputCols("tickerOneHot", "dateOneHot", "open", "high", "low")
-                        .setInputCols("tickerOneHot", "dateOneHot", "open")
-                        .setOutputCol("vectorAssembly")
-//                        .setInputSizes(tickerSize, dateSize, 1, 1, 1);
-                        .setInputSizes(tickerSize, dateSize, 1);
+                        .setInputCols("tickerOneHot", "dateOneHot", "open", "high", "low")
+//                        .setInputCols("tickerOneHot", "dateOneHot", "open")
+                        .setInputSizes(tickerSize, dateSize, 1, 1, 1)
+//                        .setInputSizes(tickerSize, dateSize, 1)
+                        .setOutputCol("vectorAssembly");
 
         // Uses the VectorAssembler object for feature transformations.
         Table vectorTable = vectorAssembler.transform(oneHotTable)[0];
@@ -198,10 +201,10 @@ public class PredictKSQLStock {
                 .setOutputCol("scaledFeatures");
 
         // Trains the StandardScaler Model.
-        StandardScalerModel model = scaleModel.fit(vectorTable);
+        StandardScalerModel scalerModel = scaleModel.fit(vectorTable);
 
         // Uses the StandardScaler Model for predictions.
-        Table scaleTable = model.transform(vectorTable)[0];
+        Table scaleTable = scalerModel.transform(vectorTable)[0];
         scaleTable.printSchema();
 
 //        // Extracts and displays the results.
@@ -212,10 +215,44 @@ public class PredictKSQLStock {
 //            System.out.printf("Input Value: %s\tOutput Value: %s\n", inputValue, outputValue);
 //        }
 
-        Table trainTable = scaleTable.select($("scaledFeatures").as("features"), $("close").as("label"));
+//        Table outputTable = scaleTable.select($("scaledFeatures").as("features"), $("close").as("label"));
+
+        // Creates a UnivariateFeatureSelector object and initializes its parameters.
+        UnivariateFeatureSelector univariateFeatureSelector =
+                new UnivariateFeatureSelector()
+                        .setFeaturesCol("scaledFeatures")
+                        .setLabelCol("close")
+                        .setOutputCol("newFeatures")
+                        .setFeatureType("continuous")
+                        .setLabelType("continuous")
+                        .setSelectionMode("numTopFeatures")
+                        .setSelectionThreshold(1);
+
+        // Trains the UnivariateFeatureSelector model.
+        UnivariateFeatureSelectorModel featureSelectorModel = univariateFeatureSelector.fit(scaleTable);
+
+        // Uses the UnivariateFeatureSelector model for predictions.
+        Table featureSelectorTable = featureSelectorModel.transform(scaleTable)[0];
+        featureSelectorTable.printSchema();
+
+//        // Extracts and displays the results.
+//        for (CloseableIterator<Row> it = featureSelectorTable.execute().collect(); it.hasNext(); ) {
+//            Row row = it.next();
+//            Vector inputValue =
+//                    (Vector) row.getField(univariateFeatureSelector.getFeaturesCol());
+//            Vector outputValue =
+//                    (Vector) row.getField(univariateFeatureSelector.getOutputCol());
+//            System.out.printf("Input Value: %s\tOutput Value: %s\n", inputValue, outputValue);
+//        }
+
+//        // Creates a RandomSplitter object and initializes its parameters.
+//        RandomSplitter splitter = new RandomSplitter().setWeights(4.0, 6.0);
+//
+//        // Uses the RandomSplitter to split inputData.
+//        Table[] outputTables = splitter.transform(inputTable);
 
 //        //Show Features and Label
-//        for (CloseableIterator<Row> it = trainTable.execute().collect(); it.hasNext(); ) {
+//        for (CloseableIterator<Row> it = outputTable.execute().collect(); it.hasNext(); ) {
 //            Row row = it.next();
 //            Vector features = (Vector) row.getField("features");
 //            Double label = (Double) row.getField("label");
@@ -224,25 +261,28 @@ public class PredictKSQLStock {
 
         // Creates a LinearRegression object and initializes its parameters.
         LinearRegression lr = new LinearRegression()
+                .setFeaturesCol("newFeatures")
+                .setLabelCol("close")
                 .setReg(0.3)
                 .setElasticNet(0.8);
 
         // Trains the LinearRegression Model.
-        LinearRegressionModel lrModel = lr.fit(trainTable);
+        LinearRegressionModel lrModel = lr.fit(featureSelectorTable);
 
         // Uses the LinearRegression Model for predictions.
-        Table predictTable = lrModel.transform(trainTable)[0];
+        Table predictTable = lrModel.transform(featureSelectorTable)[0];
         predictTable.printSchema();
 
         //Print FeatureHasher Result
         for (CloseableIterator<Row> it = predictTable.execute().collect(); it.hasNext(); ) {
             Row row = it.next();
             Vector features = (Vector) row.getField(lr.getFeaturesCol());
+            String id = (String) row.getField("ticker") + "_" + (String) row.getField("date");
             double expectedResult = (Double) row.getField(lr.getLabelCol());
             double predictionResult = (Double) row.getField(lr.getPredictionCol());
             System.out.printf(
-                    "Expected Result: %s \tPrediction Result: %s\n",
-                    expectedResult, predictionResult);
+                    "ID: %s Expected Result: %s \tPrediction Result: %s\n",
+                    id, expectedResult, predictionResult);
         }
 
         // Execute the Flink job
