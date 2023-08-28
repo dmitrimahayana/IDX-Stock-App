@@ -9,14 +9,13 @@ services:
       - ./scripts/create_cluster_id.sh:/tmp/create_cluster_id.sh
       - ./clusterID:/tmp/clusterID
     command: "bash -c '/tmp/create_cluster_id.sh'"
-#    restart: always
 
   kafka1:
     image: confluentinc/cp-kafka:7.3.3
-    hostname: kafka1
     container_name: kafka1
     ports:
       - "39092:39092"
+      - "49092:49092"
     environment:
       KAFKA_NODE_ID: 1
       KAFKA_LISTENERS: BROKER://kafka1:19092,EXTERNAL://kafka1:39092,CONTROLLER://kafka1:9093
@@ -28,13 +27,19 @@ services:
       KAFKA_GROUP_INITIAL_REBALANCE_DELAY_MS: 0
       KAFKA_LISTENER_SECURITY_PROTOCOL_MAP: CONTROLLER:PLAINTEXT,BROKER:PLAINTEXT,EXTERNAL:PLAINTEXT
       KAFKA_PROCESS_ROLES: 'controller,broker'
+      TOPIC_AUTO_CREATE: 'false'
+      # 2 Days of Retention
+      KAFKA_LOG_RETENTION_HOURS: 48
       # For testing small segments 16MB and retention of 128MB
       KAFKA_LOG_SEGMENT_BYTES: 16777216
       KAFKA_LOG_RETENTION_BYTES: 134217728
-      KAFKA_LOG_RETENTION_HOURS: 48   # Set the desired retention hours
-#      KAFKA_METADATA_LOG_SEGMENT_MS: 15000
-#      KAFKA_METADATA_MAX_RETENTION_MS: 1200000
-#      KAFKA_METADATA_LOG_MAX_RECORD_BYTES_BETWEEN_SNAPSHOTS: 2800
+      KAFKA_JMX_PORT: 49092
+      KAFKA_JMX_HOSTNAME: localhost
+      KAFKA_JMX_OPTS: >
+        -Djava.rmi.server.hostname=127.0.0.1
+        -Dcom.sun.management.jmxremote=true
+        -Dcom.sun.management.jmxremote.authenticate=false 
+        -Dcom.sun.management.jmxremote.ssl=false
     volumes:
       - kafka1-data:/var/lib/kafka/data
       - ./scripts/update_run.sh:/tmp/update_run.sh
@@ -44,10 +49,10 @@ services:
 
   kafka2:
     image: confluentinc/cp-kafka:7.3.3
-    hostname: kafka2
     container_name: kafka2
     ports:
       - "39093:39093"
+      - "49093:49093"
     environment:
       KAFKA_NODE_ID: 2
       KAFKA_LISTENERS: BROKER://kafka2:19093,EXTERNAL://kafka2:39093,CONTROLLER://kafka2:9093
@@ -59,13 +64,19 @@ services:
       KAFKA_LISTENER_SECURITY_PROTOCOL_MAP: CONTROLLER:PLAINTEXT,BROKER:PLAINTEXT,EXTERNAL:PLAINTEXT
       KAFKA_GROUP_INITIAL_REBALANCE_DELAY_MS: 0
       KAFKA_PROCESS_ROLES: 'controller,broker'
+      TOPIC_AUTO_CREATE: 'false'
+      # 2 Days of Retention
+      KAFKA_LOG_RETENTION_HOURS: 48
       # For testing small segments 16MB and retention of 128MB
       KAFKA_LOG_SEGMENT_BYTES: 16777216
       KAFKA_LOG_RETENTION_BYTES: 134217728
-      KAFKA_LOG_RETENTION_HOURS: 48   # Set the desired retention hours
-#      KAFKA_METADATA_LOG_SEGMENT_MS: 15000
-#      KAFKA_METADATA_MAX_RETENTION_MS: 1200000
-#      KAFKA_METADATA_LOG_MAX_RECORD_BYTES_BETWEEN_SNAPSHOTS: 2800
+      KAFKA_JMX_PORT: 49093
+      KAFKA_JMX_HOSTNAME: localhost
+      KAFKA_JMX_OPTS: >
+        -Djava.rmi.server.hostname=127.0.0.1
+        -Dcom.sun.management.jmxremote=true
+        -Dcom.sun.management.jmxremote.authenticate=false 
+        -Dcom.sun.management.jmxremote.ssl=false
     volumes:
       - kafka2-data:/var/lib/kafka/data
       - ./scripts/update_run.sh:/tmp/update_run.sh
@@ -75,10 +86,10 @@ services:
 
   kafka3:
     image: confluentinc/cp-kafka:7.3.3
-    hostname: kafka3
     container_name: kafka3
     ports:
       - "39094:39094"
+      - "49094:49094"
     environment:
       KAFKA_NODE_ID: 3
       KAFKA_LISTENERS: BROKER://kafka3:19094,EXTERNAL://kafka3:39094,CONTROLLER://kafka3:9093
@@ -90,13 +101,19 @@ services:
       KAFKA_LISTENER_SECURITY_PROTOCOL_MAP: CONTROLLER:PLAINTEXT,BROKER:PLAINTEXT,EXTERNAL:PLAINTEXT
       KAFKA_GROUP_INITIAL_REBALANCE_DELAY_MS: 0
       KAFKA_PROCESS_ROLES: 'controller,broker'
+      TOPIC_AUTO_CREATE: 'false'
+      # 2 Days of Retention
+      KAFKA_LOG_RETENTION_HOURS: 48
       # For testing small segments 16MB and retention of 128MB
       KAFKA_LOG_SEGMENT_BYTES: 16777216
       KAFKA_LOG_RETENTION_BYTES: 134217728
-      KAFKA_LOG_RETENTION_HOURS: 48   # Set the desired retention hours
-#      KAFKA_METADATA_LOG_SEGMENT_MS: 15000
-#      KAFKA_METADATA_MAX_RETENTION_MS: 1200000
-#      KAFKA_METADATA_LOG_MAX_RECORD_BYTES_BETWEEN_SNAPSHOTS: 2800
+      KAFKA_JMX_PORT: 49094
+      KAFKA_JMX_HOSTNAME: localhost
+      KAFKA_JMX_OPTS: >
+        -Djava.rmi.server.hostname=127.0.0.1
+        -Dcom.sun.management.jmxremote=true
+        -Dcom.sun.management.jmxremote.authenticate=false 
+        -Dcom.sun.management.jmxremote.ssl=false
     volumes:
       - kafka3-data:/var/lib/kafka/data
       - ./scripts/update_run.sh:/tmp/update_run.sh
@@ -110,10 +127,18 @@ services:
     container_name: schema-registry
     ports:
       - "8282:8282"
+      - "1088:1088"
     environment:
       SCHEMA_REGISTRY_HOST_NAME: schema-registry
       SCHEMA_REGISTRY_KAFKASTORE_BOOTSTRAP_SERVERS: kafka1:19092,kafka2:19093,kafka3:19094
       SCHEMA_REGISTRY_LISTENERS: http://0.0.0.0:8282
+      SCHEMA_REGISTRY_JMX_OPTS: >
+        -Djava.rmi.server.hostname=localhost
+        -Dcom.sun.management.jmxremote
+        -Dcom.sun.management.jmxremote.port=1088
+        -Dcom.sun.management.jmxremote.authenticate=false
+        -Dcom.sun.management.jmxremote.ssl=false
+        -Dcom.sun.management.jmxremote.rmi.port=1088
     depends_on:
       - kafka1
       - kafka2
@@ -125,27 +150,33 @@ services:
     hostname: ksqldb-server
     container_name: ksqldb-server
     depends_on:
-#      - kafka1
-#      - kafka2
-#      - kafka3
+      - kafka1
+      - kafka2
+      - kafka3
       - schema-registry
     ports:
       - "9088:9088"
+      - "1099:1099"
     environment:
       KSQL_LISTENERS: http://0.0.0.0:9088
       KSQL_BOOTSTRAP_SERVERS: kafka1:19092,kafka2:19093,kafka3:19094
+      KSQL_KSQL_SCHEMA_REGISTRY_URL: http://schema-registry:8282
       KSQL_KSQL_LOGGING_PROCESSING_STREAM_AUTO_CREATE: "true"
       KSQL_KSQL_LOGGING_PROCESSING_TOPIC_AUTO_CREATE: "true"
-      KSQL_KSQL_SCHEMA_REGISTRY_URL: http://schema-registry:8282
+      KSQL_KSQL_QUERY_PULL_METRICS_ENABLED: "true"
+      KSQL_JMX_OPTS: >
+        -Djava.rmi.server.hostname=localhost
+        -Dcom.sun.management.jmxremote
+        -Dcom.sun.management.jmxremote.port=1099
+        -Dcom.sun.management.jmxremote.authenticate=false
+        -Dcom.sun.management.jmxremote.ssl=false
+        -Dcom.sun.management.jmxremote.rmi.port=1099
     restart: always
 
   ksqldb-cli:
     image: confluentinc/ksqldb-cli:0.29.0
     container_name: ksqldb-cli
     depends_on:
-#      - kafka1
-#      - kafka2
-#      - kafka3
       - ksqldb-server
     entrypoint: /bin/sh
     tty: true

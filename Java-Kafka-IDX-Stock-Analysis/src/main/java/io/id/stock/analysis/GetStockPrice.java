@@ -161,7 +161,7 @@ public class GetStockPrice {
             String dateNow = LocalDate.now().format(formatter); //Date Now
             String dateYesterday = LocalDate.now().minusDays(1).format(formatter);  //yesterday
 //            String encodedParam1 = URLEncoder.encode(dateYesterday, StandardCharsets.UTF_8.toString());
-            String encodedParam1 = URLEncoder.encode("2020-01-02", StandardCharsets.UTF_8.toString());
+            String encodedParam1 = URLEncoder.encode("2023-01-02", StandardCharsets.UTF_8.toString());
 //            String encodedParam2 = URLEncoder.encode("2020-01-02", StandardCharsets.UTF_8.toString());
             String encodedParam2 = URLEncoder.encode(dateNow, StandardCharsets.UTF_8.toString());
 

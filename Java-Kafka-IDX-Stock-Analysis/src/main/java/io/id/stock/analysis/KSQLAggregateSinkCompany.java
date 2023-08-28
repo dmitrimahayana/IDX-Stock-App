@@ -74,8 +74,7 @@ public class KSQLAggregateSinkCompany extends Thread {
                 if (rowCompany != null) {
                     String finalJsonComp = createJsonString(rowCompany);
                     mongoDBConn.insertOrUpdate("kafka", "ksql-company-stream", finalJsonComp);
-//                    SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss.SSS");
-//                    log.info(sdf.format(new Date()) + " Sync Query Company Result " + finalJsonComp);
+//                    log.info(new SimpleDateFormat("yyyy-MM-dd HH:mm:ss.SSS").format(new Date()) + " Sync Query Company Result " + finalJsonComp);
                 }
             }
         } catch (ExecutionException e) {
