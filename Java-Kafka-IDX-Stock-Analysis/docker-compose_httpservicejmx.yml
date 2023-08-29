@@ -1,0 +1,207 @@
+version: "3.5"
+services:
+
+  kafka-gen:
+    image: confluentinc/cp-kafka:7.3.3
+    hostname: kafka-gen
+    container_name: kafka-gen
+    volumes:
+      - ./scripts/create_cluster_id.sh:/tmp/create_cluster_id.sh
+      - ./clusterID:/tmp/clusterID
+    command: "bash -c '/tmp/create_cluster_id.sh'"
+
+  kafka1:
+    image: confluentinc/cp-kafka:7.3.3
+    container_name: kafka1
+    ports:
+      - "39092:39092"
+      - "49092:49092"
+    environment:
+      KAFKA_NODE_ID: 1
+      KAFKA_LISTENERS: BROKER://kafka1:19092,EXTERNAL://kafka1:39092,CONTROLLER://kafka1:9093
+      KAFKA_ADVERTISED_LISTENERS: BROKER://kafka1:19092,EXTERNAL://${DOCKER_HOST_IP:-127.0.0.1}:39092
+      KAFKA_CONTROLLER_QUORUM_VOTERS: '1@kafka1:9093,2@kafka2:9093,3@kafka3:9093'
+      KAFKA_LOG_DIRS: '/tmp/kraft-combined-logs'
+      KAFKA_INTER_BROKER_LISTENER_NAME: BROKER
+      KAFKA_CONTROLLER_LISTENER_NAMES: CONTROLLER
+      KAFKA_GROUP_INITIAL_REBALANCE_DELAY_MS: 0
+      KAFKA_LISTENER_SECURITY_PROTOCOL_MAP: CONTROLLER:PLAINTEXT,BROKER:PLAINTEXT,EXTERNAL:PLAINTEXT
+      KAFKA_PROCESS_ROLES: 'controller,broker'
+      TOPIC_AUTO_CREATE: 'false'
+      # 2 Days of Retention
+      KAFKA_LOG_RETENTION_HOURS: 48
+      # For testing small segments 16MB and retention of 128MB
+      KAFKA_LOG_SEGMENT_BYTES: 16777216
+      KAFKA_LOG_RETENTION_BYTES: 134217728
+      EXTRA_ARGS:
+        -javaagent:/usr/share/jmx_exporter/jmx_prometheus_javaagent-0.19.0.jar=49092:/usr/share/jmx_exporter/config.yml
+        -Djava.util.logging.config.file=/usr/share/jmx_exporter/exporter_debug_logging.properties
+    volumes:
+      - kafka1-data:/var/lib/kafka/data
+      - ./scripts/update_run.sh:/tmp/update_run.sh
+      - ./clusterID:/tmp/clusterID
+      - ./etc/jmx_exporter:/usr/share/jmx_exporter
+    command: "bash -c '/tmp/update_run.sh && /etc/confluent/docker/run'"
+    restart: always
+
+  kafka2:
+    image: confluentinc/cp-kafka:7.3.3
+    container_name: kafka2
+    ports:
+      - "39093:39093"
+      - "49093:49093"
+    environment:
+      KAFKA_NODE_ID: 2
+      KAFKA_LISTENERS: BROKER://kafka2:19093,EXTERNAL://kafka2:39093,CONTROLLER://kafka2:9093
+      KAFKA_ADVERTISED_LISTENERS: BROKER://kafka2:19093,EXTERNAL://${DOCKER_HOST_IP:-127.0.0.1}:39093
+      KAFKA_CONTROLLER_QUORUM_VOTERS: '1@kafka1:9093,2@kafka2:9093,3@kafka3:9093'
+      KAFKA_LOG_DIRS: '/tmp/kraft-combined-logs'
+      KAFKA_INTER_BROKER_LISTENER_NAME: BROKER
+      KAFKA_CONTROLLER_LISTENER_NAMES: CONTROLLER
+      KAFKA_LISTENER_SECURITY_PROTOCOL_MAP: CONTROLLER:PLAINTEXT,BROKER:PLAINTEXT,EXTERNAL:PLAINTEXT
+      KAFKA_GROUP_INITIAL_REBALANCE_DELAY_MS: 0
+      KAFKA_PROCESS_ROLES: 'controller,broker'
+      TOPIC_AUTO_CREATE: 'false'
+      # 2 Days of Retention
+      KAFKA_LOG_RETENTION_HOURS: 48
+      # For testing small segments 16MB and retention of 128MB
+      KAFKA_LOG_SEGMENT_BYTES: 16777216
+      KAFKA_LOG_RETENTION_BYTES: 134217728
+      EXTRA_ARGS:
+        -javaagent:/usr/share/jmx_exporter/jmx_prometheus_javaagent-0.19.0.jar=49093:/usr/share/jmx_exporter/config.yml
+        -Djava.util.logging.config.file=/usr/share/jmx_exporter/exporter_debug_logging.properties
+    volumes:
+      - kafka2-data:/var/lib/kafka/data
+      - ./scripts/update_run.sh:/tmp/update_run.sh
+      - ./clusterID:/tmp/clusterID
+      - ./etc/jmx_exporter:/usr/share/jmx_exporter
+    command: "bash -c '/tmp/update_run.sh && /etc/confluent/docker/run'"
+    restart: always
+
+  kafka3:
+    image: confluentinc/cp-kafka:7.3.3
+    container_name: kafka3
+    ports:
+      - "39094:39094"
+      - "49094:49094"
+    environment:
+      KAFKA_NODE_ID: 3
+      KAFKA_LISTENERS: BROKER://kafka3:19094,EXTERNAL://kafka3:39094,CONTROLLER://kafka3:9093
+      KAFKA_ADVERTISED_LISTENERS: BROKER://kafka3:19094,EXTERNAL://${DOCKER_HOST_IP:-127.0.0.1}:39094
+      KAFKA_LISTENER_SECURITY_PROTOCOL_MAP: BROKER:PLAINTEXT,EXTERNAL:PLAINTEXT,CONTROLLER:PLAINTEXT
+      KAFKA_CONTROLLER_QUORUM_VOTERS: '1@kafka1:9093,2@kafka2:9093,3@kafka3:9093'
+      KAFKA_LOG_DIRS: '/tmp/kraft-combined-logs'
+      KAFKA_INTER_BROKER_LISTENER_NAME: BROKER
+      KAFKA_CONTROLLER_LISTENER_NAMES: CONTROLLER
+      KAFKA_GROUP_INITIAL_REBALANCE_DELAY_MS: 0
+      KAFKA_PROCESS_ROLES: 'controller,broker'
+      TOPIC_AUTO_CREATE: 'false'
+      # 2 Days of Retention
+      KAFKA_LOG_RETENTION_HOURS: 48
+      # For testing small segments 16MB and retention of 128MB
+      KAFKA_LOG_SEGMENT_BYTES: 16777216
+      KAFKA_LOG_RETENTION_BYTES: 134217728
+      EXTRA_ARGS:
+        -javaagent:/usr/share/jmx_exporter/jmx_prometheus_javaagent-0.19.0.jar=49094:/usr/share/jmx_exporter/config.yml
+        -Djava.util.logging.config.file=/usr/share/jmx_exporter/exporter_debug_logging.properties
+    volumes:
+      - kafka3-data:/var/lib/kafka/data
+      - ./scripts/update_run.sh:/tmp/update_run.sh
+      - ./clusterID:/tmp/clusterID
+      - ./etc/jmx_exporter:/usr/share/jmx_exporter
+    command: "bash -c '/tmp/update_run.sh && /etc/confluent/docker/run'"
+    restart: always
+
+  schema-registry:
+    image: confluentinc/cp-schema-registry
+    hostname: schema-registry
+    container_name: schema-registry
+    depends_on:
+      - kafka1
+      - kafka2
+      - kafka3
+    ports:
+      - "8282:8282"
+      - "1088:1088"
+    environment:
+      SCHEMA_REGISTRY_HOST_NAME: schema-registry
+      SCHEMA_REGISTRY_KAFKASTORE_BOOTSTRAP_SERVERS: kafka1:19092,kafka2:19093,kafka3:19094
+      SCHEMA_REGISTRY_LISTENERS: http://0.0.0.0:8282
+      SCHEMA_REGISTRY_JMX_OPTS:
+        -Djava.rmi.server.hostname=localhost
+        -Dcom.sun.management.jmxremote
+        -Dcom.sun.management.jmxremote.port=1088
+        -Dcom.sun.management.jmxremote.authenticate=false
+        -Dcom.sun.management.jmxremote.ssl=false
+        -Dcom.sun.management.jmxremote.rmi.port=1088
+    restart: always
+
+  ksqldb-server:
+    image: confluentinc/ksqldb-server:0.29.0
+    hostname: ksqldb-server
+    container_name: ksqldb-server
+    depends_on:
+      - kafka1
+      - kafka2
+      - kafka3
+      - schema-registry
+    ports:
+      - "9088:9088"
+      - "1099:1099"
+    environment:
+      KSQL_LISTENERS: http://0.0.0.0:9088
+      KSQL_BOOTSTRAP_SERVERS: kafka1:19092,kafka2:19093,kafka3:19094
+      KSQL_KSQL_SCHEMA_REGISTRY_URL: http://schema-registry:8282
+      KSQL_KSQL_LOGGING_PROCESSING_STREAM_AUTO_CREATE: "true"
+      KSQL_KSQL_LOGGING_PROCESSING_TOPIC_AUTO_CREATE: "true"
+      KSQL_KSQL_QUERY_PULL_METRICS_ENABLED: "true"
+      KSQL_JMX_OPTS:
+        -Djava.rmi.server.hostname=localhost
+        -Dcom.sun.management.jmxremote
+        -Dcom.sun.management.jmxremote.port=1099
+        -Dcom.sun.management.jmxremote.authenticate=false
+        -Dcom.sun.management.jmxremote.ssl=false
+        -Dcom.sun.management.jmxremote.rmi.port=1099
+    restart: always
+
+  ksqldb-cli:
+    image: confluentinc/ksqldb-cli:0.29.0
+    container_name: ksqldb-cli
+    depends_on:
+      - ksqldb-server
+    entrypoint: /bin/sh
+    tty: true
+    restart: always
+
+  prometheus:
+    image: prom/prometheus:v2.46.0
+    container_name: prometheus
+    ports:
+      - "9090:9090"
+    volumes:
+      - ./etc/prometheus/prometheus.yml:/etc/prometheus/prometheus.yml
+    command: "--config.file=/etc/prometheus/prometheus.yml"
+
+  grafana:
+    image: grafana/grafana:8.4.5
+    ports:
+      - "3000:3000"
+    environment:
+      GF_PATHS_DATA : /var/lib/grafana
+      GF_SECURITY_ADMIN_PASSWORD : kafka
+    volumes:
+      - ./grafana/provisioning:/etc/grafana/provisioning
+      - ./grafana/dashboards:/var/lib/grafana/dashboards
+    container_name: grafana
+    depends_on:
+      - prometheus
+
+volumes:
+  kafka1-data:
+  kafka2-data:
+  kafka3-data:
+
+networks:
+  default:
+    name: my_docker_network
+    external: true

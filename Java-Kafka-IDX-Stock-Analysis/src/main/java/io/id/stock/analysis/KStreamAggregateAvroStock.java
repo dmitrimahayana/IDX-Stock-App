@@ -111,9 +111,9 @@ public class KStreamAggregateAvroStock {
     public static void main(String[] args) {
         String topic1 = "streaming.goapi.idx.stock.json";
         String topic2 = "streaming.goapi.idx.companies.json";
-        String topic3 = "group.stock";
-        String topic4 = "group.company";
-        String topic5 = "join.stock.company";
+        String topic3 = "kstream.group.stock";
+        String topic4 = "kstream.group.company";
+        String topic5 = "kstream.join.stock.company";
         String bootStrapServer = "localhost:39092,localhost:39093,localhost:39094";
         String schemaHost = "http://localhost:8282";
 

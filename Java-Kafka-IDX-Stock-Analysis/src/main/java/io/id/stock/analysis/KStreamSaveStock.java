@@ -46,9 +46,9 @@ public class KStreamSaveStock {
 
         try {
             //Must check if topic has been created by KSQL or KStream first
-            String topic1 = "group.stock";
-            String topic2 = "group.company";
-            String topic3 = "join.stock.company";
+            String topic1 = "kstream.group.stock";
+            String topic2 = "kstream.group.company";
+            String topic3 = "kstream.join.stock.company";
             consumer.createConsumer(Arrays.asList(topic1, topic2, topic3));
 
             //Show data
