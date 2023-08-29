@@ -221,10 +221,10 @@ services:
       GF_PATHS_DATA : /var/lib/grafana
       GF_SECURITY_ADMIN_USER: admin
       GF_SECURITY_ADMIN_PASSWORD : kafka
+      GF_USERS_ALLOW_SIGN_UP: false
     volumes:
-      - ./grafana/provisioning:/etc/grafana/provisioning
-#      - ./grafana/provisioning:/etc/grafana/provisioning
-#      - ./grafana/dashboards:/var/lib/grafana/dashboards
+      - ./grafana/provisioning_v1:/etc/grafana/provisioning
+      - ./grafana/dashboards_v1:/var/lib/grafana/dashboards
     depends_on:
       - prometheus-kafka
 
