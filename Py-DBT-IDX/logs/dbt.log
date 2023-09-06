@@ -9434,3 +9434,1306 @@ having count(*) > 1
 [0m18:39:17.016395 [info ] [MainThread]: Done. PASS=8 WARN=0 ERROR=1 SKIP=0 TOTAL=9
 [0m18:39:17.018491 [debug] [MainThread]: Command `dbt test` failed at 18:39:17.018491 after 1.72 seconds
 [0m18:39:17.019500 [debug] [MainThread]: Flushing usage events
+
+
+============================== 22:35:10.035109 | c16dbe10-b0ee-47a0-ab98-2a88941d0aaf ==============================
+[0m22:35:10.035109 [info ] [MainThread]: Running with dbt=1.6.1
+[0m22:35:10.040108 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'debug': 'False', 'profiles_dir': 'D:\\00 Project\\00 My Project\\IdeaProjects\\Py-DBT-IDX', 'log_path': 'D:\\00 Project\\00 My Project\\IdeaProjects\\Py-DBT-IDX\\logs', 'fail_fast': 'False', 'version_check': 'True', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'log_format': 'default', 'static_parser': 'True', 'introspect': 'True', 'invocation_command': 'dbt docs generate', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'send_anonymous_usage_stats': 'False'}
+[0m22:35:10.164213 [info ] [MainThread]: Registered adapter: postgres=1.6.1
+[0m22:35:10.175589 [debug] [MainThread]: checksum: efe19d9f5b93d1a98cc804fbfcdb6b3aced98b974af664946fee1cde8837deb7, vars: {}, profile: , target: , version: 1.6.1
+[0m22:35:10.356091 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 1 files changed.
+[0m22:35:10.357601 [debug] [MainThread]: Partial parsing: updated file: dbt_idx://tests\assert_customer_dimension_has_no_row_loss.sql.sql
+[0m22:35:10.425147 [info ] [MainThread]: Found 1 snapshot, 9 tests, 7 models, 3 sources, 0 exposures, 0 metrics, 349 macros, 0 groups, 0 semantic models
+[0m22:35:10.429147 [info ] [MainThread]: 
+[0m22:35:10.431145 [debug] [MainThread]: Acquiring new postgres connection 'master'
+[0m22:35:10.434148 [debug] [ThreadPool]: Acquiring new postgres connection 'list_IDX-Stock_warehouse'
+[0m22:35:10.448679 [debug] [ThreadPool]: Using postgres connection "list_IDX-Stock_warehouse"
+[0m22:35:10.450675 [debug] [ThreadPool]: On list_IDX-Stock_warehouse: BEGIN
+[0m22:35:10.451678 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m22:35:10.491200 [debug] [ThreadPool]: SQL status: BEGIN in 0.0 seconds
+[0m22:35:10.493195 [debug] [ThreadPool]: Using postgres connection "list_IDX-Stock_warehouse"
+[0m22:35:10.494195 [debug] [ThreadPool]: On list_IDX-Stock_warehouse: /* {"app": "dbt", "dbt_version": "1.6.1", "profile_name": "dbt_idx", "target_name": "dev", "connection_name": "list_IDX-Stock_warehouse"} */
+select
+      'IDX-Stock' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'warehouse'
+    union all
+    select
+      'IDX-Stock' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'warehouse'
+    union all
+    select
+      'IDX-Stock' as database,
+      matviewname as name,
+      schemaname as schema,
+      'materialized_view' as type
+    from pg_matviews
+    where schemaname ilike 'warehouse'
+  
+[0m22:35:10.499170 [debug] [ThreadPool]: SQL status: SELECT 10 in 0.0 seconds
+[0m22:35:10.501168 [debug] [ThreadPool]: On list_IDX-Stock_warehouse: ROLLBACK
+[0m22:35:10.504173 [debug] [ThreadPool]: On list_IDX-Stock_warehouse: Close
+[0m22:35:10.506176 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_IDX-Stock_warehouse, now list_IDX-Stock_snapshots)
+[0m22:35:10.514713 [debug] [ThreadPool]: Using postgres connection "list_IDX-Stock_snapshots"
+[0m22:35:10.516713 [debug] [ThreadPool]: On list_IDX-Stock_snapshots: BEGIN
+[0m22:35:10.516713 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m22:35:10.541714 [debug] [ThreadPool]: SQL status: BEGIN in 0.0 seconds
+[0m22:35:10.542727 [debug] [ThreadPool]: Using postgres connection "list_IDX-Stock_snapshots"
+[0m22:35:10.543738 [debug] [ThreadPool]: On list_IDX-Stock_snapshots: /* {"app": "dbt", "dbt_version": "1.6.1", "profile_name": "dbt_idx", "target_name": "dev", "connection_name": "list_IDX-Stock_snapshots"} */
+select
+      'IDX-Stock' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'snapshots'
+    union all
+    select
+      'IDX-Stock' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'snapshots'
+    union all
+    select
+      'IDX-Stock' as database,
+      matviewname as name,
+      schemaname as schema,
+      'materialized_view' as type
+    from pg_matviews
+    where schemaname ilike 'snapshots'
+  
+[0m22:35:10.552724 [debug] [ThreadPool]: SQL status: SELECT 1 in 0.0 seconds
+[0m22:35:10.555709 [debug] [ThreadPool]: On list_IDX-Stock_snapshots: ROLLBACK
+[0m22:35:10.558714 [debug] [ThreadPool]: On list_IDX-Stock_snapshots: Close
+[0m22:35:10.568715 [debug] [MainThread]: Using postgres connection "master"
+[0m22:35:10.569741 [debug] [MainThread]: On master: BEGIN
+[0m22:35:10.570740 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m22:35:10.596179 [debug] [MainThread]: SQL status: BEGIN in 0.0 seconds
+[0m22:35:10.597160 [debug] [MainThread]: Using postgres connection "master"
+[0m22:35:10.598207 [debug] [MainThread]: On master: /* {"app": "dbt", "dbt_version": "1.6.1", "profile_name": "dbt_idx", "target_name": "dev", "connection_name": "master"} */
+with relation as (
+        select
+            pg_rewrite.ev_class as class,
+            pg_rewrite.oid as id
+        from pg_rewrite
+    ),
+    class as (
+        select
+            oid as id,
+            relname as name,
+            relnamespace as schema,
+            relkind as kind
+        from pg_class
+    ),
+    dependency as (
+        select distinct
+            pg_depend.objid as id,
+            pg_depend.refobjid as ref
+        from pg_depend
+    ),
+    schema as (
+        select
+            pg_namespace.oid as id,
+            pg_namespace.nspname as name
+        from pg_namespace
+        where nspname != 'information_schema' and nspname not like 'pg\_%'
+    ),
+    referenced as (
+        select
+            relation.id AS id,
+            referenced_class.name ,
+            referenced_class.schema ,
+            referenced_class.kind
+        from relation
+        join class as referenced_class on relation.class=referenced_class.id
+        where referenced_class.kind in ('r', 'v', 'm')
+    ),
+    relationships as (
+        select
+            referenced.name as referenced_name,
+            referenced.schema as referenced_schema_id,
+            dependent_class.name as dependent_name,
+            dependent_class.schema as dependent_schema_id,
+            referenced.kind as kind
+        from referenced
+        join dependency on referenced.id=dependency.id
+        join class as dependent_class on dependency.ref=dependent_class.id
+        where
+            (referenced.name != dependent_class.name or
+             referenced.schema != dependent_class.schema)
+    )
+
+    select
+        referenced_schema.name as referenced_schema,
+        relationships.referenced_name as referenced_name,
+        dependent_schema.name as dependent_schema,
+        relationships.dependent_name as dependent_name
+    from relationships
+    join schema as dependent_schema on relationships.dependent_schema_id=dependent_schema.id
+    join schema as referenced_schema on relationships.referenced_schema_id=referenced_schema.id
+    group by referenced_schema, referenced_name, dependent_schema, dependent_name
+    order by referenced_schema, referenced_name, dependent_schema, dependent_name;
+[0m22:35:10.607173 [debug] [MainThread]: SQL status: SELECT 6 in 0.0 seconds
+[0m22:35:10.611159 [debug] [MainThread]: On master: ROLLBACK
+[0m22:35:10.614172 [debug] [MainThread]: On master: Close
+[0m22:35:10.616176 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m22:35:10.618067 [info ] [MainThread]: 
+[0m22:35:10.623617 [debug] [Thread-1 (]: Began running node model.dbt_idx.stg_eltool__customers
+[0m22:35:10.625596 [debug] [Thread-1 (]: Acquiring new postgres connection 'model.dbt_idx.stg_eltool__customers'
+[0m22:35:10.627609 [debug] [Thread-1 (]: Began compiling node model.dbt_idx.stg_eltool__customers
+[0m22:35:10.640612 [debug] [Thread-1 (]: Writing injected SQL for node "model.dbt_idx.stg_eltool__customers"
+[0m22:35:10.648595 [debug] [Thread-1 (]: Timing info for model.dbt_idx.stg_eltool__customers (compile): 22:35:10.628597 => 22:35:10.648595
+[0m22:35:10.649594 [debug] [Thread-1 (]: Began executing node model.dbt_idx.stg_eltool__customers
+[0m22:35:10.650608 [debug] [Thread-1 (]: Timing info for model.dbt_idx.stg_eltool__customers (execute): 22:35:10.650608 => 22:35:10.650608
+[0m22:35:10.652595 [debug] [Thread-1 (]: Finished running node model.dbt_idx.stg_eltool__customers
+[0m22:35:10.653608 [debug] [Thread-1 (]: Began running node model.dbt_idx.stg_eltool__orders
+[0m22:35:10.654616 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.dbt_idx.stg_eltool__customers, now model.dbt_idx.stg_eltool__orders)
+[0m22:35:10.655593 [debug] [Thread-1 (]: Began compiling node model.dbt_idx.stg_eltool__orders
+[0m22:35:10.658594 [debug] [Thread-1 (]: Writing injected SQL for node "model.dbt_idx.stg_eltool__orders"
+[0m22:35:10.669102 [debug] [Thread-1 (]: Timing info for model.dbt_idx.stg_eltool__orders (compile): 22:35:10.656623 => 22:35:10.669102
+[0m22:35:10.670118 [debug] [Thread-1 (]: Began executing node model.dbt_idx.stg_eltool__orders
+[0m22:35:10.671131 [debug] [Thread-1 (]: Timing info for model.dbt_idx.stg_eltool__orders (execute): 22:35:10.671131 => 22:35:10.671131
+[0m22:35:10.673107 [debug] [Thread-1 (]: Finished running node model.dbt_idx.stg_eltool__orders
+[0m22:35:10.674098 [debug] [Thread-1 (]: Began running node model.dbt_idx.stg_eltool__state
+[0m22:35:10.675096 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.dbt_idx.stg_eltool__orders, now model.dbt_idx.stg_eltool__state)
+[0m22:35:10.675096 [debug] [Thread-1 (]: Began compiling node model.dbt_idx.stg_eltool__state
+[0m22:35:10.679133 [debug] [Thread-1 (]: Writing injected SQL for node "model.dbt_idx.stg_eltool__state"
+[0m22:35:10.685618 [debug] [Thread-1 (]: Timing info for model.dbt_idx.stg_eltool__state (compile): 22:35:10.676133 => 22:35:10.684665
+[0m22:35:10.685618 [debug] [Thread-1 (]: Began executing node model.dbt_idx.stg_eltool__state
+[0m22:35:10.686657 [debug] [Thread-1 (]: Timing info for model.dbt_idx.stg_eltool__state (execute): 22:35:10.686657 => 22:35:10.686657
+[0m22:35:10.687652 [debug] [Thread-1 (]: Finished running node model.dbt_idx.stg_eltool__state
+[0m22:35:10.688651 [debug] [Thread-1 (]: Began running node snapshot.dbt_idx.customers_snapshot
+[0m22:35:10.689624 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.dbt_idx.stg_eltool__state, now snapshot.dbt_idx.customers_snapshot)
+[0m22:35:10.690617 [debug] [Thread-1 (]: Began compiling node snapshot.dbt_idx.customers_snapshot
+[0m22:35:10.693650 [debug] [Thread-1 (]: Timing info for snapshot.dbt_idx.customers_snapshot (compile): 22:35:10.691617 => 22:35:10.693650
+[0m22:35:10.694651 [debug] [Thread-1 (]: Began executing node snapshot.dbt_idx.customers_snapshot
+[0m22:35:10.695619 [debug] [Thread-1 (]: Timing info for snapshot.dbt_idx.customers_snapshot (execute): 22:35:10.695619 => 22:35:10.695619
+[0m22:35:10.696650 [debug] [Thread-1 (]: Finished running node snapshot.dbt_idx.customers_snapshot
+[0m22:35:10.697617 [debug] [Thread-1 (]: Began running node test.dbt_idx.source_not_null_warehouse_customers_customer_id.ae7452c4c6
+[0m22:35:10.698650 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly snapshot.dbt_idx.customers_snapshot, now test.dbt_idx.source_not_null_warehouse_customers_customer_id.ae7452c4c6)
+[0m22:35:10.698650 [debug] [Thread-1 (]: Began compiling node test.dbt_idx.source_not_null_warehouse_customers_customer_id.ae7452c4c6
+[0m22:35:10.710618 [debug] [Thread-1 (]: Writing injected SQL for node "test.dbt_idx.source_not_null_warehouse_customers_customer_id.ae7452c4c6"
+[0m22:35:10.717617 [debug] [Thread-1 (]: Timing info for test.dbt_idx.source_not_null_warehouse_customers_customer_id.ae7452c4c6 (compile): 22:35:10.699653 => 22:35:10.716662
+[0m22:35:10.717617 [debug] [Thread-1 (]: Began executing node test.dbt_idx.source_not_null_warehouse_customers_customer_id.ae7452c4c6
+[0m22:35:10.718642 [debug] [Thread-1 (]: Timing info for test.dbt_idx.source_not_null_warehouse_customers_customer_id.ae7452c4c6 (execute): 22:35:10.718642 => 22:35:10.718642
+[0m22:35:10.720618 [debug] [Thread-1 (]: Finished running node test.dbt_idx.source_not_null_warehouse_customers_customer_id.ae7452c4c6
+[0m22:35:10.721620 [debug] [Thread-1 (]: Began running node test.dbt_idx.source_not_null_warehouse_orders_order_id.c85a1f0b76
+[0m22:35:10.722657 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.dbt_idx.source_not_null_warehouse_customers_customer_id.ae7452c4c6, now test.dbt_idx.source_not_null_warehouse_orders_order_id.c85a1f0b76)
+[0m22:35:10.722657 [debug] [Thread-1 (]: Began compiling node test.dbt_idx.source_not_null_warehouse_orders_order_id.c85a1f0b76
+[0m22:35:10.727642 [debug] [Thread-1 (]: Writing injected SQL for node "test.dbt_idx.source_not_null_warehouse_orders_order_id.c85a1f0b76"
+[0m22:35:10.734642 [debug] [Thread-1 (]: Timing info for test.dbt_idx.source_not_null_warehouse_orders_order_id.c85a1f0b76 (compile): 22:35:10.723644 => 22:35:10.733616
+[0m22:35:10.734642 [debug] [Thread-1 (]: Began executing node test.dbt_idx.source_not_null_warehouse_orders_order_id.c85a1f0b76
+[0m22:35:10.735644 [debug] [Thread-1 (]: Timing info for test.dbt_idx.source_not_null_warehouse_orders_order_id.c85a1f0b76 (execute): 22:35:10.735644 => 22:35:10.735644
+[0m22:35:10.736619 [debug] [Thread-1 (]: Finished running node test.dbt_idx.source_not_null_warehouse_orders_order_id.c85a1f0b76
+[0m22:35:10.737641 [debug] [Thread-1 (]: Began running node test.dbt_idx.source_relationships_warehouse_orders_cust_id__customer_id__source_warehouse_customers_.d3f9188fc2
+[0m22:35:10.738621 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.dbt_idx.source_not_null_warehouse_orders_order_id.c85a1f0b76, now test.dbt_idx.source_relationships_warehouse_orders_cust_id__customer_id__source_warehouse_customers_.d3f9188fc2)
+[0m22:35:10.739616 [debug] [Thread-1 (]: Began compiling node test.dbt_idx.source_relationships_warehouse_orders_cust_id__customer_id__source_warehouse_customers_.d3f9188fc2
+[0m22:35:10.747653 [debug] [Thread-1 (]: Writing injected SQL for node "test.dbt_idx.source_relationships_warehouse_orders_cust_id__customer_id__source_warehouse_customers_.d3f9188fc2"
+[0m22:35:10.754688 [debug] [Thread-1 (]: Timing info for test.dbt_idx.source_relationships_warehouse_orders_cust_id__customer_id__source_warehouse_customers_.d3f9188fc2 (compile): 22:35:10.739616 => 22:35:10.753698
+[0m22:35:10.754688 [debug] [Thread-1 (]: Began executing node test.dbt_idx.source_relationships_warehouse_orders_cust_id__customer_id__source_warehouse_customers_.d3f9188fc2
+[0m22:35:10.755687 [debug] [Thread-1 (]: Timing info for test.dbt_idx.source_relationships_warehouse_orders_cust_id__customer_id__source_warehouse_customers_.d3f9188fc2 (execute): 22:35:10.755687 => 22:35:10.755687
+[0m22:35:10.756673 [debug] [Thread-1 (]: Finished running node test.dbt_idx.source_relationships_warehouse_orders_cust_id__customer_id__source_warehouse_customers_.d3f9188fc2
+[0m22:35:10.757692 [debug] [Thread-1 (]: Began running node test.dbt_idx.source_unique_warehouse_orders_order_id.839fb43d0f
+[0m22:35:10.758653 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.dbt_idx.source_relationships_warehouse_orders_cust_id__customer_id__source_warehouse_customers_.d3f9188fc2, now test.dbt_idx.source_unique_warehouse_orders_order_id.839fb43d0f)
+[0m22:35:10.759653 [debug] [Thread-1 (]: Began compiling node test.dbt_idx.source_unique_warehouse_orders_order_id.839fb43d0f
+[0m22:35:10.765688 [debug] [Thread-1 (]: Writing injected SQL for node "test.dbt_idx.source_unique_warehouse_orders_order_id.839fb43d0f"
+[0m22:35:10.771673 [debug] [Thread-1 (]: Timing info for test.dbt_idx.source_unique_warehouse_orders_order_id.839fb43d0f (compile): 22:35:10.759653 => 22:35:10.771673
+[0m22:35:10.772693 [debug] [Thread-1 (]: Began executing node test.dbt_idx.source_unique_warehouse_orders_order_id.839fb43d0f
+[0m22:35:10.773675 [debug] [Thread-1 (]: Timing info for test.dbt_idx.source_unique_warehouse_orders_order_id.839fb43d0f (execute): 22:35:10.773675 => 22:35:10.773675
+[0m22:35:10.774668 [debug] [Thread-1 (]: Finished running node test.dbt_idx.source_unique_warehouse_orders_order_id.839fb43d0f
+[0m22:35:10.775670 [debug] [Thread-1 (]: Began running node model.dbt_idx.fact_orders
+[0m22:35:10.776700 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.dbt_idx.source_unique_warehouse_orders_order_id.839fb43d0f, now model.dbt_idx.fact_orders)
+[0m22:35:10.776700 [debug] [Thread-1 (]: Began compiling node model.dbt_idx.fact_orders
+[0m22:35:10.779700 [debug] [Thread-1 (]: Writing injected SQL for node "model.dbt_idx.fact_orders"
+[0m22:35:10.785940 [debug] [Thread-1 (]: Timing info for model.dbt_idx.fact_orders (compile): 22:35:10.777702 => 22:35:10.785940
+[0m22:35:10.786924 [debug] [Thread-1 (]: Began executing node model.dbt_idx.fact_orders
+[0m22:35:10.786924 [debug] [Thread-1 (]: Timing info for model.dbt_idx.fact_orders (execute): 22:35:10.786924 => 22:35:10.786924
+[0m22:35:10.787960 [debug] [Thread-1 (]: Finished running node model.dbt_idx.fact_orders
+[0m22:35:10.788966 [debug] [Thread-1 (]: Began running node model.dbt_idx.stg_eltool__customers_snapshots
+[0m22:35:10.789939 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.dbt_idx.fact_orders, now model.dbt_idx.stg_eltool__customers_snapshots)
+[0m22:35:10.791002 [debug] [Thread-1 (]: Began compiling node model.dbt_idx.stg_eltool__customers_snapshots
+[0m22:35:10.793958 [debug] [Thread-1 (]: Writing injected SQL for node "model.dbt_idx.stg_eltool__customers_snapshots"
+[0m22:35:10.800427 [debug] [Thread-1 (]: Timing info for model.dbt_idx.stg_eltool__customers_snapshots (compile): 22:35:10.791926 => 22:35:10.800427
+[0m22:35:10.801406 [debug] [Thread-1 (]: Began executing node model.dbt_idx.stg_eltool__customers_snapshots
+[0m22:35:10.802407 [debug] [Thread-1 (]: Timing info for model.dbt_idx.stg_eltool__customers_snapshots (execute): 22:35:10.801406 => 22:35:10.801406
+[0m22:35:10.803406 [debug] [Thread-1 (]: Finished running node model.dbt_idx.stg_eltool__customers_snapshots
+[0m22:35:10.804408 [debug] [Thread-1 (]: Began running node model.dbt_idx.dim_customers
+[0m22:35:10.805410 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.dbt_idx.stg_eltool__customers_snapshots, now model.dbt_idx.dim_customers)
+[0m22:35:10.806412 [debug] [Thread-1 (]: Began compiling node model.dbt_idx.dim_customers
+[0m22:35:10.809410 [debug] [Thread-1 (]: Writing injected SQL for node "model.dbt_idx.dim_customers"
+[0m22:35:10.815410 [debug] [Thread-1 (]: Timing info for model.dbt_idx.dim_customers (compile): 22:35:10.806412 => 22:35:10.814407
+[0m22:35:10.816411 [debug] [Thread-1 (]: Began executing node model.dbt_idx.dim_customers
+[0m22:35:10.816411 [debug] [Thread-1 (]: Timing info for model.dbt_idx.dim_customers (execute): 22:35:10.816411 => 22:35:10.816411
+[0m22:35:10.818411 [debug] [Thread-1 (]: Finished running node model.dbt_idx.dim_customers
+[0m22:35:10.818411 [debug] [Thread-1 (]: Began running node test.dbt_idx.not_null_stg_eltool__customers_snapshots_customer_id.ea4fc4ca86
+[0m22:35:10.820429 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.dbt_idx.dim_customers, now test.dbt_idx.not_null_stg_eltool__customers_snapshots_customer_id.ea4fc4ca86)
+[0m22:35:10.821425 [debug] [Thread-1 (]: Began compiling node test.dbt_idx.not_null_stg_eltool__customers_snapshots_customer_id.ea4fc4ca86
+[0m22:35:10.825410 [debug] [Thread-1 (]: Writing injected SQL for node "test.dbt_idx.not_null_stg_eltool__customers_snapshots_customer_id.ea4fc4ca86"
+[0m22:35:10.831411 [debug] [Thread-1 (]: Timing info for test.dbt_idx.not_null_stg_eltool__customers_snapshots_customer_id.ea4fc4ca86 (compile): 22:35:10.821425 => 22:35:10.830407
+[0m22:35:10.832411 [debug] [Thread-1 (]: Began executing node test.dbt_idx.not_null_stg_eltool__customers_snapshots_customer_id.ea4fc4ca86
+[0m22:35:10.832411 [debug] [Thread-1 (]: Timing info for test.dbt_idx.not_null_stg_eltool__customers_snapshots_customer_id.ea4fc4ca86 (execute): 22:35:10.832411 => 22:35:10.832411
+[0m22:35:10.833410 [debug] [Thread-1 (]: Finished running node test.dbt_idx.not_null_stg_eltool__customers_snapshots_customer_id.ea4fc4ca86
+[0m22:35:10.834411 [debug] [Thread-1 (]: Began running node model.dbt_idx.customer_orders_status
+[0m22:35:10.835436 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.dbt_idx.not_null_stg_eltool__customers_snapshots_customer_id.ea4fc4ca86, now model.dbt_idx.customer_orders_status)
+[0m22:35:10.836410 [debug] [Thread-1 (]: Began compiling node model.dbt_idx.customer_orders_status
+[0m22:35:10.839410 [debug] [Thread-1 (]: Writing injected SQL for node "model.dbt_idx.customer_orders_status"
+[0m22:35:10.844406 [debug] [Thread-1 (]: Timing info for model.dbt_idx.customer_orders_status (compile): 22:35:10.836410 => 22:35:10.844406
+[0m22:35:10.845412 [debug] [Thread-1 (]: Began executing node model.dbt_idx.customer_orders_status
+[0m22:35:10.846411 [debug] [Thread-1 (]: Timing info for model.dbt_idx.customer_orders_status (execute): 22:35:10.845412 => 22:35:10.845412
+[0m22:35:10.847410 [debug] [Thread-1 (]: Finished running node model.dbt_idx.customer_orders_status
+[0m22:35:10.847410 [debug] [Thread-1 (]: Began running node test.dbt_idx.assert_customer_dimension_has_no_row_loss.sql
+[0m22:35:10.849410 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.dbt_idx.customer_orders_status, now test.dbt_idx.assert_customer_dimension_has_no_row_loss.sql)
+[0m22:35:10.849410 [debug] [Thread-1 (]: Began compiling node test.dbt_idx.assert_customer_dimension_has_no_row_loss.sql
+[0m22:35:10.853410 [debug] [Thread-1 (]: Writing injected SQL for node "test.dbt_idx.assert_customer_dimension_has_no_row_loss.sql"
+[0m22:35:10.858746 [debug] [Thread-1 (]: Timing info for test.dbt_idx.assert_customer_dimension_has_no_row_loss.sql (compile): 22:35:10.850411 => 22:35:10.858746
+[0m22:35:10.859749 [debug] [Thread-1 (]: Began executing node test.dbt_idx.assert_customer_dimension_has_no_row_loss.sql
+[0m22:35:10.860713 [debug] [Thread-1 (]: Timing info for test.dbt_idx.assert_customer_dimension_has_no_row_loss.sql (execute): 22:35:10.860713 => 22:35:10.860713
+[0m22:35:10.861748 [debug] [Thread-1 (]: Finished running node test.dbt_idx.assert_customer_dimension_has_no_row_loss.sql
+[0m22:35:10.862711 [debug] [Thread-1 (]: Began running node test.dbt_idx.accepted_values_customer_orders_status_order_status__delivered__invoiced__shipped__processing__canceled__unavailable.ea8c296d27
+[0m22:35:10.862711 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.dbt_idx.assert_customer_dimension_has_no_row_loss.sql, now test.dbt_idx.accepted_values_customer_orders_status_order_status__delivered__invoiced__shipped__processing__canceled__unavailable.ea8c296d27)
+[0m22:35:10.863748 [debug] [Thread-1 (]: Began compiling node test.dbt_idx.accepted_values_customer_orders_status_order_status__delivered__invoiced__shipped__processing__canceled__unavailable.ea8c296d27
+[0m22:35:10.874787 [debug] [Thread-1 (]: Writing injected SQL for node "test.dbt_idx.accepted_values_customer_orders_status_order_status__delivered__invoiced__shipped__processing__canceled__unavailable.ea8c296d27"
+[0m22:35:10.880753 [debug] [Thread-1 (]: Timing info for test.dbt_idx.accepted_values_customer_orders_status_order_status__delivered__invoiced__shipped__processing__canceled__unavailable.ea8c296d27 (compile): 22:35:10.864725 => 22:35:10.879755
+[0m22:35:10.880753 [debug] [Thread-1 (]: Began executing node test.dbt_idx.accepted_values_customer_orders_status_order_status__delivered__invoiced__shipped__processing__canceled__unavailable.ea8c296d27
+[0m22:35:10.881753 [debug] [Thread-1 (]: Timing info for test.dbt_idx.accepted_values_customer_orders_status_order_status__delivered__invoiced__shipped__processing__canceled__unavailable.ea8c296d27 (execute): 22:35:10.881753 => 22:35:10.881753
+[0m22:35:10.882769 [debug] [Thread-1 (]: Finished running node test.dbt_idx.accepted_values_customer_orders_status_order_status__delivered__invoiced__shipped__processing__canceled__unavailable.ea8c296d27
+[0m22:35:10.883787 [debug] [Thread-1 (]: Began running node test.dbt_idx.not_null_customer_orders_status_customer_id.3915c814eb
+[0m22:35:10.884328 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.dbt_idx.accepted_values_customer_orders_status_order_status__delivered__invoiced__shipped__processing__canceled__unavailable.ea8c296d27, now test.dbt_idx.not_null_customer_orders_status_customer_id.3915c814eb)
+[0m22:35:10.885369 [debug] [Thread-1 (]: Began compiling node test.dbt_idx.not_null_customer_orders_status_customer_id.3915c814eb
+[0m22:35:10.890398 [debug] [Thread-1 (]: Writing injected SQL for node "test.dbt_idx.not_null_customer_orders_status_customer_id.3915c814eb"
+[0m22:35:10.897356 [debug] [Thread-1 (]: Timing info for test.dbt_idx.not_null_customer_orders_status_customer_id.3915c814eb (compile): 22:35:10.886338 => 22:35:10.897356
+[0m22:35:10.898356 [debug] [Thread-1 (]: Began executing node test.dbt_idx.not_null_customer_orders_status_customer_id.3915c814eb
+[0m22:35:10.899355 [debug] [Thread-1 (]: Timing info for test.dbt_idx.not_null_customer_orders_status_customer_id.3915c814eb (execute): 22:35:10.899355 => 22:35:10.899355
+[0m22:35:10.901355 [debug] [Thread-1 (]: Finished running node test.dbt_idx.not_null_customer_orders_status_customer_id.3915c814eb
+[0m22:35:10.901355 [debug] [Thread-1 (]: Began running node test.dbt_idx.unique_customer_orders_status_order_id.b7a45e83ee
+[0m22:35:10.902355 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.dbt_idx.not_null_customer_orders_status_customer_id.3915c814eb, now test.dbt_idx.unique_customer_orders_status_order_id.b7a45e83ee)
+[0m22:35:10.903354 [debug] [Thread-1 (]: Began compiling node test.dbt_idx.unique_customer_orders_status_order_id.b7a45e83ee
+[0m22:35:10.907355 [debug] [Thread-1 (]: Writing injected SQL for node "test.dbt_idx.unique_customer_orders_status_order_id.b7a45e83ee"
+[0m22:35:10.913653 [debug] [Thread-1 (]: Timing info for test.dbt_idx.unique_customer_orders_status_order_id.b7a45e83ee (compile): 22:35:10.903354 => 22:35:10.912686
+[0m22:35:10.914651 [debug] [Thread-1 (]: Began executing node test.dbt_idx.unique_customer_orders_status_order_id.b7a45e83ee
+[0m22:35:10.914651 [debug] [Thread-1 (]: Timing info for test.dbt_idx.unique_customer_orders_status_order_id.b7a45e83ee (execute): 22:35:10.914651 => 22:35:10.914651
+[0m22:35:10.916654 [debug] [Thread-1 (]: Finished running node test.dbt_idx.unique_customer_orders_status_order_id.b7a45e83ee
+[0m22:35:10.917664 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m22:35:10.918650 [debug] [MainThread]: Connection 'list_IDX-Stock_snapshots' was properly closed.
+[0m22:35:10.919652 [debug] [MainThread]: Connection 'test.dbt_idx.unique_customer_orders_status_order_id.b7a45e83ee' was properly closed.
+[0m22:35:10.922648 [debug] [MainThread]: Command end result
+[0m22:35:11.272872 [debug] [MainThread]: Acquiring new postgres connection 'generate_catalog'
+[0m22:35:11.272872 [info ] [MainThread]: Building catalog
+[0m22:35:11.275838 [debug] [ThreadPool]: Acquiring new postgres connection 'IDX-Stock.information_schema'
+[0m22:35:11.284351 [debug] [ThreadPool]: Using postgres connection "IDX-Stock.information_schema"
+[0m22:35:11.285365 [debug] [ThreadPool]: On IDX-Stock.information_schema: BEGIN
+[0m22:35:11.286360 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m22:35:11.308884 [debug] [ThreadPool]: SQL status: BEGIN in 0.0 seconds
+[0m22:35:11.309884 [debug] [ThreadPool]: Using postgres connection "IDX-Stock.information_schema"
+[0m22:35:11.310881 [debug] [ThreadPool]: On IDX-Stock.information_schema: /* {"app": "dbt", "dbt_version": "1.6.1", "profile_name": "dbt_idx", "target_name": "dev", "connection_name": "IDX-Stock.information_schema"} */
+
+    
+    
+
+    select
+        'IDX-Stock' as table_database,
+        sch.nspname as table_schema,
+        tbl.relname as table_name,
+        case tbl.relkind
+            when 'v' then 'VIEW'
+            else 'BASE TABLE'
+        end as table_type,
+        tbl_desc.description as table_comment,
+        col.attname as column_name,
+        col.attnum as column_index,
+        pg_catalog.format_type(col.atttypid, col.atttypmod) as column_type,
+        col_desc.description as column_comment,
+        pg_get_userbyid(tbl.relowner) as table_owner
+
+    from pg_catalog.pg_namespace sch
+    join pg_catalog.pg_class tbl on tbl.relnamespace = sch.oid
+    join pg_catalog.pg_attribute col on col.attrelid = tbl.oid
+    left outer join pg_catalog.pg_description tbl_desc on (tbl_desc.objoid = tbl.oid and tbl_desc.objsubid = 0)
+    left outer join pg_catalog.pg_description col_desc on (col_desc.objoid = tbl.oid and col_desc.objsubid = col.attnum)
+
+    where (upper(sch.nspname) = upper('warehouse') or upper(sch.nspname) = upper('snapshots'))
+      and not pg_is_other_temp_schema(sch.oid) -- not a temporary schema belonging to another session
+      and tbl.relpersistence in ('p', 'u') -- [p]ermanent table or [u]nlogged table. Exclude [t]emporary tables
+      and tbl.relkind in ('r', 'v', 'f', 'p') -- o[r]dinary table, [v]iew, [f]oreign table, [p]artitioned table. Other values are [i]ndex, [S]equence, [c]omposite type, [t]OAST table, [m]aterialized view
+      and col.attnum > 0 -- negative numbers are used for system columns such as oid
+      and not col.attisdropped -- column as not been dropped
+
+    order by
+        sch.nspname,
+        tbl.relname,
+        col.attnum
+[0m22:35:11.320398 [debug] [ThreadPool]: SQL status: SELECT 77 in 0.0 seconds
+[0m22:35:11.328365 [debug] [ThreadPool]: On IDX-Stock.information_schema: ROLLBACK
+[0m22:35:11.330330 [debug] [ThreadPool]: On IDX-Stock.information_schema: Close
+[0m22:35:11.355362 [info ] [MainThread]: Catalog written to D:\00 Project\00 My Project\IdeaProjects\Py-DBT-IDX\target\catalog.json
+[0m22:35:11.357331 [debug] [MainThread]: Command `dbt docs generate` succeeded at 22:35:11.357331 after 1.36 seconds
+[0m22:35:11.358331 [debug] [MainThread]: Connection 'generate_catalog' was properly closed.
+[0m22:35:11.358331 [debug] [MainThread]: Connection 'IDX-Stock.information_schema' was properly closed.
+[0m22:35:11.359333 [debug] [MainThread]: Flushing usage events
+
+
+============================== 22:35:23.422319 | 71be45e0-426d-4cf4-8780-409403bd1a6a ==============================
+[0m22:35:23.422319 [info ] [MainThread]: Running with dbt=1.6.1
+[0m22:35:23.429829 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'version_check': 'True', 'debug': 'False', 'log_path': 'D:\\00 Project\\00 My Project\\IdeaProjects\\Py-DBT-IDX\\logs', 'fail_fast': 'False', 'profiles_dir': 'D:\\00 Project\\00 My Project\\IdeaProjects\\Py-DBT-IDX', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'log_format': 'default', 'introspect': 'True', 'static_parser': 'True', 'invocation_command': 'dbt docs serve', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'send_anonymous_usage_stats': 'False'}
+[0m22:38:10.713456 [error] [MainThread]: Encountered an error:
+
+[0m22:38:10.724507 [error] [MainThread]: Traceback (most recent call last):
+  File "C:\Users\dmitr\Py-DBT-IDX\Lib\site-packages\dbt\cli\requires.py", line 87, in wrapper
+    result, success = func(*args, **kwargs)
+                      ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dmitr\Py-DBT-IDX\Lib\site-packages\dbt\cli\requires.py", line 72, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dmitr\Py-DBT-IDX\Lib\site-packages\dbt\cli\requires.py", line 143, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dmitr\Py-DBT-IDX\Lib\site-packages\dbt\cli\requires.py", line 172, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dmitr\Py-DBT-IDX\Lib\site-packages\dbt\cli\requires.py", line 219, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dmitr\Py-DBT-IDX\Lib\site-packages\dbt\cli\main.py", line 307, in docs_serve
+    results = task.run()
+              ^^^^^^^^^^
+  File "C:\Users\dmitr\Py-DBT-IDX\Lib\site-packages\dbt\task\serve.py", line 28, in run
+    httpd.serve_forever()
+  File "C:\Python311\Lib\socketserver.py", line 233, in serve_forever
+    ready = selector.select(poll_interval)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python311\Lib\selectors.py", line 323, in select
+    r, w, _ = self._select(self._readers, self._writers, [], timeout)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python311\Lib\selectors.py", line 314, in _select
+    r, w, x = select.select(r, w, w, timeout)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+KeyboardInterrupt
+
+[0m22:38:10.726507 [debug] [MainThread]: Command `dbt docs serve` failed at 22:38:10.726507 after 167.36 seconds
+[0m22:38:10.727524 [debug] [MainThread]: Flushing usage events
+
+
+============================== 22:38:17.482797 | dbd64980-bb0b-466c-917e-ad096d663d9c ==============================
+[0m22:38:17.482797 [info ] [MainThread]: Running with dbt=1.6.1
+[0m22:38:17.490826 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'debug': 'False', 'fail_fast': 'False', 'log_path': 'D:\\00 Project\\00 My Project\\IdeaProjects\\Py-DBT-IDX\\logs', 'version_check': 'True', 'profiles_dir': 'D:\\00 Project\\00 My Project\\IdeaProjects\\Py-DBT-IDX', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'log_format': 'default', 'invocation_command': 'dbt test', 'introspect': 'True', 'static_parser': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'send_anonymous_usage_stats': 'False'}
+[0m22:38:17.637940 [info ] [MainThread]: Registered adapter: postgres=1.6.1
+[0m22:38:17.648950 [debug] [MainThread]: checksum: efe19d9f5b93d1a98cc804fbfcdb6b3aced98b974af664946fee1cde8837deb7, vars: {}, profile: , target: , version: 1.6.1
+[0m22:38:17.828545 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 1 files changed.
+[0m22:38:17.829545 [debug] [MainThread]: Partial parsing: updated file: dbt_idx://tests\assert_customer_dimension_has_no_row_loss.sql.sql
+[0m22:38:17.913287 [info ] [MainThread]: Found 1 snapshot, 9 tests, 7 models, 3 sources, 0 exposures, 0 metrics, 349 macros, 0 groups, 0 semantic models
+[0m22:38:17.917294 [info ] [MainThread]: 
+[0m22:38:17.919289 [debug] [MainThread]: Acquiring new postgres connection 'master'
+[0m22:38:17.923297 [debug] [ThreadPool]: Acquiring new postgres connection 'list_IDX-Stock_warehouse'
+[0m22:38:17.944289 [debug] [ThreadPool]: Using postgres connection "list_IDX-Stock_warehouse"
+[0m22:38:17.945304 [debug] [ThreadPool]: On list_IDX-Stock_warehouse: BEGIN
+[0m22:38:17.946294 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m22:38:17.986293 [debug] [ThreadPool]: SQL status: BEGIN in 0.0 seconds
+[0m22:38:17.987295 [debug] [ThreadPool]: Using postgres connection "list_IDX-Stock_warehouse"
+[0m22:38:17.988314 [debug] [ThreadPool]: On list_IDX-Stock_warehouse: /* {"app": "dbt", "dbt_version": "1.6.1", "profile_name": "dbt_idx", "target_name": "dev", "connection_name": "list_IDX-Stock_warehouse"} */
+select
+      'IDX-Stock' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'warehouse'
+    union all
+    select
+      'IDX-Stock' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'warehouse'
+    union all
+    select
+      'IDX-Stock' as database,
+      matviewname as name,
+      schemaname as schema,
+      'materialized_view' as type
+    from pg_matviews
+    where schemaname ilike 'warehouse'
+  
+[0m22:38:17.994297 [debug] [ThreadPool]: SQL status: SELECT 10 in 0.0 seconds
+[0m22:38:17.996295 [debug] [ThreadPool]: On list_IDX-Stock_warehouse: ROLLBACK
+[0m22:38:17.999295 [debug] [ThreadPool]: On list_IDX-Stock_warehouse: Close
+[0m22:38:18.002644 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_IDX-Stock_warehouse, now list_IDX-Stock_snapshots)
+[0m22:38:18.009637 [debug] [ThreadPool]: Using postgres connection "list_IDX-Stock_snapshots"
+[0m22:38:18.010635 [debug] [ThreadPool]: On list_IDX-Stock_snapshots: BEGIN
+[0m22:38:18.011637 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m22:38:18.037635 [debug] [ThreadPool]: SQL status: BEGIN in 0.0 seconds
+[0m22:38:18.038634 [debug] [ThreadPool]: Using postgres connection "list_IDX-Stock_snapshots"
+[0m22:38:18.039634 [debug] [ThreadPool]: On list_IDX-Stock_snapshots: /* {"app": "dbt", "dbt_version": "1.6.1", "profile_name": "dbt_idx", "target_name": "dev", "connection_name": "list_IDX-Stock_snapshots"} */
+select
+      'IDX-Stock' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'snapshots'
+    union all
+    select
+      'IDX-Stock' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'snapshots'
+    union all
+    select
+      'IDX-Stock' as database,
+      matviewname as name,
+      schemaname as schema,
+      'materialized_view' as type
+    from pg_matviews
+    where schemaname ilike 'snapshots'
+  
+[0m22:38:18.045639 [debug] [ThreadPool]: SQL status: SELECT 1 in 0.0 seconds
+[0m22:38:18.048635 [debug] [ThreadPool]: On list_IDX-Stock_snapshots: ROLLBACK
+[0m22:38:18.051658 [debug] [ThreadPool]: On list_IDX-Stock_snapshots: Close
+[0m22:38:18.062659 [debug] [MainThread]: Using postgres connection "master"
+[0m22:38:18.064655 [debug] [MainThread]: On master: BEGIN
+[0m22:38:18.065636 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m22:38:18.106383 [debug] [MainThread]: SQL status: BEGIN in 0.0 seconds
+[0m22:38:18.107362 [debug] [MainThread]: Using postgres connection "master"
+[0m22:38:18.108363 [debug] [MainThread]: On master: /* {"app": "dbt", "dbt_version": "1.6.1", "profile_name": "dbt_idx", "target_name": "dev", "connection_name": "master"} */
+with relation as (
+        select
+            pg_rewrite.ev_class as class,
+            pg_rewrite.oid as id
+        from pg_rewrite
+    ),
+    class as (
+        select
+            oid as id,
+            relname as name,
+            relnamespace as schema,
+            relkind as kind
+        from pg_class
+    ),
+    dependency as (
+        select distinct
+            pg_depend.objid as id,
+            pg_depend.refobjid as ref
+        from pg_depend
+    ),
+    schema as (
+        select
+            pg_namespace.oid as id,
+            pg_namespace.nspname as name
+        from pg_namespace
+        where nspname != 'information_schema' and nspname not like 'pg\_%'
+    ),
+    referenced as (
+        select
+            relation.id AS id,
+            referenced_class.name ,
+            referenced_class.schema ,
+            referenced_class.kind
+        from relation
+        join class as referenced_class on relation.class=referenced_class.id
+        where referenced_class.kind in ('r', 'v', 'm')
+    ),
+    relationships as (
+        select
+            referenced.name as referenced_name,
+            referenced.schema as referenced_schema_id,
+            dependent_class.name as dependent_name,
+            dependent_class.schema as dependent_schema_id,
+            referenced.kind as kind
+        from referenced
+        join dependency on referenced.id=dependency.id
+        join class as dependent_class on dependency.ref=dependent_class.id
+        where
+            (referenced.name != dependent_class.name or
+             referenced.schema != dependent_class.schema)
+    )
+
+    select
+        referenced_schema.name as referenced_schema,
+        relationships.referenced_name as referenced_name,
+        dependent_schema.name as dependent_schema,
+        relationships.dependent_name as dependent_name
+    from relationships
+    join schema as dependent_schema on relationships.dependent_schema_id=dependent_schema.id
+    join schema as referenced_schema on relationships.referenced_schema_id=referenced_schema.id
+    group by referenced_schema, referenced_name, dependent_schema, dependent_name
+    order by referenced_schema, referenced_name, dependent_schema, dependent_name;
+[0m22:38:18.119373 [debug] [MainThread]: SQL status: SELECT 6 in 0.0 seconds
+[0m22:38:18.124389 [debug] [MainThread]: On master: ROLLBACK
+[0m22:38:18.127365 [debug] [MainThread]: Using postgres connection "master"
+[0m22:38:18.128377 [debug] [MainThread]: On master: BEGIN
+[0m22:38:18.132378 [debug] [MainThread]: SQL status: BEGIN in 0.0 seconds
+[0m22:38:18.133378 [debug] [MainThread]: On master: COMMIT
+[0m22:38:18.135377 [debug] [MainThread]: Using postgres connection "master"
+[0m22:38:18.136393 [debug] [MainThread]: On master: COMMIT
+[0m22:38:18.140382 [debug] [MainThread]: SQL status: COMMIT in 0.0 seconds
+[0m22:38:18.141378 [debug] [MainThread]: On master: Close
+[0m22:38:18.144380 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m22:38:18.146379 [info ] [MainThread]: 
+[0m22:38:18.155408 [debug] [Thread-1 (]: Began running node test.dbt_idx.accepted_values_customer_orders_status_order_status__delivered__invoiced__shipped__processing__canceled__unavailable.ea8c296d27
+[0m22:38:18.157377 [info ] [Thread-1 (]: 1 of 9 START test accepted_values_customer_orders_status_order_status__delivered__invoiced__shipped__processing__canceled__unavailable  [RUN]
+[0m22:38:18.160378 [debug] [Thread-1 (]: Acquiring new postgres connection 'test.dbt_idx.accepted_values_customer_orders_status_order_status__delivered__invoiced__shipped__processing__canceled__unavailable.ea8c296d27'
+[0m22:38:18.162379 [debug] [Thread-1 (]: Began compiling node test.dbt_idx.accepted_values_customer_orders_status_order_status__delivered__invoiced__shipped__processing__canceled__unavailable.ea8c296d27
+[0m22:38:18.205095 [debug] [Thread-1 (]: Writing injected SQL for node "test.dbt_idx.accepted_values_customer_orders_status_order_status__delivered__invoiced__shipped__processing__canceled__unavailable.ea8c296d27"
+[0m22:38:18.215350 [debug] [Thread-1 (]: Timing info for test.dbt_idx.accepted_values_customer_orders_status_order_status__delivered__invoiced__shipped__processing__canceled__unavailable.ea8c296d27 (compile): 22:38:18.163385 => 22:38:18.215350
+[0m22:38:18.219129 [debug] [Thread-1 (]: Began executing node test.dbt_idx.accepted_values_customer_orders_status_order_status__delivered__invoiced__shipped__processing__canceled__unavailable.ea8c296d27
+[0m22:38:18.261517 [debug] [Thread-1 (]: Writing runtime sql for node "test.dbt_idx.accepted_values_customer_orders_status_order_status__delivered__invoiced__shipped__processing__canceled__unavailable.ea8c296d27"
+[0m22:38:18.271258 [debug] [Thread-1 (]: Using postgres connection "test.dbt_idx.accepted_values_customer_orders_status_order_status__delivered__invoiced__shipped__processing__canceled__unavailable.ea8c296d27"
+[0m22:38:18.273253 [debug] [Thread-1 (]: On test.dbt_idx.accepted_values_customer_orders_status_order_status__delivered__invoiced__shipped__processing__canceled__unavailable.ea8c296d27: BEGIN
+[0m22:38:18.274267 [debug] [Thread-1 (]: Opening a new connection, currently in state init
+[0m22:38:18.342879 [debug] [Thread-1 (]: SQL status: BEGIN in 0.0 seconds
+[0m22:38:18.343869 [debug] [Thread-1 (]: Using postgres connection "test.dbt_idx.accepted_values_customer_orders_status_order_status__delivered__invoiced__shipped__processing__canceled__unavailable.ea8c296d27"
+[0m22:38:18.345857 [debug] [Thread-1 (]: On test.dbt_idx.accepted_values_customer_orders_status_order_status__delivered__invoiced__shipped__processing__canceled__unavailable.ea8c296d27: /* {"app": "dbt", "dbt_version": "1.6.1", "profile_name": "dbt_idx", "target_name": "dev", "node_id": "test.dbt_idx.accepted_values_customer_orders_status_order_status__delivered__invoiced__shipped__processing__canceled__unavailable.ea8c296d27"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+with all_values as (
+
+    select
+        order_status as value_field,
+        count(*) as n_records
+
+    from "IDX-Stock"."warehouse"."customer_orders_status"
+    group by order_status
+
+)
+
+select *
+from all_values
+where value_field not in (
+    'delivered','invoiced','shipped','processing','canceled','unavailable'
+)
+
+
+
+      
+    ) dbt_internal_test
+[0m22:38:18.353231 [debug] [Thread-1 (]: SQL status: SELECT 1 in 0.0 seconds
+[0m22:38:18.358252 [debug] [Thread-1 (]: Timing info for test.dbt_idx.accepted_values_customer_orders_status_order_status__delivered__invoiced__shipped__processing__canceled__unavailable.ea8c296d27 (execute): 22:38:18.223352 => 22:38:18.357233
+[0m22:38:18.359232 [debug] [Thread-1 (]: On test.dbt_idx.accepted_values_customer_orders_status_order_status__delivered__invoiced__shipped__processing__canceled__unavailable.ea8c296d27: ROLLBACK
+[0m22:38:18.362297 [debug] [Thread-1 (]: On test.dbt_idx.accepted_values_customer_orders_status_order_status__delivered__invoiced__shipped__processing__canceled__unavailable.ea8c296d27: Close
+[0m22:38:18.364855 [info ] [Thread-1 (]: 1 of 9 PASS accepted_values_customer_orders_status_order_status__delivered__invoiced__shipped__processing__canceled__unavailable  [[32mPASS[0m in 0.20s]
+[0m22:38:18.366845 [debug] [Thread-1 (]: Finished running node test.dbt_idx.accepted_values_customer_orders_status_order_status__delivered__invoiced__shipped__processing__canceled__unavailable.ea8c296d27
+[0m22:38:18.370187 [debug] [Thread-1 (]: Began running node test.dbt_idx.assert_customer_dimension_has_no_row_loss.sql
+[0m22:38:18.371892 [info ] [Thread-1 (]: 2 of 9 START test assert_customer_dimension_has_no_row_loss.sql ................ [RUN]
+[0m22:38:18.374889 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.dbt_idx.accepted_values_customer_orders_status_order_status__delivered__invoiced__shipped__processing__canceled__unavailable.ea8c296d27, now test.dbt_idx.assert_customer_dimension_has_no_row_loss.sql)
+[0m22:38:18.376560 [debug] [Thread-1 (]: Began compiling node test.dbt_idx.assert_customer_dimension_has_no_row_loss.sql
+[0m22:38:18.384015 [debug] [Thread-1 (]: Writing injected SQL for node "test.dbt_idx.assert_customer_dimension_has_no_row_loss.sql"
+[0m22:38:18.392794 [debug] [Thread-1 (]: Timing info for test.dbt_idx.assert_customer_dimension_has_no_row_loss.sql (compile): 22:38:18.378222 => 22:38:18.391813
+[0m22:38:18.394800 [debug] [Thread-1 (]: Began executing node test.dbt_idx.assert_customer_dimension_has_no_row_loss.sql
+[0m22:38:18.400362 [debug] [Thread-1 (]: Writing runtime sql for node "test.dbt_idx.assert_customer_dimension_has_no_row_loss.sql"
+[0m22:38:18.409413 [debug] [Thread-1 (]: Using postgres connection "test.dbt_idx.assert_customer_dimension_has_no_row_loss.sql"
+[0m22:38:18.410450 [debug] [Thread-1 (]: On test.dbt_idx.assert_customer_dimension_has_no_row_loss.sql: BEGIN
+[0m22:38:18.411411 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m22:38:18.438839 [debug] [Thread-1 (]: SQL status: BEGIN in 0.0 seconds
+[0m22:38:18.440835 [debug] [Thread-1 (]: Using postgres connection "test.dbt_idx.assert_customer_dimension_has_no_row_loss.sql"
+[0m22:38:18.442832 [debug] [Thread-1 (]: On test.dbt_idx.assert_customer_dimension_has_no_row_loss.sql: /* {"app": "dbt", "dbt_version": "1.6.1", "profile_name": "dbt_idx", "target_name": "dev", "node_id": "test.dbt_idx.assert_customer_dimension_has_no_row_loss.sql"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      -- dim_customers must have the same number of rows as its staging counterpart
+-- Therefore return records where this isn't true to make the test fail
+select *
+from (
+    select dim_cust.customer_id
+    from "IDX-Stock"."warehouse"."dim_customers" dim_cust
+        left join "IDX-Stock"."warehouse"."stg_eltool__customers_snapshots" stg_cust
+    on dim_cust.customer_id = stg_cust.customer_id
+    where stg_cust.customer_id is null
+    UNION ALL
+    select stg_cust.customer_id
+    from "IDX-Stock"."warehouse"."stg_eltool__customers_snapshots" stg_cust
+      left join "IDX-Stock"."warehouse"."dim_customers" dim_cust
+    on stg_cust.customer_id = dim_cust.customer_id
+    where dim_cust.customer_id is null
+) tmp
+      
+    ) dbt_internal_test
+[0m22:38:18.449913 [debug] [Thread-1 (]: SQL status: SELECT 1 in 0.0 seconds
+[0m22:38:18.453911 [debug] [Thread-1 (]: Timing info for test.dbt_idx.assert_customer_dimension_has_no_row_loss.sql (execute): 22:38:18.395798 => 22:38:18.453911
+[0m22:38:18.455913 [debug] [Thread-1 (]: On test.dbt_idx.assert_customer_dimension_has_no_row_loss.sql: ROLLBACK
+[0m22:38:18.459438 [debug] [Thread-1 (]: On test.dbt_idx.assert_customer_dimension_has_no_row_loss.sql: Close
+[0m22:38:18.461437 [info ] [Thread-1 (]: 2 of 9 PASS assert_customer_dimension_has_no_row_loss.sql ...................... [[32mPASS[0m in 0.09s]
+[0m22:38:18.463964 [debug] [Thread-1 (]: Finished running node test.dbt_idx.assert_customer_dimension_has_no_row_loss.sql
+[0m22:38:18.464965 [debug] [Thread-1 (]: Began running node test.dbt_idx.not_null_customer_orders_status_customer_id.3915c814eb
+[0m22:38:18.466479 [info ] [Thread-1 (]: 3 of 9 START test not_null_customer_orders_status_customer_id .................. [RUN]
+[0m22:38:18.469493 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.dbt_idx.assert_customer_dimension_has_no_row_loss.sql, now test.dbt_idx.not_null_customer_orders_status_customer_id.3915c814eb)
+[0m22:38:18.470493 [debug] [Thread-1 (]: Began compiling node test.dbt_idx.not_null_customer_orders_status_customer_id.3915c814eb
+[0m22:38:18.485603 [debug] [Thread-1 (]: Writing injected SQL for node "test.dbt_idx.not_null_customer_orders_status_customer_id.3915c814eb"
+[0m22:38:18.493596 [debug] [Thread-1 (]: Timing info for test.dbt_idx.not_null_customer_orders_status_customer_id.3915c814eb (compile): 22:38:18.471492 => 22:38:18.492601
+[0m22:38:18.494595 [debug] [Thread-1 (]: Began executing node test.dbt_idx.not_null_customer_orders_status_customer_id.3915c814eb
+[0m22:38:18.498595 [debug] [Thread-1 (]: Writing runtime sql for node "test.dbt_idx.not_null_customer_orders_status_customer_id.3915c814eb"
+[0m22:38:18.505427 [debug] [Thread-1 (]: Using postgres connection "test.dbt_idx.not_null_customer_orders_status_customer_id.3915c814eb"
+[0m22:38:18.506428 [debug] [Thread-1 (]: On test.dbt_idx.not_null_customer_orders_status_customer_id.3915c814eb: BEGIN
+[0m22:38:18.507429 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m22:38:18.528955 [debug] [Thread-1 (]: SQL status: BEGIN in 0.0 seconds
+[0m22:38:18.529951 [debug] [Thread-1 (]: Using postgres connection "test.dbt_idx.not_null_customer_orders_status_customer_id.3915c814eb"
+[0m22:38:18.530952 [debug] [Thread-1 (]: On test.dbt_idx.not_null_customer_orders_status_customer_id.3915c814eb: /* {"app": "dbt", "dbt_version": "1.6.1", "profile_name": "dbt_idx", "target_name": "dev", "node_id": "test.dbt_idx.not_null_customer_orders_status_customer_id.3915c814eb"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+
+
+select customer_id
+from "IDX-Stock"."warehouse"."customer_orders_status"
+where customer_id is null
+
+
+
+      
+    ) dbt_internal_test
+[0m22:38:18.534950 [debug] [Thread-1 (]: SQL status: SELECT 1 in 0.0 seconds
+[0m22:38:18.537029 [debug] [Thread-1 (]: Timing info for test.dbt_idx.not_null_customer_orders_status_customer_id.3915c814eb (execute): 22:38:18.494595 => 22:38:18.537029
+[0m22:38:18.538036 [debug] [Thread-1 (]: On test.dbt_idx.not_null_customer_orders_status_customer_id.3915c814eb: ROLLBACK
+[0m22:38:18.540032 [debug] [Thread-1 (]: On test.dbt_idx.not_null_customer_orders_status_customer_id.3915c814eb: Close
+[0m22:38:18.542031 [info ] [Thread-1 (]: 3 of 9 PASS not_null_customer_orders_status_customer_id ........................ [[32mPASS[0m in 0.07s]
+[0m22:38:18.544038 [debug] [Thread-1 (]: Finished running node test.dbt_idx.not_null_customer_orders_status_customer_id.3915c814eb
+[0m22:38:18.545420 [debug] [Thread-1 (]: Began running node test.dbt_idx.not_null_stg_eltool__customers_snapshots_customer_id.ea4fc4ca86
+[0m22:38:18.546029 [info ] [Thread-1 (]: 4 of 9 START test not_null_stg_eltool__customers_snapshots_customer_id ......... [RUN]
+[0m22:38:18.548026 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.dbt_idx.not_null_customer_orders_status_customer_id.3915c814eb, now test.dbt_idx.not_null_stg_eltool__customers_snapshots_customer_id.ea4fc4ca86)
+[0m22:38:18.549038 [debug] [Thread-1 (]: Began compiling node test.dbt_idx.not_null_stg_eltool__customers_snapshots_customer_id.ea4fc4ca86
+[0m22:38:18.556558 [debug] [Thread-1 (]: Writing injected SQL for node "test.dbt_idx.not_null_stg_eltool__customers_snapshots_customer_id.ea4fc4ca86"
+[0m22:38:18.564201 [debug] [Thread-1 (]: Timing info for test.dbt_idx.not_null_stg_eltool__customers_snapshots_customer_id.ea4fc4ca86 (compile): 22:38:18.549038 => 22:38:18.564201
+[0m22:38:18.565188 [debug] [Thread-1 (]: Began executing node test.dbt_idx.not_null_stg_eltool__customers_snapshots_customer_id.ea4fc4ca86
+[0m22:38:18.568185 [debug] [Thread-1 (]: Writing runtime sql for node "test.dbt_idx.not_null_stg_eltool__customers_snapshots_customer_id.ea4fc4ca86"
+[0m22:38:18.576374 [debug] [Thread-1 (]: Using postgres connection "test.dbt_idx.not_null_stg_eltool__customers_snapshots_customer_id.ea4fc4ca86"
+[0m22:38:18.577373 [debug] [Thread-1 (]: On test.dbt_idx.not_null_stg_eltool__customers_snapshots_customer_id.ea4fc4ca86: BEGIN
+[0m22:38:18.578398 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m22:38:18.602010 [debug] [Thread-1 (]: SQL status: BEGIN in 0.0 seconds
+[0m22:38:18.603416 [debug] [Thread-1 (]: Using postgres connection "test.dbt_idx.not_null_stg_eltool__customers_snapshots_customer_id.ea4fc4ca86"
+[0m22:38:18.604417 [debug] [Thread-1 (]: On test.dbt_idx.not_null_stg_eltool__customers_snapshots_customer_id.ea4fc4ca86: /* {"app": "dbt", "dbt_version": "1.6.1", "profile_name": "dbt_idx", "target_name": "dev", "node_id": "test.dbt_idx.not_null_stg_eltool__customers_snapshots_customer_id.ea4fc4ca86"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+
+
+select customer_id
+from "IDX-Stock"."warehouse"."stg_eltool__customers_snapshots"
+where customer_id is null
+
+
+
+      
+    ) dbt_internal_test
+[0m22:38:18.607414 [debug] [Thread-1 (]: SQL status: SELECT 1 in 0.0 seconds
+[0m22:38:18.609433 [debug] [Thread-1 (]: Timing info for test.dbt_idx.not_null_stg_eltool__customers_snapshots_customer_id.ea4fc4ca86 (execute): 22:38:18.566186 => 22:38:18.609433
+[0m22:38:18.610941 [debug] [Thread-1 (]: On test.dbt_idx.not_null_stg_eltool__customers_snapshots_customer_id.ea4fc4ca86: ROLLBACK
+[0m22:38:18.612948 [debug] [Thread-1 (]: On test.dbt_idx.not_null_stg_eltool__customers_snapshots_customer_id.ea4fc4ca86: Close
+[0m22:38:18.615953 [info ] [Thread-1 (]: 4 of 9 PASS not_null_stg_eltool__customers_snapshots_customer_id ............... [[32mPASS[0m in 0.07s]
+[0m22:38:18.617955 [debug] [Thread-1 (]: Finished running node test.dbt_idx.not_null_stg_eltool__customers_snapshots_customer_id.ea4fc4ca86
+[0m22:38:18.618952 [debug] [Thread-1 (]: Began running node test.dbt_idx.source_not_null_warehouse_customers_customer_id.ae7452c4c6
+[0m22:38:18.619950 [info ] [Thread-1 (]: 5 of 9 START test source_not_null_warehouse_customers_customer_id .............. [RUN]
+[0m22:38:18.621949 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.dbt_idx.not_null_stg_eltool__customers_snapshots_customer_id.ea4fc4ca86, now test.dbt_idx.source_not_null_warehouse_customers_customer_id.ae7452c4c6)
+[0m22:38:18.622946 [debug] [Thread-1 (]: Began compiling node test.dbt_idx.source_not_null_warehouse_customers_customer_id.ae7452c4c6
+[0m22:38:18.627946 [debug] [Thread-1 (]: Writing injected SQL for node "test.dbt_idx.source_not_null_warehouse_customers_customer_id.ae7452c4c6"
+[0m22:38:18.635483 [debug] [Thread-1 (]: Timing info for test.dbt_idx.source_not_null_warehouse_customers_customer_id.ae7452c4c6 (compile): 22:38:18.622946 => 22:38:18.635483
+[0m22:38:18.636500 [debug] [Thread-1 (]: Began executing node test.dbt_idx.source_not_null_warehouse_customers_customer_id.ae7452c4c6
+[0m22:38:18.640501 [debug] [Thread-1 (]: Writing runtime sql for node "test.dbt_idx.source_not_null_warehouse_customers_customer_id.ae7452c4c6"
+[0m22:38:18.647259 [debug] [Thread-1 (]: Using postgres connection "test.dbt_idx.source_not_null_warehouse_customers_customer_id.ae7452c4c6"
+[0m22:38:18.648254 [debug] [Thread-1 (]: On test.dbt_idx.source_not_null_warehouse_customers_customer_id.ae7452c4c6: BEGIN
+[0m22:38:18.649255 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m22:38:18.672846 [debug] [Thread-1 (]: SQL status: BEGIN in 0.0 seconds
+[0m22:38:18.673849 [debug] [Thread-1 (]: Using postgres connection "test.dbt_idx.source_not_null_warehouse_customers_customer_id.ae7452c4c6"
+[0m22:38:18.674831 [debug] [Thread-1 (]: On test.dbt_idx.source_not_null_warehouse_customers_customer_id.ae7452c4c6: /* {"app": "dbt", "dbt_version": "1.6.1", "profile_name": "dbt_idx", "target_name": "dev", "node_id": "test.dbt_idx.source_not_null_warehouse_customers_customer_id.ae7452c4c6"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+
+
+select customer_id
+from "IDX-Stock"."warehouse"."customers"
+where customer_id is null
+
+
+
+      
+    ) dbt_internal_test
+[0m22:38:18.676831 [debug] [Thread-1 (]: SQL status: SELECT 1 in 0.0 seconds
+[0m22:38:18.679832 [debug] [Thread-1 (]: Timing info for test.dbt_idx.source_not_null_warehouse_customers_customer_id.ae7452c4c6 (execute): 22:38:18.637479 => 22:38:18.678830
+[0m22:38:18.680832 [debug] [Thread-1 (]: On test.dbt_idx.source_not_null_warehouse_customers_customer_id.ae7452c4c6: ROLLBACK
+[0m22:38:18.682978 [debug] [Thread-1 (]: On test.dbt_idx.source_not_null_warehouse_customers_customer_id.ae7452c4c6: Close
+[0m22:38:18.684839 [info ] [Thread-1 (]: 5 of 9 PASS source_not_null_warehouse_customers_customer_id .................... [[32mPASS[0m in 0.06s]
+[0m22:38:18.686832 [debug] [Thread-1 (]: Finished running node test.dbt_idx.source_not_null_warehouse_customers_customer_id.ae7452c4c6
+[0m22:38:18.687839 [debug] [Thread-1 (]: Began running node test.dbt_idx.source_not_null_warehouse_orders_order_id.c85a1f0b76
+[0m22:38:18.688832 [info ] [Thread-1 (]: 6 of 9 START test source_not_null_warehouse_orders_order_id .................... [RUN]
+[0m22:38:18.690830 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.dbt_idx.source_not_null_warehouse_customers_customer_id.ae7452c4c6, now test.dbt_idx.source_not_null_warehouse_orders_order_id.c85a1f0b76)
+[0m22:38:18.691834 [debug] [Thread-1 (]: Began compiling node test.dbt_idx.source_not_null_warehouse_orders_order_id.c85a1f0b76
+[0m22:38:18.698320 [debug] [Thread-1 (]: Writing injected SQL for node "test.dbt_idx.source_not_null_warehouse_orders_order_id.c85a1f0b76"
+[0m22:38:18.705534 [debug] [Thread-1 (]: Timing info for test.dbt_idx.source_not_null_warehouse_orders_order_id.c85a1f0b76 (compile): 22:38:18.691834 => 22:38:18.705534
+[0m22:38:18.706508 [debug] [Thread-1 (]: Began executing node test.dbt_idx.source_not_null_warehouse_orders_order_id.c85a1f0b76
+[0m22:38:18.709505 [debug] [Thread-1 (]: Writing runtime sql for node "test.dbt_idx.source_not_null_warehouse_orders_order_id.c85a1f0b76"
+[0m22:38:18.716038 [debug] [Thread-1 (]: Using postgres connection "test.dbt_idx.source_not_null_warehouse_orders_order_id.c85a1f0b76"
+[0m22:38:18.717040 [debug] [Thread-1 (]: On test.dbt_idx.source_not_null_warehouse_orders_order_id.c85a1f0b76: BEGIN
+[0m22:38:18.718042 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m22:38:18.740576 [debug] [Thread-1 (]: SQL status: BEGIN in 0.0 seconds
+[0m22:38:18.741557 [debug] [Thread-1 (]: Using postgres connection "test.dbt_idx.source_not_null_warehouse_orders_order_id.c85a1f0b76"
+[0m22:38:18.742562 [debug] [Thread-1 (]: On test.dbt_idx.source_not_null_warehouse_orders_order_id.c85a1f0b76: /* {"app": "dbt", "dbt_version": "1.6.1", "profile_name": "dbt_idx", "target_name": "dev", "node_id": "test.dbt_idx.source_not_null_warehouse_orders_order_id.c85a1f0b76"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+
+
+select order_id
+from "IDX-Stock"."warehouse"."orders"
+where order_id is null
+
+
+
+      
+    ) dbt_internal_test
+[0m22:38:18.745557 [debug] [Thread-1 (]: SQL status: SELECT 1 in 0.0 seconds
+[0m22:38:18.747558 [debug] [Thread-1 (]: Timing info for test.dbt_idx.source_not_null_warehouse_orders_order_id.c85a1f0b76 (execute): 22:38:18.707527 => 22:38:18.747558
+[0m22:38:18.748582 [debug] [Thread-1 (]: On test.dbt_idx.source_not_null_warehouse_orders_order_id.c85a1f0b76: ROLLBACK
+[0m22:38:18.750560 [debug] [Thread-1 (]: On test.dbt_idx.source_not_null_warehouse_orders_order_id.c85a1f0b76: Close
+[0m22:38:18.752562 [info ] [Thread-1 (]: 6 of 9 PASS source_not_null_warehouse_orders_order_id .......................... [[32mPASS[0m in 0.06s]
+[0m22:38:18.755091 [debug] [Thread-1 (]: Finished running node test.dbt_idx.source_not_null_warehouse_orders_order_id.c85a1f0b76
+[0m22:38:18.756104 [debug] [Thread-1 (]: Began running node test.dbt_idx.source_relationships_warehouse_orders_cust_id__customer_id__source_warehouse_customers_.d3f9188fc2
+[0m22:38:18.757102 [info ] [Thread-1 (]: 7 of 9 START test source_relationships_warehouse_orders_cust_id__customer_id__source_warehouse_customers_  [RUN]
+[0m22:38:18.759100 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.dbt_idx.source_not_null_warehouse_orders_order_id.c85a1f0b76, now test.dbt_idx.source_relationships_warehouse_orders_cust_id__customer_id__source_warehouse_customers_.d3f9188fc2)
+[0m22:38:18.760101 [debug] [Thread-1 (]: Began compiling node test.dbt_idx.source_relationships_warehouse_orders_cust_id__customer_id__source_warehouse_customers_.d3f9188fc2
+[0m22:38:18.770100 [debug] [Thread-1 (]: Writing injected SQL for node "test.dbt_idx.source_relationships_warehouse_orders_cust_id__customer_id__source_warehouse_customers_.d3f9188fc2"
+[0m22:38:18.778183 [debug] [Thread-1 (]: Timing info for test.dbt_idx.source_relationships_warehouse_orders_cust_id__customer_id__source_warehouse_customers_.d3f9188fc2 (compile): 22:38:18.760101 => 22:38:18.777184
+[0m22:38:18.779187 [debug] [Thread-1 (]: Began executing node test.dbt_idx.source_relationships_warehouse_orders_cust_id__customer_id__source_warehouse_customers_.d3f9188fc2
+[0m22:38:18.782183 [debug] [Thread-1 (]: Writing runtime sql for node "test.dbt_idx.source_relationships_warehouse_orders_cust_id__customer_id__source_warehouse_customers_.d3f9188fc2"
+[0m22:38:18.789260 [debug] [Thread-1 (]: Using postgres connection "test.dbt_idx.source_relationships_warehouse_orders_cust_id__customer_id__source_warehouse_customers_.d3f9188fc2"
+[0m22:38:18.790189 [debug] [Thread-1 (]: On test.dbt_idx.source_relationships_warehouse_orders_cust_id__customer_id__source_warehouse_customers_.d3f9188fc2: BEGIN
+[0m22:38:18.791187 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m22:38:18.812509 [debug] [Thread-1 (]: SQL status: BEGIN in 0.0 seconds
+[0m22:38:18.814510 [debug] [Thread-1 (]: Using postgres connection "test.dbt_idx.source_relationships_warehouse_orders_cust_id__customer_id__source_warehouse_customers_.d3f9188fc2"
+[0m22:38:18.814510 [debug] [Thread-1 (]: On test.dbt_idx.source_relationships_warehouse_orders_cust_id__customer_id__source_warehouse_customers_.d3f9188fc2: /* {"app": "dbt", "dbt_version": "1.6.1", "profile_name": "dbt_idx", "target_name": "dev", "node_id": "test.dbt_idx.source_relationships_warehouse_orders_cust_id__customer_id__source_warehouse_customers_.d3f9188fc2"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+with child as (
+    select cust_id as from_field
+    from "IDX-Stock"."warehouse"."orders"
+    where cust_id is not null
+),
+
+parent as (
+    select customer_id as to_field
+    from "IDX-Stock"."warehouse"."customers"
+)
+
+select
+    from_field
+
+from child
+left join parent
+    on child.from_field = parent.to_field
+
+where parent.to_field is null
+
+
+
+      
+    ) dbt_internal_test
+[0m22:38:18.818612 [debug] [Thread-1 (]: SQL status: SELECT 1 in 0.0 seconds
+[0m22:38:18.820647 [debug] [Thread-1 (]: Timing info for test.dbt_idx.source_relationships_warehouse_orders_cust_id__customer_id__source_warehouse_customers_.d3f9188fc2 (execute): 22:38:18.780188 => 22:38:18.820647
+[0m22:38:18.821616 [debug] [Thread-1 (]: On test.dbt_idx.source_relationships_warehouse_orders_cust_id__customer_id__source_warehouse_customers_.d3f9188fc2: ROLLBACK
+[0m22:38:18.824614 [debug] [Thread-1 (]: On test.dbt_idx.source_relationships_warehouse_orders_cust_id__customer_id__source_warehouse_customers_.d3f9188fc2: Close
+[0m22:38:18.826625 [info ] [Thread-1 (]: 7 of 9 PASS source_relationships_warehouse_orders_cust_id__customer_id__source_warehouse_customers_  [[32mPASS[0m in 0.07s]
+[0m22:38:18.828620 [debug] [Thread-1 (]: Finished running node test.dbt_idx.source_relationships_warehouse_orders_cust_id__customer_id__source_warehouse_customers_.d3f9188fc2
+[0m22:38:18.829614 [debug] [Thread-1 (]: Began running node test.dbt_idx.source_unique_warehouse_orders_order_id.839fb43d0f
+[0m22:38:18.830672 [info ] [Thread-1 (]: 8 of 9 START test source_unique_warehouse_orders_order_id ...................... [RUN]
+[0m22:38:18.832649 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.dbt_idx.source_relationships_warehouse_orders_cust_id__customer_id__source_warehouse_customers_.d3f9188fc2, now test.dbt_idx.source_unique_warehouse_orders_order_id.839fb43d0f)
+[0m22:38:18.832649 [debug] [Thread-1 (]: Began compiling node test.dbt_idx.source_unique_warehouse_orders_order_id.839fb43d0f
+[0m22:38:18.840232 [debug] [Thread-1 (]: Writing injected SQL for node "test.dbt_idx.source_unique_warehouse_orders_order_id.839fb43d0f"
+[0m22:38:18.848197 [debug] [Thread-1 (]: Timing info for test.dbt_idx.source_unique_warehouse_orders_order_id.839fb43d0f (compile): 22:38:18.834189 => 22:38:18.847195
+[0m22:38:18.849196 [debug] [Thread-1 (]: Began executing node test.dbt_idx.source_unique_warehouse_orders_order_id.839fb43d0f
+[0m22:38:18.851781 [debug] [Thread-1 (]: Writing runtime sql for node "test.dbt_idx.source_unique_warehouse_orders_order_id.839fb43d0f"
+[0m22:38:18.858750 [debug] [Thread-1 (]: Using postgres connection "test.dbt_idx.source_unique_warehouse_orders_order_id.839fb43d0f"
+[0m22:38:18.859772 [debug] [Thread-1 (]: On test.dbt_idx.source_unique_warehouse_orders_order_id.839fb43d0f: BEGIN
+[0m22:38:18.860756 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m22:38:18.884255 [debug] [Thread-1 (]: SQL status: BEGIN in 0.0 seconds
+[0m22:38:18.885286 [debug] [Thread-1 (]: Using postgres connection "test.dbt_idx.source_unique_warehouse_orders_order_id.839fb43d0f"
+[0m22:38:18.886264 [debug] [Thread-1 (]: On test.dbt_idx.source_unique_warehouse_orders_order_id.839fb43d0f: /* {"app": "dbt", "dbt_version": "1.6.1", "profile_name": "dbt_idx", "target_name": "dev", "node_id": "test.dbt_idx.source_unique_warehouse_orders_order_id.839fb43d0f"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+select
+    order_id as unique_field,
+    count(*) as n_records
+
+from "IDX-Stock"."warehouse"."orders"
+where order_id is not null
+group by order_id
+having count(*) > 1
+
+
+
+      
+    ) dbt_internal_test
+[0m22:38:18.889316 [debug] [Thread-1 (]: SQL status: SELECT 1 in 0.0 seconds
+[0m22:38:18.892297 [debug] [Thread-1 (]: Timing info for test.dbt_idx.source_unique_warehouse_orders_order_id.839fb43d0f (execute): 22:38:18.849196 => 22:38:18.891298
+[0m22:38:18.893265 [debug] [Thread-1 (]: On test.dbt_idx.source_unique_warehouse_orders_order_id.839fb43d0f: ROLLBACK
+[0m22:38:18.895263 [debug] [Thread-1 (]: On test.dbt_idx.source_unique_warehouse_orders_order_id.839fb43d0f: Close
+[0m22:38:18.896820 [info ] [Thread-1 (]: 8 of 9 PASS source_unique_warehouse_orders_order_id ............................ [[32mPASS[0m in 0.07s]
+[0m22:38:18.898826 [debug] [Thread-1 (]: Finished running node test.dbt_idx.source_unique_warehouse_orders_order_id.839fb43d0f
+[0m22:38:18.899815 [debug] [Thread-1 (]: Began running node test.dbt_idx.unique_customer_orders_status_order_id.b7a45e83ee
+[0m22:38:18.901060 [info ] [Thread-1 (]: 9 of 9 START test unique_customer_orders_status_order_id ....................... [RUN]
+[0m22:38:18.903093 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.dbt_idx.source_unique_warehouse_orders_order_id.839fb43d0f, now test.dbt_idx.unique_customer_orders_status_order_id.b7a45e83ee)
+[0m22:38:18.904070 [debug] [Thread-1 (]: Began compiling node test.dbt_idx.unique_customer_orders_status_order_id.b7a45e83ee
+[0m22:38:18.909095 [debug] [Thread-1 (]: Writing injected SQL for node "test.dbt_idx.unique_customer_orders_status_order_id.b7a45e83ee"
+[0m22:38:18.915087 [debug] [Thread-1 (]: Timing info for test.dbt_idx.unique_customer_orders_status_order_id.b7a45e83ee (compile): 22:38:18.904070 => 22:38:18.915087
+[0m22:38:18.916628 [debug] [Thread-1 (]: Began executing node test.dbt_idx.unique_customer_orders_status_order_id.b7a45e83ee
+[0m22:38:18.919669 [debug] [Thread-1 (]: Writing runtime sql for node "test.dbt_idx.unique_customer_orders_status_order_id.b7a45e83ee"
+[0m22:38:18.926640 [debug] [Thread-1 (]: Using postgres connection "test.dbt_idx.unique_customer_orders_status_order_id.b7a45e83ee"
+[0m22:38:18.927674 [debug] [Thread-1 (]: On test.dbt_idx.unique_customer_orders_status_order_id.b7a45e83ee: BEGIN
+[0m22:38:18.928636 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m22:38:18.952151 [debug] [Thread-1 (]: SQL status: BEGIN in 0.0 seconds
+[0m22:38:18.953182 [debug] [Thread-1 (]: Using postgres connection "test.dbt_idx.unique_customer_orders_status_order_id.b7a45e83ee"
+[0m22:38:18.954658 [debug] [Thread-1 (]: On test.dbt_idx.unique_customer_orders_status_order_id.b7a45e83ee: /* {"app": "dbt", "dbt_version": "1.6.1", "profile_name": "dbt_idx", "target_name": "dev", "node_id": "test.dbt_idx.unique_customer_orders_status_order_id.b7a45e83ee"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+select
+    order_id as unique_field,
+    count(*) as n_records
+
+from "IDX-Stock"."warehouse"."customer_orders_status"
+where order_id is not null
+group by order_id
+having count(*) > 1
+
+
+
+      
+    ) dbt_internal_test
+[0m22:38:18.958721 [debug] [Thread-1 (]: SQL status: SELECT 1 in 0.0 seconds
+[0m22:38:18.960701 [debug] [Thread-1 (]: Timing info for test.dbt_idx.unique_customer_orders_status_order_id.b7a45e83ee (execute): 22:38:18.917637 => 22:38:18.960701
+[0m22:38:18.961700 [debug] [Thread-1 (]: On test.dbt_idx.unique_customer_orders_status_order_id.b7a45e83ee: ROLLBACK
+[0m22:38:18.963673 [debug] [Thread-1 (]: On test.dbt_idx.unique_customer_orders_status_order_id.b7a45e83ee: Close
+[0m22:38:18.965760 [info ] [Thread-1 (]: 9 of 9 PASS unique_customer_orders_status_order_id ............................. [[32mPASS[0m in 0.06s]
+[0m22:38:18.967667 [debug] [Thread-1 (]: Finished running node test.dbt_idx.unique_customer_orders_status_order_id.b7a45e83ee
+[0m22:38:18.970687 [debug] [MainThread]: Using postgres connection "master"
+[0m22:38:18.971669 [debug] [MainThread]: On master: BEGIN
+[0m22:38:18.972693 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m22:38:18.994226 [debug] [MainThread]: SQL status: BEGIN in 0.0 seconds
+[0m22:38:18.995242 [debug] [MainThread]: On master: COMMIT
+[0m22:38:18.995242 [debug] [MainThread]: Using postgres connection "master"
+[0m22:38:18.996230 [debug] [MainThread]: On master: COMMIT
+[0m22:38:18.998343 [debug] [MainThread]: SQL status: COMMIT in 0.0 seconds
+[0m22:38:19.000894 [debug] [MainThread]: On master: Close
+[0m22:38:19.002903 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m22:38:19.003895 [debug] [MainThread]: Connection 'list_IDX-Stock_snapshots' was properly closed.
+[0m22:38:19.004896 [debug] [MainThread]: Connection 'test.dbt_idx.unique_customer_orders_status_order_id.b7a45e83ee' was properly closed.
+[0m22:38:19.006260 [info ] [MainThread]: 
+[0m22:38:19.006894 [info ] [MainThread]: Finished running 9 tests in 0 hours 0 minutes and 1.09 seconds (1.09s).
+[0m22:38:19.010895 [debug] [MainThread]: Command end result
+[0m22:38:19.031014 [info ] [MainThread]: 
+[0m22:38:19.031014 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m22:38:19.032556 [info ] [MainThread]: 
+[0m22:38:19.033598 [info ] [MainThread]: Done. PASS=9 WARN=0 ERROR=0 SKIP=0 TOTAL=9
+[0m22:38:19.034563 [debug] [MainThread]: Command `dbt test` succeeded at 22:38:19.034563 after 1.60 seconds
+[0m22:38:19.035599 [debug] [MainThread]: Flushing usage events
+
+
+============================== 22:38:29.954496 | 17cfe8fd-d22b-474e-807e-8ab64b90f1f7 ==============================
+[0m22:38:29.954496 [info ] [MainThread]: Running with dbt=1.6.1
+[0m22:38:29.959459 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'debug': 'False', 'fail_fast': 'False', 'log_path': 'D:\\00 Project\\00 My Project\\IdeaProjects\\Py-DBT-IDX\\logs', 'version_check': 'True', 'profiles_dir': 'D:\\00 Project\\00 My Project\\IdeaProjects\\Py-DBT-IDX', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'log_format': 'default', 'static_parser': 'True', 'invocation_command': 'dbt docs generate', 'introspect': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'send_anonymous_usage_stats': 'False'}
+[0m22:38:30.086615 [info ] [MainThread]: Registered adapter: postgres=1.6.1
+[0m22:38:30.096583 [debug] [MainThread]: checksum: efe19d9f5b93d1a98cc804fbfcdb6b3aced98b974af664946fee1cde8837deb7, vars: {}, profile: , target: , version: 1.6.1
+[0m22:38:30.246950 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m22:38:30.247950 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m22:38:30.275939 [info ] [MainThread]: Found 1 snapshot, 9 tests, 7 models, 3 sources, 0 exposures, 0 metrics, 349 macros, 0 groups, 0 semantic models
+[0m22:38:30.278934 [info ] [MainThread]: 
+[0m22:38:30.279935 [debug] [MainThread]: Acquiring new postgres connection 'master'
+[0m22:38:30.283935 [debug] [ThreadPool]: Acquiring new postgres connection 'list_IDX-Stock_warehouse'
+[0m22:38:30.297143 [debug] [ThreadPool]: Using postgres connection "list_IDX-Stock_warehouse"
+[0m22:38:30.298105 [debug] [ThreadPool]: On list_IDX-Stock_warehouse: BEGIN
+[0m22:38:30.299106 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m22:38:30.336780 [debug] [ThreadPool]: SQL status: BEGIN in 0.0 seconds
+[0m22:38:30.337789 [debug] [ThreadPool]: Using postgres connection "list_IDX-Stock_warehouse"
+[0m22:38:30.338780 [debug] [ThreadPool]: On list_IDX-Stock_warehouse: /* {"app": "dbt", "dbt_version": "1.6.1", "profile_name": "dbt_idx", "target_name": "dev", "connection_name": "list_IDX-Stock_warehouse"} */
+select
+      'IDX-Stock' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'warehouse'
+    union all
+    select
+      'IDX-Stock' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'warehouse'
+    union all
+    select
+      'IDX-Stock' as database,
+      matviewname as name,
+      schemaname as schema,
+      'materialized_view' as type
+    from pg_matviews
+    where schemaname ilike 'warehouse'
+  
+[0m22:38:30.343789 [debug] [ThreadPool]: SQL status: SELECT 10 in 0.0 seconds
+[0m22:38:30.346297 [debug] [ThreadPool]: On list_IDX-Stock_warehouse: ROLLBACK
+[0m22:38:30.349304 [debug] [ThreadPool]: On list_IDX-Stock_warehouse: Close
+[0m22:38:30.352307 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_IDX-Stock_warehouse, now list_IDX-Stock_snapshots)
+[0m22:38:30.358538 [debug] [ThreadPool]: Using postgres connection "list_IDX-Stock_snapshots"
+[0m22:38:30.360538 [debug] [ThreadPool]: On list_IDX-Stock_snapshots: BEGIN
+[0m22:38:30.361539 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m22:38:30.385624 [debug] [ThreadPool]: SQL status: BEGIN in 0.0 seconds
+[0m22:38:30.386596 [debug] [ThreadPool]: Using postgres connection "list_IDX-Stock_snapshots"
+[0m22:38:30.387596 [debug] [ThreadPool]: On list_IDX-Stock_snapshots: /* {"app": "dbt", "dbt_version": "1.6.1", "profile_name": "dbt_idx", "target_name": "dev", "connection_name": "list_IDX-Stock_snapshots"} */
+select
+      'IDX-Stock' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'snapshots'
+    union all
+    select
+      'IDX-Stock' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'snapshots'
+    union all
+    select
+      'IDX-Stock' as database,
+      matviewname as name,
+      schemaname as schema,
+      'materialized_view' as type
+    from pg_matviews
+    where schemaname ilike 'snapshots'
+  
+[0m22:38:30.393107 [debug] [ThreadPool]: SQL status: SELECT 1 in 0.0 seconds
+[0m22:38:30.395117 [debug] [ThreadPool]: On list_IDX-Stock_snapshots: ROLLBACK
+[0m22:38:30.397128 [debug] [ThreadPool]: On list_IDX-Stock_snapshots: Close
+[0m22:38:30.406646 [debug] [MainThread]: Using postgres connection "master"
+[0m22:38:30.407650 [debug] [MainThread]: On master: BEGIN
+[0m22:38:30.408649 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m22:38:30.437175 [debug] [MainThread]: SQL status: BEGIN in 0.0 seconds
+[0m22:38:30.438174 [debug] [MainThread]: Using postgres connection "master"
+[0m22:38:30.440173 [debug] [MainThread]: On master: /* {"app": "dbt", "dbt_version": "1.6.1", "profile_name": "dbt_idx", "target_name": "dev", "connection_name": "master"} */
+with relation as (
+        select
+            pg_rewrite.ev_class as class,
+            pg_rewrite.oid as id
+        from pg_rewrite
+    ),
+    class as (
+        select
+            oid as id,
+            relname as name,
+            relnamespace as schema,
+            relkind as kind
+        from pg_class
+    ),
+    dependency as (
+        select distinct
+            pg_depend.objid as id,
+            pg_depend.refobjid as ref
+        from pg_depend
+    ),
+    schema as (
+        select
+            pg_namespace.oid as id,
+            pg_namespace.nspname as name
+        from pg_namespace
+        where nspname != 'information_schema' and nspname not like 'pg\_%'
+    ),
+    referenced as (
+        select
+            relation.id AS id,
+            referenced_class.name ,
+            referenced_class.schema ,
+            referenced_class.kind
+        from relation
+        join class as referenced_class on relation.class=referenced_class.id
+        where referenced_class.kind in ('r', 'v', 'm')
+    ),
+    relationships as (
+        select
+            referenced.name as referenced_name,
+            referenced.schema as referenced_schema_id,
+            dependent_class.name as dependent_name,
+            dependent_class.schema as dependent_schema_id,
+            referenced.kind as kind
+        from referenced
+        join dependency on referenced.id=dependency.id
+        join class as dependent_class on dependency.ref=dependent_class.id
+        where
+            (referenced.name != dependent_class.name or
+             referenced.schema != dependent_class.schema)
+    )
+
+    select
+        referenced_schema.name as referenced_schema,
+        relationships.referenced_name as referenced_name,
+        dependent_schema.name as dependent_schema,
+        relationships.dependent_name as dependent_name
+    from relationships
+    join schema as dependent_schema on relationships.dependent_schema_id=dependent_schema.id
+    join schema as referenced_schema on relationships.referenced_schema_id=referenced_schema.id
+    group by referenced_schema, referenced_name, dependent_schema, dependent_name
+    order by referenced_schema, referenced_name, dependent_schema, dependent_name;
+[0m22:38:30.448349 [debug] [MainThread]: SQL status: SELECT 6 in 0.0 seconds
+[0m22:38:30.451657 [debug] [MainThread]: On master: ROLLBACK
+[0m22:38:30.454649 [debug] [MainThread]: On master: Close
+[0m22:38:30.456647 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m22:38:30.458348 [info ] [MainThread]: 
+[0m22:38:30.465924 [debug] [Thread-1 (]: Began running node model.dbt_idx.stg_eltool__customers
+[0m22:38:30.466935 [debug] [Thread-1 (]: Acquiring new postgres connection 'model.dbt_idx.stg_eltool__customers'
+[0m22:38:30.467923 [debug] [Thread-1 (]: Began compiling node model.dbt_idx.stg_eltool__customers
+[0m22:38:30.478941 [debug] [Thread-1 (]: Writing injected SQL for node "model.dbt_idx.stg_eltool__customers"
+[0m22:38:30.487032 [debug] [Thread-1 (]: Timing info for model.dbt_idx.stg_eltool__customers (compile): 22:38:30.469924 => 22:38:30.487032
+[0m22:38:30.488036 [debug] [Thread-1 (]: Began executing node model.dbt_idx.stg_eltool__customers
+[0m22:38:30.490032 [debug] [Thread-1 (]: Timing info for model.dbt_idx.stg_eltool__customers (execute): 22:38:30.489031 => 22:38:30.489031
+[0m22:38:30.492045 [debug] [Thread-1 (]: Finished running node model.dbt_idx.stg_eltool__customers
+[0m22:38:30.493032 [debug] [Thread-1 (]: Began running node model.dbt_idx.stg_eltool__orders
+[0m22:38:30.494030 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.dbt_idx.stg_eltool__customers, now model.dbt_idx.stg_eltool__orders)
+[0m22:38:30.495199 [debug] [Thread-1 (]: Began compiling node model.dbt_idx.stg_eltool__orders
+[0m22:38:30.499132 [debug] [Thread-1 (]: Writing injected SQL for node "model.dbt_idx.stg_eltool__orders"
+[0m22:38:30.513161 [debug] [Thread-1 (]: Timing info for model.dbt_idx.stg_eltool__orders (compile): 22:38:30.496107 => 22:38:30.512167
+[0m22:38:30.514130 [debug] [Thread-1 (]: Began executing node model.dbt_idx.stg_eltool__orders
+[0m22:38:30.515143 [debug] [Thread-1 (]: Timing info for model.dbt_idx.stg_eltool__orders (execute): 22:38:30.514130 => 22:38:30.514130
+[0m22:38:30.517136 [debug] [Thread-1 (]: Finished running node model.dbt_idx.stg_eltool__orders
+[0m22:38:30.518139 [debug] [Thread-1 (]: Began running node model.dbt_idx.stg_eltool__state
+[0m22:38:30.520134 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.dbt_idx.stg_eltool__orders, now model.dbt_idx.stg_eltool__state)
+[0m22:38:30.521155 [debug] [Thread-1 (]: Began compiling node model.dbt_idx.stg_eltool__state
+[0m22:38:30.524660 [debug] [Thread-1 (]: Writing injected SQL for node "model.dbt_idx.stg_eltool__state"
+[0m22:38:30.532686 [debug] [Thread-1 (]: Timing info for model.dbt_idx.stg_eltool__state (compile): 22:38:30.522139 => 22:38:30.532686
+[0m22:38:30.533710 [debug] [Thread-1 (]: Began executing node model.dbt_idx.stg_eltool__state
+[0m22:38:30.534660 [debug] [Thread-1 (]: Timing info for model.dbt_idx.stg_eltool__state (execute): 22:38:30.534660 => 22:38:30.534660
+[0m22:38:30.535667 [debug] [Thread-1 (]: Finished running node model.dbt_idx.stg_eltool__state
+[0m22:38:30.536664 [debug] [Thread-1 (]: Began running node snapshot.dbt_idx.customers_snapshot
+[0m22:38:30.538669 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.dbt_idx.stg_eltool__state, now snapshot.dbt_idx.customers_snapshot)
+[0m22:38:30.539663 [debug] [Thread-1 (]: Began compiling node snapshot.dbt_idx.customers_snapshot
+[0m22:38:30.545196 [debug] [Thread-1 (]: Timing info for snapshot.dbt_idx.customers_snapshot (compile): 22:38:30.540668 => 22:38:30.545196
+[0m22:38:30.546195 [debug] [Thread-1 (]: Began executing node snapshot.dbt_idx.customers_snapshot
+[0m22:38:30.548195 [debug] [Thread-1 (]: Timing info for snapshot.dbt_idx.customers_snapshot (execute): 22:38:30.547196 => 22:38:30.547196
+[0m22:38:30.550210 [debug] [Thread-1 (]: Finished running node snapshot.dbt_idx.customers_snapshot
+[0m22:38:30.551189 [debug] [Thread-1 (]: Began running node test.dbt_idx.source_not_null_warehouse_customers_customer_id.ae7452c4c6
+[0m22:38:30.553204 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly snapshot.dbt_idx.customers_snapshot, now test.dbt_idx.source_not_null_warehouse_customers_customer_id.ae7452c4c6)
+[0m22:38:30.554226 [debug] [Thread-1 (]: Began compiling node test.dbt_idx.source_not_null_warehouse_customers_customer_id.ae7452c4c6
+[0m22:38:30.574620 [debug] [Thread-1 (]: Writing injected SQL for node "test.dbt_idx.source_not_null_warehouse_customers_customer_id.ae7452c4c6"
+[0m22:38:30.584584 [debug] [Thread-1 (]: Timing info for test.dbt_idx.source_not_null_warehouse_customers_customer_id.ae7452c4c6 (compile): 22:38:30.555193 => 22:38:30.583547
+[0m22:38:30.585573 [debug] [Thread-1 (]: Began executing node test.dbt_idx.source_not_null_warehouse_customers_customer_id.ae7452c4c6
+[0m22:38:30.586550 [debug] [Thread-1 (]: Timing info for test.dbt_idx.source_not_null_warehouse_customers_customer_id.ae7452c4c6 (execute): 22:38:30.586550 => 22:38:30.586550
+[0m22:38:30.589552 [debug] [Thread-1 (]: Finished running node test.dbt_idx.source_not_null_warehouse_customers_customer_id.ae7452c4c6
+[0m22:38:30.590549 [debug] [Thread-1 (]: Began running node test.dbt_idx.source_not_null_warehouse_orders_order_id.c85a1f0b76
+[0m22:38:30.592550 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.dbt_idx.source_not_null_warehouse_customers_customer_id.ae7452c4c6, now test.dbt_idx.source_not_null_warehouse_orders_order_id.c85a1f0b76)
+[0m22:38:30.593547 [debug] [Thread-1 (]: Began compiling node test.dbt_idx.source_not_null_warehouse_orders_order_id.c85a1f0b76
+[0m22:38:30.600887 [debug] [Thread-1 (]: Writing injected SQL for node "test.dbt_idx.source_not_null_warehouse_orders_order_id.c85a1f0b76"
+[0m22:38:30.608891 [debug] [Thread-1 (]: Timing info for test.dbt_idx.source_not_null_warehouse_orders_order_id.c85a1f0b76 (compile): 22:38:30.594554 => 22:38:30.608891
+[0m22:38:30.609887 [debug] [Thread-1 (]: Began executing node test.dbt_idx.source_not_null_warehouse_orders_order_id.c85a1f0b76
+[0m22:38:30.610918 [debug] [Thread-1 (]: Timing info for test.dbt_idx.source_not_null_warehouse_orders_order_id.c85a1f0b76 (execute): 22:38:30.610918 => 22:38:30.610918
+[0m22:38:30.613152 [debug] [Thread-1 (]: Finished running node test.dbt_idx.source_not_null_warehouse_orders_order_id.c85a1f0b76
+[0m22:38:30.614182 [debug] [Thread-1 (]: Began running node test.dbt_idx.source_relationships_warehouse_orders_cust_id__customer_id__source_warehouse_customers_.d3f9188fc2
+[0m22:38:30.616155 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.dbt_idx.source_not_null_warehouse_orders_order_id.c85a1f0b76, now test.dbt_idx.source_relationships_warehouse_orders_cust_id__customer_id__source_warehouse_customers_.d3f9188fc2)
+[0m22:38:30.617147 [debug] [Thread-1 (]: Began compiling node test.dbt_idx.source_relationships_warehouse_orders_cust_id__customer_id__source_warehouse_customers_.d3f9188fc2
+[0m22:38:30.643344 [debug] [Thread-1 (]: Writing injected SQL for node "test.dbt_idx.source_relationships_warehouse_orders_cust_id__customer_id__source_warehouse_customers_.d3f9188fc2"
+[0m22:38:30.657056 [debug] [Thread-1 (]: Timing info for test.dbt_idx.source_relationships_warehouse_orders_cust_id__customer_id__source_warehouse_customers_.d3f9188fc2 (compile): 22:38:30.619155 => 22:38:30.655453
+[0m22:38:30.658511 [debug] [Thread-1 (]: Began executing node test.dbt_idx.source_relationships_warehouse_orders_cust_id__customer_id__source_warehouse_customers_.d3f9188fc2
+[0m22:38:30.662107 [debug] [Thread-1 (]: Timing info for test.dbt_idx.source_relationships_warehouse_orders_cust_id__customer_id__source_warehouse_customers_.d3f9188fc2 (execute): 22:38:30.660025 => 22:38:30.660025
+[0m22:38:30.665692 [debug] [Thread-1 (]: Finished running node test.dbt_idx.source_relationships_warehouse_orders_cust_id__customer_id__source_warehouse_customers_.d3f9188fc2
+[0m22:38:30.667704 [debug] [Thread-1 (]: Began running node test.dbt_idx.source_unique_warehouse_orders_order_id.839fb43d0f
+[0m22:38:30.669703 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.dbt_idx.source_relationships_warehouse_orders_cust_id__customer_id__source_warehouse_customers_.d3f9188fc2, now test.dbt_idx.source_unique_warehouse_orders_order_id.839fb43d0f)
+[0m22:38:30.671702 [debug] [Thread-1 (]: Began compiling node test.dbt_idx.source_unique_warehouse_orders_order_id.839fb43d0f
+[0m22:38:30.694062 [debug] [Thread-1 (]: Writing injected SQL for node "test.dbt_idx.source_unique_warehouse_orders_order_id.839fb43d0f"
+[0m22:38:30.707282 [debug] [Thread-1 (]: Timing info for test.dbt_idx.source_unique_warehouse_orders_order_id.839fb43d0f (compile): 22:38:30.673284 => 22:38:30.706282
+[0m22:38:30.708278 [debug] [Thread-1 (]: Began executing node test.dbt_idx.source_unique_warehouse_orders_order_id.839fb43d0f
+[0m22:38:30.711304 [debug] [Thread-1 (]: Timing info for test.dbt_idx.source_unique_warehouse_orders_order_id.839fb43d0f (execute): 22:38:30.710278 => 22:38:30.710278
+[0m22:38:30.714340 [debug] [Thread-1 (]: Finished running node test.dbt_idx.source_unique_warehouse_orders_order_id.839fb43d0f
+[0m22:38:30.715865 [debug] [Thread-1 (]: Began running node model.dbt_idx.fact_orders
+[0m22:38:30.719405 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.dbt_idx.source_unique_warehouse_orders_order_id.839fb43d0f, now model.dbt_idx.fact_orders)
+[0m22:38:30.721496 [debug] [Thread-1 (]: Began compiling node model.dbt_idx.fact_orders
+[0m22:38:30.731586 [debug] [Thread-1 (]: Writing injected SQL for node "model.dbt_idx.fact_orders"
+[0m22:38:30.742262 [debug] [Thread-1 (]: Timing info for model.dbt_idx.fact_orders (compile): 22:38:30.722510 => 22:38:30.741261
+[0m22:38:30.743262 [debug] [Thread-1 (]: Began executing node model.dbt_idx.fact_orders
+[0m22:38:30.743262 [debug] [Thread-1 (]: Timing info for model.dbt_idx.fact_orders (execute): 22:38:30.743262 => 22:38:30.743262
+[0m22:38:30.745801 [debug] [Thread-1 (]: Finished running node model.dbt_idx.fact_orders
+[0m22:38:30.746832 [debug] [Thread-1 (]: Began running node model.dbt_idx.stg_eltool__customers_snapshots
+[0m22:38:30.747852 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.dbt_idx.fact_orders, now model.dbt_idx.stg_eltool__customers_snapshots)
+[0m22:38:30.748383 [debug] [Thread-1 (]: Began compiling node model.dbt_idx.stg_eltool__customers_snapshots
+[0m22:38:30.752431 [debug] [Thread-1 (]: Writing injected SQL for node "model.dbt_idx.stg_eltool__customers_snapshots"
+[0m22:38:30.760524 [debug] [Thread-1 (]: Timing info for model.dbt_idx.stg_eltool__customers_snapshots (compile): 22:38:30.749416 => 22:38:30.759505
+[0m22:38:30.761509 [debug] [Thread-1 (]: Began executing node model.dbt_idx.stg_eltool__customers_snapshots
+[0m22:38:30.762517 [debug] [Thread-1 (]: Timing info for model.dbt_idx.stg_eltool__customers_snapshots (execute): 22:38:30.762517 => 22:38:30.762517
+[0m22:38:30.764506 [debug] [Thread-1 (]: Finished running node model.dbt_idx.stg_eltool__customers_snapshots
+[0m22:38:30.765507 [debug] [Thread-1 (]: Began running node model.dbt_idx.dim_customers
+[0m22:38:30.767504 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.dbt_idx.stg_eltool__customers_snapshots, now model.dbt_idx.dim_customers)
+[0m22:38:30.768504 [debug] [Thread-1 (]: Began compiling node model.dbt_idx.dim_customers
+[0m22:38:30.773634 [debug] [Thread-1 (]: Writing injected SQL for node "model.dbt_idx.dim_customers"
+[0m22:38:30.781167 [debug] [Thread-1 (]: Timing info for model.dbt_idx.dim_customers (compile): 22:38:30.769526 => 22:38:30.780196
+[0m22:38:30.782164 [debug] [Thread-1 (]: Began executing node model.dbt_idx.dim_customers
+[0m22:38:30.783161 [debug] [Thread-1 (]: Timing info for model.dbt_idx.dim_customers (execute): 22:38:30.782164 => 22:38:30.783161
+[0m22:38:30.784195 [debug] [Thread-1 (]: Finished running node model.dbt_idx.dim_customers
+[0m22:38:30.785195 [debug] [Thread-1 (]: Began running node test.dbt_idx.not_null_stg_eltool__customers_snapshots_customer_id.ea4fc4ca86
+[0m22:38:30.786194 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.dbt_idx.dim_customers, now test.dbt_idx.not_null_stg_eltool__customers_snapshots_customer_id.ea4fc4ca86)
+[0m22:38:30.787194 [debug] [Thread-1 (]: Began compiling node test.dbt_idx.not_null_stg_eltool__customers_snapshots_customer_id.ea4fc4ca86
+[0m22:38:30.795148 [debug] [Thread-1 (]: Writing injected SQL for node "test.dbt_idx.not_null_stg_eltool__customers_snapshots_customer_id.ea4fc4ca86"
+[0m22:38:30.804123 [debug] [Thread-1 (]: Timing info for test.dbt_idx.not_null_stg_eltool__customers_snapshots_customer_id.ea4fc4ca86 (compile): 22:38:30.788597 => 22:38:30.803123
+[0m22:38:30.805121 [debug] [Thread-1 (]: Began executing node test.dbt_idx.not_null_stg_eltool__customers_snapshots_customer_id.ea4fc4ca86
+[0m22:38:30.805121 [debug] [Thread-1 (]: Timing info for test.dbt_idx.not_null_stg_eltool__customers_snapshots_customer_id.ea4fc4ca86 (execute): 22:38:30.805121 => 22:38:30.805121
+[0m22:38:30.806712 [debug] [Thread-1 (]: Finished running node test.dbt_idx.not_null_stg_eltool__customers_snapshots_customer_id.ea4fc4ca86
+[0m22:38:30.807738 [debug] [Thread-1 (]: Began running node model.dbt_idx.customer_orders_status
+[0m22:38:30.809745 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.dbt_idx.not_null_stg_eltool__customers_snapshots_customer_id.ea4fc4ca86, now model.dbt_idx.customer_orders_status)
+[0m22:38:30.809745 [debug] [Thread-1 (]: Began compiling node model.dbt_idx.customer_orders_status
+[0m22:38:30.814478 [debug] [Thread-1 (]: Writing injected SQL for node "model.dbt_idx.customer_orders_status"
+[0m22:38:30.821478 [debug] [Thread-1 (]: Timing info for model.dbt_idx.customer_orders_status (compile): 22:38:30.809745 => 22:38:30.821478
+[0m22:38:30.823455 [debug] [Thread-1 (]: Began executing node model.dbt_idx.customer_orders_status
+[0m22:38:30.823455 [debug] [Thread-1 (]: Timing info for model.dbt_idx.customer_orders_status (execute): 22:38:30.823455 => 22:38:30.823455
+[0m22:38:30.826492 [debug] [Thread-1 (]: Finished running node model.dbt_idx.customer_orders_status
+[0m22:38:30.827491 [debug] [Thread-1 (]: Began running node test.dbt_idx.assert_customer_dimension_has_no_row_loss.sql
+[0m22:38:30.830525 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.dbt_idx.customer_orders_status, now test.dbt_idx.assert_customer_dimension_has_no_row_loss.sql)
+[0m22:38:30.831531 [debug] [Thread-1 (]: Began compiling node test.dbt_idx.assert_customer_dimension_has_no_row_loss.sql
+[0m22:38:30.840491 [debug] [Thread-1 (]: Writing injected SQL for node "test.dbt_idx.assert_customer_dimension_has_no_row_loss.sql"
+[0m22:38:30.849536 [debug] [Thread-1 (]: Timing info for test.dbt_idx.assert_customer_dimension_has_no_row_loss.sql (compile): 22:38:30.832533 => 22:38:30.848574
+[0m22:38:30.850560 [debug] [Thread-1 (]: Began executing node test.dbt_idx.assert_customer_dimension_has_no_row_loss.sql
+[0m22:38:30.851571 [debug] [Thread-1 (]: Timing info for test.dbt_idx.assert_customer_dimension_has_no_row_loss.sql (execute): 22:38:30.851571 => 22:38:30.851571
+[0m22:38:30.853535 [debug] [Thread-1 (]: Finished running node test.dbt_idx.assert_customer_dimension_has_no_row_loss.sql
+[0m22:38:30.854534 [debug] [Thread-1 (]: Began running node test.dbt_idx.accepted_values_customer_orders_status_order_status__delivered__invoiced__shipped__processing__canceled__unavailable.ea8c296d27
+[0m22:38:30.855535 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.dbt_idx.assert_customer_dimension_has_no_row_loss.sql, now test.dbt_idx.accepted_values_customer_orders_status_order_status__delivered__invoiced__shipped__processing__canceled__unavailable.ea8c296d27)
+[0m22:38:30.856536 [debug] [Thread-1 (]: Began compiling node test.dbt_idx.accepted_values_customer_orders_status_order_status__delivered__invoiced__shipped__processing__canceled__unavailable.ea8c296d27
+[0m22:38:30.869578 [debug] [Thread-1 (]: Writing injected SQL for node "test.dbt_idx.accepted_values_customer_orders_status_order_status__delivered__invoiced__shipped__processing__canceled__unavailable.ea8c296d27"
+[0m22:38:30.877594 [debug] [Thread-1 (]: Timing info for test.dbt_idx.accepted_values_customer_orders_status_order_status__delivered__invoiced__shipped__processing__canceled__unavailable.ea8c296d27 (compile): 22:38:30.856536 => 22:38:30.876579
+[0m22:38:30.878577 [debug] [Thread-1 (]: Began executing node test.dbt_idx.accepted_values_customer_orders_status_order_status__delivered__invoiced__shipped__processing__canceled__unavailable.ea8c296d27
+[0m22:38:30.879580 [debug] [Thread-1 (]: Timing info for test.dbt_idx.accepted_values_customer_orders_status_order_status__delivered__invoiced__shipped__processing__canceled__unavailable.ea8c296d27 (execute): 22:38:30.879580 => 22:38:30.879580
+[0m22:38:30.880831 [debug] [Thread-1 (]: Finished running node test.dbt_idx.accepted_values_customer_orders_status_order_status__delivered__invoiced__shipped__processing__canceled__unavailable.ea8c296d27
+[0m22:38:30.882795 [debug] [Thread-1 (]: Began running node test.dbt_idx.not_null_customer_orders_status_customer_id.3915c814eb
+[0m22:38:30.883831 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.dbt_idx.accepted_values_customer_orders_status_order_status__delivered__invoiced__shipped__processing__canceled__unavailable.ea8c296d27, now test.dbt_idx.not_null_customer_orders_status_customer_id.3915c814eb)
+[0m22:38:30.884811 [debug] [Thread-1 (]: Began compiling node test.dbt_idx.not_null_customer_orders_status_customer_id.3915c814eb
+[0m22:38:30.891338 [debug] [Thread-1 (]: Writing injected SQL for node "test.dbt_idx.not_null_customer_orders_status_customer_id.3915c814eb"
+[0m22:38:30.898334 [debug] [Thread-1 (]: Timing info for test.dbt_idx.not_null_customer_orders_status_customer_id.3915c814eb (compile): 22:38:30.884811 => 22:38:30.898334
+[0m22:38:30.899339 [debug] [Thread-1 (]: Began executing node test.dbt_idx.not_null_customer_orders_status_customer_id.3915c814eb
+[0m22:38:30.900368 [debug] [Thread-1 (]: Timing info for test.dbt_idx.not_null_customer_orders_status_customer_id.3915c814eb (execute): 22:38:30.900368 => 22:38:30.900368
+[0m22:38:30.902541 [debug] [Thread-1 (]: Finished running node test.dbt_idx.not_null_customer_orders_status_customer_id.3915c814eb
+[0m22:38:30.903508 [debug] [Thread-1 (]: Began running node test.dbt_idx.unique_customer_orders_status_order_id.b7a45e83ee
+[0m22:38:30.904530 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.dbt_idx.not_null_customer_orders_status_customer_id.3915c814eb, now test.dbt_idx.unique_customer_orders_status_order_id.b7a45e83ee)
+[0m22:38:30.906508 [debug] [Thread-1 (]: Began compiling node test.dbt_idx.unique_customer_orders_status_order_id.b7a45e83ee
+[0m22:38:30.911525 [debug] [Thread-1 (]: Writing injected SQL for node "test.dbt_idx.unique_customer_orders_status_order_id.b7a45e83ee"
+[0m22:38:30.919602 [debug] [Thread-1 (]: Timing info for test.dbt_idx.unique_customer_orders_status_order_id.b7a45e83ee (compile): 22:38:30.906508 => 22:38:30.919602
+[0m22:38:30.921603 [debug] [Thread-1 (]: Began executing node test.dbt_idx.unique_customer_orders_status_order_id.b7a45e83ee
+[0m22:38:30.924188 [debug] [Thread-1 (]: Timing info for test.dbt_idx.unique_customer_orders_status_order_id.b7a45e83ee (execute): 22:38:30.923118 => 22:38:30.923118
+[0m22:38:30.925128 [debug] [Thread-1 (]: Finished running node test.dbt_idx.unique_customer_orders_status_order_id.b7a45e83ee
+[0m22:38:30.928138 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m22:38:30.929153 [debug] [MainThread]: Connection 'list_IDX-Stock_snapshots' was properly closed.
+[0m22:38:30.930156 [debug] [MainThread]: Connection 'test.dbt_idx.unique_customer_orders_status_order_id.b7a45e83ee' was properly closed.
+[0m22:38:30.934129 [debug] [MainThread]: Command end result
+[0m22:38:31.392062 [debug] [MainThread]: Acquiring new postgres connection 'generate_catalog'
+[0m22:38:31.393025 [info ] [MainThread]: Building catalog
+[0m22:38:31.398083 [debug] [ThreadPool]: Acquiring new postgres connection 'IDX-Stock.information_schema'
+[0m22:38:31.407069 [debug] [ThreadPool]: Using postgres connection "IDX-Stock.information_schema"
+[0m22:38:31.408063 [debug] [ThreadPool]: On IDX-Stock.information_schema: BEGIN
+[0m22:38:31.409590 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m22:38:31.435795 [debug] [ThreadPool]: SQL status: BEGIN in 0.0 seconds
+[0m22:38:31.436795 [debug] [ThreadPool]: Using postgres connection "IDX-Stock.information_schema"
+[0m22:38:31.437812 [debug] [ThreadPool]: On IDX-Stock.information_schema: /* {"app": "dbt", "dbt_version": "1.6.1", "profile_name": "dbt_idx", "target_name": "dev", "connection_name": "IDX-Stock.information_schema"} */
+
+    
+    
+
+    select
+        'IDX-Stock' as table_database,
+        sch.nspname as table_schema,
+        tbl.relname as table_name,
+        case tbl.relkind
+            when 'v' then 'VIEW'
+            else 'BASE TABLE'
+        end as table_type,
+        tbl_desc.description as table_comment,
+        col.attname as column_name,
+        col.attnum as column_index,
+        pg_catalog.format_type(col.atttypid, col.atttypmod) as column_type,
+        col_desc.description as column_comment,
+        pg_get_userbyid(tbl.relowner) as table_owner
+
+    from pg_catalog.pg_namespace sch
+    join pg_catalog.pg_class tbl on tbl.relnamespace = sch.oid
+    join pg_catalog.pg_attribute col on col.attrelid = tbl.oid
+    left outer join pg_catalog.pg_description tbl_desc on (tbl_desc.objoid = tbl.oid and tbl_desc.objsubid = 0)
+    left outer join pg_catalog.pg_description col_desc on (col_desc.objoid = tbl.oid and col_desc.objsubid = col.attnum)
+
+    where (upper(sch.nspname) = upper('warehouse') or upper(sch.nspname) = upper('snapshots'))
+      and not pg_is_other_temp_schema(sch.oid) -- not a temporary schema belonging to another session
+      and tbl.relpersistence in ('p', 'u') -- [p]ermanent table or [u]nlogged table. Exclude [t]emporary tables
+      and tbl.relkind in ('r', 'v', 'f', 'p') -- o[r]dinary table, [v]iew, [f]oreign table, [p]artitioned table. Other values are [i]ndex, [S]equence, [c]omposite type, [t]OAST table, [m]aterialized view
+      and col.attnum > 0 -- negative numbers are used for system columns such as oid
+      and not col.attisdropped -- column as not been dropped
+
+    order by
+        sch.nspname,
+        tbl.relname,
+        col.attnum
+[0m22:38:31.444794 [debug] [ThreadPool]: SQL status: SELECT 77 in 0.0 seconds
+[0m22:38:31.455911 [debug] [ThreadPool]: On IDX-Stock.information_schema: ROLLBACK
+[0m22:38:31.459577 [debug] [ThreadPool]: On IDX-Stock.information_schema: Close
+[0m22:38:31.504233 [info ] [MainThread]: Catalog written to D:\00 Project\00 My Project\IdeaProjects\Py-DBT-IDX\target\catalog.json
+[0m22:38:31.507778 [debug] [MainThread]: Command `dbt docs generate` succeeded at 22:38:31.507778 after 1.59 seconds
+[0m22:38:31.509779 [debug] [MainThread]: Connection 'generate_catalog' was properly closed.
+[0m22:38:31.510754 [debug] [MainThread]: Connection 'IDX-Stock.information_schema' was properly closed.
+[0m22:38:31.512263 [debug] [MainThread]: Flushing usage events
+
+
+============================== 22:38:39.984176 | 36f0edca-3680-4b4a-96be-deb10670ad9a ==============================
+[0m22:38:39.984176 [info ] [MainThread]: Running with dbt=1.6.1
+[0m22:38:39.989176 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': 'D:\\00 Project\\00 My Project\\IdeaProjects\\Py-DBT-IDX', 'debug': 'False', 'version_check': 'True', 'log_path': 'D:\\00 Project\\00 My Project\\IdeaProjects\\Py-DBT-IDX\\logs', 'warn_error': 'None', 'fail_fast': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'log_format': 'default', 'invocation_command': 'dbt docs serve', 'static_parser': 'True', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'target_path': 'None', 'introspect': 'True', 'send_anonymous_usage_stats': 'False'}
