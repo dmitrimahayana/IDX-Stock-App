@@ -2,7 +2,7 @@
   
     
 
-  create  table "IDX-Stock"."warehouse"."fact_orders__dbt_tmp"
+  create  table "IDX-Stock"."IDX-Schema"."fact_orders__dbt_tmp"
   
   
     as
@@ -10,7 +10,7 @@
   (
     with orders as (
     select *
-    from "IDX-Stock"."warehouse"."stg_eltool__orders"
+    from "IDX-Stock"."IDX-Schema"."stg_eltool__orders"
 )
 select * from orders
   );

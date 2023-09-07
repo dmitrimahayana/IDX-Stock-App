@@ -1,5 +1,5 @@
 
-  create view "IDX-Stock"."warehouse"."stg_eltool__customers_snapshots__dbt_tmp"
+  create view "IDX-Stock"."IDX-Schema"."stg_eltool__customers_snapshots__dbt_tmp"
     
     
   as (

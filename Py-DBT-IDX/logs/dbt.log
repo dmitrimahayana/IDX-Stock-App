@@ -10737,3 +10737,1167 @@ with relation as (
 ============================== 22:38:39.984176 | 36f0edca-3680-4b4a-96be-deb10670ad9a ==============================
 [0m22:38:39.984176 [info ] [MainThread]: Running with dbt=1.6.1
 [0m22:38:39.989176 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': 'D:\\00 Project\\00 My Project\\IdeaProjects\\Py-DBT-IDX', 'debug': 'False', 'version_check': 'True', 'log_path': 'D:\\00 Project\\00 My Project\\IdeaProjects\\Py-DBT-IDX\\logs', 'warn_error': 'None', 'fail_fast': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'log_format': 'default', 'invocation_command': 'dbt docs serve', 'static_parser': 'True', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'target_path': 'None', 'introspect': 'True', 'send_anonymous_usage_stats': 'False'}
+
+
+============================== 13:08:11.514484 | 8c3b585c-73be-4768-a7c1-41d7134d8424 ==============================
+[0m13:08:11.514484 [info ] [MainThread]: Running with dbt=1.6.1
+[0m13:08:11.521826 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'debug': 'False', 'fail_fast': 'False', 'log_path': 'D:\\00 Project\\00 My Project\\IdeaProjects\\Py-DBT-IDX\\logs', 'version_check': 'True', 'profiles_dir': 'D:\\00 Project\\00 My Project\\IdeaProjects\\Py-DBT-IDX', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'log_format': 'default', 'static_parser': 'True', 'introspect': 'True', 'invocation_command': 'dbt run', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'send_anonymous_usage_stats': 'False'}
+[0m13:08:11.525862 [error] [MainThread]: Encountered an error:
+Runtime Error
+  The profile 'dbt_idx' does not have a target named 'dev'. The valid target names for this profile are:
+   - IDX_warehouse
+[0m13:08:11.526841 [debug] [MainThread]: Command `dbt run` failed at 13:08:11.526841 after 0.05 seconds
+[0m13:08:11.527837 [debug] [MainThread]: Flushing usage events
+
+
+============================== 13:14:29.349773 | e53996b0-eacf-44a2-97f0-bdd94e991651 ==============================
+[0m13:14:29.349773 [info ] [MainThread]: Running with dbt=1.6.1
+[0m13:14:29.355735 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'fail_fast': 'False', 'version_check': 'True', 'log_path': 'D:\\00 Project\\00 My Project\\IdeaProjects\\Py-DBT-IDX\\logs', 'debug': 'False', 'profiles_dir': 'D:\\00 Project\\00 My Project\\IdeaProjects\\Py-DBT-IDX', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'static_parser': 'True', 'introspect': 'True', 'log_format': 'default', 'target_path': 'None', 'invocation_command': 'dbt snapshot', 'send_anonymous_usage_stats': 'False'}
+[0m13:14:29.523713 [info ] [MainThread]: Registered adapter: postgres=1.6.1
+[0m13:14:29.534291 [debug] [MainThread]: checksum: efe19d9f5b93d1a98cc804fbfcdb6b3aced98b974af664946fee1cde8837deb7, vars: {}, profile: , target: , version: 1.6.1
+[0m13:14:29.546839 [info ] [MainThread]: Unable to do partial parsing because profile has changed
+[0m13:14:30.614172 [info ] [MainThread]: Found 7 models, 1 snapshot, 10 tests, 3 sources, 0 exposures, 0 metrics, 349 macros, 0 groups, 0 semantic models
+[0m13:14:30.616049 [info ] [MainThread]: 
+[0m13:14:30.618014 [debug] [MainThread]: Acquiring new postgres connection 'master'
+[0m13:14:30.620558 [debug] [ThreadPool]: Acquiring new postgres connection 'list_IDX-Stock'
+[0m13:14:30.634149 [debug] [ThreadPool]: Using postgres connection "list_IDX-Stock"
+[0m13:14:30.635130 [debug] [ThreadPool]: On list_IDX-Stock: /* {"app": "dbt", "dbt_version": "1.6.1", "profile_name": "dbt_idx", "target_name": "dev", "connection_name": "list_IDX-Stock"} */
+
+    select distinct nspname from pg_namespace
+  
+[0m13:14:30.636114 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m13:14:30.688068 [debug] [ThreadPool]: SQL status: SELECT 12 in 0.0 seconds
+[0m13:14:30.689604 [debug] [ThreadPool]: On list_IDX-Stock: Close
+[0m13:14:30.693617 [debug] [ThreadPool]: Acquiring new postgres connection 'list_IDX-Stock_IDX-Schema'
+[0m13:14:30.701166 [debug] [ThreadPool]: Using postgres connection "list_IDX-Stock_IDX-Schema"
+[0m13:14:30.702132 [debug] [ThreadPool]: On list_IDX-Stock_IDX-Schema: BEGIN
+[0m13:14:30.703130 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m13:14:30.728529 [debug] [ThreadPool]: SQL status: BEGIN in 0.0 seconds
+[0m13:14:30.729061 [debug] [ThreadPool]: Using postgres connection "list_IDX-Stock_IDX-Schema"
+[0m13:14:30.730066 [debug] [ThreadPool]: On list_IDX-Stock_IDX-Schema: /* {"app": "dbt", "dbt_version": "1.6.1", "profile_name": "dbt_idx", "target_name": "dev", "connection_name": "list_IDX-Stock_IDX-Schema"} */
+select
+      'IDX-Stock' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'IDX-Schema'
+    union all
+    select
+      'IDX-Stock' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'IDX-Schema'
+    union all
+    select
+      'IDX-Stock' as database,
+      matviewname as name,
+      schemaname as schema,
+      'materialized_view' as type
+    from pg_matviews
+    where schemaname ilike 'IDX-Schema'
+  
+[0m13:14:30.734094 [debug] [ThreadPool]: SQL status: SELECT 6 in 0.0 seconds
+[0m13:14:30.736095 [debug] [ThreadPool]: On list_IDX-Stock_IDX-Schema: ROLLBACK
+[0m13:14:30.739067 [debug] [ThreadPool]: On list_IDX-Stock_IDX-Schema: Close
+[0m13:14:30.741236 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_IDX-Stock_IDX-Schema, now list_IDX-Stock_snapshots)
+[0m13:14:30.747196 [debug] [ThreadPool]: Using postgres connection "list_IDX-Stock_snapshots"
+[0m13:14:30.747196 [debug] [ThreadPool]: On list_IDX-Stock_snapshots: BEGIN
+[0m13:14:30.748221 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m13:14:30.769033 [debug] [ThreadPool]: SQL status: BEGIN in 0.0 seconds
+[0m13:14:30.769576 [debug] [ThreadPool]: Using postgres connection "list_IDX-Stock_snapshots"
+[0m13:14:30.770620 [debug] [ThreadPool]: On list_IDX-Stock_snapshots: /* {"app": "dbt", "dbt_version": "1.6.1", "profile_name": "dbt_idx", "target_name": "dev", "connection_name": "list_IDX-Stock_snapshots"} */
+select
+      'IDX-Stock' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'snapshots'
+    union all
+    select
+      'IDX-Stock' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'snapshots'
+    union all
+    select
+      'IDX-Stock' as database,
+      matviewname as name,
+      schemaname as schema,
+      'materialized_view' as type
+    from pg_matviews
+    where schemaname ilike 'snapshots'
+  
+[0m13:14:30.775796 [debug] [ThreadPool]: SQL status: SELECT 0 in 0.0 seconds
+[0m13:14:30.776808 [debug] [ThreadPool]: On list_IDX-Stock_snapshots: ROLLBACK
+[0m13:14:30.779777 [debug] [ThreadPool]: On list_IDX-Stock_snapshots: Close
+[0m13:14:30.786834 [debug] [MainThread]: Using postgres connection "master"
+[0m13:14:30.786834 [debug] [MainThread]: On master: BEGIN
+[0m13:14:30.787826 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m13:14:30.813139 [debug] [MainThread]: SQL status: BEGIN in 0.0 seconds
+[0m13:14:30.813236 [debug] [MainThread]: Using postgres connection "master"
+[0m13:14:30.814266 [debug] [MainThread]: On master: /* {"app": "dbt", "dbt_version": "1.6.1", "profile_name": "dbt_idx", "target_name": "dev", "connection_name": "master"} */
+with relation as (
+        select
+            pg_rewrite.ev_class as class,
+            pg_rewrite.oid as id
+        from pg_rewrite
+    ),
+    class as (
+        select
+            oid as id,
+            relname as name,
+            relnamespace as schema,
+            relkind as kind
+        from pg_class
+    ),
+    dependency as (
+        select distinct
+            pg_depend.objid as id,
+            pg_depend.refobjid as ref
+        from pg_depend
+    ),
+    schema as (
+        select
+            pg_namespace.oid as id,
+            pg_namespace.nspname as name
+        from pg_namespace
+        where nspname != 'information_schema' and nspname not like 'pg\_%'
+    ),
+    referenced as (
+        select
+            relation.id AS id,
+            referenced_class.name ,
+            referenced_class.schema ,
+            referenced_class.kind
+        from relation
+        join class as referenced_class on relation.class=referenced_class.id
+        where referenced_class.kind in ('r', 'v', 'm')
+    ),
+    relationships as (
+        select
+            referenced.name as referenced_name,
+            referenced.schema as referenced_schema_id,
+            dependent_class.name as dependent_name,
+            dependent_class.schema as dependent_schema_id,
+            referenced.kind as kind
+        from referenced
+        join dependency on referenced.id=dependency.id
+        join class as dependent_class on dependency.ref=dependent_class.id
+        where
+            (referenced.name != dependent_class.name or
+             referenced.schema != dependent_class.schema)
+    )
+
+    select
+        referenced_schema.name as referenced_schema,
+        relationships.referenced_name as referenced_name,
+        dependent_schema.name as dependent_schema,
+        relationships.dependent_name as dependent_name
+    from relationships
+    join schema as dependent_schema on relationships.dependent_schema_id=dependent_schema.id
+    join schema as referenced_schema on relationships.referenced_schema_id=referenced_schema.id
+    group by referenced_schema, referenced_name, dependent_schema, dependent_name
+    order by referenced_schema, referenced_name, dependent_schema, dependent_name;
+[0m13:14:30.821762 [debug] [MainThread]: SQL status: SELECT 0 in 0.0 seconds
+[0m13:14:30.823776 [debug] [MainThread]: On master: ROLLBACK
+[0m13:14:30.825860 [debug] [MainThread]: Using postgres connection "master"
+[0m13:14:30.826942 [debug] [MainThread]: On master: BEGIN
+[0m13:14:30.830049 [debug] [MainThread]: SQL status: BEGIN in 0.0 seconds
+[0m13:14:30.831046 [debug] [MainThread]: On master: COMMIT
+[0m13:14:30.832072 [debug] [MainThread]: Using postgres connection "master"
+[0m13:14:30.833081 [debug] [MainThread]: On master: COMMIT
+[0m13:14:30.835097 [debug] [MainThread]: SQL status: COMMIT in 0.0 seconds
+[0m13:14:30.836048 [debug] [MainThread]: On master: Close
+[0m13:14:30.837045 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m13:14:30.839062 [info ] [MainThread]: 
+[0m13:14:30.844987 [debug] [Thread-1 (]: Began running node snapshot.dbt_idx.customers_snapshot
+[0m13:14:30.845988 [info ] [Thread-1 (]: 1 of 1 START snapshot snapshots.customers_snapshot ............................. [RUN]
+[0m13:14:30.846999 [debug] [Thread-1 (]: Acquiring new postgres connection 'snapshot.dbt_idx.customers_snapshot'
+[0m13:14:30.847985 [debug] [Thread-1 (]: Began compiling node snapshot.dbt_idx.customers_snapshot
+[0m13:14:30.857531 [debug] [Thread-1 (]: Timing info for snapshot.dbt_idx.customers_snapshot (compile): 13:14:30.849012 => 13:14:30.857531
+[0m13:14:30.857531 [debug] [Thread-1 (]: Began executing node snapshot.dbt_idx.customers_snapshot
+[0m13:14:30.907282 [debug] [Thread-1 (]: Writing runtime sql for node "snapshot.dbt_idx.customers_snapshot"
+[0m13:14:30.915809 [debug] [Thread-1 (]: Using postgres connection "snapshot.dbt_idx.customers_snapshot"
+[0m13:14:30.915809 [debug] [Thread-1 (]: On snapshot.dbt_idx.customers_snapshot: BEGIN
+[0m13:14:30.916809 [debug] [Thread-1 (]: Opening a new connection, currently in state init
+[0m13:14:30.941027 [debug] [Thread-1 (]: SQL status: BEGIN in 0.0 seconds
+[0m13:14:30.942061 [debug] [Thread-1 (]: Using postgres connection "snapshot.dbt_idx.customers_snapshot"
+[0m13:14:30.943030 [debug] [Thread-1 (]: On snapshot.dbt_idx.customers_snapshot: /* {"app": "dbt", "dbt_version": "1.6.1", "profile_name": "dbt_idx", "target_name": "dev", "node_id": "snapshot.dbt_idx.customers_snapshot"} */
+
+      
+  
+    
+
+  create  table "IDX-Stock"."snapshots"."customers_snapshot"
+  
+  
+    as
+  
+  (
+    
+
+    select *,
+        md5(coalesce(cast(customer_id as varchar ), '')
+         || '|' || coalesce(cast(datetime_updated as varchar ), '')
+        ) as dbt_scd_id,
+        datetime_updated as dbt_updated_at,
+        datetime_updated as dbt_valid_from,
+        nullif(datetime_updated, datetime_updated) as dbt_valid_to
+    from (
+        
+
+
+
+select *
+from "IDX-Stock"."warehouse"."customers"
+
+    ) sbq
+
+
+
+  );
+  
+  
+[0m13:14:30.946028 [debug] [Thread-1 (]: Postgres adapter: Postgres error: relation "warehouse.customers" does not exist
+LINE 28: from "IDX-Stock"."warehouse"."customers"
+              ^
+
+[0m13:14:30.947027 [debug] [Thread-1 (]: On snapshot.dbt_idx.customers_snapshot: ROLLBACK
+[0m13:14:30.949026 [debug] [Thread-1 (]: Timing info for snapshot.dbt_idx.customers_snapshot (execute): 13:14:30.859087 => 13:14:30.949026
+[0m13:14:30.950555 [debug] [Thread-1 (]: On snapshot.dbt_idx.customers_snapshot: Close
+[0m13:14:30.970189 [debug] [Thread-1 (]: Database Error in snapshot customers_snapshot (snapshots\customers.sql)
+  relation "warehouse.customers" does not exist
+  LINE 28: from "IDX-Stock"."warehouse"."customers"
+                ^
+  compiled Code at target\run\dbt_idx\snapshots\customers.sql
+[0m13:14:30.971199 [error] [Thread-1 (]: 1 of 1 ERROR snapshotting snapshots.customers_snapshot ......................... [[31mERROR[0m in 0.12s]
+[0m13:14:30.972217 [debug] [Thread-1 (]: Finished running node snapshot.dbt_idx.customers_snapshot
+[0m13:14:30.975190 [debug] [MainThread]: Using postgres connection "master"
+[0m13:14:30.975190 [debug] [MainThread]: On master: BEGIN
+[0m13:14:30.976190 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m13:14:30.999972 [debug] [MainThread]: SQL status: BEGIN in 0.0 seconds
+[0m13:14:31.000969 [debug] [MainThread]: On master: COMMIT
+[0m13:14:31.001994 [debug] [MainThread]: Using postgres connection "master"
+[0m13:14:31.002969 [debug] [MainThread]: On master: COMMIT
+[0m13:14:31.004965 [debug] [MainThread]: SQL status: COMMIT in 0.0 seconds
+[0m13:14:31.005967 [debug] [MainThread]: On master: Close
+[0m13:14:31.006980 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m13:14:31.008971 [debug] [MainThread]: Connection 'list_IDX-Stock' was properly closed.
+[0m13:14:31.008971 [debug] [MainThread]: Connection 'list_IDX-Stock_snapshots' was properly closed.
+[0m13:14:31.010303 [debug] [MainThread]: Connection 'snapshot.dbt_idx.customers_snapshot' was properly closed.
+[0m13:14:31.011301 [info ] [MainThread]: 
+[0m13:14:31.012314 [info ] [MainThread]: Finished running 1 snapshot in 0 hours 0 minutes and 0.39 seconds (0.39s).
+[0m13:14:31.014301 [debug] [MainThread]: Command end result
+[0m13:14:31.039059 [info ] [MainThread]: 
+[0m13:14:31.039983 [info ] [MainThread]: [31mCompleted with 1 error and 0 warnings:[0m
+[0m13:14:31.041001 [info ] [MainThread]: 
+[0m13:14:31.042049 [error] [MainThread]: [33mDatabase Error in snapshot customers_snapshot (snapshots\customers.sql)[0m
+[0m13:14:31.043014 [error] [MainThread]:   relation "warehouse.customers" does not exist
+[0m13:14:31.044020 [error] [MainThread]:   LINE 28: from "IDX-Stock"."warehouse"."customers"
+[0m13:14:31.045041 [error] [MainThread]:                 ^
+[0m13:14:31.046014 [error] [MainThread]:   compiled Code at target\run\dbt_idx\snapshots\customers.sql
+[0m13:14:31.048013 [info ] [MainThread]: 
+[0m13:14:31.049013 [info ] [MainThread]: Done. PASS=0 WARN=0 ERROR=1 SKIP=0 TOTAL=1
+[0m13:14:31.049013 [debug] [MainThread]: Command `dbt snapshot` failed at 13:14:31.049013 after 1.74 seconds
+[0m13:14:31.050818 [debug] [MainThread]: Flushing usage events
+
+
+============================== 13:16:25.744017 | be2d323b-2909-4fc5-8fb6-a948899aad2b ==============================
+[0m13:16:25.744017 [info ] [MainThread]: Running with dbt=1.6.1
+[0m13:16:25.750221 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': 'D:\\00 Project\\00 My Project\\IdeaProjects\\Py-DBT-IDX', 'fail_fast': 'False', 'debug': 'False', 'log_path': 'D:\\00 Project\\00 My Project\\IdeaProjects\\Py-DBT-IDX\\logs', 'version_check': 'True', 'warn_error': 'None', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'introspect': 'True', 'invocation_command': 'dbt snapshot', 'static_parser': 'True', 'target_path': 'None', 'log_format': 'default', 'send_anonymous_usage_stats': 'False'}
+[0m13:16:25.928982 [info ] [MainThread]: Registered adapter: postgres=1.6.1
+[0m13:16:25.942069 [debug] [MainThread]: checksum: efe19d9f5b93d1a98cc804fbfcdb6b3aced98b974af664946fee1cde8837deb7, vars: {}, profile: , target: , version: 1.6.1
+[0m13:16:26.129887 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 1 files changed.
+[0m13:16:26.130929 [debug] [MainThread]: Partial parsing: updated file: dbt_idx://snapshots\customers.sql
+[0m13:16:26.157561 [error] [MainThread]: Encountered an error:
+Compilation Error in snapshot customers_snapshot (snapshots\customers.sql)
+  source() takes exactly two arguments (1 given)
+[0m13:16:26.158681 [debug] [MainThread]: Command `dbt snapshot` failed at 13:16:26.158681 after 0.46 seconds
+[0m13:16:26.159692 [debug] [MainThread]: Flushing usage events
+
+
+============================== 13:17:14.982105 | 3bc6cf7d-d510-4cc0-b138-785cda2ffa70 ==============================
+[0m13:17:14.982105 [info ] [MainThread]: Running with dbt=1.6.1
+[0m13:17:14.991668 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': 'D:\\00 Project\\00 My Project\\IdeaProjects\\Py-DBT-IDX', 'version_check': 'True', 'warn_error': 'None', 'log_path': 'D:\\00 Project\\00 My Project\\IdeaProjects\\Py-DBT-IDX\\logs', 'debug': 'False', 'fail_fast': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'static_parser': 'True', 'introspect': 'True', 'invocation_command': 'dbt snapshot', 'target_path': 'None', 'log_format': 'default', 'send_anonymous_usage_stats': 'False'}
+[0m13:17:15.172234 [info ] [MainThread]: Registered adapter: postgres=1.6.1
+[0m13:17:15.184749 [debug] [MainThread]: checksum: efe19d9f5b93d1a98cc804fbfcdb6b3aced98b974af664946fee1cde8837deb7, vars: {}, profile: , target: , version: 1.6.1
+[0m13:17:15.360471 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 1 files changed.
+[0m13:17:15.361496 [debug] [MainThread]: Partial parsing: updated file: dbt_idx://snapshots\customers.sql
+[0m13:17:15.403237 [error] [MainThread]: Encountered an error:
+Compilation Error
+  Snapshot 'snapshot.dbt_idx.customers_snapshot' (snapshots\customers.sql) depends on a source named 'IDX-Schema.customers' which was not found
+[0m13:17:15.404208 [debug] [MainThread]: Command `dbt snapshot` failed at 13:17:15.404208 after 0.47 seconds
+[0m13:17:15.405206 [debug] [MainThread]: Flushing usage events
+
+
+============================== 13:20:45.404939 | 7c7048ae-5270-4ec5-ae88-b0b26a4a7c22 ==============================
+[0m13:20:45.404939 [info ] [MainThread]: Running with dbt=1.6.1
+[0m13:20:45.411054 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'version_check': 'True', 'debug': 'False', 'log_path': 'D:\\00 Project\\00 My Project\\IdeaProjects\\Py-DBT-IDX\\logs', 'fail_fast': 'False', 'profiles_dir': 'D:\\00 Project\\00 My Project\\IdeaProjects\\Py-DBT-IDX', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'log_format': 'default', 'introspect': 'True', 'static_parser': 'True', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'target_path': 'None', 'invocation_command': 'dbt snapshot', 'send_anonymous_usage_stats': 'False'}
+[0m13:20:45.569456 [info ] [MainThread]: Registered adapter: postgres=1.6.1
+[0m13:20:45.580041 [debug] [MainThread]: checksum: efe19d9f5b93d1a98cc804fbfcdb6b3aced98b974af664946fee1cde8837deb7, vars: {}, profile: , target: , version: 1.6.1
+[0m13:20:45.784826 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 1 files changed.
+[0m13:20:45.786838 [debug] [MainThread]: Partial parsing: updated file: dbt_idx://snapshots\customers.sql
+[0m13:20:45.852856 [error] [MainThread]: Encountered an error:
+Compilation Error
+  Snapshot 'snapshot.dbt_idx.customers_snapshot' (snapshots\customers.sql) depends on a source named '"IDX-Schema".customers' which was not found
+[0m13:20:45.855378 [debug] [MainThread]: Command `dbt snapshot` failed at 13:20:45.854848 after 0.49 seconds
+[0m13:20:45.856388 [debug] [MainThread]: Flushing usage events
+
+
+============================== 13:29:48.798847 | 72941f75-0eea-4972-af84-f5d7037e4eb3 ==============================
+[0m13:29:48.798847 [info ] [MainThread]: Running with dbt=1.6.1
+[0m13:29:48.803794 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'debug': 'False', 'fail_fast': 'False', 'log_path': 'D:\\00 Project\\00 My Project\\IdeaProjects\\Py-DBT-IDX\\logs', 'profiles_dir': 'D:\\00 Project\\00 My Project\\IdeaProjects\\Py-DBT-IDX', 'version_check': 'True', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'static_parser': 'True', 'invocation_command': 'dbt snapshot', 'log_format': 'default', 'target_path': 'None', 'introspect': 'True', 'send_anonymous_usage_stats': 'False'}
+[0m13:29:48.947423 [info ] [MainThread]: Registered adapter: postgres=1.6.1
+[0m13:29:48.957938 [debug] [MainThread]: checksum: efe19d9f5b93d1a98cc804fbfcdb6b3aced98b974af664946fee1cde8837deb7, vars: {}, profile: , target: , version: 1.6.1
+[0m13:29:49.102969 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 2 files changed.
+[0m13:29:49.104968 [debug] [MainThread]: Partial parsing: updated file: dbt_idx://models\staging\src_eltool.yml
+[0m13:29:49.105947 [debug] [MainThread]: Partial parsing: updated file: dbt_idx://snapshots\customers.sql
+[0m13:29:49.273461 [error] [MainThread]: Encountered an error:
+Compilation Error
+  Model 'model.dbt_idx.stg_eltool__customers' (models\staging\stg_eltool__customers.sql) depends on a source named 'warehouse.customers' which was not found
+[0m13:29:49.274442 [debug] [MainThread]: Command `dbt snapshot` failed at 13:29:49.274442 after 0.52 seconds
+[0m13:29:49.276984 [debug] [MainThread]: Flushing usage events
+
+
+============================== 13:29:54.840649 | 02c951d2-3f1b-4ccf-9596-abad927600dd ==============================
+[0m13:29:54.840649 [info ] [MainThread]: Running with dbt=1.6.1
+[0m13:29:54.846155 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'fail_fast': 'False', 'profiles_dir': 'D:\\00 Project\\00 My Project\\IdeaProjects\\Py-DBT-IDX', 'log_path': 'D:\\00 Project\\00 My Project\\IdeaProjects\\Py-DBT-IDX\\logs', 'version_check': 'True', 'debug': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'log_format': 'default', 'introspect': 'True', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'invocation_command': 'dbt snapshot', 'target_path': 'None', 'static_parser': 'True', 'send_anonymous_usage_stats': 'False'}
+[0m13:29:54.992495 [info ] [MainThread]: Registered adapter: postgres=1.6.1
+[0m13:29:55.002992 [debug] [MainThread]: checksum: efe19d9f5b93d1a98cc804fbfcdb6b3aced98b974af664946fee1cde8837deb7, vars: {}, profile: , target: , version: 1.6.1
+[0m13:29:55.146993 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 2 files changed.
+[0m13:29:55.148996 [debug] [MainThread]: Partial parsing: updated file: dbt_idx://models\staging\src_eltool.yml
+[0m13:29:55.150010 [debug] [MainThread]: Partial parsing: updated file: dbt_idx://snapshots\customers.sql
+[0m13:29:55.306731 [error] [MainThread]: Encountered an error:
+Compilation Error
+  Model 'model.dbt_idx.stg_eltool__customers' (models\staging\stg_eltool__customers.sql) depends on a source named 'warehouse.customers' which was not found
+[0m13:29:55.308697 [debug] [MainThread]: Command `dbt snapshot` failed at 13:29:55.308697 after 0.51 seconds
+[0m13:29:55.308697 [debug] [MainThread]: Flushing usage events
+
+
+============================== 13:30:22.968289 | a3b82655-c5f6-40be-8baf-146627a5411c ==============================
+[0m13:30:22.968289 [info ] [MainThread]: Running with dbt=1.6.1
+[0m13:30:22.974310 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'fail_fast': 'False', 'debug': 'False', 'log_path': 'D:\\00 Project\\00 My Project\\IdeaProjects\\Py-DBT-IDX\\logs', 'version_check': 'True', 'profiles_dir': 'D:\\00 Project\\00 My Project\\IdeaProjects\\Py-DBT-IDX', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'log_format': 'default', 'static_parser': 'True', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'introspect': 'True', 'target_path': 'None', 'invocation_command': 'dbt snapshot', 'send_anonymous_usage_stats': 'False'}
+[0m13:30:23.114508 [info ] [MainThread]: Registered adapter: postgres=1.6.1
+[0m13:30:23.126648 [debug] [MainThread]: checksum: efe19d9f5b93d1a98cc804fbfcdb6b3aced98b974af664946fee1cde8837deb7, vars: {}, profile: , target: , version: 1.6.1
+[0m13:30:23.286780 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 5 files changed.
+[0m13:30:23.288780 [debug] [MainThread]: Partial parsing: updated file: dbt_idx://models\staging\src_eltool.yml
+[0m13:30:23.289779 [debug] [MainThread]: Partial parsing: updated file: dbt_idx://snapshots\customers.sql
+[0m13:30:23.290781 [debug] [MainThread]: Partial parsing: updated file: dbt_idx://models\staging\stg_eltool__state.sql
+[0m13:30:23.290781 [debug] [MainThread]: Partial parsing: updated file: dbt_idx://models\staging\stg_eltool__orders.sql
+[0m13:30:23.291780 [debug] [MainThread]: Partial parsing: updated file: dbt_idx://models\staging\stg_eltool__customers.sql
+[0m13:30:23.521067 [info ] [MainThread]: Found 7 models, 1 snapshot, 10 tests, 3 sources, 0 exposures, 0 metrics, 349 macros, 0 groups, 0 semantic models
+[0m13:30:23.524104 [info ] [MainThread]: 
+[0m13:30:23.525613 [debug] [MainThread]: Acquiring new postgres connection 'master'
+[0m13:30:23.527658 [debug] [ThreadPool]: Acquiring new postgres connection 'list_IDX-Stock'
+[0m13:30:23.540031 [debug] [ThreadPool]: Using postgres connection "list_IDX-Stock"
+[0m13:30:23.541031 [debug] [ThreadPool]: On list_IDX-Stock: /* {"app": "dbt", "dbt_version": "1.6.1", "profile_name": "dbt_idx", "target_name": "dev", "connection_name": "list_IDX-Stock"} */
+
+    select distinct nspname from pg_namespace
+  
+[0m13:30:23.541996 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m13:30:23.573166 [debug] [ThreadPool]: SQL status: SELECT 11 in 0.0 seconds
+[0m13:30:23.574135 [debug] [ThreadPool]: On list_IDX-Stock: Close
+[0m13:30:23.577730 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_IDX-Stock, now create_IDX-Stock_snapshots)
+[0m13:30:23.579730 [debug] [ThreadPool]: Creating schema "database: "IDX-Stock"
+schema: "snapshots"
+"
+[0m13:30:23.585761 [debug] [ThreadPool]: Using postgres connection "create_IDX-Stock_snapshots"
+[0m13:30:23.585761 [debug] [ThreadPool]: On create_IDX-Stock_snapshots: BEGIN
+[0m13:30:23.586859 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m13:30:23.611498 [debug] [ThreadPool]: SQL status: BEGIN in 0.0 seconds
+[0m13:30:23.613556 [debug] [ThreadPool]: Using postgres connection "create_IDX-Stock_snapshots"
+[0m13:30:23.615288 [debug] [ThreadPool]: On create_IDX-Stock_snapshots: /* {"app": "dbt", "dbt_version": "1.6.1", "profile_name": "dbt_idx", "target_name": "dev", "connection_name": "create_IDX-Stock_snapshots"} */
+create schema if not exists "snapshots"
+[0m13:30:23.619423 [debug] [ThreadPool]: SQL status: CREATE SCHEMA in 0.0 seconds
+[0m13:30:23.622765 [debug] [ThreadPool]: On create_IDX-Stock_snapshots: COMMIT
+[0m13:30:23.624486 [debug] [ThreadPool]: Using postgres connection "create_IDX-Stock_snapshots"
+[0m13:30:23.625521 [debug] [ThreadPool]: On create_IDX-Stock_snapshots: COMMIT
+[0m13:30:23.633144 [debug] [ThreadPool]: SQL status: COMMIT in 0.0 seconds
+[0m13:30:23.634272 [debug] [ThreadPool]: On create_IDX-Stock_snapshots: Close
+[0m13:30:23.640719 [debug] [ThreadPool]: Acquiring new postgres connection 'list_IDX-Stock_snapshots'
+[0m13:30:23.648167 [debug] [ThreadPool]: Using postgres connection "list_IDX-Stock_snapshots"
+[0m13:30:23.649166 [debug] [ThreadPool]: On list_IDX-Stock_snapshots: BEGIN
+[0m13:30:23.649166 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m13:30:23.734605 [debug] [ThreadPool]: SQL status: BEGIN in 0.0 seconds
+[0m13:30:23.735577 [debug] [ThreadPool]: Using postgres connection "list_IDX-Stock_snapshots"
+[0m13:30:23.736142 [debug] [ThreadPool]: On list_IDX-Stock_snapshots: /* {"app": "dbt", "dbt_version": "1.6.1", "profile_name": "dbt_idx", "target_name": "dev", "connection_name": "list_IDX-Stock_snapshots"} */
+select
+      'IDX-Stock' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'snapshots'
+    union all
+    select
+      'IDX-Stock' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'snapshots'
+    union all
+    select
+      'IDX-Stock' as database,
+      matviewname as name,
+      schemaname as schema,
+      'materialized_view' as type
+    from pg_matviews
+    where schemaname ilike 'snapshots'
+  
+[0m13:30:23.743676 [debug] [ThreadPool]: SQL status: SELECT 0 in 0.0 seconds
+[0m13:30:23.745704 [debug] [ThreadPool]: On list_IDX-Stock_snapshots: ROLLBACK
+[0m13:30:23.749062 [debug] [ThreadPool]: On list_IDX-Stock_snapshots: Close
+[0m13:30:23.751580 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_IDX-Stock_snapshots, now list_IDX-Stock_IDX-Schema)
+[0m13:30:23.757209 [debug] [ThreadPool]: Using postgres connection "list_IDX-Stock_IDX-Schema"
+[0m13:30:23.758760 [debug] [ThreadPool]: On list_IDX-Stock_IDX-Schema: BEGIN
+[0m13:30:23.759805 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m13:30:23.786010 [debug] [ThreadPool]: SQL status: BEGIN in 0.0 seconds
+[0m13:30:23.786905 [debug] [ThreadPool]: Using postgres connection "list_IDX-Stock_IDX-Schema"
+[0m13:30:23.788920 [debug] [ThreadPool]: On list_IDX-Stock_IDX-Schema: /* {"app": "dbt", "dbt_version": "1.6.1", "profile_name": "dbt_idx", "target_name": "dev", "connection_name": "list_IDX-Stock_IDX-Schema"} */
+select
+      'IDX-Stock' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'IDX-Schema'
+    union all
+    select
+      'IDX-Stock' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'IDX-Schema'
+    union all
+    select
+      'IDX-Stock' as database,
+      matviewname as name,
+      schemaname as schema,
+      'materialized_view' as type
+    from pg_matviews
+    where schemaname ilike 'IDX-Schema'
+  
+[0m13:30:23.798728 [debug] [ThreadPool]: SQL status: SELECT 6 in 0.0 seconds
+[0m13:30:23.802462 [debug] [ThreadPool]: On list_IDX-Stock_IDX-Schema: ROLLBACK
+[0m13:30:23.805455 [debug] [ThreadPool]: On list_IDX-Stock_IDX-Schema: Close
+[0m13:30:23.814695 [debug] [MainThread]: Using postgres connection "master"
+[0m13:30:23.816229 [debug] [MainThread]: On master: BEGIN
+[0m13:30:23.816229 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m13:30:23.847062 [debug] [MainThread]: SQL status: BEGIN in 0.0 seconds
+[0m13:30:23.848103 [debug] [MainThread]: Using postgres connection "master"
+[0m13:30:23.849073 [debug] [MainThread]: On master: /* {"app": "dbt", "dbt_version": "1.6.1", "profile_name": "dbt_idx", "target_name": "dev", "connection_name": "master"} */
+with relation as (
+        select
+            pg_rewrite.ev_class as class,
+            pg_rewrite.oid as id
+        from pg_rewrite
+    ),
+    class as (
+        select
+            oid as id,
+            relname as name,
+            relnamespace as schema,
+            relkind as kind
+        from pg_class
+    ),
+    dependency as (
+        select distinct
+            pg_depend.objid as id,
+            pg_depend.refobjid as ref
+        from pg_depend
+    ),
+    schema as (
+        select
+            pg_namespace.oid as id,
+            pg_namespace.nspname as name
+        from pg_namespace
+        where nspname != 'information_schema' and nspname not like 'pg\_%'
+    ),
+    referenced as (
+        select
+            relation.id AS id,
+            referenced_class.name ,
+            referenced_class.schema ,
+            referenced_class.kind
+        from relation
+        join class as referenced_class on relation.class=referenced_class.id
+        where referenced_class.kind in ('r', 'v', 'm')
+    ),
+    relationships as (
+        select
+            referenced.name as referenced_name,
+            referenced.schema as referenced_schema_id,
+            dependent_class.name as dependent_name,
+            dependent_class.schema as dependent_schema_id,
+            referenced.kind as kind
+        from referenced
+        join dependency on referenced.id=dependency.id
+        join class as dependent_class on dependency.ref=dependent_class.id
+        where
+            (referenced.name != dependent_class.name or
+             referenced.schema != dependent_class.schema)
+    )
+
+    select
+        referenced_schema.name as referenced_schema,
+        relationships.referenced_name as referenced_name,
+        dependent_schema.name as dependent_schema,
+        relationships.dependent_name as dependent_name
+    from relationships
+    join schema as dependent_schema on relationships.dependent_schema_id=dependent_schema.id
+    join schema as referenced_schema on relationships.referenced_schema_id=referenced_schema.id
+    group by referenced_schema, referenced_name, dependent_schema, dependent_name
+    order by referenced_schema, referenced_name, dependent_schema, dependent_name;
+[0m13:30:23.857129 [debug] [MainThread]: SQL status: SELECT 0 in 0.0 seconds
+[0m13:30:23.859193 [debug] [MainThread]: On master: ROLLBACK
+[0m13:30:23.862181 [debug] [MainThread]: Using postgres connection "master"
+[0m13:30:23.863130 [debug] [MainThread]: On master: BEGIN
+[0m13:30:23.867695 [debug] [MainThread]: SQL status: BEGIN in 0.0 seconds
+[0m13:30:23.869228 [debug] [MainThread]: On master: COMMIT
+[0m13:30:23.870236 [debug] [MainThread]: Using postgres connection "master"
+[0m13:30:23.871241 [debug] [MainThread]: On master: COMMIT
+[0m13:30:23.873241 [debug] [MainThread]: SQL status: COMMIT in 0.0 seconds
+[0m13:30:23.874272 [debug] [MainThread]: On master: Close
+[0m13:30:23.875781 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m13:30:23.877790 [info ] [MainThread]: 
+[0m13:30:23.884825 [debug] [Thread-1 (]: Began running node snapshot.dbt_idx.customers_snapshot
+[0m13:30:23.885787 [info ] [Thread-1 (]: 1 of 1 START snapshot snapshots.customers_snapshot ............................. [RUN]
+[0m13:30:23.888136 [debug] [Thread-1 (]: Acquiring new postgres connection 'snapshot.dbt_idx.customers_snapshot'
+[0m13:30:23.889146 [debug] [Thread-1 (]: Began compiling node snapshot.dbt_idx.customers_snapshot
+[0m13:30:23.904684 [debug] [Thread-1 (]: Timing info for snapshot.dbt_idx.customers_snapshot (compile): 13:30:23.890166 => 13:30:23.904684
+[0m13:30:23.905686 [debug] [Thread-1 (]: Began executing node snapshot.dbt_idx.customers_snapshot
+[0m13:30:23.961224 [debug] [Thread-1 (]: Writing runtime sql for node "snapshot.dbt_idx.customers_snapshot"
+[0m13:30:23.969726 [debug] [Thread-1 (]: Using postgres connection "snapshot.dbt_idx.customers_snapshot"
+[0m13:30:23.970725 [debug] [Thread-1 (]: On snapshot.dbt_idx.customers_snapshot: BEGIN
+[0m13:30:23.972233 [debug] [Thread-1 (]: Opening a new connection, currently in state init
+[0m13:30:23.995828 [debug] [Thread-1 (]: SQL status: BEGIN in 0.0 seconds
+[0m13:30:23.998037 [debug] [Thread-1 (]: Using postgres connection "snapshot.dbt_idx.customers_snapshot"
+[0m13:30:23.999073 [debug] [Thread-1 (]: On snapshot.dbt_idx.customers_snapshot: /* {"app": "dbt", "dbt_version": "1.6.1", "profile_name": "dbt_idx", "target_name": "dev", "node_id": "snapshot.dbt_idx.customers_snapshot"} */
+
+      
+  
+    
+
+  create  table "IDX-Stock"."snapshots"."customers_snapshot"
+  
+  
+    as
+  
+  (
+    
+
+    select *,
+        md5(coalesce(cast(customer_id as varchar ), '')
+         || '|' || coalesce(cast(datetime_updated as varchar ), '')
+        ) as dbt_scd_id,
+        datetime_updated as dbt_updated_at,
+        datetime_updated as dbt_valid_from,
+        nullif(datetime_updated, datetime_updated) as dbt_valid_to
+    from (
+        
+
+
+
+select *
+from "IDX-Stock"."IDX-Schema"."customers"
+
+    ) sbq
+
+
+
+  );
+  
+  
+[0m13:30:24.012614 [debug] [Thread-1 (]: SQL status: SELECT 100 in 0.0 seconds
+[0m13:30:24.042053 [debug] [Thread-1 (]: On snapshot.dbt_idx.customers_snapshot: COMMIT
+[0m13:30:24.044057 [debug] [Thread-1 (]: Using postgres connection "snapshot.dbt_idx.customers_snapshot"
+[0m13:30:24.044057 [debug] [Thread-1 (]: On snapshot.dbt_idx.customers_snapshot: COMMIT
+[0m13:30:24.049603 [debug] [Thread-1 (]: SQL status: COMMIT in 0.0 seconds
+[0m13:30:24.051658 [debug] [Thread-1 (]: Timing info for snapshot.dbt_idx.customers_snapshot (execute): 13:30:23.906938 => 13:30:24.051115
+[0m13:30:24.051658 [debug] [Thread-1 (]: On snapshot.dbt_idx.customers_snapshot: Close
+[0m13:30:24.055712 [info ] [Thread-1 (]: 1 of 1 OK snapshotted snapshots.customers_snapshot ............................. [[32msuccess[0m in 0.17s]
+[0m13:30:24.057730 [debug] [Thread-1 (]: Finished running node snapshot.dbt_idx.customers_snapshot
+[0m13:30:24.061744 [debug] [MainThread]: Using postgres connection "master"
+[0m13:30:24.062744 [debug] [MainThread]: On master: BEGIN
+[0m13:30:24.063736 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m13:30:24.093167 [debug] [MainThread]: SQL status: BEGIN in 0.0 seconds
+[0m13:30:24.094167 [debug] [MainThread]: On master: COMMIT
+[0m13:30:24.095165 [debug] [MainThread]: Using postgres connection "master"
+[0m13:30:24.095672 [debug] [MainThread]: On master: COMMIT
+[0m13:30:24.098706 [debug] [MainThread]: SQL status: COMMIT in 0.0 seconds
+[0m13:30:24.099703 [debug] [MainThread]: On master: Close
+[0m13:30:24.101705 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m13:30:24.102706 [debug] [MainThread]: Connection 'create_IDX-Stock_snapshots' was properly closed.
+[0m13:30:24.103704 [debug] [MainThread]: Connection 'list_IDX-Stock_IDX-Schema' was properly closed.
+[0m13:30:24.104705 [debug] [MainThread]: Connection 'snapshot.dbt_idx.customers_snapshot' was properly closed.
+[0m13:30:24.106222 [info ] [MainThread]: 
+[0m13:30:24.107250 [info ] [MainThread]: Finished running 1 snapshot in 0 hours 0 minutes and 0.58 seconds (0.58s).
+[0m13:30:24.109803 [debug] [MainThread]: Command end result
+[0m13:30:24.139614 [info ] [MainThread]: 
+[0m13:30:24.141607 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m13:30:24.142628 [info ] [MainThread]: 
+[0m13:30:24.143607 [info ] [MainThread]: Done. PASS=1 WARN=0 ERROR=0 SKIP=0 TOTAL=1
+[0m13:30:24.144609 [debug] [MainThread]: Command `dbt snapshot` succeeded at 13:30:24.144609 after 1.22 seconds
+[0m13:30:24.145621 [debug] [MainThread]: Flushing usage events
+
+
+============================== 13:30:43.030096 | a685c631-81df-4bf6-907d-67501a29bdfb ==============================
+[0m13:30:43.030096 [info ] [MainThread]: Running with dbt=1.6.1
+[0m13:30:43.035611 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': 'D:\\00 Project\\00 My Project\\IdeaProjects\\Py-DBT-IDX', 'fail_fast': 'False', 'warn_error': 'None', 'log_path': 'D:\\00 Project\\00 My Project\\IdeaProjects\\Py-DBT-IDX\\logs', 'version_check': 'True', 'debug': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'log_format': 'default', 'invocation_command': 'dbt run', 'introspect': 'True', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'target_path': 'None', 'static_parser': 'True', 'send_anonymous_usage_stats': 'False'}
+[0m13:30:43.171419 [info ] [MainThread]: Registered adapter: postgres=1.6.1
+[0m13:30:43.182045 [debug] [MainThread]: checksum: efe19d9f5b93d1a98cc804fbfcdb6b3aced98b974af664946fee1cde8837deb7, vars: {}, profile: , target: , version: 1.6.1
+[0m13:30:43.343304 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m13:30:43.344304 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m13:30:43.397088 [info ] [MainThread]: Found 7 models, 1 snapshot, 10 tests, 3 sources, 0 exposures, 0 metrics, 349 macros, 0 groups, 0 semantic models
+[0m13:30:43.400099 [info ] [MainThread]: 
+[0m13:30:43.401683 [debug] [MainThread]: Acquiring new postgres connection 'master'
+[0m13:30:43.404680 [debug] [ThreadPool]: Acquiring new postgres connection 'list_IDX-Stock'
+[0m13:30:43.415585 [debug] [ThreadPool]: Using postgres connection "list_IDX-Stock"
+[0m13:30:43.416576 [debug] [ThreadPool]: On list_IDX-Stock: /* {"app": "dbt", "dbt_version": "1.6.1", "profile_name": "dbt_idx", "target_name": "dev", "connection_name": "list_IDX-Stock"} */
+
+    select distinct nspname from pg_namespace
+  
+[0m13:30:43.417575 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m13:30:43.449642 [debug] [ThreadPool]: SQL status: SELECT 12 in 0.0 seconds
+[0m13:30:43.451638 [debug] [ThreadPool]: On list_IDX-Stock: Close
+[0m13:30:43.456159 [debug] [ThreadPool]: Acquiring new postgres connection 'list_IDX-Stock_IDX-Schema'
+[0m13:30:43.463224 [debug] [ThreadPool]: Using postgres connection "list_IDX-Stock_IDX-Schema"
+[0m13:30:43.463224 [debug] [ThreadPool]: On list_IDX-Stock_IDX-Schema: BEGIN
+[0m13:30:43.464263 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m13:30:43.485856 [debug] [ThreadPool]: SQL status: BEGIN in 0.0 seconds
+[0m13:30:43.487332 [debug] [ThreadPool]: Using postgres connection "list_IDX-Stock_IDX-Schema"
+[0m13:30:43.488347 [debug] [ThreadPool]: On list_IDX-Stock_IDX-Schema: /* {"app": "dbt", "dbt_version": "1.6.1", "profile_name": "dbt_idx", "target_name": "dev", "connection_name": "list_IDX-Stock_IDX-Schema"} */
+select
+      'IDX-Stock' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'IDX-Schema'
+    union all
+    select
+      'IDX-Stock' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'IDX-Schema'
+    union all
+    select
+      'IDX-Stock' as database,
+      matviewname as name,
+      schemaname as schema,
+      'materialized_view' as type
+    from pg_matviews
+    where schemaname ilike 'IDX-Schema'
+  
+[0m13:30:43.494088 [debug] [ThreadPool]: SQL status: SELECT 6 in 0.0 seconds
+[0m13:30:43.495655 [debug] [ThreadPool]: On list_IDX-Stock_IDX-Schema: ROLLBACK
+[0m13:30:43.497612 [debug] [ThreadPool]: On list_IDX-Stock_IDX-Schema: Close
+[0m13:30:43.501664 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_IDX-Stock_IDX-Schema, now list_IDX-Stock_snapshots)
+[0m13:30:43.507143 [debug] [ThreadPool]: Using postgres connection "list_IDX-Stock_snapshots"
+[0m13:30:43.508149 [debug] [ThreadPool]: On list_IDX-Stock_snapshots: BEGIN
+[0m13:30:43.509150 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m13:30:43.531538 [debug] [ThreadPool]: SQL status: BEGIN in 0.0 seconds
+[0m13:30:43.533528 [debug] [ThreadPool]: Using postgres connection "list_IDX-Stock_snapshots"
+[0m13:30:43.533528 [debug] [ThreadPool]: On list_IDX-Stock_snapshots: /* {"app": "dbt", "dbt_version": "1.6.1", "profile_name": "dbt_idx", "target_name": "dev", "connection_name": "list_IDX-Stock_snapshots"} */
+select
+      'IDX-Stock' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'snapshots'
+    union all
+    select
+      'IDX-Stock' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'snapshots'
+    union all
+    select
+      'IDX-Stock' as database,
+      matviewname as name,
+      schemaname as schema,
+      'materialized_view' as type
+    from pg_matviews
+    where schemaname ilike 'snapshots'
+  
+[0m13:30:43.538661 [debug] [ThreadPool]: SQL status: SELECT 1 in 0.0 seconds
+[0m13:30:43.540695 [debug] [ThreadPool]: On list_IDX-Stock_snapshots: ROLLBACK
+[0m13:30:43.542665 [debug] [ThreadPool]: On list_IDX-Stock_snapshots: Close
+[0m13:30:43.550782 [debug] [MainThread]: Using postgres connection "master"
+[0m13:30:43.551802 [debug] [MainThread]: On master: BEGIN
+[0m13:30:43.552781 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m13:30:43.575665 [debug] [MainThread]: SQL status: BEGIN in 0.0 seconds
+[0m13:30:43.577175 [debug] [MainThread]: Using postgres connection "master"
+[0m13:30:43.578227 [debug] [MainThread]: On master: /* {"app": "dbt", "dbt_version": "1.6.1", "profile_name": "dbt_idx", "target_name": "dev", "connection_name": "master"} */
+with relation as (
+        select
+            pg_rewrite.ev_class as class,
+            pg_rewrite.oid as id
+        from pg_rewrite
+    ),
+    class as (
+        select
+            oid as id,
+            relname as name,
+            relnamespace as schema,
+            relkind as kind
+        from pg_class
+    ),
+    dependency as (
+        select distinct
+            pg_depend.objid as id,
+            pg_depend.refobjid as ref
+        from pg_depend
+    ),
+    schema as (
+        select
+            pg_namespace.oid as id,
+            pg_namespace.nspname as name
+        from pg_namespace
+        where nspname != 'information_schema' and nspname not like 'pg\_%'
+    ),
+    referenced as (
+        select
+            relation.id AS id,
+            referenced_class.name ,
+            referenced_class.schema ,
+            referenced_class.kind
+        from relation
+        join class as referenced_class on relation.class=referenced_class.id
+        where referenced_class.kind in ('r', 'v', 'm')
+    ),
+    relationships as (
+        select
+            referenced.name as referenced_name,
+            referenced.schema as referenced_schema_id,
+            dependent_class.name as dependent_name,
+            dependent_class.schema as dependent_schema_id,
+            referenced.kind as kind
+        from referenced
+        join dependency on referenced.id=dependency.id
+        join class as dependent_class on dependency.ref=dependent_class.id
+        where
+            (referenced.name != dependent_class.name or
+             referenced.schema != dependent_class.schema)
+    )
+
+    select
+        referenced_schema.name as referenced_schema,
+        relationships.referenced_name as referenced_name,
+        dependent_schema.name as dependent_schema,
+        relationships.dependent_name as dependent_name
+    from relationships
+    join schema as dependent_schema on relationships.dependent_schema_id=dependent_schema.id
+    join schema as referenced_schema on relationships.referenced_schema_id=referenced_schema.id
+    group by referenced_schema, referenced_name, dependent_schema, dependent_name
+    order by referenced_schema, referenced_name, dependent_schema, dependent_name;
+[0m13:30:43.584180 [debug] [MainThread]: SQL status: SELECT 0 in 0.0 seconds
+[0m13:30:43.585828 [debug] [MainThread]: On master: ROLLBACK
+[0m13:30:43.588037 [debug] [MainThread]: Using postgres connection "master"
+[0m13:30:43.589083 [debug] [MainThread]: On master: BEGIN
+[0m13:30:43.592084 [debug] [MainThread]: SQL status: BEGIN in 0.0 seconds
+[0m13:30:43.593135 [debug] [MainThread]: On master: COMMIT
+[0m13:30:43.594140 [debug] [MainThread]: Using postgres connection "master"
+[0m13:30:43.594140 [debug] [MainThread]: On master: COMMIT
+[0m13:30:43.596731 [debug] [MainThread]: SQL status: COMMIT in 0.0 seconds
+[0m13:30:43.596731 [debug] [MainThread]: On master: Close
+[0m13:30:43.598714 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m13:30:43.599710 [info ] [MainThread]: 
+[0m13:30:43.604709 [debug] [Thread-1 (]: Began running node model.dbt_idx.stg_eltool__customers
+[0m13:30:43.605736 [info ] [Thread-1 (]: 1 of 7 START sql view model IDX-Schema.stg_eltool__customers ................... [RUN]
+[0m13:30:43.607022 [debug] [Thread-1 (]: Acquiring new postgres connection 'model.dbt_idx.stg_eltool__customers'
+[0m13:30:43.609029 [debug] [Thread-1 (]: Began compiling node model.dbt_idx.stg_eltool__customers
+[0m13:30:43.617626 [debug] [Thread-1 (]: Writing injected SQL for node "model.dbt_idx.stg_eltool__customers"
+[0m13:30:43.624087 [debug] [Thread-1 (]: Timing info for model.dbt_idx.stg_eltool__customers (compile): 13:30:43.610023 => 13:30:43.624087
+[0m13:30:43.625648 [debug] [Thread-1 (]: Began executing node model.dbt_idx.stg_eltool__customers
+[0m13:30:43.663162 [debug] [Thread-1 (]: Writing runtime sql for node "model.dbt_idx.stg_eltool__customers"
+[0m13:30:43.670153 [debug] [Thread-1 (]: Using postgres connection "model.dbt_idx.stg_eltool__customers"
+[0m13:30:43.672176 [debug] [Thread-1 (]: On model.dbt_idx.stg_eltool__customers: BEGIN
+[0m13:30:43.673155 [debug] [Thread-1 (]: Opening a new connection, currently in state init
+[0m13:30:43.698761 [debug] [Thread-1 (]: SQL status: BEGIN in 0.0 seconds
+[0m13:30:43.699761 [debug] [Thread-1 (]: Using postgres connection "model.dbt_idx.stg_eltool__customers"
+[0m13:30:43.700761 [debug] [Thread-1 (]: On model.dbt_idx.stg_eltool__customers: /* {"app": "dbt", "dbt_version": "1.6.1", "profile_name": "dbt_idx", "target_name": "dev", "node_id": "model.dbt_idx.stg_eltool__customers"} */
+
+  create view "IDX-Stock"."IDX-Schema"."stg_eltool__customers__dbt_tmp"
+    
+    
+  as (
+    with source as (select *
+                from "IDX-Stock"."IDX-Schema"."customers"),
+     renamed as (select
+                     customer_id,
+                    'This is Dummy' as dummy
+                 from source
+                 where customer_id = 1234567890)
+select *
+from renamed
+  );
+[0m13:30:43.708290 [debug] [Thread-1 (]: SQL status: CREATE VIEW in 0.0 seconds
+[0m13:30:43.715885 [debug] [Thread-1 (]: Using postgres connection "model.dbt_idx.stg_eltool__customers"
+[0m13:30:43.716803 [debug] [Thread-1 (]: On model.dbt_idx.stg_eltool__customers: /* {"app": "dbt", "dbt_version": "1.6.1", "profile_name": "dbt_idx", "target_name": "dev", "node_id": "model.dbt_idx.stg_eltool__customers"} */
+alter table "IDX-Stock"."IDX-Schema"."stg_eltool__customers__dbt_tmp" rename to "stg_eltool__customers"
+[0m13:30:43.719748 [debug] [Thread-1 (]: SQL status: ALTER TABLE in 0.0 seconds
+[0m13:30:43.737991 [debug] [Thread-1 (]: On model.dbt_idx.stg_eltool__customers: COMMIT
+[0m13:30:43.738964 [debug] [Thread-1 (]: Using postgres connection "model.dbt_idx.stg_eltool__customers"
+[0m13:30:43.738964 [debug] [Thread-1 (]: On model.dbt_idx.stg_eltool__customers: COMMIT
+[0m13:30:43.742817 [debug] [Thread-1 (]: SQL status: COMMIT in 0.0 seconds
+[0m13:30:43.752398 [debug] [Thread-1 (]: Using postgres connection "model.dbt_idx.stg_eltool__customers"
+[0m13:30:43.753386 [debug] [Thread-1 (]: On model.dbt_idx.stg_eltool__customers: /* {"app": "dbt", "dbt_version": "1.6.1", "profile_name": "dbt_idx", "target_name": "dev", "node_id": "model.dbt_idx.stg_eltool__customers"} */
+drop view if exists "IDX-Stock"."IDX-Schema"."stg_eltool__customers__dbt_backup" cascade
+[0m13:30:43.756013 [debug] [Thread-1 (]: SQL status: DROP VIEW in 0.0 seconds
+[0m13:30:43.757956 [debug] [Thread-1 (]: Timing info for model.dbt_idx.stg_eltool__customers (execute): 13:30:43.626612 => 13:30:43.757956
+[0m13:30:43.757956 [debug] [Thread-1 (]: On model.dbt_idx.stg_eltool__customers: Close
+[0m13:30:43.759940 [info ] [Thread-1 (]: 1 of 7 OK created sql view model IDX-Schema.stg_eltool__customers .............. [[32mCREATE VIEW[0m in 0.15s]
+[0m13:30:43.762923 [debug] [Thread-1 (]: Finished running node model.dbt_idx.stg_eltool__customers
+[0m13:30:43.763955 [debug] [Thread-1 (]: Began running node model.dbt_idx.stg_eltool__customers_snapshots
+[0m13:30:43.764929 [info ] [Thread-1 (]: 2 of 7 START sql view model IDX-Schema.stg_eltool__customers_snapshots ......... [RUN]
+[0m13:30:43.767044 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.dbt_idx.stg_eltool__customers, now model.dbt_idx.stg_eltool__customers_snapshots)
+[0m13:30:43.768068 [debug] [Thread-1 (]: Began compiling node model.dbt_idx.stg_eltool__customers_snapshots
+[0m13:30:43.774052 [debug] [Thread-1 (]: Writing injected SQL for node "model.dbt_idx.stg_eltool__customers_snapshots"
+[0m13:30:43.781167 [debug] [Thread-1 (]: Timing info for model.dbt_idx.stg_eltool__customers_snapshots (compile): 13:30:43.769051 => 13:30:43.781167
+[0m13:30:43.782163 [debug] [Thread-1 (]: Began executing node model.dbt_idx.stg_eltool__customers_snapshots
+[0m13:30:43.787756 [debug] [Thread-1 (]: Writing runtime sql for node "model.dbt_idx.stg_eltool__customers_snapshots"
+[0m13:30:43.796867 [debug] [Thread-1 (]: Using postgres connection "model.dbt_idx.stg_eltool__customers_snapshots"
+[0m13:30:43.797868 [debug] [Thread-1 (]: On model.dbt_idx.stg_eltool__customers_snapshots: BEGIN
+[0m13:30:43.798845 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m13:30:43.824138 [debug] [Thread-1 (]: SQL status: BEGIN in 0.0 seconds
+[0m13:30:43.824138 [debug] [Thread-1 (]: Using postgres connection "model.dbt_idx.stg_eltool__customers_snapshots"
+[0m13:30:43.825700 [debug] [Thread-1 (]: On model.dbt_idx.stg_eltool__customers_snapshots: /* {"app": "dbt", "dbt_version": "1.6.1", "profile_name": "dbt_idx", "target_name": "dev", "node_id": "model.dbt_idx.stg_eltool__customers_snapshots"} */
+
+  create view "IDX-Stock"."IDX-Schema"."stg_eltool__customers_snapshots__dbt_tmp"
+    
+    
+  as (
+    with source as (select *
+                from "IDX-Stock"."snapshots"."customers_snapshot"),
+     renamed as (select customer_id,
+                        zipcode,
+                        city,
+                        state_code,
+                        datetime_created::TIMESTAMP AS datetime_created,
+                        datetime_updated::TIMESTAMP AS datetime_updated,
+                        dbt_valid_from,
+                        dbt_valid_to
+                 from source)
+select *
+from renamed
+  );
+[0m13:30:43.831666 [debug] [Thread-1 (]: SQL status: CREATE VIEW in 0.0 seconds
+[0m13:30:43.836803 [debug] [Thread-1 (]: Using postgres connection "model.dbt_idx.stg_eltool__customers_snapshots"
+[0m13:30:43.837807 [debug] [Thread-1 (]: On model.dbt_idx.stg_eltool__customers_snapshots: /* {"app": "dbt", "dbt_version": "1.6.1", "profile_name": "dbt_idx", "target_name": "dev", "node_id": "model.dbt_idx.stg_eltool__customers_snapshots"} */
+alter table "IDX-Stock"."IDX-Schema"."stg_eltool__customers_snapshots__dbt_tmp" rename to "stg_eltool__customers_snapshots"
+[0m13:30:43.841818 [debug] [Thread-1 (]: SQL status: ALTER TABLE in 0.0 seconds
+[0m13:30:43.843802 [debug] [Thread-1 (]: On model.dbt_idx.stg_eltool__customers_snapshots: COMMIT
+[0m13:30:43.844801 [debug] [Thread-1 (]: Using postgres connection "model.dbt_idx.stg_eltool__customers_snapshots"
+[0m13:30:43.845802 [debug] [Thread-1 (]: On model.dbt_idx.stg_eltool__customers_snapshots: COMMIT
+[0m13:30:43.849317 [debug] [Thread-1 (]: SQL status: COMMIT in 0.0 seconds
+[0m13:30:43.853349 [debug] [Thread-1 (]: Using postgres connection "model.dbt_idx.stg_eltool__customers_snapshots"
+[0m13:30:43.854315 [debug] [Thread-1 (]: On model.dbt_idx.stg_eltool__customers_snapshots: /* {"app": "dbt", "dbt_version": "1.6.1", "profile_name": "dbt_idx", "target_name": "dev", "node_id": "model.dbt_idx.stg_eltool__customers_snapshots"} */
+drop view if exists "IDX-Stock"."IDX-Schema"."stg_eltool__customers_snapshots__dbt_backup" cascade
+[0m13:30:43.855822 [debug] [Thread-1 (]: SQL status: DROP VIEW in 0.0 seconds
+[0m13:30:43.858864 [debug] [Thread-1 (]: Timing info for model.dbt_idx.stg_eltool__customers_snapshots (execute): 13:30:43.783160 => 13:30:43.858864
+[0m13:30:43.859830 [debug] [Thread-1 (]: On model.dbt_idx.stg_eltool__customers_snapshots: Close
+[0m13:30:43.861840 [info ] [Thread-1 (]: 2 of 7 OK created sql view model IDX-Schema.stg_eltool__customers_snapshots .... [[32mCREATE VIEW[0m in 0.09s]
+[0m13:30:43.863833 [debug] [Thread-1 (]: Finished running node model.dbt_idx.stg_eltool__customers_snapshots
+[0m13:30:43.864841 [debug] [Thread-1 (]: Began running node model.dbt_idx.stg_eltool__orders
+[0m13:30:43.865830 [info ] [Thread-1 (]: 3 of 7 START sql view model IDX-Schema.stg_eltool__orders ...................... [RUN]
+[0m13:30:43.866960 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.dbt_idx.stg_eltool__customers_snapshots, now model.dbt_idx.stg_eltool__orders)
+[0m13:30:43.867970 [debug] [Thread-1 (]: Began compiling node model.dbt_idx.stg_eltool__orders
+[0m13:30:43.870991 [debug] [Thread-1 (]: Writing injected SQL for node "model.dbt_idx.stg_eltool__orders"
+[0m13:30:43.883579 [debug] [Thread-1 (]: Timing info for model.dbt_idx.stg_eltool__orders (compile): 13:30:43.868979 => 13:30:43.883579
+[0m13:30:43.884577 [debug] [Thread-1 (]: Began executing node model.dbt_idx.stg_eltool__orders
+[0m13:30:43.890007 [debug] [Thread-1 (]: Writing runtime sql for node "model.dbt_idx.stg_eltool__orders"
+[0m13:30:43.901536 [debug] [Thread-1 (]: Using postgres connection "model.dbt_idx.stg_eltool__orders"
+[0m13:30:43.903527 [debug] [Thread-1 (]: On model.dbt_idx.stg_eltool__orders: BEGIN
+[0m13:30:43.904527 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m13:30:43.928394 [debug] [Thread-1 (]: SQL status: BEGIN in 0.0 seconds
+[0m13:30:43.929410 [debug] [Thread-1 (]: Using postgres connection "model.dbt_idx.stg_eltool__orders"
+[0m13:30:43.929410 [debug] [Thread-1 (]: On model.dbt_idx.stg_eltool__orders: /* {"app": "dbt", "dbt_version": "1.6.1", "profile_name": "dbt_idx", "target_name": "dev", "node_id": "model.dbt_idx.stg_eltool__orders"} */
+
+  create view "IDX-Stock"."IDX-Schema"."stg_eltool__orders__dbt_tmp"
+    
+    
+  as (
+    with source as (select *
+                from "IDX-Stock"."IDX-Schema"."orders"),
+     renamed as (select order_id,
+                        cust_id AS customer_id,
+                        order_status,
+                        order_purchase_timestamp::TIMESTAMP,
+                        order_approved_at::TIMESTAMP,
+                        order_delivered_carrier_date::TIMESTAMP,
+                        order_delivered_customer_date::TIMESTAMP,
+                        order_estimated_delivery_date::TIMESTAMP
+                 from source)
+select *
+from renamed
+  );
+[0m13:30:43.934405 [debug] [Thread-1 (]: SQL status: CREATE VIEW in 0.0 seconds
+[0m13:30:43.938994 [debug] [Thread-1 (]: Using postgres connection "model.dbt_idx.stg_eltool__orders"
+[0m13:30:43.939998 [debug] [Thread-1 (]: On model.dbt_idx.stg_eltool__orders: /* {"app": "dbt", "dbt_version": "1.6.1", "profile_name": "dbt_idx", "target_name": "dev", "node_id": "model.dbt_idx.stg_eltool__orders"} */
+alter table "IDX-Stock"."IDX-Schema"."stg_eltool__orders__dbt_tmp" rename to "stg_eltool__orders"
+[0m13:30:43.942960 [debug] [Thread-1 (]: SQL status: ALTER TABLE in 0.0 seconds
+[0m13:30:43.945553 [debug] [Thread-1 (]: On model.dbt_idx.stg_eltool__orders: COMMIT
+[0m13:30:43.946578 [debug] [Thread-1 (]: Using postgres connection "model.dbt_idx.stg_eltool__orders"
+[0m13:30:43.947566 [debug] [Thread-1 (]: On model.dbt_idx.stg_eltool__orders: COMMIT
+[0m13:30:43.951581 [debug] [Thread-1 (]: SQL status: COMMIT in 0.0 seconds
+[0m13:30:43.954617 [debug] [Thread-1 (]: Using postgres connection "model.dbt_idx.stg_eltool__orders"
+[0m13:30:43.955582 [debug] [Thread-1 (]: On model.dbt_idx.stg_eltool__orders: /* {"app": "dbt", "dbt_version": "1.6.1", "profile_name": "dbt_idx", "target_name": "dev", "node_id": "model.dbt_idx.stg_eltool__orders"} */
+drop view if exists "IDX-Stock"."IDX-Schema"."stg_eltool__orders__dbt_backup" cascade
+[0m13:30:43.958137 [debug] [Thread-1 (]: SQL status: DROP VIEW in 0.0 seconds
+[0m13:30:43.963732 [debug] [Thread-1 (]: Timing info for model.dbt_idx.stg_eltool__orders (execute): 13:30:43.885580 => 13:30:43.962530
+[0m13:30:43.965363 [debug] [Thread-1 (]: On model.dbt_idx.stg_eltool__orders: Close
+[0m13:30:43.969307 [info ] [Thread-1 (]: 3 of 7 OK created sql view model IDX-Schema.stg_eltool__orders ................. [[32mCREATE VIEW[0m in 0.10s]
+[0m13:30:43.972133 [debug] [Thread-1 (]: Finished running node model.dbt_idx.stg_eltool__orders
+[0m13:30:43.974330 [debug] [Thread-1 (]: Began running node model.dbt_idx.stg_eltool__state
+[0m13:30:43.975947 [info ] [Thread-1 (]: 4 of 7 START sql view model IDX-Schema.stg_eltool__state ....................... [RUN]
+[0m13:30:43.978213 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.dbt_idx.stg_eltool__orders, now model.dbt_idx.stg_eltool__state)
+[0m13:30:43.979583 [debug] [Thread-1 (]: Began compiling node model.dbt_idx.stg_eltool__state
+[0m13:30:43.984490 [debug] [Thread-1 (]: Writing injected SQL for node "model.dbt_idx.stg_eltool__state"
+[0m13:30:43.994029 [debug] [Thread-1 (]: Timing info for model.dbt_idx.stg_eltool__state (compile): 13:30:43.980341 => 13:30:43.994029
+[0m13:30:43.995671 [debug] [Thread-1 (]: Began executing node model.dbt_idx.stg_eltool__state
+[0m13:30:44.000635 [debug] [Thread-1 (]: Writing runtime sql for node "model.dbt_idx.stg_eltool__state"
+[0m13:30:44.007704 [debug] [Thread-1 (]: Using postgres connection "model.dbt_idx.stg_eltool__state"
+[0m13:30:44.008712 [debug] [Thread-1 (]: On model.dbt_idx.stg_eltool__state: BEGIN
+[0m13:30:44.009682 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m13:30:44.062639 [debug] [Thread-1 (]: SQL status: BEGIN in 0.0 seconds
+[0m13:30:44.063704 [debug] [Thread-1 (]: Using postgres connection "model.dbt_idx.stg_eltool__state"
+[0m13:30:44.064643 [debug] [Thread-1 (]: On model.dbt_idx.stg_eltool__state: /* {"app": "dbt", "dbt_version": "1.6.1", "profile_name": "dbt_idx", "target_name": "dev", "node_id": "model.dbt_idx.stg_eltool__state"} */
+
+  create view "IDX-Stock"."IDX-Schema"."stg_eltool__state__dbt_tmp"
+    
+    
+  as (
+    with source as (select *
+                from "IDX-Stock"."IDX-Schema"."state"),
+     renamed as (select state_identifier::INT AS state_id,
+                         state_code::VARCHAR(2) AS state_code,
+                         st_name::VARCHAR(30) AS state_name
+                 from source)
+select *
+from renamed
+  );
+[0m13:30:44.069160 [debug] [Thread-1 (]: SQL status: CREATE VIEW in 0.0 seconds
+[0m13:30:44.074156 [debug] [Thread-1 (]: Using postgres connection "model.dbt_idx.stg_eltool__state"
+[0m13:30:44.074156 [debug] [Thread-1 (]: On model.dbt_idx.stg_eltool__state: /* {"app": "dbt", "dbt_version": "1.6.1", "profile_name": "dbt_idx", "target_name": "dev", "node_id": "model.dbt_idx.stg_eltool__state"} */
+alter table "IDX-Stock"."IDX-Schema"."stg_eltool__state__dbt_tmp" rename to "stg_eltool__state"
+[0m13:30:44.078733 [debug] [Thread-1 (]: SQL status: ALTER TABLE in 0.0 seconds
+[0m13:30:44.080692 [debug] [Thread-1 (]: On model.dbt_idx.stg_eltool__state: COMMIT
+[0m13:30:44.081674 [debug] [Thread-1 (]: Using postgres connection "model.dbt_idx.stg_eltool__state"
+[0m13:30:44.081674 [debug] [Thread-1 (]: On model.dbt_idx.stg_eltool__state: COMMIT
+[0m13:30:44.085810 [debug] [Thread-1 (]: SQL status: COMMIT in 0.0 seconds
+[0m13:30:44.090207 [debug] [Thread-1 (]: Using postgres connection "model.dbt_idx.stg_eltool__state"
+[0m13:30:44.090207 [debug] [Thread-1 (]: On model.dbt_idx.stg_eltool__state: /* {"app": "dbt", "dbt_version": "1.6.1", "profile_name": "dbt_idx", "target_name": "dev", "node_id": "model.dbt_idx.stg_eltool__state"} */
+drop view if exists "IDX-Stock"."IDX-Schema"."stg_eltool__state__dbt_backup" cascade
+[0m13:30:44.093157 [debug] [Thread-1 (]: SQL status: DROP VIEW in 0.0 seconds
+[0m13:30:44.095743 [debug] [Thread-1 (]: Timing info for model.dbt_idx.stg_eltool__state (execute): 13:30:43.995671 => 13:30:44.094203
+[0m13:30:44.096750 [debug] [Thread-1 (]: On model.dbt_idx.stg_eltool__state: Close
+[0m13:30:44.098756 [info ] [Thread-1 (]: 4 of 7 OK created sql view model IDX-Schema.stg_eltool__state .................. [[32mCREATE VIEW[0m in 0.12s]
+[0m13:30:44.100755 [debug] [Thread-1 (]: Finished running node model.dbt_idx.stg_eltool__state
+[0m13:30:44.102266 [debug] [Thread-1 (]: Began running node model.dbt_idx.fact_orders
+[0m13:30:44.103278 [info ] [Thread-1 (]: 5 of 7 START sql table model IDX-Schema.fact_orders ............................ [RUN]
+[0m13:30:44.104277 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.dbt_idx.stg_eltool__state, now model.dbt_idx.fact_orders)
+[0m13:30:44.105808 [debug] [Thread-1 (]: Began compiling node model.dbt_idx.fact_orders
+[0m13:30:44.110818 [debug] [Thread-1 (]: Writing injected SQL for node "model.dbt_idx.fact_orders"
+[0m13:30:44.121035 [debug] [Thread-1 (]: Timing info for model.dbt_idx.fact_orders (compile): 13:30:44.106816 => 13:30:44.120496
+[0m13:30:44.122858 [debug] [Thread-1 (]: Began executing node model.dbt_idx.fact_orders
+[0m13:30:44.152051 [debug] [Thread-1 (]: Writing runtime sql for node "model.dbt_idx.fact_orders"
+[0m13:30:44.158526 [debug] [Thread-1 (]: Using postgres connection "model.dbt_idx.fact_orders"
+[0m13:30:44.160533 [debug] [Thread-1 (]: On model.dbt_idx.fact_orders: BEGIN
+[0m13:30:44.161529 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m13:30:44.182709 [debug] [Thread-1 (]: SQL status: BEGIN in 0.0 seconds
+[0m13:30:44.183737 [debug] [Thread-1 (]: Using postgres connection "model.dbt_idx.fact_orders"
+[0m13:30:44.184719 [debug] [Thread-1 (]: On model.dbt_idx.fact_orders: /* {"app": "dbt", "dbt_version": "1.6.1", "profile_name": "dbt_idx", "target_name": "dev", "node_id": "model.dbt_idx.fact_orders"} */
+
+  
+    
+
+  create  table "IDX-Stock"."IDX-Schema"."fact_orders__dbt_tmp"
+  
+  
+    as
+  
+  (
+    with orders as (
+    select *
+    from "IDX-Stock"."IDX-Schema"."stg_eltool__orders"
+)
+select * from orders
+  );
+  
+[0m13:30:44.195550 [debug] [Thread-1 (]: SQL status: SELECT 999 in 0.0 seconds
+[0m13:30:44.199573 [debug] [Thread-1 (]: Using postgres connection "model.dbt_idx.fact_orders"
+[0m13:30:44.199573 [debug] [Thread-1 (]: On model.dbt_idx.fact_orders: /* {"app": "dbt", "dbt_version": "1.6.1", "profile_name": "dbt_idx", "target_name": "dev", "node_id": "model.dbt_idx.fact_orders"} */
+alter table "IDX-Stock"."IDX-Schema"."fact_orders__dbt_tmp" rename to "fact_orders"
+[0m13:30:44.203596 [debug] [Thread-1 (]: SQL status: ALTER TABLE in 0.0 seconds
+[0m13:30:44.209187 [debug] [Thread-1 (]: On model.dbt_idx.fact_orders: COMMIT
+[0m13:30:44.210156 [debug] [Thread-1 (]: Using postgres connection "model.dbt_idx.fact_orders"
+[0m13:30:44.211155 [debug] [Thread-1 (]: On model.dbt_idx.fact_orders: COMMIT
+[0m13:30:44.215701 [debug] [Thread-1 (]: SQL status: COMMIT in 0.0 seconds
+[0m13:30:44.222707 [debug] [Thread-1 (]: Using postgres connection "model.dbt_idx.fact_orders"
+[0m13:30:44.223745 [debug] [Thread-1 (]: On model.dbt_idx.fact_orders: /* {"app": "dbt", "dbt_version": "1.6.1", "profile_name": "dbt_idx", "target_name": "dev", "node_id": "model.dbt_idx.fact_orders"} */
+drop table if exists "IDX-Stock"."IDX-Schema"."fact_orders__dbt_backup" cascade
+[0m13:30:44.225761 [debug] [Thread-1 (]: SQL status: DROP TABLE in 0.0 seconds
+[0m13:30:44.227990 [debug] [Thread-1 (]: Timing info for model.dbt_idx.fact_orders (execute): 13:30:44.124222 => 13:30:44.227990
+[0m13:30:44.228987 [debug] [Thread-1 (]: On model.dbt_idx.fact_orders: Close
+[0m13:30:44.230975 [info ] [Thread-1 (]: 5 of 7 OK created sql table model IDX-Schema.fact_orders ....................... [[32mSELECT 999[0m in 0.13s]
+[0m13:30:44.232952 [debug] [Thread-1 (]: Finished running node model.dbt_idx.fact_orders
+[0m13:30:44.233954 [debug] [Thread-1 (]: Began running node model.dbt_idx.dim_customers
+[0m13:30:44.235478 [info ] [Thread-1 (]: 6 of 7 START sql table model IDX-Schema.dim_customers .......................... [RUN]
+[0m13:30:44.236513 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.dbt_idx.fact_orders, now model.dbt_idx.dim_customers)
+[0m13:30:44.237483 [debug] [Thread-1 (]: Began compiling node model.dbt_idx.dim_customers
+[0m13:30:44.240519 [debug] [Thread-1 (]: Writing injected SQL for node "model.dbt_idx.dim_customers"
+[0m13:30:44.247037 [debug] [Thread-1 (]: Timing info for model.dbt_idx.dim_customers (compile): 13:30:44.238487 => 13:30:44.247037
+[0m13:30:44.248061 [debug] [Thread-1 (]: Began executing node model.dbt_idx.dim_customers
+[0m13:30:44.253071 [debug] [Thread-1 (]: Writing runtime sql for node "model.dbt_idx.dim_customers"
+[0m13:30:44.258586 [debug] [Thread-1 (]: Using postgres connection "model.dbt_idx.dim_customers"
+[0m13:30:44.259625 [debug] [Thread-1 (]: On model.dbt_idx.dim_customers: BEGIN
+[0m13:30:44.260586 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m13:30:44.284178 [debug] [Thread-1 (]: SQL status: BEGIN in 0.0 seconds
+[0m13:30:44.284178 [debug] [Thread-1 (]: Using postgres connection "model.dbt_idx.dim_customers"
+[0m13:30:44.285813 [debug] [Thread-1 (]: On model.dbt_idx.dim_customers: /* {"app": "dbt", "dbt_version": "1.6.1", "profile_name": "dbt_idx", "target_name": "dev", "node_id": "model.dbt_idx.dim_customers"} */
+
+  
+    
+
+  create  table "IDX-Stock"."IDX-Schema"."dim_customers__dbt_tmp"
+  
+  
+    as
+  
+  (
+    -- noinspection SqlDialectInspectionForFile
+
+with customers as (
+    select *
+    from "IDX-Stock"."IDX-Schema"."stg_eltool__customers_snapshots"
+    ),
+     state as (
+         select *
+         from "IDX-Stock"."IDX-Schema"."stg_eltool__state"
+     )
+select c.customer_id,
+       c.zipcode,
+       c.city,
+       c.state_code,
+       s.state_name,
+       c.datetime_created,
+       c.datetime_updated,
+       c.dbt_valid_from::TIMESTAMP as valid_from,
+        CASE WHEN c.dbt_valid_to IS NULL
+            THEN '9999-12-31'::TIMESTAMP
+            ELSE c.dbt_valid_to::TIMESTAMP
+        END as valid_to
+from customers c
+    join state s on c.state_code = s.state_code
+  );
+  
+[0m13:30:44.290750 [debug] [Thread-1 (]: SQL status: SELECT 100 in 0.0 seconds
+[0m13:30:44.295764 [debug] [Thread-1 (]: Using postgres connection "model.dbt_idx.dim_customers"
+[0m13:30:44.296276 [debug] [Thread-1 (]: On model.dbt_idx.dim_customers: /* {"app": "dbt", "dbt_version": "1.6.1", "profile_name": "dbt_idx", "target_name": "dev", "node_id": "model.dbt_idx.dim_customers"} */
+alter table "IDX-Stock"."IDX-Schema"."dim_customers__dbt_tmp" rename to "dim_customers"
+[0m13:30:44.299284 [debug] [Thread-1 (]: SQL status: ALTER TABLE in 0.0 seconds
+[0m13:30:44.301284 [debug] [Thread-1 (]: On model.dbt_idx.dim_customers: COMMIT
+[0m13:30:44.302320 [debug] [Thread-1 (]: Using postgres connection "model.dbt_idx.dim_customers"
+[0m13:30:44.303285 [debug] [Thread-1 (]: On model.dbt_idx.dim_customers: COMMIT
+[0m13:30:44.307821 [debug] [Thread-1 (]: SQL status: COMMIT in 0.0 seconds
+[0m13:30:44.313798 [debug] [Thread-1 (]: Using postgres connection "model.dbt_idx.dim_customers"
+[0m13:30:44.314797 [debug] [Thread-1 (]: On model.dbt_idx.dim_customers: /* {"app": "dbt", "dbt_version": "1.6.1", "profile_name": "dbt_idx", "target_name": "dev", "node_id": "model.dbt_idx.dim_customers"} */
+drop table if exists "IDX-Stock"."IDX-Schema"."dim_customers__dbt_backup" cascade
+[0m13:30:44.317193 [debug] [Thread-1 (]: SQL status: DROP TABLE in 0.0 seconds
+[0m13:30:44.320236 [debug] [Thread-1 (]: Timing info for model.dbt_idx.dim_customers (execute): 13:30:44.249073 => 13:30:44.320236
+[0m13:30:44.321254 [debug] [Thread-1 (]: On model.dbt_idx.dim_customers: Close
+[0m13:30:44.323233 [info ] [Thread-1 (]: 6 of 7 OK created sql table model IDX-Schema.dim_customers ..................... [[32mSELECT 100[0m in 0.09s]
+[0m13:30:44.324194 [debug] [Thread-1 (]: Finished running node model.dbt_idx.dim_customers
+[0m13:30:44.325721 [debug] [Thread-1 (]: Began running node model.dbt_idx.customer_orders_status
+[0m13:30:44.327734 [info ] [Thread-1 (]: 7 of 7 START sql view model IDX-Schema.customer_orders_status .................. [RUN]
+[0m13:30:44.329730 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.dbt_idx.dim_customers, now model.dbt_idx.customer_orders_status)
+[0m13:30:44.330729 [debug] [Thread-1 (]: Began compiling node model.dbt_idx.customer_orders_status
+[0m13:30:44.333766 [debug] [Thread-1 (]: Writing injected SQL for node "model.dbt_idx.customer_orders_status"
+[0m13:30:44.341281 [debug] [Thread-1 (]: Timing info for model.dbt_idx.customer_orders_status (compile): 13:30:44.330729 => 13:30:44.341281
+[0m13:30:44.343255 [debug] [Thread-1 (]: Began executing node model.dbt_idx.customer_orders_status
+[0m13:30:44.348807 [debug] [Thread-1 (]: Writing runtime sql for node "model.dbt_idx.customer_orders_status"
+[0m13:30:44.358229 [debug] [Thread-1 (]: Using postgres connection "model.dbt_idx.customer_orders_status"
+[0m13:30:44.358796 [debug] [Thread-1 (]: On model.dbt_idx.customer_orders_status: BEGIN
+[0m13:30:44.359985 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m13:30:44.383223 [debug] [Thread-1 (]: SQL status: BEGIN in 0.0 seconds
+[0m13:30:44.384260 [debug] [Thread-1 (]: Using postgres connection "model.dbt_idx.customer_orders_status"
+[0m13:30:44.385956 [debug] [Thread-1 (]: On model.dbt_idx.customer_orders_status: /* {"app": "dbt", "dbt_version": "1.6.1", "profile_name": "dbt_idx", "target_name": "dev", "node_id": "model.dbt_idx.customer_orders_status"} */
+
+  create view "IDX-Stock"."IDX-Schema"."customer_orders_status__dbt_tmp"
+    
+    
+  as (
+    with orders as (select *
+                from "IDX-Stock"."IDX-Schema"."fact_orders"),
+     customers as (select *
+                   from "IDX-Stock"."IDX-Schema"."dim_customers")
+select o.order_id,
+       o.customer_id,
+       o.order_status,
+       o.order_purchase_timestamp,
+       o.order_approved_at,
+       o.order_delivered_carrier_date,
+       o.order_delivered_customer_date,
+       o.order_estimated_delivery_date,
+       c.zipcode    as customer_zipcode,
+       c.city       as customer_city,
+       c.state_code as customer_state_code,
+       c.state_name as customer_state_name
+from orders o
+    join customers c on o.customer_id = c.customer_id
+    and o.order_purchase_timestamp >= c.valid_from
+    and o.order_purchase_timestamp <= c.valid_to
+  );
+[0m13:30:44.391813 [debug] [Thread-1 (]: SQL status: CREATE VIEW in 0.0 seconds
+[0m13:30:44.396354 [debug] [Thread-1 (]: Using postgres connection "model.dbt_idx.customer_orders_status"
+[0m13:30:44.397366 [debug] [Thread-1 (]: On model.dbt_idx.customer_orders_status: /* {"app": "dbt", "dbt_version": "1.6.1", "profile_name": "dbt_idx", "target_name": "dev", "node_id": "model.dbt_idx.customer_orders_status"} */
+alter table "IDX-Stock"."IDX-Schema"."customer_orders_status__dbt_tmp" rename to "customer_orders_status"
+[0m13:30:44.400377 [debug] [Thread-1 (]: SQL status: ALTER TABLE in 0.0 seconds
+[0m13:30:44.403408 [debug] [Thread-1 (]: On model.dbt_idx.customer_orders_status: COMMIT
+[0m13:30:44.403408 [debug] [Thread-1 (]: Using postgres connection "model.dbt_idx.customer_orders_status"
+[0m13:30:44.404374 [debug] [Thread-1 (]: On model.dbt_idx.customer_orders_status: COMMIT
+[0m13:30:44.409137 [debug] [Thread-1 (]: SQL status: COMMIT in 0.0 seconds
+[0m13:30:44.412139 [debug] [Thread-1 (]: Using postgres connection "model.dbt_idx.customer_orders_status"
+[0m13:30:44.413176 [debug] [Thread-1 (]: On model.dbt_idx.customer_orders_status: /* {"app": "dbt", "dbt_version": "1.6.1", "profile_name": "dbt_idx", "target_name": "dev", "node_id": "model.dbt_idx.customer_orders_status"} */
+drop view if exists "IDX-Stock"."IDX-Schema"."customer_orders_status__dbt_backup" cascade
+[0m13:30:44.415648 [debug] [Thread-1 (]: SQL status: DROP VIEW in 0.0 seconds
+[0m13:30:44.417684 [debug] [Thread-1 (]: Timing info for model.dbt_idx.customer_orders_status (execute): 13:30:44.344255 => 13:30:44.417684
+[0m13:30:44.418680 [debug] [Thread-1 (]: On model.dbt_idx.customer_orders_status: Close
+[0m13:30:44.421658 [info ] [Thread-1 (]: 7 of 7 OK created sql view model IDX-Schema.customer_orders_status ............. [[32mCREATE VIEW[0m in 0.09s]
+[0m13:30:44.423657 [debug] [Thread-1 (]: Finished running node model.dbt_idx.customer_orders_status
+[0m13:30:44.427123 [debug] [MainThread]: Using postgres connection "master"
+[0m13:30:44.428128 [debug] [MainThread]: On master: BEGIN
+[0m13:30:44.429145 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m13:30:44.453545 [debug] [MainThread]: SQL status: BEGIN in 0.0 seconds
+[0m13:30:44.454545 [debug] [MainThread]: On master: COMMIT
+[0m13:30:44.455545 [debug] [MainThread]: Using postgres connection "master"
+[0m13:30:44.456050 [debug] [MainThread]: On master: COMMIT
+[0m13:30:44.458091 [debug] [MainThread]: SQL status: COMMIT in 0.0 seconds
+[0m13:30:44.459065 [debug] [MainThread]: On master: Close
+[0m13:30:44.460065 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m13:30:44.461069 [debug] [MainThread]: Connection 'list_IDX-Stock' was properly closed.
+[0m13:30:44.462067 [debug] [MainThread]: Connection 'list_IDX-Stock_snapshots' was properly closed.
+[0m13:30:44.463101 [debug] [MainThread]: Connection 'model.dbt_idx.customer_orders_status' was properly closed.
+[0m13:30:44.464067 [info ] [MainThread]: 
+[0m13:30:44.465572 [info ] [MainThread]: Finished running 5 view models, 2 table models in 0 hours 0 minutes and 1.06 seconds (1.06s).
+[0m13:30:44.468102 [debug] [MainThread]: Command end result
+[0m13:30:44.496780 [info ] [MainThread]: 
+[0m13:30:44.497808 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m13:30:44.498798 [info ] [MainThread]: 
+[0m13:30:44.499786 [info ] [MainThread]: Done. PASS=7 WARN=0 ERROR=0 SKIP=0 TOTAL=7
+[0m13:30:44.500785 [debug] [MainThread]: Command `dbt run` succeeded at 13:30:44.500785 after 1.51 seconds
+[0m13:30:44.501787 [debug] [MainThread]: Flushing usage events
