@@ -12,12 +12,12 @@ default_args = {
 }
 
 @task()
-def extractStock():
+def mongodb_extractStock():
     stockDf = extract.extractKSQLStock({})
     return stockDf
 
 @task()
-def extractCompany():
+def mongodb_extractCompany():
     companyDf = extract.extractKSQLCompany({})
     return companyDf
 
@@ -27,12 +27,22 @@ def transformers(stockDf, companyDf):
     return df
 
 @task()
-def loaders(df):
+def mongodb_loaders(df):
     collection = "ksql-join-stock-company"
     load.insertOrUpdateCollection(collection, df)
 
-with DAG('IDX_Stock_ETL', schedule_interval=timedelta(seconds=60), default_args=default_args, catchup=False) as dag:
-    extract_data1 = extractStock()
-    extract_data2 = extractCompany()
-    transform_data = transformers(extract_data1, extract_data2)
-    id = loaders(transform_data)
+@task()
+def postgres_stock_loaders(df):
+    load.add_data_sqlalchemy(df, 'ksql-stock-stream')
+
+@task()
+def postgres_company_loaders(df):
+    load.add_data_sqlalchemy(df, 'ksql-company-stream')
+
+with DAG('IDX_Stock_ETL', schedule_interval=timedelta(minutes=5), default_args=default_args, catchup=False) as dag:
+    df_stock = mongodb_extractStock()
+    df_company = mongodb_extractCompany()
+    df_transform = transformers(df_stock, df_company)
+    id = mongodb_loaders(df_transform)
+    postgres_stock_loaders(df_stock)
+    postgres_company_loaders(df_company)
