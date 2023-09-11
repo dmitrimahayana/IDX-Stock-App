@@ -1,0 +1,16 @@
+config:
+  send_anonymous_usage_stats: False
+
+dbt_idx:
+  target: dev
+  outputs:
+    dev:
+      type: postgres
+      threads: 1
+#      host: localhost
+      host: 172.26.0.5
+      port: 5432
+      user: postgres
+      pass: postgres
+      dbname: IDX-Stock
+      schema: IDX-Schema

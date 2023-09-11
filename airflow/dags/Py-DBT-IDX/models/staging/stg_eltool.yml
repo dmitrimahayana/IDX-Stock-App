@@ -1,0 +1,21 @@
+version: 2
+
+models:
+  - name: stg_eltool__stock
+    columns:
+      - name: id
+        tests:
+          - not_null
+  - name: stg_eltool__company
+    columns:
+      - name: id
+        tests:
+          - not_null
+  - name: stg_eltool__customers_snapshots
+    columns:
+      - name: customer_id
+        tests:
+          - not_null
+  - name: stg_eltool__customers
+  - name: stg_eltool__orders
+  - name: stg_eltool__state
