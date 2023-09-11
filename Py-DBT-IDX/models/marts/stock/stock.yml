@@ -1,0 +1,8 @@
+version: 2
+
+models:
+  - name: stock_update_status
+    columns:
+      - name: id
+        tests:
+          - not_null
