@@ -2,7 +2,7 @@
   
     
 
-  create  table "IDX-Stock"."warehouse"."dim_customers__dbt_tmp"
+  create  table "IDX-Stock"."IDX-Schema"."dim_customers__dbt_tmp"
   
   
     as
@@ -12,11 +12,11 @@
 
 with customers as (
     select *
-    from "IDX-Stock"."warehouse"."stg_eltool__customers_snapshots"
+    from "IDX-Stock"."IDX-Schema"."stg_eltool__customers_snapshots"
     ),
      state as (
          select *
-         from "IDX-Stock"."warehouse"."stg_eltool__state"
+         from "IDX-Stock"."IDX-Schema"."stg_eltool__state"
      )
 select c.customer_id,
        c.zipcode,

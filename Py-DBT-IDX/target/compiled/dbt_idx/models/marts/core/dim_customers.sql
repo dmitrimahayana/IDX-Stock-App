@@ -2,11 +2,11 @@
 
 with customers as (
     select *
-    from "IDX-Stock"."warehouse"."stg_eltool__customers_snapshots"
+    from "IDX-Stock"."IDX-Schema"."stg_eltool__customers_snapshots"
     ),
      state as (
          select *
-         from "IDX-Stock"."warehouse"."stg_eltool__state"
+         from "IDX-Stock"."IDX-Schema"."stg_eltool__state"
      )
 select c.customer_id,
        c.zipcode,

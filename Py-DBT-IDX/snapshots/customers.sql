@@ -12,6 +12,6 @@
 }}
 
 select *
-from {{ source('warehouse', 'customers') }}
+from {{ source('IDX-Schema', 'customers') }}
 
 {% endsnapshot %}

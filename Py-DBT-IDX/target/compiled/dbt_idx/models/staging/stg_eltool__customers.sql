@@ -1,5 +1,5 @@
 with source as (select *
-                from "IDX-Stock"."warehouse"."customers"),
+                from "IDX-Stock"."IDX-Schema"."customers"),
      renamed as (select
                      customer_id,
                     'This is Dummy' as dummy

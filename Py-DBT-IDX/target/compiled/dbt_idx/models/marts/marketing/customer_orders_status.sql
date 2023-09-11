@@ -1,7 +1,7 @@
 with orders as (select *
-                from "IDX-Stock"."warehouse"."fact_orders"),
+                from "IDX-Stock"."IDX-Schema"."fact_orders"),
      customers as (select *
-                   from "IDX-Stock"."warehouse"."dim_customers")
+                   from "IDX-Stock"."IDX-Schema"."dim_customers")
 select o.order_id,
        o.customer_id,
        o.order_status,

@@ -1,10 +1,10 @@
 
-  create view "IDX-Stock"."warehouse"."stg_eltool__customers__dbt_tmp"
+  create view "IDX-Stock"."IDX-Schema"."stg_eltool__customers__dbt_tmp"
     
     
   as (
     with source as (select *
-                from "IDX-Stock"."warehouse"."customers"),
+                from "IDX-Stock"."IDX-Schema"."customers"),
      renamed as (select
                      customer_id,
                     'This is Dummy' as dummy

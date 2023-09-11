@@ -1,5 +1,5 @@
 with source as (select *
-                from {{ source('warehouse', 'orders') }}),
+                from {{ source('IDX-Schema', 'orders') }}),
      renamed as (select order_id,
                         cust_id AS customer_id,
                         order_status,
