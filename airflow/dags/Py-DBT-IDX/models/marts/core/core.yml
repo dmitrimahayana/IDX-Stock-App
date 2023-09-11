@@ -1,0 +1,14 @@
+version: 2
+
+models:
+  - name: fact_stocks
+    columns:
+      - name: id
+        tests:
+          - not_null
+  - name: dim_customers
+    columns:
+      - name: customer_id
+        tests:
+          - not_null
+  - name: fact_orders
