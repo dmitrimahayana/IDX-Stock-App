@@ -1,0 +1,37 @@
+version: 2
+
+sources:
+  - name: IDX-Schema
+    description: Data from application database, brought in by an EL process.
+    tables:
+      - name: ksql-stock-stream
+        columns:
+          - name: id
+            tests:
+              - not_null
+              - unique
+      - name: ksql-company-stream
+        columns:
+          - name: id
+            tests:
+              - not_null
+              - unique
+      - name: customers
+        columns:
+          - name: customer_id
+            tests:
+              - not_null
+
+      - name: orders
+        columns:
+          - name: order_id
+            tests:
+              - not_null
+              - unique
+          - name: cust_id
+            tests:
+              - relationships:
+                  to: source('IDX-Schema', 'customers')
+                  field: customer_id
+
+      - name: state
