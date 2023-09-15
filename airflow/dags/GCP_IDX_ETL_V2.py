@@ -144,7 +144,7 @@ bq_create_stock_view = BigQueryCreateEmptyTableOperator(
                         SELECT a.id, a.ticker, b.name, a.date, a.open, a.high, a.low, a.close, a.volume, b.logo,
                         ROW_NUMBER() OVER (PARTITION BY a.ticker ORDER BY a.date desc) AS rownum
                         FROM `IDX.dim_stocks` AS a
-                        JOIN `IDX.dim_companies` AS b ON a.ticker = b.ticker
+                        INNER JOIN `IDX.dim_companies` AS b ON a.ticker = b.ticker
                     ) table_row
                 ) table_rank
                 ORDER BY table_rank.ranking asc, table_rank.ticker asc;
@@ -155,6 +155,36 @@ bq_create_stock_view = BigQueryCreateEmptyTableOperator(
     dag=dag
 )
 
+## Task BigQueryOperator: check that the data table is existed in the dataset
+bq_create_last_stock_view = BigQueryCreateEmptyTableOperator(
+    task_id="bq_create_last_stock_view",
+    dataset_id=BQ_DATASET,
+    table_id="last_stock_view",
+    view={
+        "query": """
+                SELECT
+                rank1.id, rank1.ticker, rank1.name, rank1.date, rank1.open, rank1.high, rank1.low, rank1.close,
+                rank2.close AS lastclose,
+                rank1.close - rank2.close AS changevalue,
+                ((rank1.close - rank2.close)/rank2.close) * 100 AS changepercent,
+                rank1.volume, rank1.logo
+                FROM
+                (SELECT * FROM `IDX.stock_view` WHERE ranking = 1) rank1
+                INNER JOIN 
+                (SELECT * FROM `IDX.stock_view` WHERE ranking = 2) rank2
+                ON rank1.ticker = rank2.ticker
+                """,
+        "useLegacySql": False,
+    },
+    gcp_conn_id=BQ_CONN_ID,  # Use your Airflow BigQuery connection ID
+    dag=dag
+)
+
 ## Define task
-postgres_stock_to_gcs >> bq_stock_load_csv >> bq_stock_count >> bq_create_stock_view
+postgres_stock_to_gcs >> bq_stock_load_csv >> bq_stock_count
 postgres_company_to_gcs >> bq_company_load_csv >> bq_company_count
+
+bq_stock_count >> bq_create_stock_view
+bq_company_count >> bq_create_stock_view
+
+bq_create_stock_view >> bq_create_last_stock_view
