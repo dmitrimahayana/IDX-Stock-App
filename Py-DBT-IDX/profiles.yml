@@ -8,8 +8,9 @@ dbt_idx:
       type: postgres
       threads: 1
       host: localhost
+#      host: postgres
       port: 5432
       user: postgres
       pass: postgres
       dbname: IDX-Stock
-      schema: warehouse
+      schema: IDX-Schema
