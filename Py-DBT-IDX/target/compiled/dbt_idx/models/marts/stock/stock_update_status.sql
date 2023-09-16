@@ -1,19 +1,18 @@
 with stock as (select *,
-                        rank() over (
-                        partition by ticker
-                        order by date desc
-                        ) as rank
+                      ROW_NUMBER() OVER (PARTITION BY ticker ORDER BY date desc) AS rownum
                from "IDX-Stock"."IDX-Schema"."fact_stocks")
-select a.id,
-       a.ticker,
-       a.name,
-       a.date,
-       a.open,
-       a.high,
-       a.low,
-       a.close,
-       a.volume,
-       a.rank,
-       a.logo
-from stock a
-order by a.date desc, a.ticker desc
+select * from (
+    select a.id,
+          a.ticker,
+          a.name,
+          a.date,
+          a.open,
+          a.high,
+          a.low,
+          a.close,
+          a.volume,
+          a.rownum,
+          DENSE_RANK() OVER (PARTITION BY a.ticker ORDER BY a.rownum desc) AS ranking
+   from stock a
+   ) b
+   order by b.ranking asc, b.ticker asc
