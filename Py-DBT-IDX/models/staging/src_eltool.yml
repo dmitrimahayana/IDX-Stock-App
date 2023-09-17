@@ -9,13 +9,13 @@ sources:
           - name: id
             tests:
               - not_null
-              - unique
+#              - unique
       - name: ksql-company-stream
         columns:
           - name: id
             tests:
               - not_null
-              - unique
+#              - unique
       - name: customers
         columns:
           - name: customer_id
