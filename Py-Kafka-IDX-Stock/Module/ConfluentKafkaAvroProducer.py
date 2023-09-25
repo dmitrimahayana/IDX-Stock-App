@@ -3,8 +3,8 @@ from confluent_kafka.serialization import StringSerializer, SerializationContext
 def deliveryReport(err, event):
     if err is not None:
         print(f"Error ID: {event.key().decode('utf8')}: {err}")
-    else:
-        print(f"Stored ID: {event.key().decode('utf8')} to Topic: {event.topic()}")
+    # else:
+    #     print(f"Stored ID: {event.key().decode('utf8')} to Topic: {event.topic()}")
 
 def sendProducer(topic, object, producer, avroSerializer):
     producer.produce(topic=topic,
